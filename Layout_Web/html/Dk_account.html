@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/global.css">
+      <link rel="stylesheet" href="../bootstrap-4.4.1-dist/css/bootstrap.css">
+      <script src="../js/jquery-3.5.0.min.js"></script>  
+      <script src="../js/jquery.validate.min.js"></script>
+      <script src="../js/additional-methods.min.js"></script>
+        
+    </head>
+    <body>
+        
+        <div class="container-fluid bg">
+           
+            <div class="row">
+                <div class="col-md-4 col-sm-3 col-xs-12"></div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <form class="form-container">
+                        <h1>Đăng Ký</h1>
+                        
+                        <div class="form-group">
+                            <div class="form-row">
+                                <div class="col">
+                                    <label>Họ</label>
+                                    <input type="text" class="form-control" placeholder="Họ" >
+                                 </div>
+                                <div class="col">
+                                   <label>Tên</label>
+                                   <input type="text" class="form-control" placeholder="Tên" >
+                                </div>
+                                
+                             </div>
+                          </div>
+                        <div class="form-group">
+                          <label for="ipEmail">Email</label>
+                          <input type="email" class="form-control" name="emaill" id="ipEmail" placeholder="Nhập địa chỉ email">
+
+                        </div>
+                        <div class="form-group">
+                            <label for="txtpass">Password</label>
+                            <input type="password" name="pass" id="txtpass" class="form-control" placeholder="nhập mật khẩu" >
+                        </div>
+                        <div class="form-group">
+                            <label for="txtrepass">Pass</label>
+                            <input type="password" name="repass" id="txtrepass" class="form-control" placeholder="nhập lại mật khẩu" >
+                        </div>
+                        <div class="form-group">
+                          <label for="ipphone">SDT</label>
+                          <input type="text" name="phone" id="ipphone" class="form-control" placeholder="SDT" >
+                          
+                        </div>
+                        <div class="form-group">
+                            
+                            <input type="radio"  id="ipnam"name="gioi-tinh" value="Nam">Nam
+                            <input type="radio"  id ="ipnu"name="gioi-tinh" value="Nữ">Nữ
+                            <label for="ipBorn">Ngày sinh</label>
+                            <input type="date" id="ipBorn" name=ngsinh>
+                        </div>
+                        <button type="submit" class="btn btn-success btn-block" id="btnSend">Đăng ký</button>
+                        <div id="comment"style="color:red;padding:10px"></div>
+                    </form>
+                </div>
+
+                <div class="col-md-4 col-sm-3 col-xs-12" >
+                </div>
+
+            </div>
+        </div>
+      
+    </body>
+
+   
+</html>
