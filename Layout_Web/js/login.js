@@ -13,7 +13,7 @@ $("#btnLogin").click(function(){
     Swal.fire({
       
         icon: 'success',
-        title: 'Your work has been saved',
+        title: 'Bạn đã đăng nhập thành công',
         showConfirmButton: false,
         timer: 1500
       })
