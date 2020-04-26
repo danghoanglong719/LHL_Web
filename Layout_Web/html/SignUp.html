@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Đăng ký</title>
+        <link rel="stylesheet" type="text/css" href="../css/SignUp.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <link rel="stylesheet" href="../OwlCarousel2-2.3.4/src/js/owl.carousel.js">
+        <link rel="stylesheet" href="../OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="../OwlCarousel2-2.3.4/dist/assets/owl.theme.green.min.css">
+        <style type="text/css">    
+            label.error{color:Red;}     
+            input.error {  color:red;} 
+        </style>
+    </head>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-3.5.0.min.js"></script>
+    <script src="../OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    
+
+
+    <body>
+        <!--#region Thanh đầu-->
+        <div class="container-fluid" id="container1">
+            <div class="row  clearfix">
+                <div class="col-sm-9 floar-left">
+                    <small>
+                          hotline : 0909090909 || Thành Phố Hồ Chí Minh                                     
+                    </small>
+                </div>
+                <div class="col-sm-3 float-right">
+                    <a href="#"><i class='fab fa-facebook-square'></i></a>
+                    <a href="#"><i class="fas fa-envelope-square"></i></a>
+                    <a href="#"><i class="fas fa-envelope-square"></i></a>
+                    <a href="#"><i class="fas fa-envelope-square"></i></a>
+                </div>
+    
+            </div>
+        </div>
+        <!--#endregion Thanh đầu -->
+
+        <!--#region Thanh công cụ-->
+        <nav class="navbar navbar-expand-md bg-dark navbar-inverse">
+            <!-- Brand -->
+            <a class="navbar-brand" href="Home.html"><img src="../img/LogoLHL.png" width="50px"></a>
+    
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon bg-success"></span>
+            </button>
+    
+            <!--#region Navbar links -->
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav text-uppercase ">
+                    <li class="nav-item">
+                        <a class="nav-link ml-2" href="Home.html">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ml-2" href="#">Liên hệ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ml-2" href="#">Trợ giúp</a>
+                    </li>
+                    <li id="dropdown" class="nav-item dropdown  ml-2 ">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                          Sản phẩm
+                        </a>
+                        <div class="drop-down dropdown-menu ">
+    
+                            <div class="row d-inline-flex">
+                                <div class=" col-md-12  ">
+                                    <img id="mega-img" src="../img/banner_mega_1.png " width="800px" height="200px">
+                                </div>
+    
+                                <div class="col-md-4 ">
+                                    <div class="dropdown-header text-center ">Năm 2021</div>
+                                    <p><a href="# ">Vật Phẩm 1</a></p>
+                                    <p><a href="# ">Vật Phẩm 1</a></p>
+                                    <p><a href="# ">Vật Phẩm 1</a></p>
+                                    <p><a href="# ">Vật Phẩm 1</a></p>
+                                    <p><a href="# ">Vật Phẩm 1</a></p>
+    
+                                </div>
+                                <div class="col-md-4 ">
+                                    <div class="dropdown-header text-center ">Năm 2022</div>
+                                    <p><a href="# ">Vật Phẩm 1</a></p>
+                                    <p><a href="# ">Vật Phẩm 1</a></p>
+                                    <p><a href="# ">Vật Phẩm 1</a></p>
+                                    <p><a href="# ">Vật Phẩm 1</a></p>
+                                    <p><a href="# ">Vật Phẩm 1</a></p>
+    
+                                </div>
+                                <div class="col-md-4 ">
+                                    <div class="dropdown-header text-center ">Năm 2023</div>
+                                    <p><a href="# ">Vật Phẩm 1</a></p>
+                                    <p><a href="# ">Vật Phẩm 1</a></p>
+                                    <p><a href="# ">Vật Phẩm 1</a></p>
+                                    <p><a href="# ">Vật Phẩm 1</a></p>
+                                    <p><a href="# ">Vật Phẩm 1</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+    
+                </ul>
+                <form class="navbar-form " action="#">
+                    <div class="input-group ml-2">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default " type="submit" style="background-color: white;margin-left: -5px;">
+                                <i class="fas fa-search" style="color: red;  "></i>
+                        </button>
+                        </div>
+                    </div>
+                </form>
+                <!--#region Dropdown-menu-->
+                <ul class="nav navbar-nav ml-auto ">
+                    <li class="nav-item dropdown ">
+                        <a class="nav-link dropdown-toggle  text-decoration-none mr-4" href="#" id="navbardrop" data-toggle="dropdown">
+                            <i class="fas fa-user"></i> Đăng nhập
+                        </a>
+    
+                        <div class="dropdown-menu dropdown-menu-right log" style="width:300px;">
+                            <form class="px-3 py-2 ">
+                                <h3>Đăng nhập</h1>
+                                <div class="signin">
+                                    
+                                    <div class="form-group">
+                                        <label for="exampleDropdownFormEmail1 ">Tên tài khoản hoặc email</label>
+                                        <input type="email" class="form-control" id="txtUsername" placeholder="Nhập tên tài khoản">
+                                        <p id="txtErrUser" style="color: red;"></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleDropdownFormPassword1">Mật khẩu</label>
+                                        <input type="password" class="form-control" id="txtPassword" placeholder="Nhập mật khẩu">
+                                        <p id="txtErrPass" style="color: red;"></p>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="ckRem">
+                                        <label class="form-check-label" for="dropdownCheck">Remember me</label>
+                                    </div>
+                                    <button type="submit" class="btn btn-success btn-block" id="btnLogin">Sign in</button>
+                                    <div class="dropdown-divider"></div>
+                                    <a href="#" target="_blank" class="forgot-password">Quên mật khẩu</a>
+                                    <span>hoặc</span>
+                                    <a href="SignUp.html" target="_blank" class="signup">Đăng ký</a>
+                                    
+                            </form>
+                        </div>
+                    </li>
+                </ul>
+                <!--#endregion Dropdown-menu-->
+            </div>
+            <!--#endregion Navbar links-->
+        </nav>
+        <!--#endregion Thanh công cụ-->
+
+        <!--#region SignUp-->
+        <div class="container-fluid bg">
+           
+            <div class="row">
+                <div class="col-md-4 col-sm-3 col-xs-12"></div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <form class="form-container" id="formLogin">
+                        <h2>Đăng ký</h2>
+                        <div class="form-group">
+                            <div class="form-inline">
+                                <div class="col-sm-6">
+                                    <div class="form-inline">
+                                        <label for="ipFirstname" class="col-md-3">Họ</label>
+                                        <input type="text" name="firstname" id="ipFirstname" class="form-control col-md-9" placeholder="Họ">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-inline">
+                                        <label for="ipLastname" class="col-md-3">Tên</label>
+                                        <input type="text" name="lastname" id="ipLastname" class="form-control col-md-9" placeholder="Tên">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-inline">
+                                <label for="ipTk" class="col-md-4">Tài khoản</label>
+                                <input type="text" name="user" id="ipTK" class="form-control col-md-8" placeholder="Nhập tài khoản">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-inline">
+                                <label for="ipPass" class="col-sm-4">Mật khẩu</label>
+                                <input type="password" name="pass" id="ipPass" class="form-control col-sm-8" placeholder="Nhập mật khẩu">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-inline">
+                                <div class="col-sm-4"></div>
+                                <input type="password" name="repass" id="ipRePass" class="form-control col-sm-8" placeholder="Nhập lại mật khẩu">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-inline">
+                            <label for="ipSdt" class="col-md-4">SDT</label>
+                            <input type="text" name="sdt" id="ipSdt" class="form-control col-md-8" placeholder="Nhập Số điện thoại" >
+                            </div>
+                        </div>
+                            <div class="form-gruop">
+                                <div class="form-check">
+                                    <label for="" class="form-check-label col-sm-4">Giới tính</label>
+                                    <input type="radio" name="gioi" id="ipGioi" checked="checked" >Nam
+                                    <input type="radio" name=gioi id=ipNu> Nữ
+                                </div>
+                            </div>
+                        <div class="form-group">
+                            <div class="form-inline">
+                                <label for="ipDate" class="col-sm-4">Ngày sinh</label>
+                                <input type="date" name="ngaysinh" id="ipDate" class="form-control col-sm-8">
+                            </div>
+                        </div>
+                        <div id="myErr"></div>
+                        <button type="submit" class="btn btn-success btn-block" id="btnSignUp" value="SignUp">Đăng ký</button>
+                        
+                    </form>
+                </div>
+                <div class="col-md-4 col-sm-3 col-xs-12"></div>
+            </div>
+        </div>
+        <!--#endregion SignUp-->
+    </body>
+    <!--#region Script-->
+    <script>
+        $(document).ready(function(){
+            $('#formLogin').validate({
+                rules: {
+                    firstname:{required:true},
+                    lastname:{required:true},
+                    user:{required:true ,minlength:6},
+                    pass:{required:true,minlength:6},
+                    repass:{required:true,equalTo:"#ipPass"},
+                    sdt:{digits:true}
+                },
+                messages:{
+                   firstname:{
+                       required:"Không được bỏ trống",
+                   },
+                   lastname:{required:"Không được bỏ trống",},
+                   user:{
+                    required:"Không được bỏ trống",
+                    minlength:"Ít nhất 6 ký tự"
+                   },
+                   pass:{
+                       required:"Không được bỏ trống",
+                        minlength:"Ít nhất 6 ký tự"
+                   },
+                   repass:{
+                       required:"Không được bỏ trống",
+                      
+                        equalTo:"Mật khẩu không khớp",
+                   },
+                   sdt:{digits:"Chỉ nhập số nguyên"}
+                },
+                
+            });
+        })
+    </script>
+    <!--#endregion Script-->
+   
+</html>

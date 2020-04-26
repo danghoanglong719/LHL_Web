@@ -4,26 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>layout</title>
+    <title>LHL Furniture</title>
     <link rel="stylesheet" type="text/css" href="../css/Home.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../OwlCarousel2-2.3.4/src/js/owl.carousel.js">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <link rel="stylesheet" href="../OwlCarousel2-2.3.4/src/js/owl.carousel.js">
+    <link rel="stylesheet" href="../OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="../OwlCarousel2-2.3.4/dist/assets/owl.theme.green.min.css">
 </head>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="../js/jquery-3.5.0.min.js"></script>
 <script src="../OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
-<link rel="stylesheet" href="../OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
-<link rel="stylesheet" href="../OwlCarousel2-2.3.4/dist/assets/owl.theme.green.min.css">
+
 
 
 <body>
-    <!--thanh đầu-->
+    <!--#region Thanh đầu-->
     <div class="container-fluid" id="container1">
         <div class="row  clearfix">
             <div class="col-sm-9 floar-left">
@@ -40,24 +40,24 @@
 
         </div>
     </div>
-    <!--kết thúc thanh đầu -->
+    <!--#endregion Thanh đầu-->
 
 
-    <!--phần thanh công cụ-->
+    <!--#region Thanh công cụ-->
     <nav class="navbar navbar-expand-md bg-dark navbar-inverse">
         <!-- Brand -->
-        <a class="navbar-brand" href="#"><img src="../img/93857934_612549849469974_8484715989261352960_n.png" width="50px"></a>
+        <a class="navbar-brand" href="Home.html"><img src="../img/LogoLHL.png" width="50px"></a>
 
         <!-- Toggler/collapsibe Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
           <span class="navbar-toggler-icon bg-success"></span>
         </button>
 
-        <!-- Navbar links -->
+        <!--#region Navbar links -->
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav text-uppercase ">
                 <li class="nav-item">
-                    <a class="nav-link ml-2" href="#">Trang chủ</a>
+                    <a class="nav-link ml-2" href="Home.html">Trang chủ</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link ml-2" href="#">Liên hệ</a>
@@ -117,11 +117,11 @@
                     </div>
                 </div>
             </form>
-            <!--dropdown-menu-->
+            <!--#region Dropdown-menu-->
             <ul class="nav navbar-nav ml-auto ">
                 <li class="nav-item dropdown ">
                     <a class="nav-link dropdown-toggle  text-decoration-none mr-4" href="#" id="navbardrop" data-toggle="dropdown">
-                        <i class="fas fa-user"></i> Sign Up
+                        <i class="fas fa-user"></i> Đăng nhập
                     </a>
 
                     <div class="dropdown-menu dropdown-menu-right log" style="width:300px;">
@@ -141,22 +141,23 @@
                                 </div>
                                 <div class="form-check">
                                     <input type="checkbox" class="form-check-input" id="ckRem">
-                                    <label class="form-check-label" for="dropdownCheck">
-                                Remember me
-                                </label>
+                                    <label class="form-check-label" for="dropdownCheck">Nhớ mật khẩu</label>
                                 </div>
-                                <button type="submit" class="btn btn-success btn-block" id="btnLogin">Sign in</button>
+                                <button type="submit" class="btn btn-success btn-block" id="btnLogin">Đăng nhập</button>
+                                <div class="dropdown-divider"></div>
+                                <a href="#" target="_blank" class="forgot-password">Quên mật khẩu</a>
+                                <span>hoặc</span>
+                                <a href="SignUp.html" target="_blank" class="signup">Đăng ký</a>
                                 
                         </form>
-
                     </div>
-
                 </li>
-
             </ul>
+            <!--#endregion Dropdown-menu-->
         </div>
+        <!--#endregion Navbar links-->
     </nav>
-    <!--kết thúc-->
+    <!--#endregion Thanh công cụ-->
 
     <!--carousel-->
     <div id="demo" class="carousel slide" data-ride="carousel">
