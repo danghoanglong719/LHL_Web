@@ -77,6 +77,7 @@
 
 a {
     padding-left: 10px;
+    text-decoration: none;
 }
 
 @media (max-width: 1100px) {
@@ -222,6 +223,16 @@ a {
     list-style-type: none;
 }
 
+.let li a {
+    text-decoration: none;
+    line-height: 30px;
+    color: #bebebe;
+}
+
+.let li a:hover {
+    color: black;
+}
+
 .jumbotron {
     color: black;
 }
@@ -234,15 +245,14 @@ a {
 .box {
     position: relative;
     overflow: hidden;
-    height: 247px;
+    height: 400px;
 }
 
 .face::after {
     content: 'click vào xem chi tiết';
     color: #bebebe;
-    text-align: center;
-    width: 358px;
-    height: 247px;
+    width: 803px;
+    height: 803px;
     background-color: black;
     position: absolute;
     top: 0;
@@ -261,10 +271,12 @@ a {
 .face i {
     position: absolute;
     transition: all 0.5s;
+    top: 400px;
+    left: 85px;
 }
 
 .box:hover i {
-    transform: translateY(-140px);
+    transform: translateY(-240px);
     color: aliceblue;
 }
 
@@ -272,8 +284,52 @@ a {
     color: green;
 }
 
-@media (max-width: 1200px) {
+@media (max-width:1300px) {
     .face {
-        opacity: 0;
+        overflow: hidden;
     }
+}
+
+.owl-prev {
+    zoom: 3;
+    position: absolute;
+    left: 0px;
+    top: 45px;
+}
+
+.owl-next {
+    zoom: 3;
+    position: absolute;
+    right: 0px;
+    top: 45px;
+}
+
+.mem {
+    font-size: 20px;
+    border: none;
+}
+
+.mem a {
+    color: wheat;
+}
+
+.mem a:hover {
+    background-color: aqua;
+}
+
+@media (max-width: 1300px) {
+    .mem h6 {
+        font-size: 5px;
+    }
+    .mem {
+        font-size: 5px;
+    }
+}
+
+.card-5 {
+    transition: all 0.4s;
+}
+
+.card-5:hover {
+    transform: translateY(-10px)
 }
