@@ -22,8 +22,8 @@
     color: gray;
 }
 
-.nav ul li a:hover {
-    color: white!important;
+#collapsibleNavbar .navbar-nav .nav-item a:first-child:hover{
+    color: white;
 }
 
 /*#region SignIn*/
