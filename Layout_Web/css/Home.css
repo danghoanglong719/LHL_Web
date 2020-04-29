@@ -331,5 +331,28 @@ a {
 }
 
 .card-5:hover {
-    transform: translateY(-10px)
+   transform: translateY(-10px);
+
 }
+.button_scroll2top
+	{
+		display:none;
+		width:70px;
+		height:70px;
+		
+		position:fixed;
+		z-index:999;
+		right:0;
+		top:80%;
+		background:#fb3;
+		border-radius:999px;
+		cursor:pointer;
+		opacity:0.6;
+		color:#fff;
+		
+	}
+ 
+	.button_scroll2top:hover
+	{
+		opacity:1.0;
+	}
