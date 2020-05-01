@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../OwlCarousel2-2.3.4/src/js/owl.carousel.js">
     <link rel="stylesheet" href="../OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="../OwlCarousel2-2.3.4/dist/assets/owl.theme.green.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 </head>
 <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
@@ -23,33 +24,15 @@
 
 
 <body>
-    <!--#region Thanh đầu-->
-    <div class="container-fluid" id="container1">
-        <div class="row  clearfix">
-            <div class="col-sm-9 floar-left">
-                <small>
-                      hotline : 0909090909 || Thành Phố Hồ Chí Minh                                     
-                </small>
-            </div>
-            <div class="col-sm-3 float-right">
-                <a href="#"><i class='fab fa-facebook-square'></i></a>
-                <a href="#"><i class="fas fa-envelope-square"></i></a>
-                <a href="#"><i class="fas fa-envelope-square"></i></a>
-                <a href="#"><i class="fas fa-envelope-square"></i></a>
-            </div>
-
-        </div>
-    </div>
-    <!--#endregion Thanh đầu-->
 
     <!--#region Thanh công cụ-->
-    <nav class="navbar navbar-expand-md bg-dark navbar-inverse">
+    <nav class="navbar navbar-expand-md  navbar-light bg-light">
         <!-- Brand -->
         <a class="navbar-brand" href="Home.html"><img src="../img/LogoLHL.png" width="50px"></a>
 
         <!-- Toggler/collapsibe Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-          <span class="navbar-toggler-icon bg-success"></span>
+          <i class="fa fa-bars" aria-hidden="true"></i>
         </button>
 
         <!--#region Navbar links -->
@@ -69,40 +52,26 @@
                       Sản phẩm
                     </a>
                     <div class="drop-down dropdown-menu ">
+                        <section class="dark-grey-text">
+                            <div class="row pr-lg-5">
+                                <div class="col-md-7 mb-4">
+                                    <div class="view">
+                                        <img src="https://mdbootstrap.com/img/illustrations/graphics(4).png" class="img-fluid" alt="smaple image">
+                                    </div>
+                                </div>
+                                <div class="col-md-5 d-flex align-items-center">
+                                    <div>
+                                        <h3 class="font-weight-bold mb-4">Material Design Blocks</h3>
+                                        <p>Lorem ipsum dolor sit amet consectetur adip elit. Maiores deleniti explicabo voluptatem quisquam nulla asperiores aspernatur aperiam voluptate et consectetur minima delectus, fugiat eum soluta blanditiis adipisci,
+                                            velit dolore magnam.
+                                        </p>
+                                        <button type="button" class="btn btn-orange btn-rounded mx-0">Download</button>
 
-                        <div class="row d-inline-flex">
-                            <div class=" col-md-12  ">
-                                <img id="mega-img" src="../img/banner_mega_1.png " width="800px" height="200px">
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="col-xs-4  col-md-4 col-sm-4 col-4  ">
-                                <div class="dropdown-header text-center ">SẢN PHẨM ĐIỆN</div>
-                                <p><a id="mm" href="# ">Bóng đèn lets</a></p>
-                                <p><a id="mm" href="# ">Đèn ngủ</a></p>
-                                <p><a id="mm" href="# ">Đèn gắn tường</a></p>
-                                <p><a id="mm" href="# ">Đèn bếp</a></p>
-                                <p><a id="mm" href="# ">Bóng đèn treo tường</a></p>
-
-                            </div>
-                            <div class="col-xs-4  col-md-4 col-sm-4 col-4  ">
-                                <div class="dropdown-header text-center ">SẢN PHẨM GỖ</div>
-                                <p><a id="mm" href="# ">Ghế gỗ cao cấp</a></p>
-                                <p><a id="mm" href="# ">Bàn gỗ vuông</a></p>
-                                <p><a id="mm" href="# ">Ghế gỗ gấp</a></p>
-                                <p><a id="mm" href="# ">Ghế xấp</a></p>
-                                <p><a id="mm" href="# ">Bàn gỗ</a></p>
-
-                            </div>
-                            <div class="col-xs-4  col-md-4 col-sm-4 col-4  ">
-                                <div class="dropdown-header text-center">PHÒNG KHÁCH</div>
-                                <p><a id="mm" href="# ">Đèn gắn tường</a></p>
-                                <p><a id="mm" href="# ">Ghế gấp</a></p>
-                                <p><a id="mm" href="# ">Bàn gỗ cao cấp</a></p>
-                                <p><a id="mm" href="# ">Ghế sofa</a></p>
-                                <p><a id="mm" href="# ">Bộ bàn gỗ</a></p>
-                            </div>
-
-                        </div>
+                        </section>
                     </div>
                 </li>
 
@@ -164,13 +133,33 @@
         <ul class="carousel-indicators">
             <li data-target="#demo" data-slide-to="0" class="active"></li>
             <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
         </ul>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="../img/slider_1.webp" alt="Los Angeles">
+                <img src="../img/anh_1.jpg" alt="">
+                <div class="carousel-caption">
+                    <h3 class="animated fadeInDownBig mb-3" style="transition: 1s; ">ghế sa lông trăng mềm mại và dịu êm
+                    </h3>
+                    <p class=" animated fadeInUpBig " style="transition: 1s; ">Giá cả phải chăng</p>
+                </div>
+
             </div>
-            <div class="carousel-item">
-                <img src="../img/slider_2.jpg" alt="Chicago">
+            <div class="carousel-item ">
+                <img src="../img/anh_2.webp " alt=" ">
+                <div class="carousel-caption ">
+                    <h3 class="animated fadeInDown mb-3" style="transition: 1s; ">ghế sa lông trăng mềm mại và dịu êm
+                    </h3>
+                    <p class="animated fadeInUp " style="transition: 1s; ">Giá cả phải chăng</p>
+                </div>
+            </div>
+            <div class="carousel-item ">
+                <img src="../img/ANH--3.jpg " alt=" ">
+                <div class="carousel-caption ">
+                    <h3 class="animated fadeInDown mb-3" style="transition: 1s; ">ghế sa lông trăng mềm mại và dịu êm
+                    </h3>
+                    <p class="animated fadeInUp " style="transition: 1s; ">Giá cả phải chăng</p>
+                </div>
             </div>
         </div>
 
@@ -213,253 +202,241 @@
         </div>
 
     </div>
-
-
-    <div class="container mt-5 ">
-        <div class="row d-inline-flex">
-            <div class=" col-xs-4 col-md-4 p-2 ">
-                <div class="card-5 card h-100 " id ="model1"style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-                    <img class="card-img-top " src="../img/b1.jpg " id="img-child-3">
-                </div>
-            </div>
-            <div class=" col-xs-4 col-md-4 p-2 ">
-                <div class="card-5 card h-100 " id="model2"style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-                    <img class="card-img-top " src="../img/b2.jpg " id="img-child-3">
-                </div>
-            </div>
-            <div class=" col-xs-4 col-md-4 p-2 ">
-                <div class="card-5 card h-100 "id="model3" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-                    <img class="card-img-top " src="../img/b3.jpg " id="img-child-3">
-                </div>
-            </div>
-
-        </div>
-    </div>
     <!--product-->
-    <div class=" img-container container">
-        <div class="container mt-3">
+    <div class=" container ">
+        <div class="container mt-3 ">
             <div class="row d-inline-flex ">
-                <div class=" nav col-sm-12 text-center pt-2  position-relative  justify-content-center">
-                    <h4 style="color: white; text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;">Sản Phẩm Mới
-                        <img src="../img/icon/icon_new_animated.gif"></h4>
+                <div class=" nav col-sm-12 text-center pt-2 position-relative justify-content-center ">
+                    <h4 style="color: white; text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue; ">Danh Mục Sản Phẩm
                 </div>
-                <div class="col-6 col-sm-4 col-md-3 p-2 ">
-                    <div class="card h-100 " style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-                        <img class="card-img-top " src="../img/a.jpg " id="img-child">
-                        <ul class="icon d-flex">
-                            <div><a href="# "><i class="far fa-eye "></i></a></div>
-                            <div><a href="# "><i class="fas fa-shopping-cart "></i></a></div>
-                            <div><a href="# "><i class="fas fa-heart"></i></a></div>
-                        </ul>
-                        <p class="card-text text-center ">Info..</p>
+                <div class=" col-md-2 col-sm-4 col-6 p-2 ">
+                    <div class="card h-100 " style="border:none; ">
+                        <a href="#"><img class="card-img-top " src="../img/1-ban-1587981900.jpg "></a>
+                        <div class="card-body ">
+                            <h5 class="card-title text-center ">Bàn</h5>
+                        </div>
                     </div>
                 </div>
-                <div class="col-6 col-sm-4 col-md-3 p-2 ">
-                    <div class="card h-100 " style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-                        <img class="card-img-top " src="../img/b.jpg " id="img-child">
-                        <ul class="icon d-flex">
-                            <div><a href="# "><i class="far fa-eye "></i></a></div>
-                            <div><a href="# "><i class="fas fa-shopping-cart "></i></a></div>
-                            <div><a href="# "><i class="fas fa-heart"></i></a></div>
-                        </ul>
-                        <p class="card-text text-center ">Info..</p>
+                <div class=" col-md-2 col-sm-4 col-6 p-2 ">
+                    <div class="card h-100 " style="border:none; ">
+                        <a href="#"> <img class="card-img-top " src="../img/2-ghe-1587981944.jpg "></a>
+                        <div class="card-body ">
+                            <h5 class="card-title text-center ">Ghế</h5>
+                        </div>
                     </div>
                 </div>
-                <div class="col-6 col-sm-4 col-md-3 p-2 ">
-                    <div class="card h-100 " style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-                        <img class="card-img-top " src="../img/c.jpg " id="img-child">
-                        <ul class="icon d-flex">
-                            <div><a href="# "><i class="far fa-eye "></i></a></div>
-                            <div><a href="# "><i class="fas fa-shopping-cart "></i></a></div>
-                            <div><a href="# "><i class="fas fa-heart"></i></a></div>
-                        </ul>
-                        <p class="card-text text-center ">Info..</p>
+                <div class=" col-md-2 col-sm-4 col-6 p-2 ">
+                    <div class="card h-100 " style="border:none; ">
+                        <a href="#"><img class="card-img-top " src="../img/3-ke-1587981966.jpg "></a>
+                        <div class="card-body ">
+                            <h5 class="card-title text-center ">Kệ</h5>
+                        </div>
                     </div>
                 </div>
-                <div class="col-6 col-sm-4 col-md-3 p-2 ">
-                    <div class="card h-100 " style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-                        <img class="card-img-top " src="../img/d.jpg" id="img-child">
-                        <ul class="icon d-flex">
-                            <div><a href="# "><i class="far fa-eye "></i></a></div>
-                            <div><a href="# "><i class="fas fa-shopping-cart "></i></a></div>
-                            <div><a href="# "><i class="fas fa-heart"></i></a></div>
-                        </ul>
-                        <p class="card-text text-center ">Info..</p>
+                <div class=" col-md-2 col-sm-4 col-6 p-2 ">
+                    <div class="card h-100 " style="border:none; ">
+                        <a href="#"> <img class="card-img-top " src="../img/4-tu-1587981995.jpg "></a>
+                        <h5 class="card-title text-center ">Tủ</h5>
                     </div>
                 </div>
-                <div class="col-6 col-sm-4 col-md-3 p-2 ">
-                    <div class="card h-100 " style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-                        <img class="card-img-top " src="../img/e.jpg" id="img-child">
-                        <ul class="icon d-flex">
-                            <div><a href="# "><i class="far fa-eye "></i></a></div>
-                            <div><a href="# "><i class="fas fa-shopping-cart "></i></a></div>
-                            <div><a href="# "><i class="fas fa-heart"></i></a></div>
-                        </ul>
-                        <p class="card-text text-center ">Info..</p>
+                <div class=" col-md-2 col-sm-4 col-6 p-2 ">
+                    <div class="card h-100 " style="border:none; ">
+                        <a href="#"> <img class="card-img-top " src="../img//5-sofa-1587982024.jpg "></a>
+                        <div class="card-body ">
+                            <h5 class="card-title text-center ">SoFa</h5>
+                        </div>
                     </div>
                 </div>
-                <div class="col-6 col-sm-4 col-md-3 p-2 ">
-                    <div class="card h-100 " style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-                        <img class="card-img-top " src="../img/f.jpg" id="img-child">
-                        <ul class="icon d-flex">
-                            <div><a href="# "><i class="far fa-eye "></i></a></div>
-                            <div><a href="# "><i class="fas fa-shopping-cart "></i></a></div>
-                            <div><a href="# "><i class="fas fa-heart"></i></a></div>
-                        </ul>
-                        <p class="card-text text-center ">Info..</p>
+                <div class="col-md-2 col-sm-4 col-6 p-2 ">
+                    <div class="card h-100 " style="border:none; ">
+                        <a href="#"> <img class="card-img-top " src="../img/6-giuong-1587982051.jpg "></a>
+                        <div class="card-body ">
+                            <h5 class="card-title text-center ">Giường</h5>
+                        </div>
                     </div>
                 </div>
-                <div class="col-6 col-sm-4 col-md-3 p-2 ">
-                    <div class="card h-100 " style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-                        <img class="card-img-top " src="../img/g.jpg" id="img-child">
-                        <ul class="icon d-flex">
-                            <div><a href="# "><i class="far fa-eye "></i></a></div>
-                            <div><a href="# "><i class="fas fa-shopping-cart "></i></a></div>
-                            <div><a href="# "><i class="fas fa-heart"></i></a></div>
-                        </ul>
-                        <p class="card-text text-center ">Info..</p>
+                <div class=" col-md-2 col-sm-4 col-6 p-2 ">
+                    <div class="card h-100 " style="border:none; ">
+                        <a href="#"> <img class="card-img-top " src="../img/7-kitchen-1587716252.jpg "></a>
+                        <div class="card-body ">
+                            <h5 class="card-title text-center ">Đồ gia dụng</h5>
+                        </div>
                     </div>
                 </div>
-                <div class="col-6 col-sm-4 col-md-3 p-2 ">
-                    <div class="card h-100 " style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-                        <img class="card-img-top " src="../img/h.jpg" id="img-child">
-
-                        <ul class="icon d-flex">
-                            <div><a href="# "><i class="far fa-eye "></i></a></div>
-                            <div><a href="# "><i class="fas fa-shopping-cart "></i></a></div>
-                            <div><a href="# "><i class="fas fa-heart"></i></a></div>
-                        </ul>
-                        <p class="card-text text-center ">Info..</p>
+                <div class="col-md-2 col-sm-4 col-6 p-2 ">
+                    <div class="card h-100 " style="border:none; ">
+                        <a href="#"><img class="card-img-top " src="../img/8-den-1587982122.jpg "></a>
+                        <div class="card-body ">
+                            <h5 class="card-title text-center ">Đèn</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 p-2 ">
+                    <div class="card h-100 " style="border:none; ">
+                        <a href="#"> <img class="card-img-top " src="../img/9-lo-trang-tri-1587982150.jpg "></a>
+                        <div class="card-body ">
+                            <h5 class="card-title text-center ">Lọ trang trí</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-md-2 col-sm-4 col-6 p-2 ">
+                    <div class="card h-100 " style="border:none; ">
+                        <a href="#"> <img class="card-img-top " src="../img/10-guong-1587982173.jpg "></a>
+                        <div class="card-body ">
+                            <h5 class="card-title text-center ">Giường</h5>
+                        </div>
                     </div>
 
                 </div>
+                <div class=" col-md-2 col-sm-4 col-6 p-2 ">
+                    <div class="card h-100 " style="border:none; ">
+                        <a href="#"> <img class="card-img-top " src="../img/11-thungrac-1587982194.jpg "></a>
+                        <div class="card-body ">
+                            <h5 class="card-title text-center ">Thùng rác</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-md-2 col-sm-4 col-6 p-2 ">
+                    <div class="card h-100 " style="border:none; ">
+                        <a href="#"><img class="card-img-top " src="../img/12-bosanpham-1587982214.jpg "></a>
+                        <div class="card-body ">
+                            <h5 class="card-title text-center ">Bộ sản Phẩm
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
         </div>
     </div>
     <!--ketthuc-->
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-7 ">
-                <img src="../img/aaa.jpg" class=" img-fluid">
-            </div>
-            <div class="col-md-5 ">
-                <div style="margin-bottom: 30px;"> <img src="../img/bbb.png" class=" img-fluid"></div>
-                <div> <img src="../img/ccc.jpg" class=" img-fluid"></div>
-            </div>
-        </div>
-    </div>
+
 
     <!--product-owl-->
-    <div class="container-fluid mt-5 " style="width: inherit;background-color: #F6F6F6; " id="shadow ">
-        <div class="owl-carousel owl-theme ">
-            <div class="item ">
-                <div class="box ">
-                    <div class="d-flex " id="img-child-2">
-                        <img src="../img/a.jpg " class="img-fluid ">
-                    </div>
-                    <div class="face">
-                        <h6 style="color: rgb(219, 205, 183);">name product</h6>
-                        <a href="# "><i class="far fa-eye " style="font-size: 40px; "></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item ">
-                <div class="box ">
-                    <div class="d-flex " id="img-child-2">
-                        <img src="../img/b.jpg  " class="img-fluid ">
-                    </div>
-                    <div class="face ">
-                        <h6 style="color: rgb(219, 205, 183);">name product</h6>
-                        <a href="# "><i class="far fa-eye " style="font-size: 40px; "></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item ">
-                <div class="box ">
-                    <div class="d-flex " id="img-child-2">
-                        <img src="../img/c.jpg " class="img-fluid ">
-                    </div>
-                    <div class="face ">
-                        <h6 style="color: rgb(219, 205, 183);">name product</h6>
-                        <a href="# "><i class="far fa-eye " style="font-size: 40px;"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item ">
-                <div class="box ">
-                    <div class="d-flex " id="img-child-2">
-                        <img src="../img/h.jpg " class="img-fluid ">
-                    </div>
-                    <div class="face ">
-                        <h6 style="color: rgb(219, 205, 183);">name product</h6>
-                        <a href="# "><i class="far fa-eye " style="font-size: 40px;"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item ">
-                <div class="box ">
-                    <div class="d-flex " id="img-child-2">
-                        <img src="../img/d.jpg " class="img-fluid ">
-                    </div>
-                    <div class="face ">
-                        <h6 style="color: rgb(219, 205, 183);">name product</h6>
-                        <a href="# "><i class="far fa-eye " style="font-size: 40px;"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item ">
-                <div class="box ">
-                    <div class="d-flex " id="img-child-2">
-                        <img src="../img/e.jpg " class="img-fluid ">
-                    </div>
-                    <div class="face ">
-                        <h6 style="color: rgb(219, 205, 183);">name product</h6>
-                        <a href="# "><i class="far fa-eye " style="font-size: 40px;"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item ">
-                <div class="box ">
-                    <div class="d-flex " id="img-child-2">
-                        <img src="../img/f.jpg " class="img-fluid ">
-                    </div>
-                    <div class="face ">
-                        <h6 style="color: rgb(219, 205, 183);">name product</h6>
-                        <a href="# "><i class="far fa-eye " style="font-size: 40px; "></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item ">
-                <div class="box ">
-                    <div class="d-flex " id="img-child-2">
-                        <img src="../img/g.jpg " class="img-fluid ">
-                    </div>
-                    <div class="face ">
-                        <h6 style="color: rgb(219, 205, 183);">name product</h6>
-                        <a href="# "><i class="far fa-eye " style="font-size: 40px; "></i></a>
-                    </div>
-                </div>
-            </div>
+    <div class="container mt-5 " style="width: inherit;background-color: #F6F6F6; " id="shadow ">
+
+        <div class=" nav col-sm-12 text-center p-4 justify-content-center mt-3 ">
+            <h4 style="color: white; text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue; ">Mẫu nội thất
+                <button type="button" id="myBtn" class="btn ">Prev</button>
+                <button type="button" id="myBtn2" class="btn">Next</button>
         </div>
+
+        <div class="owl-carousel owl-theme " id="owl-1">
+
+            <div class="item ">
+                <div class="box ">
+                    <div class="d-flex " id="img-child-2 ">
+                        <img src="../img/11.jpg " class="img-fluid ">
+                    </div>
+                    <div class="face ">
+                        <h6 style="color: rgb(219, 205, 183); ">name product</h6>
+                        <a href="# "><i class="far fa-eye " style="font-size: 40px; "></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="item ">
+                <div class="box ">
+                    <div class="d-flex " id="img-child-2 ">
+                        <img src="../img/22.jpg " class="img-fluid ">
+                    </div>
+                    <div class="face ">
+                        <h6 style="color: rgb(219, 205, 183); ">name product</h6>
+                        <a href="# "><i class="far fa-eye " style="font-size: 40px; "></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="item ">
+                <div class="box ">
+                    <div class="d-flex " id="img-child-2 ">
+                        <img src="../img/33.jpg " class="img-fluid ">
+                    </div>
+                    <div class="face ">
+                        <h6 style="color: rgb(219, 205, 183); ">name product</h6>
+                        <a href="# "><i class="far fa-eye " style="font-size: 40px; "></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="item ">
+                <div class="box ">
+                    <div class="d-flex " id="img-child-2 ">
+                        <img src="../img/44.jpg " class="img-fluid ">
+                    </div>
+                    <div class="face ">
+                        <h6 style="color: rgb(219, 205, 183); ">name product</h6>
+                        <a href="# "><i class="far fa-eye " style="font-size: 40px; "></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="item ">
+                <div class="box ">
+                    <div class="d-flex " id="img-child-2 ">
+                        <img src="../img/55.jpg " class="img-fluid ">
+                    </div>
+                    <div class="face ">
+                        <h6 style="color: rgb(219, 205, 183); ">name product</h6>
+                        <a href="# "><i class="far fa-eye " style="font-size: 40px; "></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="item ">
+                <div class="box ">
+                    <div class="d-flex " id="img-child-2 ">
+                        <img src="../img/66.jpg " class="img-fluid ">
+                    </div>
+                    <div class="face ">
+                        <h6 style="color: rgb(219, 205, 183); ">name product</h6>
+                        <a href="# "><i class="far fa-eye " style="font-size: 40px; "></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="item ">
+                <div class="box ">
+                    <div class="d-flex " id="img-child-2 ">
+                        <img src="../img/77.jpg " class="img-fluid ">
+                    </div>
+                    <div class="face ">
+                        <h6 style="color: rgb(219, 205, 183); ">name product</h6>
+                        <a href="# "><i class="far fa-eye " style="font-size: 40px; "></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="item ">
+                <div class="box ">
+                    <div class="d-flex " id="img-child-2 ">
+                        <img src="../img/88.jpg " class="img-fluid ">
+                    </div>
+                    <div class="face ">
+                        <h6 style="color: rgb(219, 205, 183); ">name product</h6>
+                        <a href="# "><i class="far fa-eye " style="font-size: 40px; "></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <script>
+            $(document).ready(function() {
+                $("#myBtn").click(function() {
+                    $("#owl-1").owlCarousel("prev");
+                });
+                $("#myBtn2").click(function() {
+                    $("#owl-1").owlCarousel("next");
+                });
+            });
+        </script>
         <script>
             $(function() {
                 $('.owl-carousel').owlCarousel({
-                    loop: true,
+
                     margin: 20,
-                    responsiveClass: true,
                     responsive: {
                         0: {
                             items: 1,
-                            nav: true
                         },
                         600: {
-                            items: 4,
-                            nav: false
+                            items: 2,
                         },
                         1000: {
-                            items: 5,
-                            nav: true,
-                            loop: false
+                            items: 3,
                         }
                     }
                 })
@@ -468,94 +445,344 @@
     </div>
 
     <!--ketthuc-product-owl-->
-    <!--card-->
-    <div class=" container ">
-        <div class="row mt-5 ">
-            <div class="col-12  text-center mb-5 p-2" style="border:1px solid wheat;">
-                <h4 style="color: white; text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;">Mẫu Theo Bộ</h4>
+    <div class="container mt-5">
+        <div class="clearfix" style="width:100%;border-top: 1px solid red;border-radius: 0  5px;">
+            <div class=" float-left p-1" style="border: 2px solid red; border-radius: 0 10px;">
+                <h5>Sản Phẩm Bán Chạy</h5>
             </div>
-            <div class="owl-carousel owl-theme ">
-                <div class="item ">
-                    <div class="  card ">
-                        <img class="card-img-top " src="../img/aa.png" alt="Card image cap ">
-                        <div class="card-body ">
-                            <h5 class="card-title ">Phòng Khách</h5>
-                            <p class="card-text ">Thiết kế với đủ bộ , phù hợp với cảnh quang phòng , sẽ đáp ứng đầy đủ tiện nghi và sự thoải mái</p>
-                            <a href="# " class="btn btn-primary " id="sss ">Tìm Hiểu</a>
+            <div class="mt-5">
+                <div class="row">
+                    <div class="owl-carousel owl-theme ">
+                        <div class="item ">
+                            <div class="col-xs-6 ">
+                                <div class="card h-100 ">
+                                    <a href="# "> <img class="card-img-top img-fluid " src="../img/arboard24-1580985424.jpg "></a>
+                                    <div class="card-body ">
+                                        <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
+                                            ***************
+                                        </div>
+                                        <h5>Kệ Vuông Beyours 2 Tầng</h5>
+                                        <div class="face-2 ">
+                                            <a href="# "><i class="far fa-eye " style="font-size: 30px; "></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item ">
+                            <div class="col-xs-6 ">
+                                <div class="card h-100 ">
+                                    <a href="# "> <img class="card-img-top img-fluid " src="../img/arboard24-1580985424.jpg "></a>
+                                    <div class="card-body ">
+                                        <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
+                                            ***************
+                                        </div>
+                                        <h5>Kệ Vuông Beyours 2 Tầng</h5>
+                                        <div class="face-2 ">
+                                            <a href="# "><i class="far fa-eye " style="font-size: 30px; "></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item ">
+                            <div class="col-xs-6 ">
+                                <div class="card h-100 ">
+                                    <a href="# "> <img class="card-img-top img-fluid " src="../img/arboard24-1580985424.jpg "></a>
+                                    <div class="card-body ">
+                                        <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
+                                            ***************
+                                        </div>
+                                        <h5>Kệ Vuông Beyours 2 Tầng</h5>
+                                        <div class="face-2 ">
+                                            <a href="# "><i class="far fa-eye " style="font-size: 30px; "></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item ">
+                            <div class="col-xs-6 ">
+                                <div class="card h-100 ">
+                                    <a href="# "> <img class="card-img-top img-fluid " src="../img/arboard24-1580985424.jpg "></a>
+                                    <div class="card-body ">
+                                        <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
+                                            ***************
+                                        </div>
+                                        <h5>Kệ Vuông Beyours 2 Tầng</h5>
+                                        <div class="face-2 ">
+                                            <a href="# "><i class="far fa-eye " style="font-size: 30px; "></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item ">
+                            <div class="col-xs-6 ">
+                                <div class="card h-100 ">
+                                    <a href="# "> <img class="card-img-top img-fluid " src="../img/arboard24-1580985424.jpg "></a>
+                                    <div class="card-body ">
+                                        <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
+                                            ***************
+                                        </div>
+                                        <h5>Kệ Vuông Beyours 2 Tầng</h5>
+                                        <div class="face-2 ">
+                                            <a href="# "><i class="far fa-eye " style="font-size: 30px; "></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item ">
+                            <div class="col-xs-6 ">
+                                <div class="card h-100 ">
+                                    <a href="# "> <img class="card-img-top img-fluid " src="../img/arboard24-1580985424.jpg "></a>
+                                    <div class="card-body ">
+                                        <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
+                                            ***************
+                                        </div>
+                                        <h5>Kệ Vuông Beyours 2 Tầng</h5>
+                                        <div class="face-2 ">
+                                            <a href="# "><i class="far fa-eye " style="font-size: 30px; "></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="item ">
-                    <div class="card ">
-                        <img class="card-img-top " src="../img/bb.png" alt="Card image cap ">
-                        <div class="card-body ">
-                            <h5 class="card-title ">Phòng ăn</h5>
-                            <p class="card-text ">Thiết kế với đủ bộ , phù hợp với cảnh quang phòng , sẽ đáp ứng đầy đủ tiện nghi và sự thoải mái</p>
-                            <a href="# " class="btn btn-primary " id="sss ">Tìm hiểu</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item ">
-                    <div class="card ">
-                        <img class="card-img-top " src="../img/cc.png " alt="Card image cap ">
-                        <div class="card-body ">
-                            <h5 class="card-title ">phòng ngủ</h5>
-                            <p class="card-text ">Thiết kế với đủ bộ , phù hợp với cảnh quang phòng , sẽ đáp ứng đầy đủ tiện nghi và sự thoải mái</p>
-                            <a href="# " class="btn btn-primary " id="sss ">Tìm Hiểu</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item ">
-                    <div class=" card ">
-                        <img class="card-img-top " src="../img/dd.png " alt="Card image cap ">
-                        <div class="card-body ">
-                            <h5 class="card-title ">phòng ngủ</h5>
-                            <p class="card-text ">Thiết kế với đủ bộ , phù hợp với cảnh quang phòng , sẽ đáp ứng đầy đủ tiện nghi và sự thoải mái</p>
-                            <a href="# " class="btn btn-primary " id="sss ">Tìm Hiểu</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item ">
-                    <div class=" card ">
 
-                        <img class="card-img-top " src="../img/ee.jpg " alt="Card image cap ">
-                        <div class="card-body ">
-                            <h5 class="card-title ">phòng ngủ</h5>
-                            <p class="card-text ">Thiết kế với đủ bộ , phù hợp với cảnh quang phòng , sẽ đáp ứng đầy đủ tiện nghi và sự thoải mái</p>
-                            <a href="# " class="btn btn-primary " id="sss ">Tìm Hiểu</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item ">
-                    <div class=" card ">
-
-                        <img class="card-img-top " src="../img/ff.jpg " alt="Card image cap ">
-                        <div class="card-body ">
-
-                            <h5 class="card-title ">phòng ngủ</h5>
-                            <p class="card-text ">Thiết kế với đủ bộ , phù hợp với cảnh quang phòng , sẽ đáp ứng đầy đủ tiện nghi và sự thoải mái</p>
-                            <a href="# " class="btn btn-primary " id="sss ">Tìm Hiểu</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item ">
-                    <div class=" card ">
-
-                        <img class="card-img-top " src="../img/gg.png " alt="Card image cap ">
-                        <div class="card-body ">
-                            <h5 class="card-title ">phòng ngủ</h5>
-                            <p class="card-text ">Thiết kế với đủ bộ , phù hợp với cảnh quang phòng , sẽ đáp ứng đầy đủ tiện nghi và sự thoải mái</p>
-                            <a href="# " class="btn btn-primary " id="sss ">Tìm Hiểu</a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <!--second-2-->
+    <div class="container mt-5">
+        <div class="clearfix" style="width:100%;border-top: 1px solid red;border-radius: 0  5px;">
+            <div class=" float-left p-1" style="border: 2px solid red; border-radius: 0 10px;">
+                <h5>Sản Phẩm Bán Chạy</h5>
+            </div>
+            <div class="mt-5">
+                <div class="row">
+                    <div class="owl-carousel owl-theme ">
+                        <div class="item ">
+                            <div class="col-xs-6 ">
+                                <div class="card h-100 ">
+                                    <a href="# "> <img class="card-img-top img-fluid " src="../img/arboard24-1580985424.jpg "></a>
+                                    <div class="card-body ">
+                                        <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
+                                            ***************
+                                        </div>
+                                        <h5>Kệ Vuông Beyours 2 Tầng</h5>
+                                        <div class="face-2 ">
+                                            <a href="# "><i class="far fa-eye " style="font-size: 30px; "></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item ">
+                            <div class="col-xs-6 ">
+                                <div class="card h-100 ">
+                                    <a href="# "> <img class="card-img-top img-fluid " src="../img/arboard24-1580985424.jpg "></a>
+                                    <div class="card-body ">
+                                        <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
+                                            ***************
+                                        </div>
+                                        <h5>Kệ Vuông Beyours 2 Tầng</h5>
+                                        <div class="face-2 ">
+                                            <a href="# "><i class="far fa-eye " style="font-size: 30px; "></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item ">
+                            <div class="col-xs-6 ">
+                                <div class="card h-100 ">
+                                    <a href="# "> <img class="card-img-top img-fluid " src="../img/arboard24-1580985424.jpg "></a>
+                                    <div class="card-body ">
+                                        <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
+                                            ***************
+                                        </div>
+                                        <h5>Kệ Vuông Beyours 2 Tầng</h5>
+                                        <div class="face-2 ">
+                                            <a href="# "><i class="far fa-eye " style="font-size: 30px; "></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item ">
+                            <div class="col-xs-6 ">
+                                <div class="card h-100 ">
+                                    <a href="# "> <img class="card-img-top img-fluid " src="../img/arboard24-1580985424.jpg "></a>
+                                    <div class="card-body ">
+                                        <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
+                                            ***************
+                                        </div>
+                                        <h5>Kệ Vuông Beyours 2 Tầng</h5>
+                                        <div class="face-2 ">
+                                            <a href="# "><i class="far fa-eye " style="font-size: 30px; "></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item ">
+                            <div class="col-xs-6 ">
+                                <div class="card h-100 ">
+                                    <a href="# "> <img class="card-img-top img-fluid " src="../img/arboard24-1580985424.jpg "></a>
+                                    <div class="card-body ">
+                                        <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
+                                            ***************
+                                        </div>
+                                        <h5>Kệ Vuông Beyours 2 Tầng</h5>
+                                        <div class="face-2 ">
+                                            <a href="# "><i class="far fa-eye " style="font-size: 30px; "></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item ">
+                            <div class="col-xs-6 ">
+                                <div class="card h-100 ">
+                                    <a href="# "> <img class="card-img-top img-fluid " src="../img/arboard24-1580985424.jpg "></a>
+                                    <div class="card-body ">
+                                        <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
+                                            ***************
+                                        </div>
+                                        <h5>Kệ Vuông Beyours 2 Tầng</h5>
+                                        <div class="face-2 ">
+                                            <a href="# "><i class="far fa-eye " style="font-size: 30px; "></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--second 3-->
+    <div class="container mt-5">
+        <div class="clearfix" style="width:100%;border-top: 1px solid red;border-radius: 0  5px;">
+            <div class=" float-left p-1" style="border: 2px solid red; border-radius: 0 10px;">
+                <h5>Sản Phẩm Bán Chạy</h5>
+            </div>
+            <div class="mt-5">
+                <div class="row">
+                    <div class="owl-carousel owl-theme ">
+                        <div class="item ">
+                            <div class="col-xs-6 ">
+                                <div class="card h-100 ">
+                                    <a href="# "> <img class="card-img-top img-fluid " src="../img/arboard24-1580985424.jpg "></a>
+                                    <div class="card-body ">
+                                        <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
+                                            ***************
+                                        </div>
+                                        <h5>Kệ Vuông Beyours 2 Tầng</h5>
+                                        <div class="face-2 ">
+                                            <a href="# "><i class="far fa-eye " style="font-size: 30px; "></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item ">
+                            <div class="col-xs-6 ">
+                                <div class="card h-100 ">
+                                    <a href="# "> <img class="card-img-top img-fluid " src="../img/arboard24-1580985424.jpg "></a>
+                                    <div class="card-body ">
+                                        <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
+                                            ***************
+                                        </div>
+                                        <h5>Kệ Vuông Beyours 2 Tầng</h5>
+                                        <div class="face-2 ">
+                                            <a href="# "><i class="far fa-eye " style="font-size: 30px; "></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item ">
+                            <div class="col-xs-6 ">
+                                <div class="card h-100 ">
+                                    <a href="# "> <img class="card-img-top img-fluid " src="../img/arboard24-1580985424.jpg "></a>
+                                    <div class="card-body ">
+                                        <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
+                                            ***************
+                                        </div>
+                                        <h5>Kệ Vuông Beyours 2 Tầng</h5>
+                                        <div class="face-2 ">
+                                            <a href="# "><i class="far fa-eye " style="font-size: 30px; "></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item ">
+                            <div class="col-xs-6 ">
+                                <div class="card h-100 ">
+                                    <a href="# "> <img class="card-img-top img-fluid " src="../img/arboard24-1580985424.jpg "></a>
+                                    <div class="card-body ">
+                                        <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
+                                            ***************
+                                        </div>
+                                        <h5>Kệ Vuông Beyours 2 Tầng</h5>
+                                        <div class="face-2 ">
+                                            <a href="# "><i class="far fa-eye " style="font-size: 30px; "></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item ">
+                            <div class="col-xs-6 ">
+                                <div class="card h-100 ">
+                                    <a href="# "> <img class="card-img-top img-fluid " src="../img/arboard24-1580985424.jpg "></a>
+                                    <div class="card-body ">
+                                        <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
+                                            ***************
+                                        </div>
+                                        <h5>Kệ Vuông Beyours 2 Tầng</h5>
+                                        <div class="face-2 ">
+                                            <a href="# "><i class="far fa-eye " style="font-size: 30px; "></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item ">
+                            <div class="col-xs-6 ">
+                                <div class="card h-100 ">
+                                    <a href="# "> <img class="card-img-top img-fluid " src="../img/arboard24-1580985424.jpg "></a>
+                                    <div class="card-body ">
+                                        <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
+                                            ***************
+                                        </div>
+                                        <h5>Kệ Vuông Beyours 2 Tầng</h5>
+                                        <div class="face-2 ">
+                                            <a href="# "><i class="far fa-eye " style="font-size: 30px; "></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--card-->
+
     <div class="container-fluid mt-5 " style="border:1px solid black;background-color:white; border: none;padding: 10px;box-shadow: 5px 10px 8px 10px #888888; ">
         <div class="jumbotron mb-0 mt-5 ">
             <div class="row ">
-                <div class="col-sm-4 col-xs-12  ">
+                <div class="col-sm-4 col-xs-12 ">
                     <h7> THÔNG TIN</h7>
                     <ul class="let ">
                         <li>
@@ -568,7 +795,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-sm-2 col-xs-12  ">
+                <div class="col-sm-2 col-xs-12 ">
                     <h7>CHÍNH SÁCH</h7>
                     <ul class="let ">
                         <li><a href="# ">Vận chuyển</a></li>
@@ -578,14 +805,14 @@
                         <li> <a href="# ">Khuyến mãi</a>
                         </li>
                 </div>
-                <div class="col-sm-3 col-xs-12  ">
+                <div class="col-sm-3 col-xs-12 ">
                     <a href="# "><i class="fab fa-twitter "></i></a>
                     <a href="# "><i class="fab fa-youtube "></i></a>
                     <a href="# "><i class="fab fa-facebook-f "></i></a>
                     <a href="# "><i class="fab fa-instagram "></i></a>
 
                 </div>
-                <div class="col-sm-3 col-xs-12  ">
+                <div class="col-sm-3 col-xs-12 ">
                     <h7>CHÍNH SÁCH</h7>
 
 
@@ -598,11 +825,11 @@
     <footer style="text-align: center;background-color: black ">
         <h7 style="color: white; ">Copyrights © 2018 by Suplo. Powered by Haravan</h7>
     </footer>
-    <div  class="button_scroll2top" onclick="page_scroll2top()"><img src="../img/icon/Uppage.png" ></div>
+    <div class="button_scroll2top " onclick="page_scroll2top() "><img src="../img/icon/Uppage.png "></div>
 
     <!--owl product-->
     <script src="../js/login.js "></script>
-    <script src="../js/Home.js"></script>
+    <script src="../js/Home.js "></script>
 </body>
 
 </html>

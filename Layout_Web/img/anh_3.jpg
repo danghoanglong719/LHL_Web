@@ -1,0 +1,2009 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)http://www.noithatvincen.com/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">.swal-icon--error{border-color:#f27474;-webkit-animation:animateErrorIcon .5s;animation:animateErrorIcon .5s}.swal-icon--error__x-mark{position:relative;display:block;-webkit-animation:animateXMark .5s;animation:animateXMark .5s}.swal-icon--error__line{position:absolute;height:5px;width:47px;background-color:#f27474;display:block;top:37px;border-radius:2px}.swal-icon--error__line--left{-webkit-transform:rotate(45deg);transform:rotate(45deg);left:17px}.swal-icon--error__line--right{-webkit-transform:rotate(-45deg);transform:rotate(-45deg);right:16px}@-webkit-keyframes animateErrorIcon{0%{-webkit-transform:rotateX(100deg);transform:rotateX(100deg);opacity:0}to{-webkit-transform:rotateX(0deg);transform:rotateX(0deg);opacity:1}}@keyframes animateErrorIcon{0%{-webkit-transform:rotateX(100deg);transform:rotateX(100deg);opacity:0}to{-webkit-transform:rotateX(0deg);transform:rotateX(0deg);opacity:1}}@-webkit-keyframes animateXMark{0%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}50%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}80%{-webkit-transform:scale(1.15);transform:scale(1.15);margin-top:-6px}to{-webkit-transform:scale(1);transform:scale(1);margin-top:0;opacity:1}}@keyframes animateXMark{0%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}50%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}80%{-webkit-transform:scale(1.15);transform:scale(1.15);margin-top:-6px}to{-webkit-transform:scale(1);transform:scale(1);margin-top:0;opacity:1}}.swal-icon--warning{border-color:#f8bb86;-webkit-animation:pulseWarning .75s infinite alternate;animation:pulseWarning .75s infinite alternate}.swal-icon--warning__body{width:5px;height:47px;top:10px;border-radius:2px;margin-left:-2px}.swal-icon--warning__body,.swal-icon--warning__dot{position:absolute;left:50%;background-color:#f8bb86}.swal-icon--warning__dot{width:7px;height:7px;border-radius:50%;margin-left:-4px;bottom:-11px}@-webkit-keyframes pulseWarning{0%{border-color:#f8d486}to{border-color:#f8bb86}}@keyframes pulseWarning{0%{border-color:#f8d486}to{border-color:#f8bb86}}.swal-icon--success{border-color:#a5dc86}.swal-icon--success:after,.swal-icon--success:before{content:"";border-radius:50%;position:absolute;width:60px;height:120px;background:#fff;-webkit-transform:rotate(45deg);transform:rotate(45deg)}.swal-icon--success:before{border-radius:120px 0 0 120px;top:-7px;left:-33px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-transform-origin:60px 60px;transform-origin:60px 60px}.swal-icon--success:after{border-radius:0 120px 120px 0;top:-11px;left:30px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-transform-origin:0 60px;transform-origin:0 60px;-webkit-animation:rotatePlaceholder 4.25s ease-in;animation:rotatePlaceholder 4.25s ease-in}.swal-icon--success__ring{width:80px;height:80px;border:4px solid hsla(98,55%,69%,.2);border-radius:50%;box-sizing:content-box;position:absolute;left:-4px;top:-4px;z-index:2}.swal-icon--success__hide-corners{width:5px;height:90px;background-color:#fff;position:absolute;left:28px;top:8px;z-index:1;-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}.swal-icon--success__line{height:5px;background-color:#a5dc86;display:block;border-radius:2px;position:absolute;z-index:2}.swal-icon--success__line--tip{width:25px;left:14px;top:46px;-webkit-transform:rotate(45deg);transform:rotate(45deg);-webkit-animation:animateSuccessTip .75s;animation:animateSuccessTip .75s}.swal-icon--success__line--long{width:47px;right:8px;top:38px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-animation:animateSuccessLong .75s;animation:animateSuccessLong .75s}@-webkit-keyframes rotatePlaceholder{0%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}5%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}12%{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}to{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}}@keyframes rotatePlaceholder{0%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}5%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}12%{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}to{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}}@-webkit-keyframes animateSuccessTip{0%{width:0;left:1px;top:19px}54%{width:0;left:1px;top:19px}70%{width:50px;left:-8px;top:37px}84%{width:17px;left:21px;top:48px}to{width:25px;left:14px;top:45px}}@keyframes animateSuccessTip{0%{width:0;left:1px;top:19px}54%{width:0;left:1px;top:19px}70%{width:50px;left:-8px;top:37px}84%{width:17px;left:21px;top:48px}to{width:25px;left:14px;top:45px}}@-webkit-keyframes animateSuccessLong{0%{width:0;right:46px;top:54px}65%{width:0;right:46px;top:54px}84%{width:55px;right:0;top:35px}to{width:47px;right:8px;top:38px}}@keyframes animateSuccessLong{0%{width:0;right:46px;top:54px}65%{width:0;right:46px;top:54px}84%{width:55px;right:0;top:35px}to{width:47px;right:8px;top:38px}}.swal-icon--info{border-color:#c9dae1}.swal-icon--info:before{width:5px;height:29px;bottom:17px;border-radius:2px;margin-left:-2px}.swal-icon--info:after,.swal-icon--info:before{content:"";position:absolute;left:50%;background-color:#c9dae1}.swal-icon--info:after{width:7px;height:7px;border-radius:50%;margin-left:-3px;top:19px}.swal-icon{width:80px;height:80px;border-width:4px;border-style:solid;border-radius:50%;padding:0;position:relative;box-sizing:content-box;margin:20px auto}.swal-icon:first-child{margin-top:32px}.swal-icon--custom{width:auto;height:auto;max-width:100%;border:none;border-radius:0}.swal-icon img{max-width:100%;max-height:100%}.swal-title{color:rgba(0,0,0,.65);font-weight:600;text-transform:none;position:relative;display:block;padding:13px 16px;font-size:27px;line-height:normal;text-align:center;margin-bottom:0}.swal-title:first-child{margin-top:26px}.swal-title:not(:first-child){padding-bottom:0}.swal-title:not(:last-child){margin-bottom:13px}.swal-text{font-size:16px;position:relative;float:none;line-height:normal;vertical-align:top;text-align:left;display:inline-block;margin:0;padding:0 10px;font-weight:400;color:rgba(0,0,0,.64);max-width:calc(100% - 20px);overflow-wrap:break-word;box-sizing:border-box}.swal-text:first-child{margin-top:45px}.swal-text:last-child{margin-bottom:45px}.swal-footer{text-align:right;padding-top:13px;margin-top:13px;padding:13px 16px;border-radius:inherit;border-top-left-radius:0;border-top-right-radius:0}.swal-button-container{margin:5px;display:inline-block;position:relative}.swal-button{background-color:#7cd1f9;color:#fff;border:none;box-shadow:none;border-radius:5px;font-weight:600;font-size:14px;padding:10px 24px;margin:0;cursor:pointer}.swal-button[not:disabled]:hover{background-color:#78cbf2}.swal-button:active{background-color:#70bce0}.swal-button:focus{outline:none;box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(43,114,165,.29)}.swal-button[disabled]{opacity:.5;cursor:default}.swal-button::-moz-focus-inner{border:0}.swal-button--cancel{color:#555;background-color:#efefef}.swal-button--cancel[not:disabled]:hover{background-color:#e8e8e8}.swal-button--cancel:active{background-color:#d7d7d7}.swal-button--cancel:focus{box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(116,136,150,.29)}.swal-button--danger{background-color:#e64942}.swal-button--danger[not:disabled]:hover{background-color:#df4740}.swal-button--danger:active{background-color:#cf423b}.swal-button--danger:focus{box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(165,43,43,.29)}.swal-content{padding:0 20px;margin-top:20px;font-size:medium}.swal-content:last-child{margin-bottom:20px}.swal-content__input,.swal-content__textarea{-webkit-appearance:none;background-color:#fff;border:none;font-size:14px;display:block;box-sizing:border-box;width:100%;border:1px solid rgba(0,0,0,.14);padding:10px 13px;border-radius:2px;transition:border-color .2s}.swal-content__input:focus,.swal-content__textarea:focus{outline:none;border-color:#6db8ff}.swal-content__textarea{resize:vertical}.swal-button--loading{color:transparent}.swal-button--loading~.swal-button__loader{opacity:1}.swal-button__loader{position:absolute;height:auto;width:43px;z-index:2;left:50%;top:50%;-webkit-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%);text-align:center;pointer-events:none;opacity:0}.swal-button__loader div{display:inline-block;float:none;vertical-align:baseline;width:9px;height:9px;padding:0;border:none;margin:2px;opacity:.4;border-radius:7px;background-color:hsla(0,0%,100%,.9);transition:background .2s;-webkit-animation:swal-loading-anim 1s infinite;animation:swal-loading-anim 1s infinite}.swal-button__loader div:nth-child(3n+2){-webkit-animation-delay:.15s;animation-delay:.15s}.swal-button__loader div:nth-child(3n+3){-webkit-animation-delay:.3s;animation-delay:.3s}@-webkit-keyframes swal-loading-anim{0%{opacity:.4}20%{opacity:.4}50%{opacity:1}to{opacity:.4}}@keyframes swal-loading-anim{0%{opacity:.4}20%{opacity:.4}50%{opacity:1}to{opacity:.4}}.swal-overlay{position:fixed;top:0;bottom:0;left:0;right:0;text-align:center;font-size:0;overflow-y:scroll;background-color:rgba(0,0,0,.4);z-index:10000;pointer-events:none;opacity:0;transition:opacity .3s}.swal-overlay:before{content:" ";display:inline-block;vertical-align:middle;height:100%}.swal-overlay--show-modal{opacity:1;pointer-events:auto}.swal-overlay--show-modal .swal-modal{opacity:1;pointer-events:auto;box-sizing:border-box;-webkit-animation:showSweetAlert .3s;animation:showSweetAlert .3s;will-change:transform}.swal-modal{width:478px;opacity:0;pointer-events:none;background-color:#fff;text-align:center;border-radius:5px;position:static;margin:20px auto;display:inline-block;vertical-align:middle;-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;z-index:10001;transition:opacity .2s,-webkit-transform .3s;transition:transform .3s,opacity .2s;transition:transform .3s,opacity .2s,-webkit-transform .3s}@media (max-width:500px){.swal-modal{width:calc(100% - 20px)}}@-webkit-keyframes showSweetAlert{0%{-webkit-transform:scale(1);transform:scale(1)}1%{-webkit-transform:scale(.5);transform:scale(.5)}45%{-webkit-transform:scale(1.05);transform:scale(1.05)}80%{-webkit-transform:scale(.95);transform:scale(.95)}to{-webkit-transform:scale(1);transform:scale(1)}}@keyframes showSweetAlert{0%{-webkit-transform:scale(1);transform:scale(1)}1%{-webkit-transform:scale(.5);transform:scale(.5)}45%{-webkit-transform:scale(1.05);transform:scale(1.05)}80%{-webkit-transform:scale(.95);transform:scale(.95)}to{-webkit-transform:scale(1);transform:scale(1)}}</style>
+    <title>Thiết kế nội thất VINCEN| Nội thất biệt thự - Căn hộ - Nhà phố</title>
+    <!--<base href="http://noithatvincen.com">--><base href=".">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="http://noithatvincen.com/public/images/icons/favicon.png">
+<!--===============================================================================================-->
+  <!--   <link rel="stylesheet" type="text/css" href="public/vendor/bootstrap/css/bootstrap.min.css"> -->
+    <link href="./anh_3_files/bootstrap.min.css" rel="stylesheet"> 
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="./anh_3_files/font-awesome.min.css">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="./anh_3_files/themify-icons.css">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="./anh_3_files/icon-font.min.css">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="./anh_3_files/style.css">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="./anh_3_files/animate.css">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="./anh_3_files/hamburgers.min.css">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="./anh_3_files/animsition.min.css">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="./anh_3_files/select2.min.css">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="./anh_3_files/daterangepicker.css">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="./anh_3_files/slick.css">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="./anh_3_files/lightbox.min.css">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="./anh_3_files/util.css">
+    <link rel="stylesheet" type="text/css" href="./anh_3_files/main.css">
+<!--===============================================================================================-->
+
+    <!-- S -->
+    <meta http-equiv="content-language" content="vi">
+    <title>Thiết kế nội thất VINCEN| Nội thất biệt thự - Căn hộ - Nhà phố</title>
+    <meta name="description" content="Thiết kế nội thất - thi công nội thất phải luôn nỗ lực hết mình để tạo nên những sản phẩm nội thất chất lượng có giá trị thẩm mỹ , sáng tạo và đúng mong muốn của gia chủ">
+    <meta name="keywords" content="thiet ke noi that, thiết kế nội thất, nội thất, noi that, noi that phong khach, nội thất phòng khách, nội thất phòng ngủ, noi that phong ngu, thiet ke nha dep, thiết kế nhà đẹp, phòng ngủ đẹp, phong ngu dep, phong khach dep, phòng khách đẹp, nội thất văn phòng, noi that van phong, tu bep, tủ bếp , nội thất căn hộ, noi that, can ho, nội thất chung cư, noi that chung cu, nội thất biệt thự, noi that biet thu">
+    <meta name="author" content="&lt;?=www.noithatvincen.com?&gt;">
+
+    <!-- <meta property="og:locale" content="vi" /> -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="www.noithatvincen.com">
+    <meta property="og:title" content="Thiết kế nội thất VINCEN| Nội thất biệt thự - Căn hộ - Nhà phố">
+    <meta property="og:description" content="Thiết kế nội thất - thi công nội thất phải luôn nỗ lực hết mình để tạo nên những sản phẩm nội thất chất lượng có giá trị thẩm mỹ , sáng tạo và đúng mong muốn của gia chủ">
+    <meta property="og:url" content="http://www.noithatvincen.com/">
+    <meta property="og:image" content="http://www.noithatvincen.com/public/images/tintuc/logo-2.png">
+    <meta name="news_keywords" content="thiet ke noi that, thiết kế nội thất, nội thất, noi that, noi that phong khach, nội thất phòng khách, nội thất phòng ngủ, noi that phong ngu, thiet ke nha dep, thiết kế nhà đẹp, phòng ngủ đẹp, phong ngu dep, phong khach dep, phòng khách đẹp, nội thất văn phòng, noi that van phong, tu bep, tủ bếp , nội thất căn hộ, noi that, can ho, nội thất chung cư, noi that chung cu, nội thất biệt thự, noi that biet thu">
+    <!-- //S -->
+
+<link href="./anh_3_files/languages.min.css" rel="stylesheet" type="text/css" media="all">
+
+        <!-- CROLL SIDERBAR RIGHT -->
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+        <script src="./anh_3_files/sdk.js.tải xuống" async="" crossorigin="anonymous"></script><script id="facebook-jssdk" src="./anh_3_files/sdk.js(1).tải xuống"></script><script src="./anh_3_files/jquery-1.11.1.min.js.tải xuống"></script>
+        <!-- <script src="public/js/bootstrap.min.js"></script> -->
+
+        <script src="./anh_3_files/jquery.lockfixed.js.tải xuống"></script>
+        <script>
+            $(document).ready(function () {
+                $.lockfixed("#sidebar", {offset: {top: 90, bottom: 670} });
+            });
+        </script>
+        <!-- End Croll siderbar right -->
+
+<style type="text/css">
+        a { color: #111;  }
+
+        a: hover{text-decoration: none; color: red;}
+
+        .footer1>p>a{color: #cac7c7}
+        .footer1>p>a:hover{color: red}
+
+        .social_icon_top>ul>li>a {color: #a7a5a5; opacity: 0.5}
+        .social_icon_top>ul>li>a:hover {color: red; opacity: 0.5}
+        body {
+            color: #111;
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: normal;
+            font-style: normal;
+            line-height: 1.8;
+        }
+
+        .img-responsive p>img {
+        max-width: 100%;
+        max-height: auto;
+        width: 100%;
+        height: auto;
+        background-size: cover;
+
+        }
+        
+</style>
+
+<style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}</style></head>
+<body class="animsition1">
+
+    <!-- Header -->
+    <header class="header1 fixed-header">
+        <!-- Header desktop -->
+        <div class="container-menu-header" style="top: -35px;">
+            <div class="topbar">
+                <div class="topbar-social social_icon_top">
+
+                    <ul class="social_icon2">
+                                            
+                                            <li style="display: inline; padding-right: 10px; padding-left: 10px"><a href="https://www.facebook.com/sharer/sharer.php?u=%20www.noithatvincen.com/"><i class="fa fa-facebook"></i></a></li>
+                                            <li style="display: inline;  padding-right: 10px"><a href="http://twitter.com/share"><i class="fa fa-twitter"></i></a></li>
+                                            <li style="display: inline;  padding-right: 10px"><a href="https://www.pinterest.com/pin/create/link/?url=http://www.noithatvincen.com/&amp;media=http://www.noithatvincen.com/public/images/tintuc/logo-2.png&amp;description=Thi%E1%BA%BFt%20k%E1%BA%BF%20n%E1%BB%99i%20th%E1%BA%A5t%20VINCEN|%20N%E1%BB%99i%20th%E1%BA%A5t%20bi%E1%BB%87t%20th%E1%BB%B1%20-%20C%C4%83n%20h%E1%BB%99%20-%20Nh%C3%A0%20ph%E1%BB%91" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+
+                                            <li style="display: inline;  padding-right: 10px"><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.noithatvincen.com/&amp;source=www.noithatvincen.com"><i class="fa fa-linkedin"></i></a></li>
+                                            
+                                            <li style="display: inline;  padding-right: 10px"><a href="https://plus.google.com/share?url=www.noithatvincen.com/" onclick="javascript:window.open(this.href,
+  &#39;&#39;, &#39;menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600&#39;);return false;"><i class="fa fa-google-plus"></i></a></li>
+                                      
+                   </ul>
+                </div>
+
+      
+ <span class="topbar-child1" style="color: #a7a5a5; font-weight: none; text-transform: uppercase;">
+                   Cuộc sống tươi đẹp hơn                </span>
+
+                <div class="topbar-child2">
+                    <!-- <span class="topbar-email">
+                        fashe@example.com
+                    </span> -->
+
+                    <div class="topbar-language rs1-select2">
+                       
+                        <a href="http://www.noithatvincen.com/vi"><i class="lang-sm" lang="vi"></i></a>
+                        <a href="http://www.noithatvincen.com/en"><i class="lang-sm" lang="en"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wrap_header">
+                <!-- Logo -->
+                <!-- <a href="public/index.html" class="logo">
+                    <img src="public/images/icons/logo.png" alt="IMG-LOGO">
+                </a> -->
+                <div class="#" style="width: 15%">
+                <a class="logo" href="http://noithatvincen.com/vi">
+                <img src="./anh_3_files/logo-2.png" alt="IMG-LOGO">
+                </a>
+                </div>
+                <!-- Menu -->
+                <div class="wrap_menu" style="width: 80%">
+                    <nav class="menu">
+                        <ul class="main_menu">
+<!--                       
+                            <li>
+                                <a href="#">Nội thất căn hộ</a>
+                                <ul class="sub_menu">
+                                                                        <li ><a href="vi/noi-that-can-ho-cho-thue-98">Nội thất căn hộ cho thuê</a></li>
+                                                                        <li ><a href="vi/noi-that-can-ho-cao-cap-100">Nội thất căn hộ cao cấp</a></li>
+                                                                    </ul>
+                            </li>
+                          -->
+                                                    <li class="#"><a href="http://noithatvincen.com/vi/noi-that-can-ho-cho-thue-98" title="">Nội thất căn hộ cho thuê</a></li>
+                                                    <li class="#"><a href="http://noithatvincen.com/vi/noi-that-can-ho-cao-cap-100" title="">Nội thất căn hộ cao cấp</a></li>
+                        
+                                                    <li class="#"><a href="http://noithatvincen.com/vi/nha-pho-102" title="">Nhà phố</a></li>
+                        
+                        
+
+                        <!--Menu 1 catagory tuyen dung-->
+                                    <!-- 
+                                    <li><a href="vi/tuyen-dung-96" title="" >Tuyển dụng</a>
+                                        
+                                    </li>
+
+                                     -->
+                        <!--//Menu 1 catagory tuyen dung-->                         
+
+                        <!--Menu Page xuong SX-->
+                                <!--                                     <li><a href="vi/xuong-san-xuat-1049.html">Xưởng sản xuất</a>
+                                    </li> -->
+                        <!--//Menu Page xuong SX-->
+                        <!--Menu about-->
+                            
+                            <li><a href="http://www.noithatvincen.com/vi">Giới thiệu<span class="caret"></span></a>
+                                <ul class="sub_menu">
+                                                                    <li><a href="http://noithatvincen.com/vi/ve-noi-that-vincen-1014.html">Về Nội thất Vincen</a>
+                                    </li>
+                                 
+                                                                     <li><a href="http://noithatvincen.com/vi/lich-su-hinh-thanh-1015.html">Lịch sử hình thành</a>
+                                    </li>
+                                 
+                                                                     <li><a href="http://noithatvincen.com/vi/tam-nhin-va-su-menh-1016.html">Tầm nhìn và sứ mệnh</a>
+                                    </li>
+                                 
+                                                                 <!--Menu Page xuong SX-->
+                                                                    <li><a href="http://noithatvincen.com/vi/xuong-san-xuat-1049.html">Xưởng sản xuất</a>
+                                    </li>
+                                <!--//Menu Page xuong SX-->
+
+                                </ul>
+
+                            </li>
+
+                                                    <!--//Menu about-->
+                        <!-- TinTuc -->
+                        
+                            <li>
+                                <a href="http://noithatvincen.com/vi">Tin tức <span class="caret"></span></a>
+                                <ul class="sub_menu">
+                                                                        <li><a href="http://noithatvincen.com/vi/tin-tuc-chung-89">Tin tức chung</a></li>
+                                                                        <li><a href="http://noithatvincen.com/vi/kien-truc-noi-that-dep-91">Kiến trúc nội thất đẹp</a></li>
+                                                                        <!--Menu 1 catagory tuyen dung-->
+                                    
+                                    <li><a href="http://noithatvincen.com/vi/tuyen-dung-96" title="">Tuyển dụng</a>
+                                        
+                                    </li>
+
+                                                                        <!--//Menu 1 catagory tuyen dung--> 
+                                </ul>
+                            </li>
+                         
+                        <!-- // Tin Tuc -->
+                            <li><a href="http://noithatvincen.com/vi/form_contact.html">Liên hệ</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+
+            </div>
+        </div>
+
+        <!-- Header Mobile -->
+        <div class="wrap_header_mobile">
+            <!-- Logo moblie -->
+            <a href="http://noithatvincen.com/vi" class="logo-mobile">
+                <img src="./anh_3_files/logo-2.png" alt="IMG-LOGO">
+            </a>
+
+            <!-- Button show menu -->
+            <div class="btn-show-menu">
+                <!-- Header Icon mobile -->
+
+
+                <div class="btn-show-menu-mobile hamburger hamburger--squeeze">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Mobile -->
+        <div class="wrap-side-menu">
+            <nav class="side-menu">
+                <ul class="main-menu">
+                    <li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
+                        <span class="topbar-child1">
+                            Does'nt just build house - We design the mindset                        </span>
+                        <div class="topbar-language rs1-select2">
+
+                        </div>
+                    </li>
+
+                   
+
+                    <li class="item-topbar-mobile p-l-10">
+                        <div class="topbar-social-mobile ">
+                            <ul class="social_icon2">
+                                            <li style="display: inline; padding-right: 10px; padding-left: 10px"><a href="https://www.facebook.com/sharer/sharer.php?u=%20www.noithatvincen.com/"><i class="fa fa-facebook"></i></a></li>
+                                            <li style="display: inline;  padding-right: 10px"><a href="http://twitter.com/share"><i class="fa fa-twitter"></i></a></li>
+                                            <li style="display: inline;  padding-right: 10px"><a href="https://www.pinterest.com/pin/create/link/?url=http://www.noithatvincen.com/&amp;media=%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Trying%20to%20get%20property%20of%20non-object%20in%20%3Cb%3E/home/nguyentien/public_html/views/layout.php%3C/b%3E%20on%20line%20%3Cb%3E381%3C/b%3E%3Cbr%20/%3Ehttp://www.noithatvincen.com/public/images/tintuc/&amp;description=%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Trying%20to%20get%20property%20of%20non-object%20in%20%3Cb%3E/home/nguyentien/public_html/views/layout.php%3C/b%3E%20on%20line%20%3Cb%3E381%3C/b%3E%3Cbr%20/%3E%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Trying%20to%20get%20property%20of%20non-object%20in%20%3Cb%3E/home/nguyentien/public_html/views/layout.php%3C/b%3E%20on%20line%20%3Cb%3E381%3C/b%3E%3Cbr%20/%3E" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+
+                                            <li style="display: inline;  padding-right: 10px"><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.noithatvincen.com/&amp;source=www.noithatvincen.com"><i class="fa fa-linkedin"></i></a></li>
+                                            
+                                            <li style="display: inline;  padding-right: 10px"><a href="https://plus.google.com/share?url=www.noithatvincen.com/" onclick="javascript:window.open(this.href,
+  &#39;&#39;, &#39;menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600&#39;);return false;"><i class="fa fa-google-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="item-menu-mobile">
+                                                        <a href="http://noithatvincen.com/#">Nội thất căn hộ</a>
+                                <ul class="sub-menu">
+                                                                        <li><a href="http://noithatvincen.com/vi/noi-that-can-ho-cho-thue-98">Nội thất căn hộ cho thuê</a></li>
+                                                                        <li><a href="http://noithatvincen.com/vi/noi-that-can-ho-cao-cap-100">Nội thất căn hộ cao cấp</a></li>
+                                                                    </ul>
+                                <i class="arrow-main-menu fa fa-angle-right" aria-hidden="true"></i>
+                           
+                                            </li>
+
+                                                    <li class="item-menu-mobile"><a href="http://noithatvincen.com/vi/nha-pho-102" title="">Nhà phố</a></li>
+                        
+                        <!--Menu 1 catagory tuyen dung-->
+                                    
+                                    <li class="item-menu-mobile"><a href="http://noithatvincen.com/vi/tuyen-dung-96" title="">Tuyển dụng</a>
+                                        
+                                    </li>
+
+                                                            <!--//Menu 1 catagory tuyen dung-->                         
+
+                        <!--Menu Page xuong SX-->
+                                                                        <li class="item-menu-mobile"><a href="http://noithatvincen.com/vi/xuong-san-xuat-1049.html">Xưởng sản xuất</a>
+                                    </li>
+                        <!--//Menu Page xuong SX-->
+                        <!--Menu about-->
+                        <li class="item-menu-mobile">
+                            
+                                <a href="http://www.noithatvincen.com/">Giới thiệu</a>
+                                <ul class="sub-menu">
+                                                                    <li><a href="http://noithatvincen.com/vi/ve-noi-that-vincen-1014.html">Về Nội thất Vincen</a>
+                                    </li>
+                                 
+                                                                     <li><a href="http://noithatvincen.com/vi/lich-su-hinh-thanh-1015.html">Lịch sử hình thành</a>
+                                    </li>
+                                 
+                                                                     <li><a href="http://noithatvincen.com/vi/tam-nhin-va-su-menh-1016.html">Tầm nhìn và sứ mệnh</a>
+                                    </li>
+                                 
+                                 
+                                </ul>
+                                <i class="arrow-main-menu fa fa-angle-right" aria-hidden="true"></i>
+
+                            
+
+                                                    </li>
+                        <!--//Menu about-->
+                            <li class="item-menu-mobile"><a href="http://noithatvincen.com/vi/form_contact.html">Liên hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+<style type="text/css">
+.row.is-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.row.is-flex > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+</style>
+
+<!-- Slide1 -->
+    <section class="slide1">
+        <div class="wrap-slick1"><button class="arrow-slick1 prev-slick1 slick-arrow" style="display: flex;"><i class="fa  fa-angle-left" aria-hidden="true"></i></button>
+            <div class="slick1 slick-initialized slick-slider">
+                                
+                <div class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 6076px;"><div class="item-slick1 item1-slick1 slick-slide" style="background-image: url(&quot;public/images/slide/van-chuyen-da-phuong-thuc-banner1.jpg&quot;); width: 1519px; position: relative; left: 0px; top: 0px; z-index: 998; opacity: 0; transition: opacity 500ms ease 0s;" data-slick-index="0" aria-hidden="true" tabindex="-1">
+                    <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+                        <!-- <span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15" data-appear="fadeInDown">
+                            Women Collection 2018
+                        </span>
+
+                        <h2 class="caption2-slide1 xl-text1 t-center animated visible-false m-b-37" data-appear="fadeInUp">
+                            New arrivals
+                        </h2>
+
+                        <div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="zoomIn"> -->
+                            <!-- Button -->
+                            <!-- <a href="public/product.html" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
+                                Shop Now
+                            </a> 
+                        </div>-->
+                    </div>
+                </div><div class="item-slick1 item1-slick1 slick-slide" style="background-image: url(&quot;public/images/slide/van-chuyen-xe-tai-nho-banner.jpg&quot;); width: 1519px; position: relative; left: -1519px; top: 0px; z-index: 998; opacity: 0; transition: opacity 500ms ease 0s;" data-slick-index="1" aria-hidden="true" tabindex="-1">
+                    <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+                        <!-- <span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15" data-appear="fadeInDown">
+                            Women Collection 2018
+                        </span>
+
+                        <h2 class="caption2-slide1 xl-text1 t-center animated visible-false m-b-37" data-appear="fadeInUp">
+                            New arrivals
+                        </h2>
+
+                        <div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="zoomIn"> -->
+                            <!-- Button -->
+                            <!-- <a href="public/product.html" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
+                                Shop Now
+                            </a> 
+                        </div>-->
+                    </div>
+                </div><div class="item-slick1 item1-slick1 slick-slide slick-current slick-active" style="background-image: url(&quot;public/images/slide/van-chuyen-da-phuong-thuc-banner.jpg&quot;); width: 1519px; position: relative; left: -3038px; top: 0px; z-index: 999; opacity: 1;" data-slick-index="2" aria-hidden="false" tabindex="0">
+                    <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+                        <!-- <span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15" data-appear="fadeInDown">
+                            Women Collection 2018
+                        </span>
+
+                        <h2 class="caption2-slide1 xl-text1 t-center animated visible-false m-b-37" data-appear="fadeInUp">
+                            New arrivals
+                        </h2>
+
+                        <div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="zoomIn"> -->
+                            <!-- Button -->
+                            <!-- <a href="public/product.html" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
+                                Shop Now
+                            </a> 
+                        </div>-->
+                    </div>
+                </div><div class="item-slick1 item1-slick1 slick-slide" style="background-image: url(&quot;public/images/slide/cho-thue-kho-bai-boc-xep-banner.jpg&quot;); width: 1519px; position: relative; left: -4557px; top: 0px; z-index: 998; opacity: 0;" data-slick-index="3" aria-hidden="true" tabindex="-1">
+                    <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+                        <!-- <span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15" data-appear="fadeInDown">
+                            Women Collection 2018
+                        </span>
+
+                        <h2 class="caption2-slide1 xl-text1 t-center animated visible-false m-b-37" data-appear="fadeInUp">
+                            New arrivals
+                        </h2>
+
+                        <div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="zoomIn"> -->
+                            <!-- Button -->
+                            <!-- <a href="public/product.html" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
+                                Shop Now
+                            </a> 
+                        </div>-->
+                    </div>
+                </div></div></div>
+                                
+                
+                                
+                
+                                
+                
+                
+
+
+            </div>
+        <button class="arrow-slick1 next-slick1 slick-arrow" style="display: flex;"><i class="fa  fa-angle-right" aria-hidden="true"></i></button></div>
+    </section>
+
+    <!-- Banner -->
+    <section class="banner bgwhite p-t-40 p-b-40">
+        <div class="flex-w">
+            <div class="row1">
+                                <div class=" col-md-3 "> <!-- <div class="col-sm-10 col-md-8 col-lg-4 m-l-r-auto"> -->
+                    <!-- block1 -->
+                    <div class="block1 hov-img-zoom pos-relative m-b-30">
+                    <a href="http://noithatvincen.com/vi/thiet-ke-noi-that-phong-cach-scandinavian-vinhomes-golden-river-1-phong-ngu-1228.html"><img src="./anh_3_files/thiet-ke-noi-that-phong-cach-scandinavian-vinhomes-golden-river-1-phong-ngu-1228_1.jpg" alt="noi that dep" title="Thiết kế nội thất phong cách Scandinavian - Vinhomes Golden River 1 phòng ngủ"></a>
+                        
+                        <!-- <div class="block1-wrapbtn w-size2">
+                            
+                            <a href="public/#" class="flex-c-m size4 m-text2 bg3 hov1 trans-0-4">
+                                Dresses
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+                                <div class=" col-md-3 "> <!-- <div class="col-sm-10 col-md-8 col-lg-4 m-l-r-auto"> -->
+                    <!-- block1 -->
+                    <div class="block1 hov-img-zoom pos-relative m-b-30">
+                    <a href="http://noithatvincen.com/vi/thiet-ke-noi-that-phong-cach-scandinavian-tuyet-voi-cho-can-ho-nho-mot-phong-ngu-chi-thuy-1227.html"><img src="./anh_3_files/thiet-ke-noi-that-phong-cach-scandinavian-tuyet-voi-cho-can-ho-nho-mot-phong-ngu-chi-thuy-1227_1.jpg" alt="noi that dep" title="Thiết kế nội thất phong cách Scandinavian tuyệt vời cho căn hộ nhỏ một phòng ngủ - Chị Thùy"></a>
+                        
+                        <!-- <div class="block1-wrapbtn w-size2">
+                            
+                            <a href="public/#" class="flex-c-m size4 m-text2 bg3 hov1 trans-0-4">
+                                Dresses
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+                                <div class=" col-md-3 "> <!-- <div class="col-sm-10 col-md-8 col-lg-4 m-l-r-auto"> -->
+                    <!-- block1 -->
+                    <div class="block1 hov-img-zoom pos-relative m-b-30">
+                    <a href="http://noithatvincen.com/vi/thiet-ke-noi-that-cao-cap-voi-tong-mau-sang-lake-view-ms-thuy-1226.html"><img src="./anh_3_files/thiet-ke-noi-that-cao-cap-voi-tong-mau-sang-lake-view-ms-thuy-1226_1.jpg" alt="noi that dep" title="Thiết kế nội thất cao cấp với tông màu sáng Lake View - Ms Thủy"></a>
+                        
+                        <!-- <div class="block1-wrapbtn w-size2">
+                            
+                            <a href="public/#" class="flex-c-m size4 m-text2 bg3 hov1 trans-0-4">
+                                Dresses
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+                                <div class=" col-md-3 "> <!-- <div class="col-sm-10 col-md-8 col-lg-4 m-l-r-auto"> -->
+                    <!-- block1 -->
+                    <div class="block1 hov-img-zoom pos-relative m-b-30">
+                    <a href="http://noithatvincen.com/vi/bong-toi-va-diem-manh-cua-chung-trong-thiet-ke-noi-that-1225.html"><img src="./anh_3_files/bong-toi-va-diem-manh-cua-chung-trong-thiet-ke-noi-that-1225_1.jpg" alt="noi that dep" title="Bóng tối và điểm mạnh của chúng trong thiết kế nội thất"></a>
+                        
+                        <!-- <div class="block1-wrapbtn w-size2">
+                            
+                            <a href="public/#" class="flex-c-m size4 m-text2 bg3 hov1 trans-0-4">
+                                Dresses
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+                                <div class=" col-md-3 "> <!-- <div class="col-sm-10 col-md-8 col-lg-4 m-l-r-auto"> -->
+                    <!-- block1 -->
+                    <div class="block1 hov-img-zoom pos-relative m-b-30">
+                    <a href="http://noithatvincen.com/vi/thiet-ke-noi-that-cao-cap-voi-mau-xanh-reu-cung-go-oc-cho-tuyet-voi-mr-terry-1224.html"><img src="./anh_3_files/thiet-ke-noi-that-cao-cap-voi-mau-xanh-reu-cung-go-oc-cho-tuyet-voi-mr-terry-1224_background.jpg" alt="noi that dep" title="Thiết kế nội thất cao cấp với màu xanh rêu cùng gỗ óc chó tuyệt vời - Mr Terry"></a>
+                        
+                        <!-- <div class="block1-wrapbtn w-size2">
+                            
+                            <a href="public/#" class="flex-c-m size4 m-text2 bg3 hov1 trans-0-4">
+                                Dresses
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+                                <div class=" col-md-3 "> <!-- <div class="col-sm-10 col-md-8 col-lg-4 m-l-r-auto"> -->
+                    <!-- block1 -->
+                    <div class="block1 hov-img-zoom pos-relative m-b-30">
+                    <a href="http://noithatvincen.com/vi/thiet-ke-noi-that-ben-bi-cung-thoi-gian-voi-go-oc-cho-1223.html"><img src="./anh_3_files/thiet-ke-noi-that-ben-bi-cung-thoi-gian-voi-go-oc-cho-1223_1.jpg" alt="noi that dep" title="Thiết kế nội thất bền bỉ cùng thời gian với gỗ óc chó"></a>
+                        
+                        <!-- <div class="block1-wrapbtn w-size2">
+                            
+                            <a href="public/#" class="flex-c-m size4 m-text2 bg3 hov1 trans-0-4">
+                                Dresses
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+                                <div class=" col-md-3 "> <!-- <div class="col-sm-10 col-md-8 col-lg-4 m-l-r-auto"> -->
+                    <!-- block1 -->
+                    <div class="block1 hov-img-zoom pos-relative m-b-30">
+                    <a href="http://noithatvincen.com/vi/thiet-ke-noi-that-can-ho-cao-cap-bang-go-oc-cho-mau-nau-nhat-1222.html"><img src="./anh_3_files/thiet-ke-noi-that-can-ho-cao-cap-bang-go-oc-cho-mau-nau-nhat-1222_1.jpg" alt="noi that dep" title="Thiết kế nội thất căn hộ cao cấp bằng gỗ óc chó màu nâu nhạt"></a>
+                        
+                        <!-- <div class="block1-wrapbtn w-size2">
+                            
+                            <a href="public/#" class="flex-c-m size4 m-text2 bg3 hov1 trans-0-4">
+                                Dresses
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+                                <div class=" col-md-3 "> <!-- <div class="col-sm-10 col-md-8 col-lg-4 m-l-r-auto"> -->
+                    <!-- block1 -->
+                    <div class="block1 hov-img-zoom pos-relative m-b-30">
+                    <a href="http://noithatvincen.com/vi/thiet-ke-noi-that-can-ho-studio-phong-cach-mo-cuon-hut-cam-giac-la-anh-khanh-1220.html"><img src="./anh_3_files/thiet-ke-noi-that-can-ho-studio-phong-cach-mo-cuon-hut-cam-giac-la-anh-khanh-1220-1.jpg" alt="noi that dep" title="Thiết kế nội thất căn hộ Studio phong cách mở cuốn hút cảm giác lạ - Anh Khanh"></a>
+                        
+                        <!-- <div class="block1-wrapbtn w-size2">
+                            
+                            <a href="public/#" class="flex-c-m size4 m-text2 bg3 hov1 trans-0-4">
+                                Dresses
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+                                </div>
+            </div>
+        
+    </section>
+
+
+
+    <!-- Banner2 -->
+    <section class="banner2 bg5 p-t-55 p-b-55">
+        <div class="container">
+            <div class="row">
+                
+                                <div class="col-md-6 m-l-r-auto p-t-15 p-b-15">
+                    <div class="hov-img-zoom pos-relative">
+                        <img src="./anh_3_files/03-32-06-07-16-19-phongkhach.jpg" alt="IMG-BANNER">
+
+                        <div class="ab-t-l sizefull flex-col-c-m p-l-15 p-r-15" style="">
+                        
+                            <h3 class="l-text2 fs-35-sm" style="text-shadow: 2px 2px 2px #828384; padding-top: 75px">
+                                VinCen
+                            </h3>
+              
+                                                        <a href="http://noithatvincen.com/vi/noi-that-can-ho-cho-thue-98" class=" hov2 p-t-20 " style="text-shadow: 2px 2px 2px #828384; font-size: 24px; color: #fff; font-weight: bold;">
+                                Nội thất căn hộ cho thuê <br>
+                            </a>
+                                                        <a href="http://noithatvincen.com/vi/noi-that-can-ho-cao-cap-100" class=" hov2 p-t-20 " style="text-shadow: 2px 2px 2px #828384; font-size: 24px; color: #fff; font-weight: bold;">
+                                Nội thất căn hộ cao cấp <br>
+                            </a>
+                                                      
+                        </div>
+                    </div>
+                </div>
+                                
+
+                                <div class="col-md-6 m-l-r-auto p-t-15 p-b-15">
+                    <div class="hov-img-zoom pos-relative">
+                        <img src="./anh_3_files/03-32-15-07-16-29-emirates_hills_villa.jpg" alt="IMG-BANNER">
+
+                        <div class="ab-t-l sizefull flex-col-c-m p-l-15 p-r-15">
+                            
+
+                            <h3 class="l-text2 fs-35-sm" style="text-shadow: 2px 2px 2px #828384; padding-top: 75px">
+                                VinCen
+                            </h3>
+                                                        <a href="http://noithatvincen.com/vi/biet-thu-penthouse-101" class=" hov2 p-t-20 " style="text-shadow: 2px 2px 2px #828384; font-size: 24px; color: #fff; font-weight: bold;">
+                                Biệt thự - Penthouse                            </a>
+                                                        <a href="http://noithatvincen.com/vi/nha-pho-102" class=" hov2 p-t-20 " style="text-shadow: 2px 2px 2px #828384; font-size: 24px; color: #fff; font-weight: bold;">
+                                Nhà phố                            </a>
+                                                    </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Blog -->
+    <section class="blog bgwhite p-t-94 p-b-65">
+        <div class="container">
+            <div class="sec-title p-b-52">
+                <h3 class="m-text5 t-center">
+                    Our Projects
+                </h3>
+            </div>
+
+            <div class="row">
+                <div class="row row is-flex">
+                                <div class="col-sm-10 col-md-4 p-b-30 m-l-r-auto">
+                    <!-- Block3 -->
+                    <div class="block3">
+                        <a href="http://noithatvincen.com/vi/thiet-ke-noi-that-nha-pho-voi-tong-mau-xam-trang-hien-dai-mr-john-1231.html" class="block3-img dis-block hov-img-zoom">
+                            <img src="./anh_3_files/thiet-ke-noi-that-nha-pho-voi-tong-mau-xam-trang-hien-dai-mr-john-1231_1background.jpg" alt="Thiết kế nội thất nhà phố với tông màu xám trắng hiện đại - Mr John" title="READ MORE">
+                        </a>
+
+                        <div class="block3-txt p-t-14">
+                            <h4 class="p-b-7" style="font-weight: bold;">
+                                <a style="font-weight: bold; color: #3d3d3d;  hover: red" href="http://noithatvincen.com/vi/thiet-ke-noi-that-nha-pho-voi-tong-mau-xam-trang-hien-dai-mr-john-1231.html"><span>Thiết kế nội thất nhà phố với tông màu xám trắng hiện đại - Mr John</span></a>
+                            </h4>
+
+                           <!--  <span class="s-text6">By</span> <span class="s-text7">Nancy Ward</span>
+                            <span class="s-text6">on</span> <span class="s-text7">July 22, 2017</span> -->
+
+                            <p class="s-text8 p-t-5" style="color: #3d3d3d">
+                            
+	Trong thiết kế nội thất, mỗi căn nhà được thiết kế theo một chủ để thống nhất từ phong cách đến màu ...                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                                <div class="col-sm-10 col-md-4 p-b-30 m-l-r-auto">
+                    <!-- Block3 -->
+                    <div class="block3">
+                        <a href="http://noithatvincen.com/vi/thiet-ke-noi-that-nha-pho-phong-cach-cong-nghiep-mr-terry-1230.html" class="block3-img dis-block hov-img-zoom">
+                            <img src="./anh_3_files/thiet-ke-noi-that-nha-pho-phong-cach-cong-nghiep-mr-terry-1230_122.jpg" alt="Thiết kế nội thất nhà phố phong cách công nghiệp - Mr Terry" title="READ MORE">
+                        </a>
+
+                        <div class="block3-txt p-t-14">
+                            <h4 class="p-b-7" style="font-weight: bold;">
+                                <a style="font-weight: bold; color: #3d3d3d;  hover: red" href="http://noithatvincen.com/vi/thiet-ke-noi-that-nha-pho-phong-cach-cong-nghiep-mr-terry-1230.html"><span>Thiết kế nội thất nhà phố phong cách công nghiệp - Mr Terry</span></a>
+                            </h4>
+
+                           <!--  <span class="s-text6">By</span> <span class="s-text7">Nancy Ward</span>
+                            <span class="s-text6">on</span> <span class="s-text7">July 22, 2017</span> -->
+
+                            <p class="s-text8 p-t-5" style="color: #3d3d3d">
+                            
+	Phong cách công nghiệp trong thiết kế nội thất thể hiện qua tường gạch lộ ra ngoài, kim loại, ống dẫn ...                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                                <div class="col-sm-10 col-md-4 p-b-30 m-l-r-auto">
+                    <!-- Block3 -->
+                    <div class="block3">
+                        <a href="http://noithatvincen.com/vi/thiet-ke-noi-that-can-ho-chi-30m2-day-du-cong-nang-anh-huy-1229.html" class="block3-img dis-block hov-img-zoom">
+                            <img src="./anh_3_files/thiet-ke-noi-that-can-ho-chi-30m2-day-du-cong-nang-anh-huy-1229_1.jpg" alt="Thiết kế nội thất căn hộ chỉ 30m2 đầy đủ công năng - Anh Huy" title="READ MORE">
+                        </a>
+
+                        <div class="block3-txt p-t-14">
+                            <h4 class="p-b-7" style="font-weight: bold;">
+                                <a style="font-weight: bold; color: #3d3d3d;  hover: red" href="http://noithatvincen.com/vi/thiet-ke-noi-that-can-ho-chi-30m2-day-du-cong-nang-anh-huy-1229.html"><span>Thiết kế nội thất căn hộ chỉ 30m2 đầy đủ công năng - Anh Huy</span></a>
+                            </h4>
+
+                           <!--  <span class="s-text6">By</span> <span class="s-text7">Nancy Ward</span>
+                            <span class="s-text6">on</span> <span class="s-text7">July 22, 2017</span> -->
+
+                            <p class="s-text8 p-t-5" style="color: #3d3d3d">
+                            
+	Thiết kế nội thất căn hộ 30m2 này sẽ làm bạn bất ngờ với cách bố trí và thiết kế đầy đủ ...                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                                <div class="col-sm-10 col-md-4 p-b-30 m-l-r-auto">
+                    <!-- Block3 -->
+                    <div class="block3">
+                        <a href="http://noithatvincen.com/vi/thiet-ke-noi-that-phong-cach-scandinavian-vinhomes-golden-river-1-phong-ngu-1228.html" class="block3-img dis-block hov-img-zoom">
+                            <img src="./anh_3_files/thiet-ke-noi-that-phong-cach-scandinavian-vinhomes-golden-river-1-phong-ngu-1228_1.jpg" alt="Thiết kế nội thất phong cách Scandinavian - Vinhomes Golden River 1 phòng ngủ" title="READ MORE">
+                        </a>
+
+                        <div class="block3-txt p-t-14">
+                            <h4 class="p-b-7" style="font-weight: bold;">
+                                <a style="font-weight: bold; color: #3d3d3d;  hover: red" href="http://noithatvincen.com/vi/thiet-ke-noi-that-phong-cach-scandinavian-vinhomes-golden-river-1-phong-ngu-1228.html"><span>Thiết kế nội thất phong cách Scandinavian - Vinhomes Golden River 1 phòng ngủ</span></a>
+                            </h4>
+
+                           <!--  <span class="s-text6">By</span> <span class="s-text7">Nancy Ward</span>
+                            <span class="s-text6">on</span> <span class="s-text7">July 22, 2017</span> -->
+
+                            <p class="s-text8 p-t-5" style="color: #3d3d3d">
+                            
+	Thiết kế nội thất phong cách Scandinavian với một chiếc ghế&nbsp;sofa màu ngọc lam sống động sẽ làm hài ...                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                                <div class="col-sm-10 col-md-4 p-b-30 m-l-r-auto">
+                    <!-- Block3 -->
+                    <div class="block3">
+                        <a href="http://noithatvincen.com/vi/thiet-ke-noi-that-phong-cach-scandinavian-tuyet-voi-cho-can-ho-nho-mot-phong-ngu-chi-thuy-1227.html" class="block3-img dis-block hov-img-zoom">
+                            <img src="./anh_3_files/thiet-ke-noi-that-phong-cach-scandinavian-tuyet-voi-cho-can-ho-nho-mot-phong-ngu-chi-thuy-1227_1.jpg" alt="Thiết kế nội thất phong cách Scandinavian tuyệt vời cho căn hộ nhỏ một phòng ngủ - Chị Thùy" title="READ MORE">
+                        </a>
+
+                        <div class="block3-txt p-t-14">
+                            <h4 class="p-b-7" style="font-weight: bold;">
+                                <a style="font-weight: bold; color: #3d3d3d;  hover: red" href="http://noithatvincen.com/vi/thiet-ke-noi-that-phong-cach-scandinavian-tuyet-voi-cho-can-ho-nho-mot-phong-ngu-chi-thuy-1227.html"><span>Thiết kế nội thất phong cách Scandinavian tuyệt vời cho căn hộ nhỏ một phòng ngủ - Chị Thùy</span></a>
+                            </h4>
+
+                           <!--  <span class="s-text6">By</span> <span class="s-text7">Nancy Ward</span>
+                            <span class="s-text6">on</span> <span class="s-text7">July 22, 2017</span> -->
+
+                            <p class="s-text8 p-t-5" style="color: #3d3d3d">
+                            
+	Nếu chúng ta nghĩ đến các yếu tố thường tạo nên một thiết kế nhà Scandinavia hiện đại, chúng ta ...                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                                <div class="col-sm-10 col-md-4 p-b-30 m-l-r-auto">
+                    <!-- Block3 -->
+                    <div class="block3">
+                        <a href="http://noithatvincen.com/vi/thiet-ke-noi-that-cao-cap-voi-tong-mau-sang-lake-view-ms-thuy-1226.html" class="block3-img dis-block hov-img-zoom">
+                            <img src="./anh_3_files/thiet-ke-noi-that-cao-cap-voi-tong-mau-sang-lake-view-ms-thuy-1226_1.jpg" alt="Thiết kế nội thất cao cấp với tông màu sáng Lake View - Ms Thủy" title="READ MORE">
+                        </a>
+
+                        <div class="block3-txt p-t-14">
+                            <h4 class="p-b-7" style="font-weight: bold;">
+                                <a style="font-weight: bold; color: #3d3d3d;  hover: red" href="http://noithatvincen.com/vi/thiet-ke-noi-that-cao-cap-voi-tong-mau-sang-lake-view-ms-thuy-1226.html"><span>Thiết kế nội thất cao cấp với tông màu sáng Lake View - Ms Thủy</span></a>
+                            </h4>
+
+                           <!--  <span class="s-text6">By</span> <span class="s-text7">Nancy Ward</span>
+                            <span class="s-text6">on</span> <span class="s-text7">July 22, 2017</span> -->
+
+                            <p class="s-text8 p-t-5" style="color: #3d3d3d">
+                            
+	Thiết kế nội thất với tông màu chủ đạo là gỗ màu mật ong sáng nhẹ kết hợp cùng các ...                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                                <div class="col-sm-10 col-md-4 p-b-30 m-l-r-auto">
+                    <!-- Block3 -->
+                    <div class="block3">
+                        <a href="http://noithatvincen.com/vi/bong-toi-va-diem-manh-cua-chung-trong-thiet-ke-noi-that-1225.html" class="block3-img dis-block hov-img-zoom">
+                            <img src="./anh_3_files/bong-toi-va-diem-manh-cua-chung-trong-thiet-ke-noi-that-1225_1.jpg" alt="Bóng tối và điểm mạnh của chúng trong thiết kế nội thất" title="READ MORE">
+                        </a>
+
+                        <div class="block3-txt p-t-14">
+                            <h4 class="p-b-7" style="font-weight: bold;">
+                                <a style="font-weight: bold; color: #3d3d3d;  hover: red" href="http://noithatvincen.com/vi/bong-toi-va-diem-manh-cua-chung-trong-thiet-ke-noi-that-1225.html"><span>Bóng tối và điểm mạnh của chúng trong thiết kế nội thất</span></a>
+                            </h4>
+
+                           <!--  <span class="s-text6">By</span> <span class="s-text7">Nancy Ward</span>
+                            <span class="s-text6">on</span> <span class="s-text7">July 22, 2017</span> -->
+
+                            <p class="s-text8 p-t-5" style="color: #3d3d3d">
+                            
+	Chủ đề màu tối trong thiết kế nội thất rất ít người sử dụng. Nhưng trong bài này, bạn sẽ nhận ra ...                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                                <div class="col-sm-10 col-md-4 p-b-30 m-l-r-auto">
+                    <!-- Block3 -->
+                    <div class="block3">
+                        <a href="http://noithatvincen.com/vi/thiet-ke-noi-that-cao-cap-voi-mau-xanh-reu-cung-go-oc-cho-tuyet-voi-mr-terry-1224.html" class="block3-img dis-block hov-img-zoom">
+                            <img src="./anh_3_files/thiet-ke-noi-that-cao-cap-voi-mau-xanh-reu-cung-go-oc-cho-tuyet-voi-mr-terry-1224_background.jpg" alt="Thiết kế nội thất cao cấp với màu xanh rêu cùng gỗ óc chó tuyệt vời - Mr Terry" title="READ MORE">
+                        </a>
+
+                        <div class="block3-txt p-t-14">
+                            <h4 class="p-b-7" style="font-weight: bold;">
+                                <a style="font-weight: bold; color: #3d3d3d;  hover: red" href="http://noithatvincen.com/vi/thiet-ke-noi-that-cao-cap-voi-mau-xanh-reu-cung-go-oc-cho-tuyet-voi-mr-terry-1224.html"><span>Thiết kế nội thất cao cấp với màu xanh rêu cùng gỗ óc chó tuyệt vời - Mr Terry</span></a>
+                            </h4>
+
+                           <!--  <span class="s-text6">By</span> <span class="s-text7">Nancy Ward</span>
+                            <span class="s-text6">on</span> <span class="s-text7">July 22, 2017</span> -->
+
+                            <p class="s-text8 p-t-5" style="color: #3d3d3d">
+                            
+	Thiết kế nội thất bằng gỗ óc chó được chúng tôi sử dụng để cho ra đời bộ thiết kế màu xanh ...                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                                <div class="col-sm-10 col-md-4 p-b-30 m-l-r-auto">
+                    <!-- Block3 -->
+                    <div class="block3">
+                        <a href="http://noithatvincen.com/vi/thiet-ke-noi-that-ben-bi-cung-thoi-gian-voi-go-oc-cho-1223.html" class="block3-img dis-block hov-img-zoom">
+                            <img src="./anh_3_files/thiet-ke-noi-that-ben-bi-cung-thoi-gian-voi-go-oc-cho-1223_1.jpg" alt="Thiết kế nội thất bền bỉ cùng thời gian với gỗ óc chó" title="READ MORE">
+                        </a>
+
+                        <div class="block3-txt p-t-14">
+                            <h4 class="p-b-7" style="font-weight: bold;">
+                                <a style="font-weight: bold; color: #3d3d3d;  hover: red" href="http://noithatvincen.com/vi/thiet-ke-noi-that-ben-bi-cung-thoi-gian-voi-go-oc-cho-1223.html"><span>Thiết kế nội thất bền bỉ cùng thời gian với gỗ óc chó</span></a>
+                            </h4>
+
+                           <!--  <span class="s-text6">By</span> <span class="s-text7">Nancy Ward</span>
+                            <span class="s-text6">on</span> <span class="s-text7">July 22, 2017</span> -->
+
+                            <p class="s-text8 p-t-5" style="color: #3d3d3d">
+                            
+	Một thiết kế nội thất tuyệt với với gỗ óc chó cùng màu chủ đạo là màu trắng với một ...                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                                <div class="col-sm-10 col-md-4 p-b-30 m-l-r-auto">
+                    <!-- Block3 -->
+                    <div class="block3">
+                        <a href="http://noithatvincen.com/vi/thiet-ke-noi-that-can-ho-cao-cap-bang-go-oc-cho-mau-nau-nhat-1222.html" class="block3-img dis-block hov-img-zoom">
+                            <img src="./anh_3_files/thiet-ke-noi-that-can-ho-cao-cap-bang-go-oc-cho-mau-nau-nhat-1222_1.jpg" alt="Thiết kế nội thất căn hộ cao cấp bằng gỗ óc chó màu nâu nhạt" title="READ MORE">
+                        </a>
+
+                        <div class="block3-txt p-t-14">
+                            <h4 class="p-b-7" style="font-weight: bold;">
+                                <a style="font-weight: bold; color: #3d3d3d;  hover: red" href="http://noithatvincen.com/vi/thiet-ke-noi-that-can-ho-cao-cap-bang-go-oc-cho-mau-nau-nhat-1222.html"><span>Thiết kế nội thất căn hộ cao cấp bằng gỗ óc chó màu nâu nhạt</span></a>
+                            </h4>
+
+                           <!--  <span class="s-text6">By</span> <span class="s-text7">Nancy Ward</span>
+                            <span class="s-text6">on</span> <span class="s-text7">July 22, 2017</span> -->
+
+                            <p class="s-text8 p-t-5" style="color: #3d3d3d">
+                            
+	Gỗ óc chó là một loại gỗ cứng với các vân phong phú và hấp dẫn người dùng. Trong ...                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                                <div class="col-sm-10 col-md-4 p-b-30 m-l-r-auto">
+                    <!-- Block3 -->
+                    <div class="block3">
+                        <a href="http://noithatvincen.com/vi/thiet-ke-noi-that-voi-mot-chut-diem-nhan-truu-tuong-cho-phong-ngu-vinhomes-central-park-1221.html" class="block3-img dis-block hov-img-zoom">
+                            <img src="./anh_3_files/1.jpg" alt="Thiết kế nội thất với một chút điểm nhấn trừu tượng cho phòng ngủ - Vinhomes Central Park" title="READ MORE">
+                        </a>
+
+                        <div class="block3-txt p-t-14">
+                            <h4 class="p-b-7" style="font-weight: bold;">
+                                <a style="font-weight: bold; color: #3d3d3d;  hover: red" href="http://noithatvincen.com/vi/thiet-ke-noi-that-voi-mot-chut-diem-nhan-truu-tuong-cho-phong-ngu-vinhomes-central-park-1221.html"><span>Thiết kế nội thất với một chút điểm nhấn trừu tượng cho phòng ngủ - Vinhomes Central Park</span></a>
+                            </h4>
+
+                           <!--  <span class="s-text6">By</span> <span class="s-text7">Nancy Ward</span>
+                            <span class="s-text6">on</span> <span class="s-text7">July 22, 2017</span> -->
+
+                            <p class="s-text8 p-t-5" style="color: #3d3d3d">
+                            
+	Thiết kế nội thất phòng ngủ rộng rãi màu trắng này có một bức tường âm tường đậm lớn ...                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                                <div class="col-sm-10 col-md-4 p-b-30 m-l-r-auto">
+                    <!-- Block3 -->
+                    <div class="block3">
+                        <a href="http://noithatvincen.com/vi/thiet-ke-noi-that-can-ho-studio-phong-cach-mo-cuon-hut-cam-giac-la-anh-khanh-1220.html" class="block3-img dis-block hov-img-zoom">
+                            <img src="./anh_3_files/thiet-ke-noi-that-can-ho-studio-phong-cach-mo-cuon-hut-cam-giac-la-anh-khanh-1220-1.jpg" alt="Thiết kế nội thất căn hộ Studio phong cách mở cuốn hút cảm giác lạ - Anh Khanh" title="READ MORE">
+                        </a>
+
+                        <div class="block3-txt p-t-14">
+                            <h4 class="p-b-7" style="font-weight: bold;">
+                                <a style="font-weight: bold; color: #3d3d3d;  hover: red" href="http://noithatvincen.com/vi/thiet-ke-noi-that-can-ho-studio-phong-cach-mo-cuon-hut-cam-giac-la-anh-khanh-1220.html"><span>Thiết kế nội thất căn hộ Studio phong cách mở cuốn hút cảm giác lạ - Anh Khanh</span></a>
+                            </h4>
+
+                           <!--  <span class="s-text6">By</span> <span class="s-text7">Nancy Ward</span>
+                            <span class="s-text6">on</span> <span class="s-text7">July 22, 2017</span> -->
+
+                            <p class="s-text8 p-t-5" style="color: #3d3d3d">
+                            
+	Đây là một căn hộ studio điển hình với bố trí phòng ngủ nằm cạnh bếp và phòng ...                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                                <div class="col-sm-10 col-md-4 p-b-30 m-l-r-auto">
+                    <!-- Block3 -->
+                    <div class="block3">
+                        <a href="http://noithatvincen.com/vi/thiet-ke-noi-that-can-ho-mot-phong-ngu-vinhomes-golden-river-1219.html" class="block3-img dis-block hov-img-zoom">
+                            <img src="./anh_3_files/thiet-ke-noi-that-can-ho-mot-phong-ngu-vinhomes-golden-river-1219_background.jpg" alt="Thiết kế nội thất căn hộ một phòng ngủ Vinhomes Golden River" title="READ MORE">
+                        </a>
+
+                        <div class="block3-txt p-t-14">
+                            <h4 class="p-b-7" style="font-weight: bold;">
+                                <a style="font-weight: bold; color: #3d3d3d;  hover: red" href="http://noithatvincen.com/vi/thiet-ke-noi-that-can-ho-mot-phong-ngu-vinhomes-golden-river-1219.html"><span>Thiết kế nội thất căn hộ một phòng ngủ Vinhomes Golden River</span></a>
+                            </h4>
+
+                           <!--  <span class="s-text6">By</span> <span class="s-text7">Nancy Ward</span>
+                            <span class="s-text6">on</span> <span class="s-text7">July 22, 2017</span> -->
+
+                            <p class="s-text8 p-t-5" style="color: #3d3d3d">
+                            
+	Nếu chúng ta không có điều kiện để mua một căn hộ lớn. Căn hộ một phòng ngủ là đủ cho hầu ...                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                                <div class="col-sm-10 col-md-4 p-b-30 m-l-r-auto">
+                    <!-- Block3 -->
+                    <div class="block3">
+                        <a href="http://noithatvincen.com/vi/su-phoi-hop-thiet-ke-noi-that-giua-vat-lieu-go-va-gia-gach-cho-phong-ngu-can-ho-lexington-residence-1218.html" class="block3-img dis-block hov-img-zoom">
+                            <img src="./anh_3_files/su-phoi-hop-thiet-ke-noi-that-giua-vat-lieu-go-va-gia-gach-cho-phong-ngu-can-ho-lexington-residence-1218-1.jpg" alt="Sự phối hợp thiết kế nội thất giữa vật liệu gỗ và giả gạch cho phòng ngủ căn hộ Lexington Residence" title="READ MORE">
+                        </a>
+
+                        <div class="block3-txt p-t-14">
+                            <h4 class="p-b-7" style="font-weight: bold;">
+                                <a style="font-weight: bold; color: #3d3d3d;  hover: red" href="http://noithatvincen.com/vi/su-phoi-hop-thiet-ke-noi-that-giua-vat-lieu-go-va-gia-gach-cho-phong-ngu-can-ho-lexington-residence-1218.html"><span>Sự phối hợp thiết kế nội thất giữa vật liệu gỗ và giả gạch cho phòng ngủ căn hộ Lexington Residence</span></a>
+                            </h4>
+
+                           <!--  <span class="s-text6">By</span> <span class="s-text7">Nancy Ward</span>
+                            <span class="s-text6">on</span> <span class="s-text7">July 22, 2017</span> -->
+
+                            <p class="s-text8 p-t-5" style="color: #3d3d3d">
+                            
+	Thiết kế nội thất phòng ngủ sẽ mang lại cảm giác thư giãn cho cả ngày dài làm việc căng ...                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                                <div class="col-sm-10 col-md-4 p-b-30 m-l-r-auto">
+                    <!-- Block3 -->
+                    <div class="block3">
+                        <a href="http://noithatvincen.com/vi/thiet-ke-noi-that-tuong-phong-ngu-dep-mat-cho-la-astoria-1217.html" class="block3-img dis-block hov-img-zoom">
+                            <img src="./anh_3_files/thiet-ke-noi-that-tuong-phong-ngu-dep-mat-cho-la-astoria-1217_background.jpg" alt="Thiết kế nội thất tường phòng ngủ đẹp mắt cho La Astoria" title="READ MORE">
+                        </a>
+
+                        <div class="block3-txt p-t-14">
+                            <h4 class="p-b-7" style="font-weight: bold;">
+                                <a style="font-weight: bold; color: #3d3d3d;  hover: red" href="http://noithatvincen.com/vi/thiet-ke-noi-that-tuong-phong-ngu-dep-mat-cho-la-astoria-1217.html"><span>Thiết kế nội thất tường phòng ngủ đẹp mắt cho La Astoria</span></a>
+                            </h4>
+
+                           <!--  <span class="s-text6">By</span> <span class="s-text7">Nancy Ward</span>
+                            <span class="s-text6">on</span> <span class="s-text7">July 22, 2017</span> -->
+
+                            <p class="s-text8 p-t-5" style="color: #3d3d3d">
+                            
+	Thiết kế nội thất một khu vực riêng tư và thân mật đó chính là phòng ngủ của bạn. ...                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                                <div class="col-sm-10 col-md-4 p-b-30 m-l-r-auto">
+                    <!-- Block3 -->
+                    <div class="block3">
+                        <a href="http://noithatvincen.com/vi/thiet-ke-noi-that-can-ho-co-dien-tich-nho-cho-thue-mau-xanh-la-cay-1216.html" class="block3-img dis-block hov-img-zoom">
+                            <img src="./anh_3_files/thiet-ke-noi-that-can-ho-co-dien-tich-nho-cho-thue-mau-xanh-la-cay-1216_4.jpg" alt="Thiết kế nội thất căn hộ có diện tích nhỏ cho thuê màu xanh lá cây" title="READ MORE">
+                        </a>
+
+                        <div class="block3-txt p-t-14">
+                            <h4 class="p-b-7" style="font-weight: bold;">
+                                <a style="font-weight: bold; color: #3d3d3d;  hover: red" href="http://noithatvincen.com/vi/thiet-ke-noi-that-can-ho-co-dien-tich-nho-cho-thue-mau-xanh-la-cay-1216.html"><span>Thiết kế nội thất căn hộ có diện tích nhỏ cho thuê màu xanh lá cây</span></a>
+                            </h4>
+
+                           <!--  <span class="s-text6">By</span> <span class="s-text7">Nancy Ward</span>
+                            <span class="s-text6">on</span> <span class="s-text7">July 22, 2017</span> -->
+
+                            <p class="s-text8 p-t-5" style="color: #3d3d3d">
+                            
+	Căn hộ không gian nhỏ được chào đón với thiết kế nội thất màu chủ đạo là xanh lá cây ...                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                                <div class="col-sm-10 col-md-4 p-b-30 m-l-r-auto">
+                    <!-- Block3 -->
+                    <div class="block3">
+                        <a href="http://noithatvincen.com/vi/noi-that-go-noi-troi-trong-thiet-ke-noi-that-can-ho-1215.html" class="block3-img dis-block hov-img-zoom">
+                            <img src="./anh_3_files/noi-that-go-noi-troi-trong-thiet-ke-noi-that-can-ho-1215_2.jpg" alt="Nội thất gỗ nổi trội trong thiết kế nội thất căn hộ" title="READ MORE">
+                        </a>
+
+                        <div class="block3-txt p-t-14">
+                            <h4 class="p-b-7" style="font-weight: bold;">
+                                <a style="font-weight: bold; color: #3d3d3d;  hover: red" href="http://noithatvincen.com/vi/noi-that-go-noi-troi-trong-thiet-ke-noi-that-can-ho-1215.html"><span>Nội thất gỗ nổi trội trong thiết kế nội thất căn hộ</span></a>
+                            </h4>
+
+                           <!--  <span class="s-text6">By</span> <span class="s-text7">Nancy Ward</span>
+                            <span class="s-text6">on</span> <span class="s-text7">July 22, 2017</span> -->
+
+                            <p class="s-text8 p-t-5" style="color: #3d3d3d">
+                            
+	Nằm ở Kiev, Ukraine, khu vực dự án cho thiết kế nội thất đặc trưng nửa trái đất của chúng tôi chỉ ...                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                                <div class="col-sm-10 col-md-4 p-b-30 m-l-r-auto">
+                    <!-- Block3 -->
+                    <div class="block3">
+                        <a href="http://noithatvincen.com/vi/thiet-ke-noi-that-phong-khach-tinh-te-va-trang-nha-1214.html" class="block3-img dis-block hov-img-zoom">
+                            <img src="./anh_3_files/thiet-ke-noi-that-phong-khach-tinh-te-va-trang-nha-1214_3.jpg" alt="Thiết kế nội thất phòng khách tinh tế và trang nhã" title="READ MORE">
+                        </a>
+
+                        <div class="block3-txt p-t-14">
+                            <h4 class="p-b-7" style="font-weight: bold;">
+                                <a style="font-weight: bold; color: #3d3d3d;  hover: red" href="http://noithatvincen.com/vi/thiet-ke-noi-that-phong-khach-tinh-te-va-trang-nha-1214.html"><span>Thiết kế nội thất phòng khách tinh tế và trang nhã</span></a>
+                            </h4>
+
+                           <!--  <span class="s-text6">By</span> <span class="s-text7">Nancy Ward</span>
+                            <span class="s-text6">on</span> <span class="s-text7">July 22, 2017</span> -->
+
+                            <p class="s-text8 p-t-5" style="color: #3d3d3d">
+                            
+	Một thiết kế nội thất căn hộ đầy màu sác, trong đó có màu vàng làm nền sẽ đánh ...                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                                <div class="col-sm-10 col-md-4 p-b-30 m-l-r-auto">
+                    <!-- Block3 -->
+                    <div class="block3">
+                        <a href="http://noithatvincen.com/vi/toi-da-hoa-khong-gian-qua-thiet-ke-noi-that-thong-minh-1213.html" class="block3-img dis-block hov-img-zoom">
+                            <img src="./anh_3_files/toi-da-hoa-khong-gian-qua-thiet-ke-noi-that-thong-minh-1213_background.jpg" alt="Tối đa hóa không gian qua thiết kế nội thất thông minh" title="READ MORE">
+                        </a>
+
+                        <div class="block3-txt p-t-14">
+                            <h4 class="p-b-7" style="font-weight: bold;">
+                                <a style="font-weight: bold; color: #3d3d3d;  hover: red" href="http://noithatvincen.com/vi/toi-da-hoa-khong-gian-qua-thiet-ke-noi-that-thong-minh-1213.html"><span>Tối đa hóa không gian qua thiết kế nội thất thông minh</span></a>
+                            </h4>
+
+                           <!--  <span class="s-text6">By</span> <span class="s-text7">Nancy Ward</span>
+                            <span class="s-text6">on</span> <span class="s-text7">July 22, 2017</span> -->
+
+                            <p class="s-text8 p-t-5" style="color: #3d3d3d">
+                            
+	Khi không gian sống bình thường chỉ ở mức đơn giản và đầu từ thấp, đã đến lúc sáng tạo. ...                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                                <div class="col-sm-10 col-md-4 p-b-30 m-l-r-auto">
+                    <!-- Block3 -->
+                    <div class="block3">
+                        <a href="http://noithatvincen.com/vi/thiet-ke-noi-that-phong-cach-scandinavian-pha-cach-voi-mau-xanh-la-cay-1212.html" class="block3-img dis-block hov-img-zoom">
+                            <img src="./anh_3_files/thiet-ke-noi-that-phong-cach-scandinavian-pha-cach-voi-mau-xanh-la-cay-1212_background.jpg" alt="Thiết kế nội thất phong cách Scandinavian phá cách với màu xanh lá cây" title="READ MORE">
+                        </a>
+
+                        <div class="block3-txt p-t-14">
+                            <h4 class="p-b-7" style="font-weight: bold;">
+                                <a style="font-weight: bold; color: #3d3d3d;  hover: red" href="http://noithatvincen.com/vi/thiet-ke-noi-that-phong-cach-scandinavian-pha-cach-voi-mau-xanh-la-cay-1212.html"><span>Thiết kế nội thất phong cách Scandinavian phá cách với màu xanh lá cây</span></a>
+                            </h4>
+
+                           <!--  <span class="s-text6">By</span> <span class="s-text7">Nancy Ward</span>
+                            <span class="s-text6">on</span> <span class="s-text7">July 22, 2017</span> -->
+
+                            <p class="s-text8 p-t-5" style="color: #3d3d3d">
+                            
+	Không chỉ là căn hộ được thiết kế nội thất phong cách Scandinavia này được trang trí với các ...                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                                <div class="col-sm-10 col-md-4 p-b-30 m-l-r-auto">
+                    <!-- Block3 -->
+                    <div class="block3">
+                        <a href="http://noithatvincen.com/vi/thiet-ke-noi-that-phong-ngu-mau-nhe-nhang-opal-riverside-1211.html" class="block3-img dis-block hov-img-zoom">
+                            <img src="./anh_3_files/thiet-ke-noi-that-phong-ngu-mau-nhe-nhang-opal-riverside-1211_background.jpg" alt="Thiết kế nội thất phòng ngủ màu nhẹ nhàng - Opal Riverside" title="READ MORE">
+                        </a>
+
+                        <div class="block3-txt p-t-14">
+                            <h4 class="p-b-7" style="font-weight: bold;">
+                                <a style="font-weight: bold; color: #3d3d3d;  hover: red" href="http://noithatvincen.com/vi/thiet-ke-noi-that-phong-ngu-mau-nhe-nhang-opal-riverside-1211.html"><span>Thiết kế nội thất phòng ngủ màu nhẹ nhàng - Opal Riverside</span></a>
+                            </h4>
+
+                           <!--  <span class="s-text6">By</span> <span class="s-text7">Nancy Ward</span>
+                            <span class="s-text6">on</span> <span class="s-text7">July 22, 2017</span> -->
+
+                            <p class="s-text8 p-t-5" style="color: #3d3d3d">
+                            
+	Một trong những thiết kế nội thất cao cấp của Vincen đã thực hiện cho phòng ngủ của bé tại chung cư Opal ...                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                                <div class="col-sm-10 col-md-4 p-b-30 m-l-r-auto">
+                    <!-- Block3 -->
+                    <div class="block3">
+                        <a href="http://noithatvincen.com/vi/thiet-ke-noi-that-phong-ngu-cho-be-gai-mau-tim-1210.html" class="block3-img dis-block hov-img-zoom">
+                            <img src="./anh_3_files/thiet-ke-noi-that-phong-ngu-cho-be-gai-mau-tim-1210_background.jpg" alt="Thiết kế nội thất phòng ngủ cho bé gái màu tím" title="READ MORE">
+                        </a>
+
+                        <div class="block3-txt p-t-14">
+                            <h4 class="p-b-7" style="font-weight: bold;">
+                                <a style="font-weight: bold; color: #3d3d3d;  hover: red" href="http://noithatvincen.com/vi/thiet-ke-noi-that-phong-ngu-cho-be-gai-mau-tim-1210.html"><span>Thiết kế nội thất phòng ngủ cho bé gái màu tím</span></a>
+                            </h4>
+
+                           <!--  <span class="s-text6">By</span> <span class="s-text7">Nancy Ward</span>
+                            <span class="s-text6">on</span> <span class="s-text7">July 22, 2017</span> -->
+
+                            <p class="s-text8 p-t-5" style="color: #3d3d3d">
+                            
+	Thiết kế nội thất phòng ngủ trẻ với tông màu tím cho bé gái là một ý tưởng rất ...                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                                <div class="col-sm-10 col-md-4 p-b-30 m-l-r-auto">
+                    <!-- Block3 -->
+                    <div class="block3">
+                        <a href="http://noithatvincen.com/vi/thiet-ke-noi-that-phong-ngu-cho-be-gai-mau-hong-1207.html" class="block3-img dis-block hov-img-zoom">
+                            <img src="./anh_3_files/thiet-ke-noi-that-phong-ngu-cho-be-gai-mau-hong-1207_1.jpg" alt="Thiết kế nội thất phòng ngủ cho bé gái màu hồng" title="READ MORE">
+                        </a>
+
+                        <div class="block3-txt p-t-14">
+                            <h4 class="p-b-7" style="font-weight: bold;">
+                                <a style="font-weight: bold; color: #3d3d3d;  hover: red" href="http://noithatvincen.com/vi/thiet-ke-noi-that-phong-ngu-cho-be-gai-mau-hong-1207.html"><span>Thiết kế nội thất phòng ngủ cho bé gái màu hồng</span></a>
+                            </h4>
+
+                           <!--  <span class="s-text6">By</span> <span class="s-text7">Nancy Ward</span>
+                            <span class="s-text6">on</span> <span class="s-text7">July 22, 2017</span> -->
+
+                            <p class="s-text8 p-t-5" style="color: #3d3d3d">
+                            
+	Sự thật là nhiều trẻ em đặc biệt là bé gái thích các thiết kế nội thất có nhiều ...                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram -->
+    <section class="instagram p-t-20">
+<!--         <div class="sec-title p-b-52 p-l-15 p-r-15">
+            <h3 class="m-text5 t-center">
+                @ Trang trí đẹp            </h3>
+        </div> -->
+
+        <div class="flex-w">
+            <!-- Block4 -->
+                        <div class="block4 wrap-pic-w" style="padding: 5px">
+                        
+                <img src="./anh_3_files/thiet-ke-noi-that-phong-ngu-cho-be-gai-mau-hong-1207_1.jpg" class="img-responsive" alt="thiet-ke-noi-that-phong-ngu-cho-be-gai-mau-hong">
+
+                <a href="http://noithatvincen.com/vi/thiet-ke-noi-that-phong-ngu-cho-be-gai-mau-hong-1207.html" class="block4-overlay sizefull ab-t-l trans-0-4">
+                    <span class="block4-overlay-heart s-text9 flex-m trans-0-4 p-l-40 p-t-25">
+                        <i class="icon_heart_alt fs-20 p-r-12" aria-hidden="true"></i>
+                        <span class="p-t-2">1290</span>
+                    </span>
+
+                    <div class="block4-overlay-txt trans-0-4 p-l-40 p-r-25 p-b-30">
+                        <p class="s-text10 m-b-15 h-size1 of-hidden">
+                            
+	Sự thật là nhiều trẻ em đặc biệt là bé gái thích các thiết ...                        </p>
+
+                        <!-- <span class="s-text9">
+                            Photo by @nancyward
+                        </span> -->
+                    </div>
+                </a>
+            </div>
+                         <div class="block4 wrap-pic-w" style="padding: 5px">
+                        
+                <img src="./anh_3_files/thiet-ke-noi-that-phong-ngu-mau-nhe-nhang-opal-riverside-1211_background.jpg" class="img-responsive" alt="thiet-ke-noi-that-phong-ngu-mau-nhe-nhang-opal-riverside">
+
+                <a href="http://noithatvincen.com/vi/thiet-ke-noi-that-phong-ngu-mau-nhe-nhang-opal-riverside-1211.html" class="block4-overlay sizefull ab-t-l trans-0-4">
+                    <span class="block4-overlay-heart s-text9 flex-m trans-0-4 p-l-40 p-t-25">
+                        <i class="icon_heart_alt fs-20 p-r-12" aria-hidden="true"></i>
+                        <span class="p-t-2">1276</span>
+                    </span>
+
+                    <div class="block4-overlay-txt trans-0-4 p-l-40 p-r-25 p-b-30">
+                        <p class="s-text10 m-b-15 h-size1 of-hidden">
+                            
+	Một trong những thiết kế nội thất cao cấp của Vincen đã thực hiện cho phòng ngủ ...                        </p>
+
+                        <!-- <span class="s-text9">
+                            Photo by @nancyward
+                        </span> -->
+                    </div>
+                </a>
+            </div>
+                         <div class="block4 wrap-pic-w" style="padding: 5px">
+                        
+                <img src="./anh_3_files/toi-da-hoa-khong-gian-qua-thiet-ke-noi-that-thong-minh-1213_background.jpg" class="img-responsive" alt="toi-da-hoa-khong-gian-qua-thiet-ke-noi-that-thong-minh">
+
+                <a href="http://noithatvincen.com/vi/toi-da-hoa-khong-gian-qua-thiet-ke-noi-that-thong-minh-1213.html" class="block4-overlay sizefull ab-t-l trans-0-4">
+                    <span class="block4-overlay-heart s-text9 flex-m trans-0-4 p-l-40 p-t-25">
+                        <i class="icon_heart_alt fs-20 p-r-12" aria-hidden="true"></i>
+                        <span class="p-t-2">986</span>
+                    </span>
+
+                    <div class="block4-overlay-txt trans-0-4 p-l-40 p-r-25 p-b-30">
+                        <p class="s-text10 m-b-15 h-size1 of-hidden">
+                            
+	Khi không gian sống bình thường chỉ ở mức đơn giản và đầu từ thấp, ...                        </p>
+
+                        <!-- <span class="s-text9">
+                            Photo by @nancyward
+                        </span> -->
+                    </div>
+                </a>
+            </div>
+                         <div class="block4 wrap-pic-w" style="padding: 5px">
+                        
+                <img src="./anh_3_files/noi-that-go-noi-troi-trong-thiet-ke-noi-that-can-ho-1215_2.jpg" class="img-responsive" alt="noi-that-go-noi-troi-trong-thiet-ke-noi-that-can-ho">
+
+                <a href="http://noithatvincen.com/vi/noi-that-go-noi-troi-trong-thiet-ke-noi-that-can-ho-1215.html" class="block4-overlay sizefull ab-t-l trans-0-4">
+                    <span class="block4-overlay-heart s-text9 flex-m trans-0-4 p-l-40 p-t-25">
+                        <i class="icon_heart_alt fs-20 p-r-12" aria-hidden="true"></i>
+                        <span class="p-t-2">812</span>
+                    </span>
+
+                    <div class="block4-overlay-txt trans-0-4 p-l-40 p-r-25 p-b-30">
+                        <p class="s-text10 m-b-15 h-size1 of-hidden">
+                            
+	Nằm ở Kiev, Ukraine, khu vực dự án cho thiết kế nội thất đặc trưng nửa trái ...                        </p>
+
+                        <!-- <span class="s-text9">
+                            Photo by @nancyward
+                        </span> -->
+                    </div>
+                </a>
+            </div>
+                         <div class="block4 wrap-pic-w" style="padding: 5px">
+                        
+                <img src="./anh_3_files/su-phoi-hop-thiet-ke-noi-that-giua-vat-lieu-go-va-gia-gach-cho-phong-ngu-can-ho-lexington-residence-1218-1.jpg" class="img-responsive" alt="su-phoi-hop-thiet-ke-noi-that-giua-vat-lieu-go-va-gia-gach-cho-phong-ngu-can-ho-lexington-residence">
+
+                <a href="http://noithatvincen.com/vi/su-phoi-hop-thiet-ke-noi-that-giua-vat-lieu-go-va-gia-gach-cho-phong-ngu-can-ho-lexington-residence-1218.html" class="block4-overlay sizefull ab-t-l trans-0-4">
+                    <span class="block4-overlay-heart s-text9 flex-m trans-0-4 p-l-40 p-t-25">
+                        <i class="icon_heart_alt fs-20 p-r-12" aria-hidden="true"></i>
+                        <span class="p-t-2">868</span>
+                    </span>
+
+                    <div class="block4-overlay-txt trans-0-4 p-l-40 p-r-25 p-b-30">
+                        <p class="s-text10 m-b-15 h-size1 of-hidden">
+                            
+	Thiết kế nội thất phòng ngủ sẽ mang lại cảm giác thư giãn cho cả ngày ...                        </p>
+
+                        <!-- <span class="s-text9">
+                            Photo by @nancyward
+                        </span> -->
+                    </div>
+                </a>
+            </div>
+                         <div class="block4 wrap-pic-w" style="padding: 5px">
+                        
+                <img src="./anh_3_files/thiet-ke-noi-that-can-ho-mot-phong-ngu-vinhomes-golden-river-1219_background.jpg" class="img-responsive" alt="thiet-ke-noi-that-can-ho-mot-phong-ngu-vinhomes-golden-river">
+
+                <a href="http://noithatvincen.com/vi/thiet-ke-noi-that-can-ho-mot-phong-ngu-vinhomes-golden-river-1219.html" class="block4-overlay sizefull ab-t-l trans-0-4">
+                    <span class="block4-overlay-heart s-text9 flex-m trans-0-4 p-l-40 p-t-25">
+                        <i class="icon_heart_alt fs-20 p-r-12" aria-hidden="true"></i>
+                        <span class="p-t-2">880</span>
+                    </span>
+
+                    <div class="block4-overlay-txt trans-0-4 p-l-40 p-r-25 p-b-30">
+                        <p class="s-text10 m-b-15 h-size1 of-hidden">
+                            
+	Nếu chúng ta không có điều kiện để mua một căn hộ lớn. Căn hộ một ...                        </p>
+
+                        <!-- <span class="s-text9">
+                            Photo by @nancyward
+                        </span> -->
+                    </div>
+                </a>
+            </div>
+                         <div class="block4 wrap-pic-w" style="padding: 5px">
+                        
+                <img src="./anh_3_files/thiet-ke-noi-that-can-ho-studio-phong-cach-mo-cuon-hut-cam-giac-la-anh-khanh-1220-1.jpg" class="img-responsive" alt="thiet-ke-noi-that-can-ho-studio-phong-cach-mo-cuon-hut-cam-giac-la-anh-khanh">
+
+                <a href="http://noithatvincen.com/vi/thiet-ke-noi-that-can-ho-studio-phong-cach-mo-cuon-hut-cam-giac-la-anh-khanh-1220.html" class="block4-overlay sizefull ab-t-l trans-0-4">
+                    <span class="block4-overlay-heart s-text9 flex-m trans-0-4 p-l-40 p-t-25">
+                        <i class="icon_heart_alt fs-20 p-r-12" aria-hidden="true"></i>
+                        <span class="p-t-2">905</span>
+                    </span>
+
+                    <div class="block4-overlay-txt trans-0-4 p-l-40 p-r-25 p-b-30">
+                        <p class="s-text10 m-b-15 h-size1 of-hidden">
+                            
+	Đây là một căn hộ studio điển hình với bố trí phòng ngủ nằm cạnh ...                        </p>
+
+                        <!-- <span class="s-text9">
+                            Photo by @nancyward
+                        </span> -->
+                    </div>
+                </a>
+            </div>
+                         <div class="block4 wrap-pic-w" style="padding: 5px">
+                        
+                <img src="./anh_3_files/thiet-ke-noi-that-ben-bi-cung-thoi-gian-voi-go-oc-cho-1223_1.jpg" class="img-responsive" alt="thiet-ke-noi-that-ben-bi-cung-thoi-gian-voi-go-oc-cho">
+
+                <a href="http://noithatvincen.com/vi/thiet-ke-noi-that-ben-bi-cung-thoi-gian-voi-go-oc-cho-1223.html" class="block4-overlay sizefull ab-t-l trans-0-4">
+                    <span class="block4-overlay-heart s-text9 flex-m trans-0-4 p-l-40 p-t-25">
+                        <i class="icon_heart_alt fs-20 p-r-12" aria-hidden="true"></i>
+                        <span class="p-t-2">898</span>
+                    </span>
+
+                    <div class="block4-overlay-txt trans-0-4 p-l-40 p-r-25 p-b-30">
+                        <p class="s-text10 m-b-15 h-size1 of-hidden">
+                            
+	Một thiết kế nội thất tuyệt với với gỗ óc chó cùng màu chủ đạo ...                        </p>
+
+                        <!-- <span class="s-text9">
+                            Photo by @nancyward
+                        </span> -->
+                    </div>
+                </a>
+            </div>
+                         <div class="block4 wrap-pic-w" style="padding: 5px">
+                        
+                <img src="./anh_3_files/thiet-ke-noi-that-cao-cap-voi-tong-mau-sang-lake-view-ms-thuy-1226_1.jpg" class="img-responsive" alt="thiet-ke-noi-that-cao-cap-voi-tong-mau-sang-lake-view-ms-thuy">
+
+                <a href="http://noithatvincen.com/vi/thiet-ke-noi-that-cao-cap-voi-tong-mau-sang-lake-view-ms-thuy-1226.html" class="block4-overlay sizefull ab-t-l trans-0-4">
+                    <span class="block4-overlay-heart s-text9 flex-m trans-0-4 p-l-40 p-t-25">
+                        <i class="icon_heart_alt fs-20 p-r-12" aria-hidden="true"></i>
+                        <span class="p-t-2">863</span>
+                    </span>
+
+                    <div class="block4-overlay-txt trans-0-4 p-l-40 p-r-25 p-b-30">
+                        <p class="s-text10 m-b-15 h-size1 of-hidden">
+                            
+	Thiết kế nội thất với tông màu chủ đạo là gỗ màu mật ong sáng ...                        </p>
+
+                        <!-- <span class="s-text9">
+                            Photo by @nancyward
+                        </span> -->
+                    </div>
+                </a>
+            </div>
+                         <div class="block4 wrap-pic-w" style="padding: 5px">
+                        
+                <img src="./anh_3_files/thiet-ke-noi-that-phong-cach-scandinavian-tuyet-voi-cho-can-ho-nho-mot-phong-ngu-chi-thuy-1227_1.jpg" class="img-responsive" alt="thiet-ke-noi-that-phong-cach-scandinavian-tuyet-voi-cho-can-ho-nho-mot-phong-ngu-chi-thuy">
+
+                <a href="http://noithatvincen.com/vi/thiet-ke-noi-that-phong-cach-scandinavian-tuyet-voi-cho-can-ho-nho-mot-phong-ngu-chi-thuy-1227.html" class="block4-overlay sizefull ab-t-l trans-0-4">
+                    <span class="block4-overlay-heart s-text9 flex-m trans-0-4 p-l-40 p-t-25">
+                        <i class="icon_heart_alt fs-20 p-r-12" aria-hidden="true"></i>
+                        <span class="p-t-2">1234</span>
+                    </span>
+
+                    <div class="block4-overlay-txt trans-0-4 p-l-40 p-r-25 p-b-30">
+                        <p class="s-text10 m-b-15 h-size1 of-hidden">
+                            
+	Nếu chúng ta nghĩ đến các yếu tố thường tạo nên một thiết kế nhà ...                        </p>
+
+                        <!-- <span class="s-text9">
+                            Photo by @nancyward
+                        </span> -->
+                    </div>
+                </a>
+            </div>
+                     </div>
+    </section>
+
+    <!-- Shipping -->
+<!--     <section class="shipping bgwhite p-t-62 p-b-46">
+        <div class="flex-w p-l-15 p-r-15">
+            <div class="flex-col-c w-size5 p-l-15 p-r-15 p-t-16 p-b-15 respon1">
+                <h4 class="m-text12 t-center">
+                    Free Delivery Worldwide
+                </h4>
+
+                <a href="#" class="s-text11 t-center">
+                    Click here for more info
+                </a>
+            </div>
+
+            <div class="flex-col-c w-size5 p-l-15 p-r-15 p-t-16 p-b-15 bo2 respon2">
+                <h4 class="m-text12 t-center">
+                    30 Days Return
+                </h4>
+
+                <span class="s-text11 t-center">
+                    Simply return it within 30 days for an exchange.
+                </span>
+            </div>
+
+            <div class="flex-col-c w-size5 p-l-15 p-r-15 p-t-16 p-b-15 respon1">
+                <h4 class="m-text12 t-center">
+                    Store Opening
+                </h4>
+
+                <span class="s-text11 t-center">
+                    Shop open from Monday to Sunday
+                </span>
+            </div>
+        </div>
+    </section> -->
+
+<br>
+
+        <!-- New Product -->
+    <section class="newproduct bgwhite p-t-45 p-b-50">
+        <div class="container">
+            <div class="sec-title p-b-60">
+                <h3 class="m-text5 t-center">
+                    Our Partners
+                </h3>
+            </div>
+
+            
+            <div class="wrap-slick2"><button class="arrow-slick2 prev-slick2 slick-arrow" style="display: block;"><i class="fa  fa-angle-left" aria-hidden="true"></i></button>
+                <div class="slick2 slick-initialized slick-slider">
+
+                                        <div class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 4102px; transform: translate3d(-1172px, 0px, 0px);"><div class="item-slick2 p-l-15 p-r-15 slick-slide slick-cloned" data-slick-index="-4" aria-hidden="true" tabindex="-1" style="width: 293px;">
+                        
+                        <div class="block2">
+                            <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew#">
+                                
+                                <a href="http://noithatvincen.com/vi/cong-ty-a2-1192.html" tabindex="-1"><img src="./anh_3_files/logo2.jpg" alt="noi that dep" title="noi that dep"></a>
+                                <div class="block2-overlay trans-0-4">
+                                    <a href="http://noithatvincen.com/vi" class="block2-btn-addwishlist hov-pointer trans-0-4" tabindex="-1">
+                                        <i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+                                        <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+                                    </a>
+
+                                    <!-- <div class="block2-btn-addcart w-size1 trans-0-4">
+                                        
+                                        <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+                                            Add to Cart
+                                        </button>
+                                    </div> -->
+
+                                </div>
+                            </div>
+
+<!--                             <div class="block2-txt p-t-20">
+                                <a href="public/product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+                                    Herschel supply co 25l
+                                </a>
+
+                                <span class="block2-price m-text6 p-r-5">
+                                    $75.00
+                                </span>
+                            </div> -->
+                        </div>
+                    </div><div class="item-slick2 p-l-15 p-r-15 slick-slide slick-cloned" data-slick-index="-3" aria-hidden="true" tabindex="-1" style="width: 293px;">
+                        
+                        <div class="block2">
+                            <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew#">
+                                
+                                <a href="http://noithatvincen.com/vi/cong-ty-a3-1193.html" tabindex="-1"><img src="./anh_3_files/logo3.jpg" alt="noi that dep" title="noi that dep"></a>
+                                <div class="block2-overlay trans-0-4">
+                                    <a href="http://noithatvincen.com/vi" class="block2-btn-addwishlist hov-pointer trans-0-4" tabindex="-1">
+                                        <i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+                                        <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+                                    </a>
+
+                                    <!-- <div class="block2-btn-addcart w-size1 trans-0-4">
+                                        
+                                        <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+                                            Add to Cart
+                                        </button>
+                                    </div> -->
+
+                                </div>
+                            </div>
+
+<!--                             <div class="block2-txt p-t-20">
+                                <a href="public/product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+                                    Herschel supply co 25l
+                                </a>
+
+                                <span class="block2-price m-text6 p-r-5">
+                                    $75.00
+                                </span>
+                            </div> -->
+                        </div>
+                    </div><div class="item-slick2 p-l-15 p-r-15 slick-slide slick-cloned" data-slick-index="-2" aria-hidden="true" tabindex="-1" style="width: 293px;">
+                        
+                        <div class="block2">
+                            <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew#">
+                                
+                                <a href="http://noithatvincen.com/vi/cong-ty-a4-1194.html" tabindex="-1"><img src="./anh_3_files/logo4.jpg" alt="noi that dep" title="noi that dep"></a>
+                                <div class="block2-overlay trans-0-4">
+                                    <a href="http://noithatvincen.com/vi" class="block2-btn-addwishlist hov-pointer trans-0-4" tabindex="-1">
+                                        <i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+                                        <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+                                    </a>
+
+                                    <!-- <div class="block2-btn-addcart w-size1 trans-0-4">
+                                        
+                                        <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+                                            Add to Cart
+                                        </button>
+                                    </div> -->
+
+                                </div>
+                            </div>
+
+<!--                             <div class="block2-txt p-t-20">
+                                <a href="public/product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+                                    Herschel supply co 25l
+                                </a>
+
+                                <span class="block2-price m-text6 p-r-5">
+                                    $75.00
+                                </span>
+                            </div> -->
+                        </div>
+                    </div><div class="item-slick2 p-l-15 p-r-15 slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" tabindex="-1" style="width: 293px;">
+                        
+                        <div class="block2">
+                            <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew#">
+                                
+                                <a href="http://noithatvincen.com/vi/cong-ty-a5-1195.html" tabindex="-1"><img src="./anh_3_files/logo5.jpg" alt="noi that dep" title="noi that dep"></a>
+                                <div class="block2-overlay trans-0-4">
+                                    <a href="http://noithatvincen.com/vi" class="block2-btn-addwishlist hov-pointer trans-0-4" tabindex="-1">
+                                        <i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+                                        <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+                                    </a>
+
+                                    <!-- <div class="block2-btn-addcart w-size1 trans-0-4">
+                                        
+                                        <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+                                            Add to Cart
+                                        </button>
+                                    </div> -->
+
+                                </div>
+                            </div>
+
+<!--                             <div class="block2-txt p-t-20">
+                                <a href="public/product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+                                    Herschel supply co 25l
+                                </a>
+
+                                <span class="block2-price m-text6 p-r-5">
+                                    $75.00
+                                </span>
+                            </div> -->
+                        </div>
+                    </div><div class="item-slick2 p-l-15 p-r-15 slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="0" style="width: 293px;">
+                        
+                        <div class="block2">
+                            <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew#">
+                                
+                                <a href="http://noithatvincen.com/vi/cong-ty-a1-1191.html" tabindex="0"><img src="./anh_3_files/logo1.jpg" alt="noi that dep" title="noi that dep"></a>
+                                <div class="block2-overlay trans-0-4">
+                                    <a href="http://noithatvincen.com/vi" class="block2-btn-addwishlist hov-pointer trans-0-4" tabindex="0">
+                                        <i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+                                        <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+                                    </a>
+
+                                    <!-- <div class="block2-btn-addcart w-size1 trans-0-4">
+                                        
+                                        <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+                                            Add to Cart
+                                        </button>
+                                    </div> -->
+
+                                </div>
+                            </div>
+
+<!--                             <div class="block2-txt p-t-20">
+                                <a href="public/product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+                                    Herschel supply co 25l
+                                </a>
+
+                                <span class="block2-price m-text6 p-r-5">
+                                    $75.00
+                                </span>
+                            </div> -->
+                        </div>
+                    </div><div class="item-slick2 p-l-15 p-r-15 slick-slide slick-active" data-slick-index="1" aria-hidden="false" tabindex="0" style="width: 293px;">
+                        
+                        <div class="block2">
+                            <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew#">
+                                
+                                <a href="http://noithatvincen.com/vi/cong-ty-a2-1192.html" tabindex="0"><img src="./anh_3_files/logo2.jpg" alt="noi that dep" title="noi that dep"></a>
+                                <div class="block2-overlay trans-0-4">
+                                    <a href="http://noithatvincen.com/vi" class="block2-btn-addwishlist hov-pointer trans-0-4" tabindex="0">
+                                        <i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+                                        <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+                                    </a>
+
+                                    <!-- <div class="block2-btn-addcart w-size1 trans-0-4">
+                                        
+                                        <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+                                            Add to Cart
+                                        </button>
+                                    </div> -->
+
+                                </div>
+                            </div>
+
+<!--                             <div class="block2-txt p-t-20">
+                                <a href="public/product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+                                    Herschel supply co 25l
+                                </a>
+
+                                <span class="block2-price m-text6 p-r-5">
+                                    $75.00
+                                </span>
+                            </div> -->
+                        </div>
+                    </div><div class="item-slick2 p-l-15 p-r-15 slick-slide slick-active" data-slick-index="2" aria-hidden="false" tabindex="0" style="width: 293px;">
+                        
+                        <div class="block2">
+                            <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew#">
+                                
+                                <a href="http://noithatvincen.com/vi/cong-ty-a3-1193.html" tabindex="0"><img src="./anh_3_files/logo3.jpg" alt="noi that dep" title="noi that dep"></a>
+                                <div class="block2-overlay trans-0-4">
+                                    <a href="http://noithatvincen.com/vi" class="block2-btn-addwishlist hov-pointer trans-0-4" tabindex="0">
+                                        <i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+                                        <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+                                    </a>
+
+                                    <!-- <div class="block2-btn-addcart w-size1 trans-0-4">
+                                        
+                                        <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+                                            Add to Cart
+                                        </button>
+                                    </div> -->
+
+                                </div>
+                            </div>
+
+<!--                             <div class="block2-txt p-t-20">
+                                <a href="public/product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+                                    Herschel supply co 25l
+                                </a>
+
+                                <span class="block2-price m-text6 p-r-5">
+                                    $75.00
+                                </span>
+                            </div> -->
+                        </div>
+                    </div><div class="item-slick2 p-l-15 p-r-15 slick-slide slick-active" data-slick-index="3" aria-hidden="false" tabindex="0" style="width: 293px;">
+                        
+                        <div class="block2">
+                            <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew#">
+                                
+                                <a href="http://noithatvincen.com/vi/cong-ty-a4-1194.html" tabindex="0"><img src="./anh_3_files/logo4.jpg" alt="noi that dep" title="noi that dep"></a>
+                                <div class="block2-overlay trans-0-4">
+                                    <a href="http://noithatvincen.com/vi" class="block2-btn-addwishlist hov-pointer trans-0-4" tabindex="0">
+                                        <i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+                                        <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+                                    </a>
+
+                                    <!-- <div class="block2-btn-addcart w-size1 trans-0-4">
+                                        
+                                        <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+                                            Add to Cart
+                                        </button>
+                                    </div> -->
+
+                                </div>
+                            </div>
+
+<!--                             <div class="block2-txt p-t-20">
+                                <a href="public/product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+                                    Herschel supply co 25l
+                                </a>
+
+                                <span class="block2-price m-text6 p-r-5">
+                                    $75.00
+                                </span>
+                            </div> -->
+                        </div>
+                    </div><div class="item-slick2 p-l-15 p-r-15 slick-slide" data-slick-index="4" aria-hidden="true" tabindex="-1" style="width: 293px;">
+                        
+                        <div class="block2">
+                            <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew#">
+                                
+                                <a href="http://noithatvincen.com/vi/cong-ty-a5-1195.html" tabindex="-1"><img src="./anh_3_files/logo5.jpg" alt="noi that dep" title="noi that dep"></a>
+                                <div class="block2-overlay trans-0-4">
+                                    <a href="http://noithatvincen.com/vi" class="block2-btn-addwishlist hov-pointer trans-0-4" tabindex="-1">
+                                        <i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+                                        <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+                                    </a>
+
+                                    <!-- <div class="block2-btn-addcart w-size1 trans-0-4">
+                                        
+                                        <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+                                            Add to Cart
+                                        </button>
+                                    </div> -->
+
+                                </div>
+                            </div>
+
+<!--                             <div class="block2-txt p-t-20">
+                                <a href="public/product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+                                    Herschel supply co 25l
+                                </a>
+
+                                <span class="block2-price m-text6 p-r-5">
+                                    $75.00
+                                </span>
+                            </div> -->
+                        </div>
+                    </div><div class="item-slick2 p-l-15 p-r-15 slick-slide slick-cloned" data-slick-index="5" aria-hidden="true" tabindex="-1" style="width: 293px;">
+                        
+                        <div class="block2">
+                            <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew#">
+                                
+                                <a href="http://noithatvincen.com/vi/cong-ty-a1-1191.html" tabindex="-1"><img src="./anh_3_files/logo1.jpg" alt="noi that dep" title="noi that dep"></a>
+                                <div class="block2-overlay trans-0-4">
+                                    <a href="http://noithatvincen.com/vi" class="block2-btn-addwishlist hov-pointer trans-0-4" tabindex="-1">
+                                        <i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+                                        <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+                                    </a>
+
+                                    <!-- <div class="block2-btn-addcart w-size1 trans-0-4">
+                                        
+                                        <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+                                            Add to Cart
+                                        </button>
+                                    </div> -->
+
+                                </div>
+                            </div>
+
+<!--                             <div class="block2-txt p-t-20">
+                                <a href="public/product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+                                    Herschel supply co 25l
+                                </a>
+
+                                <span class="block2-price m-text6 p-r-5">
+                                    $75.00
+                                </span>
+                            </div> -->
+                        </div>
+                    </div><div class="item-slick2 p-l-15 p-r-15 slick-slide slick-cloned" data-slick-index="6" aria-hidden="true" tabindex="-1" style="width: 293px;">
+                        
+                        <div class="block2">
+                            <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew#">
+                                
+                                <a href="http://noithatvincen.com/vi/cong-ty-a2-1192.html" tabindex="-1"><img src="./anh_3_files/logo2.jpg" alt="noi that dep" title="noi that dep"></a>
+                                <div class="block2-overlay trans-0-4">
+                                    <a href="http://noithatvincen.com/vi" class="block2-btn-addwishlist hov-pointer trans-0-4" tabindex="-1">
+                                        <i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+                                        <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+                                    </a>
+
+                                    <!-- <div class="block2-btn-addcart w-size1 trans-0-4">
+                                        
+                                        <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+                                            Add to Cart
+                                        </button>
+                                    </div> -->
+
+                                </div>
+                            </div>
+
+<!--                             <div class="block2-txt p-t-20">
+                                <a href="public/product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+                                    Herschel supply co 25l
+                                </a>
+
+                                <span class="block2-price m-text6 p-r-5">
+                                    $75.00
+                                </span>
+                            </div> -->
+                        </div>
+                    </div><div class="item-slick2 p-l-15 p-r-15 slick-slide slick-cloned" data-slick-index="7" aria-hidden="true" tabindex="-1" style="width: 293px;">
+                        
+                        <div class="block2">
+                            <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew#">
+                                
+                                <a href="http://noithatvincen.com/vi/cong-ty-a3-1193.html" tabindex="-1"><img src="./anh_3_files/logo3.jpg" alt="noi that dep" title="noi that dep"></a>
+                                <div class="block2-overlay trans-0-4">
+                                    <a href="http://noithatvincen.com/vi" class="block2-btn-addwishlist hov-pointer trans-0-4" tabindex="-1">
+                                        <i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+                                        <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+                                    </a>
+
+                                    <!-- <div class="block2-btn-addcart w-size1 trans-0-4">
+                                        
+                                        <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+                                            Add to Cart
+                                        </button>
+                                    </div> -->
+
+                                </div>
+                            </div>
+
+<!--                             <div class="block2-txt p-t-20">
+                                <a href="public/product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+                                    Herschel supply co 25l
+                                </a>
+
+                                <span class="block2-price m-text6 p-r-5">
+                                    $75.00
+                                </span>
+                            </div> -->
+                        </div>
+                    </div><div class="item-slick2 p-l-15 p-r-15 slick-slide slick-cloned" data-slick-index="8" aria-hidden="true" tabindex="-1" style="width: 293px;">
+                        
+                        <div class="block2">
+                            <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew#">
+                                
+                                <a href="http://noithatvincen.com/vi/cong-ty-a4-1194.html" tabindex="-1"><img src="./anh_3_files/logo4.jpg" alt="noi that dep" title="noi that dep"></a>
+                                <div class="block2-overlay trans-0-4">
+                                    <a href="http://noithatvincen.com/vi" class="block2-btn-addwishlist hov-pointer trans-0-4" tabindex="-1">
+                                        <i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+                                        <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+                                    </a>
+
+                                    <!-- <div class="block2-btn-addcart w-size1 trans-0-4">
+                                        
+                                        <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+                                            Add to Cart
+                                        </button>
+                                    </div> -->
+
+                                </div>
+                            </div>
+
+<!--                             <div class="block2-txt p-t-20">
+                                <a href="public/product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+                                    Herschel supply co 25l
+                                </a>
+
+                                <span class="block2-price m-text6 p-r-5">
+                                    $75.00
+                                </span>
+                            </div> -->
+                        </div>
+                    </div><div class="item-slick2 p-l-15 p-r-15 slick-slide slick-cloned" data-slick-index="9" aria-hidden="true" tabindex="-1" style="width: 293px;">
+                        
+                        <div class="block2">
+                            <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew#">
+                                
+                                <a href="http://noithatvincen.com/vi/cong-ty-a5-1195.html" tabindex="-1"><img src="./anh_3_files/logo5.jpg" alt="noi that dep" title="noi that dep"></a>
+                                <div class="block2-overlay trans-0-4">
+                                    <a href="http://noithatvincen.com/vi" class="block2-btn-addwishlist hov-pointer trans-0-4" tabindex="-1">
+                                        <i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+                                        <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+                                    </a>
+
+                                    <!-- <div class="block2-btn-addcart w-size1 trans-0-4">
+                                        
+                                        <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+                                            Add to Cart
+                                        </button>
+                                    </div> -->
+
+                                </div>
+                            </div>
+
+<!--                             <div class="block2-txt p-t-20">
+                                <a href="public/product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+                                    Herschel supply co 25l
+                                </a>
+
+                                <span class="block2-price m-text6 p-r-5">
+                                    $75.00
+                                </span>
+                            </div> -->
+                        </div>
+                    </div></div></div>
+                                        
+                                        
+                                        
+                                        
+                    
+
+                </div>
+            <button class="arrow-slick2 next-slick2 slick-arrow" style="display: block;"><i class="fa  fa-angle-right" aria-hidden="true"></i></button></div>
+
+        </div>
+    </section>
+    
+
+    <!-- Footer -->
+    <footer class="bg6 p-t-45 p-l-45 p-r-45">
+        <div class="flex-w p-l-15 p-r-15">
+            <div class="col-md-6 p-t-30 p-l-15 p-r-15 respon3">
+                <h4 class="s-text12 p-b-30" style="color: #fff">
+                    CÔNG TY TNHH VINCEN                </h4>
+
+                <div style="text-align: justify; color: #bfbebe">
+                    <p class="s-text7 w-size27" style="text-align: justify; color: #fff">
+                        </p><div>
+	Trụ sở chính: 13 Đường số 38, Phường Linh Đông, Quận Thủ Đức, Tp. Hồ Chí Minh</div>
+<div>
+	www.noithatvincen.com - Email: dtanh2209@gmail.com</div>
+<div>
+	<strong>HOTLINE: 0963 068 699</strong></div>
+<div>
+	<span style="text-align: justify;">--------------------------------</span></div>
+<p>
+	<span style="text-align: justify; color:none">Nội thất VINCEN là một công ty chuyên về&nbsp; thiết kế nội thất - thi công nội thất và sản xuất các sản phẩm nội thất dân dụng. Khởi đầu từ năm 2008 với thương hiệu WIN.&nbsp; Chúng tôi đã luôn tâm niệm rằng công việc thiết kế nội thất - thi công nội thất phải luôn nỗ lực hết mình để tạo nên những sản phẩm có giá trị thẩm mỹ , sáng tạo và đúng mong muốn của gia chủ .&nbsp;</span></p>
+                    <p></p>
+
+                    <div class="flex-m p-t-30">
+
+                        <ul class="social_icon2">
+                                            <li style="display: inline; padding-right: 10px; padding-left: 10px"><a href="https://www.facebook.com/sharer/sharer.php?u=%20www.noithatvincen.com"><i class="fs-18 color1 fa fa-facebook"></i></a></li>
+
+                                            <li style="display: inline;  padding-right: 10px"><a href="http://twitter.com/share"><i class="fs-18 color1 fa fa-twitter"></i></a></li>
+
+                                            <li style="display: inline;  padding-right: 10px"><a href="https://pinterest.com/pin/create/button/?url=www.noithatvincen.com/"><i class="fs-18 color1 fa fa-pinterest"></i></a></li>
+
+                                            <li style="display: inline;  padding-right: 10px"><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.noithatvincen.com/&amp;source=www.noithatvincen.com"><i class="fs-18 color1 fa fa-linkedin"></i></a></li>
+
+
+
+                                            <li style="display: inline;  padding-right: 10px"><a href="https://plus.google.com/share?url=www.noithatvincen.com/" onclick="javascript:window.open(this.href,
+  &#39;&#39;, &#39;menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600&#39;);return false;"><i class="fs-18 color1 fa fa-google-plus"></i></a></li>
+                        </ul>                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 p-t-30 p-l-15 p-r-15 respon3">
+                <h4 class="s-text12 p-b-30" style="color: #fff">
+                    THIẾT KẾ NỘI THẤT VINCEN                </h4>
+                                <ul>
+                                                                            <li class="p-b-9"><a style="color: #cac7c7" href="http://noithatvincen.com/vi/thiet-ke-noi-that-phong-ngu-cho-be-gai-mau-hong-1207.html" title="Thiết kế nội thất phòng ngủ cho bé gái màu hồng">Thiết kế nội thất phòng ngủ cho bé gái màu hồng</a></li>
+                                                                            <li class="p-b-9"><a style="color: #cac7c7" href="http://noithatvincen.com/vi/thiet-ke-noi-that-phong-ngu-mau-nhe-nhang-opal-riverside-1211.html" title="Thiết kế nội thất phòng ngủ màu nhẹ nhàng - Opal Riverside">Thiết kế nội thất phòng ngủ màu nhẹ nhàng - Opal Riverside</a></li>
+                                                                            <li class="p-b-9"><a style="color: #cac7c7" href="http://noithatvincen.com/vi/thiet-ke-noi-that-phong-cach-scandinavian-pha-cach-voi-mau-xanh-la-cay-1212.html" title="Thiết kế nội thất phong cách Scandinavian phá cách với màu xanh lá cây">Thiết kế nội thất phong cách Scandinavian phá cách với màu xanh lá cây</a></li>
+                                                                            <li class="p-b-9"><a style="color: #cac7c7" href="http://noithatvincen.com/vi/thiet-ke-noi-that-tuong-phong-ngu-dep-mat-cho-la-astoria-1217.html" title="Thiết kế nội thất tường phòng ngủ đẹp mắt cho La Astoria">Thiết kế nội thất tường phòng ngủ đẹp mắt cho La Astoria</a></li>
+                                                                            <li class="p-b-9"><a style="color: #cac7c7" href="http://noithatvincen.com/vi/su-phoi-hop-thiet-ke-noi-that-giua-vat-lieu-go-va-gia-gach-cho-phong-ngu-can-ho-lexington-residence-1218.html" title="Sự phối hợp thiết kế nội thất giữa vật liệu gỗ và giả gạch cho phòng ngủ căn hộ Lexington Residence">Sự phối hợp thiết kế nội thất giữa vật liệu gỗ và giả gạch cho phòng ngủ căn hộ Lexington Residence</a></li>
+                                                                    </ul>
+
+            </div>
+            <div class="col-md-3 p-t-30 p-l-15 p-r-15 respon3">
+                <h4 class="s-text12 p-b-30" style="color: #fff">
+                    PAGE FACEBOOK
+                </h4>
+
+                <div class="fb-page fb_iframe_widget" data-href="https://www.facebook.com/noithatvincen/" data-width="340" data-hide-cover="false" data-show-facepile="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=&amp;container_width=320&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fnoithatvincen%2F&amp;locale=vi_VN&amp;sdk=joey&amp;show_facepile=true&amp;width=340"><span style="vertical-align: bottom; width: 320px; height: 196px;"><iframe name="f34e5e0f525705c" width="340px" height="1000px" data-testid="fb:page Facebook Social Plugin" title="fb:page Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="./anh_3_files/page.html" style="border: none; visibility: visible; width: 320px; height: 196px;" class=""></iframe></span></div>
+            </div>
+
+        </div>
+        <div class="bg6 flex-w  t-center respon3 p-l-15 p-r-15 p-t-15" style=" margin-top:20px; text-align: center; border-top: 2px solid #333131; ">
+            <div class="bg6  col-md-2 p-b-10" style="text-align: left; ">
+            <a href="http://noithatvincen.com/vi">
+            <img height="45px" style="opacity: 0.9" src="./anh_3_files/logo vincen_w_small.png" alt="IMG-LOGO">
+            </a>
+            </div>
+
+            <div class="footer1 bg6  col-md-10" style="color: #bfbebe">
+            <a href="http://www.noithatvincen.com/vi"><span class="lang-sm" lang="vi"></span></a>
+            <a href="http://www.noithatvincen.com/en"><span class="lang-sm" lang="en"></span></a>
+            <p></p><p style="text-align: center;">
+	<a href="http://noithatvincen.com/">VinCen&nbsp;</a>Copyright 2007, All Rights Reserved</p>
+<p></p>
+            <p></p><p class="exClear" style="text-align: center;">
+	Powered by <a href="http://noithatvincen.com/">VinCen </a><span style="color:#999999;">| Designed by</span> <a href="http://noithatvincen.com/#">Grace</a></p><p></p>
+            </div>
+ 
+        </div>
+
+    </footer>
+
+    <!-- Back to top -->
+    <div class="btn-back-to-top bg0-hov" id="myBtn" style="display: none;">
+        <span class="symbol-btn-back-to-top">
+            <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+        </span>
+    </div>
+
+    <!-- Container Selection1 -->
+    <div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+<!--     <script type="text/javascript" src="public/vendor/jquery/jquery-3.2.1.min.js"></script> -->
+<!--===============================================================================================-->
+    <script type="text/javascript" src="./anh_3_files/animsition.min.js.tải xuống"></script>
+<!--===============================================================================================-->
+    <script type="text/javascript" src="./anh_3_files/popper.js.tải xuống"></script>
+    <script type="text/javascript" src="./anh_3_files/bootstrap.min.js.tải xuống"></script>
+<!--===============================================================================================-->
+    <script type="text/javascript" src="./anh_3_files/select2.min.js.tải xuống"></script>
+    <script type="text/javascript">
+        $(".selection-1").select2({
+            minimumResultsForSearch: 20,
+            dropdownParent: $('#dropDownSelect1')
+        });
+    </script>
+<!--===============================================================================================-->
+    <script type="text/javascript" src="./anh_3_files/slick.min.js.tải xuống"></script>
+    <script type="text/javascript" src="./anh_3_files/slick-custom.js.tải xuống"></script>
+<!--===============================================================================================-->
+    <script type="text/javascript" src="./anh_3_files/countdowntime.js.tải xuống"></script>
+<!--===============================================================================================-->
+    <script type="text/javascript" src="./anh_3_files/lightbox.min.js.tải xuống"></script>
+<!--===============================================================================================-->
+    <script type="text/javascript" src="./anh_3_files/sweetalert.min.js.tải xuống"></script>
+<!--     <script type="text/javascript">
+        $('.block2-btn-addcart').each(function(){
+            var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
+            $(this).on('click', function(){
+                swal(nameProduct, "is added to cart !", "success");
+            });
+        });
+
+        $('.block2-btn-addwishlist').each(function(){
+            var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
+            $(this).on('click', function(){
+                swal(nameProduct, "is added to wishlist !", "success");
+            });
+        });
+    </script> -->
+
+<!--===============================================================================================-->
+    <script src="./anh_3_files/main.js.tải xuống"></script>
+
+
+
+    <!-- Share Face -->
+    <div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.10";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+<!--     <div style="position:fixed; z-index:9999999; right:10px; bottom:10px;" class="fb-page" data-tabs="messages" data-href="https://www.facebook.com/noithatvincenhttps://www.facebook.com/noithatvincen" data-width="250" data-height="300" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"></div> -->
+<div id="lightboxOverlay" class="lightboxOverlay" style="display: none;"></div><div id="lightbox" class="lightbox" style="display: none;"><div class="lb-outerContainer"><div class="lb-container"><img class="lb-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="><div class="lb-nav"><a class="lb-prev" href="http://noithatvincen.com/"></a><a class="lb-next" href="http://noithatvincen.com/"></a></div><div class="lb-loader"><a class="lb-cancel"></a></div></div></div><div class="lb-dataContainer"><div class="lb-data"><div class="lb-details"><span class="lb-caption"></span><span class="lb-number"></span></div><div class="lb-closeContainer"><a class="lb-close"></a></div></div></div></div></body></html>
