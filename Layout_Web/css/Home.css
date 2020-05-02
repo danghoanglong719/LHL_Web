@@ -239,7 +239,7 @@
             height: 70px;
             position: fixed;
             z-index: 999;
-            right: 0;
+            right: 20px;
             top: 80%;
             cursor: pointer;
             opacity: 0.6;
