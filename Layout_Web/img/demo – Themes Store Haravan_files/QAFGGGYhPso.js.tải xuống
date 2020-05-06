@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["JcWEO"]); }
+
+__d("getSamplingPolicyConfig_DO_NOT_USE",["FalcoJSLoggerSamplingPolicies"],(function(a,b,c,d,e,f){"use strict";function a(a,c){switch(a){case"falco":return{__type:a,e:c,r:b("FalcoJSLoggerSamplingPolicies").rates[c]||0};default:return a}}e.exports=a}),null);

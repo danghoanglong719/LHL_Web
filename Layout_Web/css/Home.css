@@ -279,7 +279,7 @@
 }
 
 #buy {
-    transition: 1s;
+    transition: 0.4s;
 }
 
 #buy:hover {
