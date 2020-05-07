@@ -1,0 +1,44 @@
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .wrapper {
+        display: flex;
+        width: 100%;
+        align-items: stretch;
+    }
+    
+    #sidebar {
+        min-width: 250px;
+        max-width: 250px;
+        color: #fff;
+        transition: all 0.3s;
+        border: 1px solid red;
+    }
+    
+    #sidebar.active {
+        margin-left: -270px;
+    }
+    
+    #sidebar ul {
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    #sidebar ul li a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    @media(max-width:768px) {
+        #sidebar {
+            margin-left: -270px;
+        }
+        #sidebar.active {
+            margin-left: 0px;
+        }
+        #sidebarCollapse span {
+            display: none;
+        }
+    }
