@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Luckiest+Guy");
 /* BODY */
-h1{
+#txtLogo{
   position: absolute;
   top: 0;
   left: 0;
@@ -15,7 +15,7 @@ h1{
 
 
 /* CLOUDS */
-h1:before {
+#txtLogo:before {
   content: "";
   position: absolute;
   top: 0;
@@ -34,7 +34,7 @@ h1:before {
     -550px 0 300px 200px rgba(255, 255, 255, 0.6);
 }
 /* JUMP */
-h1 {
+#txtLogo {
     cursor: default;
     position: relative;
     top: 0;

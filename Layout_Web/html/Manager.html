@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage</title>
+   
+    <link rel="stylesheet" href="../css/Home.css">
+    <link rel="stylesheet" type="text/css" href="../css/manager.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="../OwlCarousel2-2.3.4/src/js/owl.carousel.js">
+    <link rel="stylesheet" href="../OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="../OwlCarousel2-2.3.4/dist/assets/owl.theme.green.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+</head>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/jquery/jquery-3.5.0.min.js"></script>
+<script src="../OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+
+
+
+<body>
+    <header class="" style="background-color: black;">
+        <div class="container-fluid">
+            <div class="row" style="height: 50px;">
+                <div class="col-md-2 col-sm-4 col-xs-12 " style="color: #fff;line-height: 50px;">
+                    <p><i class="fa fa-phone" aria-hidden="true"></i>
+                        <span>Phone</span> 0403501119
+                    </p>
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-12 " style="color: #fff;line-height: 50px;">
+                    <p><i class="fa fa-envelope" aria-hidden="true"></i>
+                        <span>Email</span>
+                        <a href="#">LHL.gmail.com</a>
+                    </p>
+                </div>
+                <div class="col-md-5 col-sm-4 col-xs-12 " style="line-height: 50px;">
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--#region Thanh công cụ-->
+    <nav class="navbar navbar-expand-md  navbar-dark bg-dark sticky-top">
+        <!-- Brand -->
+
+        <a class="navbar-brand" href="Home.html"><img src="../img/LogoLHL.png" width="40px"></a>
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+        <!--#region Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ">
+                <li class="nav-item">
+                    <a class="nav-link ml-2" href="Home.html">Trang Chủ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link ml-2" href="#">Liên Hệ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link ml-2" href="#">Trợ Giúp</a>
+                </li>
+                <li id="dropdown" class="nav-item dropdown  ml-2 ">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                      Sản phẩm
+                    </a>
+                    <div class="drop-down dropdown-menu " style="background-color: lightcyan;">
+                        <div class=" container ">
+                            <div class="row ">
+                                <div class="  col-xs-4 mr-bt-10 ">
+                                    <div class="dropdown-header " style="font-weight: bold;">Giường</div>
+                                    <ul class=" list-unstyled " style="font-size: 12px; ">
+                                        <li>
+                                            <a href=" ">Giường Đôi</a>
+                                        </li>
+                                        <li>
+                                            <a href=" ">Giường Đơn</a>
+                                        </li>
+                                        <li>
+                                            <a href=" ">Giường Tầng</a>
+                                        </li>
+                                        <li>
+                                            <a href=" ">Giường Kéo</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class=" col-xs-4 mr-bt-10 ">
+                                    <div class="dropdown-header " style="font-weight: bold;">Tủ</div>
+                                    <ul class=" list-unstyled " style="font-size: 12px; ">
+                                        <li>
+                                            <a href=" ">Tủ Trang Trí</a>
+                                        </li>
+                                        <li>
+                                            <a href=" ">Tủ Ngăn</a>
+                                        </li>
+                                        <li>
+                                            <a href=" ">Tủ Quần Áo</a>
+                                        </li>
+                                        <li>
+                                            <a href=" ">Tủ Giày</a>
+                                        </li>
+                                        <li>
+                                            <a href=" ">Tủ Bếp</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <div class="   col-xs-4 mr-bt-10 ">
+                                    <span class="dropdown-header " style="font-weight: bold;">Bàn</span>
+                                    <ul class=" list-unstyled " style="font-size: 12px;">
+                                        <li>
+                                            <a href=" ">Bàn Làm Việc</a>
+                                        </li>
+                                        <li>
+                                            <a href=" ">Bàn Ăn</a>
+                                        </li>
+                                        <li>
+                                            <a href=" ">Bàn Bar</a>
+                                        </li>
+                                        <li>
+                                            <a href=" ">Bàn Trang Điểm</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="  col-xs-4 mr-bt-10">
+                                    <div class="dropdown-header " style="font-weight: bold;">Ghế</div>
+                                    <ul class=" list-unstyled " style="font-size: 12px; ">
+                                        <li>
+                                            <a href=" ">Ghế Làm Việc</a>
+                                        </li>
+                                        <li>
+                                            <a href=" ">Bàn Ăn</a>
+                                        </li>
+                                        <li>
+                                            <a href=" ">Bàn Bar</a>
+                                        </li>
+                                        <li>
+                                            <a href=" ">Bàn Thư Giãn</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row ">
+                                <div class="col-xs-4 mr-bt-10 ">
+                                    <div class="dropdown-header " style="font-weight: bold;">SoFa Đơn</div>
+                                    <ul class=" list-unstyled " style="font-size: 12px; ">
+                                        <li>
+                                            <a href=" ">SoFa Đôn</a>
+                                        </li>
+                                        <li>
+                                            <a href=" ">Ghế Băng</a>
+                                        </li>
+                                        <li>
+                                            <a href=" ">Ghế Đọc Sách</a>
+                                        </li>
+                                        <li>
+                                            <a href=" ">Ghế Bằng</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="  col-xs-4 mr-bt-10 ">
+                                    <div class="dropdown-header " style="font-weight: bold;">SoFa</div>
+                                    <ul class=" list-unstyled " style="font-size: 12px; ">
+                                        <li>
+                                            <a href=" ">SoFa gốc</a>
+                                        </li>
+                                        <li>
+                                            <a href=" ">Sofa Giường</a>
+                                        </li>
+                                        <li>
+                                            <a href=" ">Sofa 2 chỗ</a>
+                                        </li>
+                                        <li>
+                                            <a href=" ">Sofa 3 chổ</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <div class=" col-xs-4 mr-bt-10">
+                                    <div class="dropdown-header " style="font-weight: bold;">Bàn Cafe</div>
+                                    <ul class=" list-unstyled " style="font-size: 12px; ">
+                                        <li>
+                                            <a href=" ">Bàn Trang Trí</a>
+                                        </li>
+                                        <li>
+                                            <a href=" ">Bàn Gốc</a>
+                                        </li>
+                                        <li>
+                                            <a href=" ">Bàn CAFE</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="   col-xs-4 mr-bt-10 ">
+                                    <div class="dropdown-header " style="font-weight: bold;">Kệ</div>
+                                    <ul class=" list-unstyled " style="font-size: 12px; ">
+                                        <li>
+                                            <a href=" ">Kệ Treo Giường</a>
+                                        </li>
+                                        <li>
+                                            <a href=" ">Kệ Sách</a>
+                                        </li>
+                                        <li>
+                                            <a href=" ">Kệ TiVi</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row ">
+                                <div class="col-xs-4 mr-bt-10 ">
+                                    <div class="dropdown-header " style="font-weight: bold;">Phụ Kiện</div>
+                                    <ul class=" list-unstyled " style="font-size: 12px; ">
+                                        <li>
+                                            <a href=" ">Gối</a>
+                                        </li>
+                                        <li>
+                                            <a href=" ">Nệm</a>
+                                        </li>
+                                        <li>
+                                            <a href=" ">Khăn</a>
+                                        </li>
+                                        <li>
+                                            <a href=" ">Thảm</a>
+                                        </li>
+                                        <li>
+                                            <a href=" ">Thùng Rác</a>
+                                        </li>
+                                        <li>
+                                            <a href=" ">Rương</a>
+                                        </li>
+                                        <li>
+                                            <a href=" ">Giỏ</a>
+                                        </li>
+                                        <li>
+                                            <a href=" ">Đồ Gia Dụng</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="  col-xs-4 mr-bt-10 ">
+                                    <div class="dropdown-header " style="font-weight: bold;">Trang Trí</div>
+                                    <ul class=" list-unstyled " style="font-size: 12px; ">
+                                        <li>
+                                            <a href=" ">Tranh</a>
+                                        </li>
+                                        <li>
+                                            <a href=" ">lọ Trang Trí</a>
+                                        </li>
+                                        <li>
+                                            <a href=" ">Cây Trang Trí</a>
+                                        </li>
+                                        <li>
+                                            <a href=" ">Đồng Hồ</a>
+                                        </li>
+                                        <li>
+                                            <a href=" ">Nến </a>
+                                        </li>
+                                        <li>
+                                            <a href=" ">Đèn</a>
+                                        </li>
+
+
+                                    </ul>
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </li>
+                <li id="dropdown" class="nav-item dropdown  ml-2 ">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                    </a>
+                    <div class="drop-down dropdown-menu ">
+                        <form class="form-inline d-flex justify-content-center md-form form-sm mt-0">
+                            <i class="fas fa-search" aria-hidden="true"></i>
+                            <input class="form-control form-control-sm ml-3 w-75" type="text" id="txt" placeholder="Search" aria-label="Search">
+                        </form>
+
+                    </div>
+                </li>
+            </ul>
+            <nav class="nav justify-content-center">
+            
+              <a class="nav-link" href="#">Quản lý</a>
+            
+            </nav>
+
+            <!--#region Dropdown-menu-->
+            <ul class="nav navbar-nav ml-auto ">
+                <li class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle  text-decoration-none mr-4" href="#" id="navbardrop" data-toggle="dropdown">
+                        <i class="fas fa-user"></i> Đăng nhập
+                    </a>
+
+                    <div class="dropdown-menu dropdown-menu-right log" style="width:300px;">
+                        <form class="px-3 py-2 ">
+                            <h3>Đăng nhập</h1>
+                                <div class="signin">
+
+                                    <div class="form-group">
+                                        <label for="exampleDropdownFormEmail1 ">Tên tài khoản hoặc email</label>
+                                        <input type="email" class="form-control" id="txtUsername" placeholder="Nhập tên tài khoản">
+                                        <p id="txtErrUser" style="color: red;"></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleDropdownFormPassword1">Mật khẩu</label>
+                                        <input type="password" class="form-control" id="txtPassword" placeholder="Nhập mật khẩu">
+                                        <p id="txtErrPass" style="color: red;"></p>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="ckRem">
+                                        <label class="form-check-label" for="dropdownCheck">Nhớ mật khẩu</label>
+                                    </div>
+                                    <button type="submit" class="btn btn-success btn-block" id="btnLogin">Đăng nhập</button>
+                                    <div class="dropdown-divider"></div>
+                                    <a href="#" target="_blank" class="forgot-password">Quên mật khẩu</a>
+                                    <span>hoặc</span>
+                                    <a href="SignUp.html" target="_blank" class="signup">Đăng ký</a>
+
+                        </form>
+                        </div>
+                </li>
+            </ul>
+            <!--#endregion Dropdown-menu-->
+           
+            </div>
+            <!--#endregion Navbar links-->
+    </nav>
+    <!--#endregion Thanh công cụ-->
+
+    <!--main-->
+    <div  id="txtFist"><h1>Quản lý trang web</h1>
+    <div class="container-fluid " id ="managerpro">        
+        
+        <div class="row">
+            <!--cột trái-->
+            <div class="col-md-3 col-sm-3 col-xs-12"  id="leftcot" >
+                <div class="row " id ="left-tren">
+                    <div class="card"  style="width: 100%">
+                        <div class="card-header na-bg">
+                          Thao tác
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item"><a href="">Sản phẩm</a></li>
+                          <li class="list-group-item"><a href="">Đơn hàng</a></li>
+                          <li class="list-group-item"><a href="">Khách hàng</a></li>
+                          <li class="list-group-item"><a href="">Quảng cáo</a></li>
+                        </ul>
+                      </div>
+                </div>
+                <div class="row " id = "left-duoi">
+                    <div class="card"  style="width: 100%">
+                        <div class="card-header na-bg">
+                          Thêm mới
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item"><a href="">Sản phẩm</a></li>
+                          <li class="list-group-item"><a href="">Đơn hàng</a></li>
+                          <li class="list-group-item"><a href="">Khách hàng</a></li>
+                          <li class="list-group-item"><a href="">Quảng cáo</a></li>
+                        </ul>
+                      </div>
+                </div>
+            </div>
+
+            <!--cột giữa-->
+            <div class="col-md-7 col-sm-3 col-xs-12" id="centercot">
+                <form action="">
+                    <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Handle</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td colspan="2">Larry the Bird</td>
+                            <td>@twitter</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </form>
+                
+            </div>
+            <!--Cột phải-->
+            <div class="col-md-2 col-sm-3 col-xs-12" id="rightcot" >
+                <input type="button" value="Xem chi tiết">
+                <input type="button" value="Sửa">
+                <input type="button" value="Xóa">
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+<!--Cuối trang-->
+    <div class="container-fluid mt-1 " style="border:1px solid black;background-color:white; border: none;padding: 10px;box-shadow: 5px 10px 8px 10px #888888; ">
+        <div class="jumbotron mb-0 mt-2">
+            <div class="row ">
+                <div class="col-sm-4 col-xs-12 ">
+                    <h7> THÔNG TIN</h7>
+                    <ul class="let ">
+                        <li>
+                            <a href="# ">Tài khoản</a>
+                        </li>
+                        <li> <a href="# ">khanh toán</a></li>
+                        <li> <a href="# ">Liên hệ</a></li>
+                        <li> <a href="# ">Giới thiệu</a></li>
+                        <li> <a href="# ">Hỗ trợ</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-2 col-xs-12 ">
+                    <h7>CHÍNH SÁCH</h7>
+                    <ul class="let ">
+                        <li><a href="# ">Vận chuyển</a></li>
+                        <li> <a href="# ">Tuyển dụng</a></li>
+                        <li> <a href="# ">Đối tác</a></li>
+                        <li> <a href="# ">Trợ giúp</a></li>
+                        <li> <a href="# ">Khuyến mãi</a>
+                        </li>
+                </div>
+                <div class="col-sm-3 col-xs-12 ">
+                    <a href="# "><i class="fab fa-twitter "></i></a>
+                    <a href="# "><i class="fab fa-youtube "></i></a>
+                    <a href="# "><i class="fab fa-facebook-f "></i></a>
+                    <a href="# "><i class="fab fa-instagram "></i></a>
+
+                </div>
+                <div class="col-sm-3 col-xs-12 ">
+                    <h7>CHÍNH SÁCH</h7>
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <footer style="text-align: center;background-color: black ">
+        <h7 style="color: white; ">Copyrights © 2018 by Suplo. Powered by Haravan</h7>
+    </footer>
+    <div class="button_scroll2top pos-relative" onclick="page_scroll2top() ">
+        <div class="position-absolute" style="left: 50%; top: 50%;transform: translate(-50%,-50%);">
+            <img src="../img/icon/Uppage.png">
+    </div>
+
+        <!--owl product-->
+        <script src="../js/login.js "></script>
+        <script src="../js/Home.js "></script>
+</body>
+
+</html>
