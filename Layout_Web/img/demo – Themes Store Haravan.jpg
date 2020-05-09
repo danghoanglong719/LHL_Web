@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<!-- saved from url=(0091)https://themes.haravan.com/pages/demo?id=default-furniture.myharavan.com&pro=furniture-shop -->
+<html lang="en" class=" js no-touch cssanimations cssgradients csstransforms csstransforms3d csstransitions video svg pointerevents placeholder"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
+		<link rel="shortcut icon" href="https://theme.hstatic.net/1000012173/1000571945/14/favicon.png?v=59" type="image/png">
+		
+		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' /><![endif]-->
+		<title>
+			demo – Themes Store Haravan
+		</title>
+		
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=0" name="viewport">
+		<link rel="canonical" href="https://themes.haravan.com/pages/demo?id=pb-store.myharavan.com%2F">
+		<link href="./demo – Themes Store Haravan_files/demo-css.css" rel="stylesheet" type="text/css" media="all">
+		<script src="./demo – Themes Store Haravan_files/jquery.min.1.11.0.js.tải xuống"></script>
+		<script src="./demo – Themes Store Haravan_files/api.jquery.js.tải xuống" type="text/javascript"></script>		
+		<script>
+		$(document).ready(function(){
+			Haravan.clear(function(){});
+			var parseQueryString = function() {
+				var str = window.location.search;
+				var objURL = {};
+				str.replace(
+					new RegExp("([^?=&]+)(=([^&]*))?", "g"),
+
+					function($0, $1, $2, $3) {
+						objURL[$1] = $3;
+					});
+				return objURL;
+			};
+			var params = parseQueryString();
+			var url_theme = 'https://' + params["id"];
+			var url_product = 'https://themes.haravan.com/products/' + params["pro"];
+			document.getElementById('PreviewFrame').src = url_theme;
+			$('.link-product').attr('href',url_product);
+			$('.link-theme').attr('href',url_product);
+			//$('.link-theme').attr('href',url_theme);
+			if (!(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/Opera Mini/))) {
+
+			}
+			else{
+				$("#SiteNavContainer").remove();
+				$('.page--styles-preview #PageContainer').css('padding-top','0');
+			}
+			// xu ly ban quyen
+			var list_banquyen = $('#list-banquyen').val();
+			var parseQueryString = function() {
+				var str = window.location.search;
+				var objURL = {};
+				str.replace(
+					new RegExp("([^?=&]+)(=([^&]*))?", "g"),
+
+					function($0, $1, $2, $3) {
+						objURL[$1] = $3;
+					});
+				return objURL;
+			};
+			var params = parseQueryString();
+			var handle_product = params["pro"];
+			if(list_banquyen.indexOf(handle_product) > -1){
+				$('#PageContainer').addClass('hidden');
+				$('#product-banquyen').removeClass('hidden');
+				$('.device-preview-controls, .marketing-nav__user').addClass('hidden');
+				if(handle_product == 'capsule-hotel')
+				{
+					$('#product-banquyen').addClass('product-banquyen-2');
+				}else
+				{
+					$('#product-banquyen').addClass('product-banquyen-1');
+				}
+				console.log('co chua');
+			}else{
+				console.log('Khong co chua');
+			}
+
+		});
+		var parseQueryString = function() {
+			var str = window.location.search;
+			var objURL = {};
+			str.replace(
+				new RegExp("([^?=&]+)(=([^&]*))?", "g"),
+
+				function($0, $1, $2, $3) {
+					objURL[$1] = $3;
+				});
+			return objURL;
+		};
+		var params = parseQueryString();
+		var handle_product = params["pro"];
+		var view = params["on"];
+		//console.log(view);
+		var variant_id_1nam = 0;
+		//var variant_id_2nam = 0;
+		//var variant_id_3nam = 0;
+
+		Haravan.getProduct(handle_product, function(product){
+			//console.log(product.variants[0].id);
+			variant_id_1nam = product.variants[0].id;
+			//variant_id_2nam = product.variants[1].id;
+			//variant_id_3nam = product.variants[2].id;
+		}); 
+
+		function mua_ngay_1nam(){
+			var variant_id = variant_id_1nam;
+			var quantity = 1;
+			var params = {
+				type: 'POST',
+				url: '/cart/add.js',
+				sync: false,
+				data: 'quantity=' + quantity + '&id=' + variant_id,
+				dataType: 'json',
+				success: function(line_item) {
+					window.location.href = '/cart';
+				},
+				error: function(XMLHttpRequest, textStatus) {
+					Haravan.onError(XMLHttpRequest, textStatus);
+				}
+			};
+			jQuery.ajax(params);
+		}
+		</script>
+	</head>
+
+	<body class="page--has-secondary-nav page--styles-preview segment-online js-is-loaded democopy" cz-shortcut-listen="true">
+		<input id="list-banquyen" value="oriental-theme, capsule-hotel,
+" class="hidden">	
+
+
+
+		<div id="SiteContainer">
+			<div id="SiteNavContainer" role="banner">
+				<div class="marketing-nav-wrapper headroom headroom--verytop headroom--top" role="navigation" aria-label="Main Navigation">
+					<nav class="marketing-nav marketing-nav__primary" id="HaravanMainNav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+						<a class="in-page-link skip-to-main visuallyhidden focusable" data-ga-event="Main Nav" data-ga-action="Skip to content" href="https://themes.haravan.com/pages/demo?id=default-furniture.myharavan.com&amp;pro=furniture-shop#Main">Skip to Content</a>
+
+						<ul class="marketing-nav__items">
+							<li>
+								<a class="marketing-nav__item link-product" itemprop="name" href="https://themes.haravan.com/products/furniture-shop">
+									<span class="icon icon-caret-left"></span> Quay về xem chi tiết
+								</a>
+							</li>
+						</ul>
+						<ul class="marketing-nav__items device-preview-controls">
+							<li>
+								<a class="marketing-nav__item device-preview-controls__toggle device-preview-controls__toggle--active" data-view="desktop" itemprop="name" id="DesktopPreview" href="https://themes.haravan.com/pages/demo?id=default-furniture.myharavan.com&amp;pro=furniture-shop#">
+									<div class="responsive-svg device-preview-controls__icon device-preview-controls__icon--desktop" style="padding-bottom: 100.0%">
+										<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+											<path d="M14 0H2C.897 0 0 .897 0 2v8c0 1.103.897 2 2 2h4.667v2h-2c-.552 0-1 .447-1 1 0 .553.448 1 1 1h6.667c.552 0 1-.447 1-1 0-.553-.448-1-1-1h-2v-2H14c1.104 0 2-.897 2-2V2c0-1.103-.896-2-2-2zM2 10V2h12v8H2z"></path>
+										</svg>
+									</div>
+									Desktop
+								</a>
+							</li>
+							<li>
+								<a class="marketing-nav__item device-preview-controls__toggle" data-view="mobile" itemprop="name" id="MobilePreview" href="https://themes.haravan.com/pages/demo?id=default-furniture.myharavan.com&amp;pro=furniture-shop#">
+
+									<div class="responsive-svg device-preview-controls__icon" style="padding-bottom: 100.0%">
+										<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+											<path d="M18.7 0H6.3C5.6 0 5 .6 5 1.3v21.3c0 .8.6 1.4 1.3 1.4h12.3c.7 0 1.4-.587 1.4-1.287V1.3c0-.7-.6-1.3-1.3-1.3zm-6.2 22.6c-.7 0-1.3-.6-1.3-1.3 0-.7.6-1.3 1.3-1.3.7 0 1.3.6 1.3 1.3 0 .7-.6 1.3-1.3 1.3zm4.5-4c0 .2-.2.4-.4.4H8.4c-.2 0-.4-.2-.4-.4V3.4c0-.2.2-.4.4-.4h8.1c.3 0 .5.2.5.4v15.2z"></path>
+										</svg>
+
+									</div>
+									Mobile
+								</a>
+							</li>
+						</ul>
+						<ul class="marketing-nav__items marketing-nav__user">
+							<li>
+								<a class="marketing-nav__button" data-ga-event="Install free theme, logged in" data-ga-action="Installed a theme on indv page" data-ga-label="Pop" href="javascript:void(0)" onclick="mua_ngay_1nam()">Mua ngay</a>
+							</li>
+							<li>
+								<a href="https://themes.haravan.com/products/furniture-shop" class="marketing-nav__item hide--mobile link-theme" title="Remove preview bar">
+									<span class="icon icon-close-white">
+										<span class="visuallyhidden">Remove preview bar</span>
+									</span>
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+
+			<!-- BEGIN product review -->
+			<div id="product-banquyen" class="product-review hidden">
+				<div class="container">
+					<div class="product-review-ct">
+						
+					</div>
+				</div>
+			</div>
+			<!-- END product review -->
+			<div id="PageContainer" class="">
+				<main role="main" id="Main">
+					<div class="device-preview">
+						<div class="loader-gif">	</div>
+						<div class="device-preview__container" id="PreviewFrameContainer">
+							<iframe id="PreviewFrame" class="device-preview__iframe" sandbox="allow-same-origin allow-forms allow-popups allow-scripts allow-modals" src="./demo – Themes Store Haravan_files/saved_resource.html">
+							</iframe>
+
+
+						</div>
+					</div>
+				</main>
+			</div>
+
+		</div>
+
+
+		<script src="./demo – Themes Store Haravan_files/demo-script.js.tải xuống" type="text/javascript"></script>
+		<script>
+		window.ThemeStore.config = {
+			spinnerImage: "//theme.hstatic.net/1000012173/1000571945/14/loading.gif?v=59"
+		};
+		$(function () {
+			ThemeStore.init();
+		});
+		$(document).ready(function() {
+			if (view == 'mobile') {
+				$("#MobilePreview").click();
+				//		document.getElementById('PreviewFrame').src = document.getElementById('PreviewFrame').src;
+				$(".device-preview").addClass("active-mobile");
+			}
+		});
+
+		$(document).on('click', 'a#MobilePreview,a#DesktopPreview', function(){
+			if($(this).attr('data-view') == 'mobile'){
+				$(".device-preview").addClass("active-mobile");
+			}
+			else{
+				$(".device-preview").removeClass("active-mobile");
+
+			}
+			$('.loader-gif').html("<img src='//file.hstatic.net/1000012173/file/page-loading-gif-3.gif'>");
+			$('#PreviewFrame').css({"opacity": "0"});
+			setTimeout(function(){
+				$('#PreviewFrame').attr("src", $('#PreviewFrame').attr("src"));
+				setTimeout(function(){
+					$('#PreviewFrame').css({"opacity": "1"});
+					$('.loader-gif').html("");
+				}, 600);
+			}, 600);
+		})
+		</script>
+		<style>
+			.device-preview.active-mobile	.device-preview__container{
+			box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+			}
+		</style>
+	
+
+
+
+
+
+
+
+
+
+
+
+</body></html>
