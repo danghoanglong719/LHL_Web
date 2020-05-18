@@ -234,13 +234,14 @@
     cursor: pointer;
     opacity: 0.6;
     color: #fff;
-    background-color: red;
+    background-color: #bebebe;
     border-radius: 100%;
 }
 
 .button_scroll2top:hover {
     opacity: 1;
 }
+
 
 #myBtn {
     border: 1px solid black;

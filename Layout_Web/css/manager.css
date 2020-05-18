@@ -1,0 +1,34 @@
+
+#leftcot{
+  
+    height: 80vh;
+}
+#centercot{
+    background-image: url("../img/Item/bg12.png") ;
+    
+}
+#rightcot{
+    border:1px solid gainsboro;
+    
+}
+#left-tren{
+    height: 50%;
+    
+    border: 2px solid blue;
+    border-radius: 10px;
+}
+#left-duoi{
+    
+    height: 50%;
+    border: 2px solid blue;
+    border-top:none;
+    border-radius: 10px;
+}
+.na-bg{
+    background-image: url("../img/Item/bg-rmenu.png");
+    font-size: 18px;
+    color: thistle;
+}
+ h1{
+    text-align: center;
+}
