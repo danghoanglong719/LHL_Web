@@ -39,21 +39,24 @@
                         <a href="#">LHL.gmail.com</a>
                     </p>
                 </div>
-                <div class="col-md-5 col-sm-4 col-xs-12 " style="line-height: 50px;">
-
+                <div class="col-md-8 col-sm-4 col-xs-12 " style="line-height: 50px;">
+                    <div id="header-11">
+                        <a href=""> <i class="fas fa-search"></i></a>
+                        <a href=""> <i class="fas fa-cart-plus"> </i><span>0</span></a>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
     <!--#region Thanh công cụ-->
-    <nav class="navbar navbar-expand-md  navbar-dark bg-dark sticky-top">
+    <nav class="navbar navbar-expand-md  navbar-light bg-light sticky-top">
         <!-- Brand -->
 
         <a class="navbar-brand" href="Home.html"><img src="../img/LogoLHL.png" width="40px"></a>
         <!-- Toggler/collapsibe Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
           <i class="fa fa-bars" aria-hidden="true"></i>
-        </button>
+                            </button>
         <!--#region Navbar links -->
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav ">
@@ -454,7 +457,8 @@
                 </div>
                 <div class=" col-md-2 col-sm-4 col-6 p-2 ">
                     <div class="card h-100 " style="border:none; ">
-                        <a href="#"><img class="card-img-top " src="../img/1-ban-1587981900.jpg "></a>
+                        <a href="#"><img class="card-img-top " src="../img/1-ban-1587981900.jpg ">
+                        </a>
                         <div class="card-body ">
                             <h5 class="card-title text-center ">Bàn</h5>
                         </div>
@@ -484,7 +488,7 @@
                 </div>
                 <div class=" col-md-2 col-sm-4 col-6 p-2 ">
                     <div class="card h-100 " style="border:none; ">
-                        <a href="#"> <img class="card-img-top " src="../img//5-sofa-1587982024.jpg "></a>
+                        <a href="#"> <img class="card-img-top " src="../img/5-sofa-1587982024.jpg "></a>
                         <div class="card-body ">
                             <h5 class="card-title text-center ">SoFa</h5>
                         </div>
@@ -664,13 +668,13 @@
                     margin: 20,
                     responsive: {
                         0: {
-                            items: 1,
+                            items: 2,
                         },
                         600: {
                             items: 2,
                         },
                         1000: {
-                            items: 3,
+                            items: 4,
                         }
                     }
                 })
@@ -685,18 +689,15 @@
                 <h5>Sản Phẩm Bán Chạy</h5>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-3" style="border:1px solid black;  color: white; background-color: white; text-align: center;height: 50px;;line-height: 50px;">
-                <button type="button" id="myBtn1" class="btn " style="color: white; background-color: black;"><span><<</span></button>
-                <button type="button" id="myBtn3" class="btn" style="color: white; background-color: black;"><span>>></span></button>
-            </div>
-        </div>
-        <div class="mt-5">
+        <div class="mt-5" id="hang">
+            <div id="prev"><button type="button" id="myBtn1" class="btn "><span><</span></button></div>
+            <div id="next"><button type="button" id="myBtn3" class="btn"><span>></span></button></div>
             <div class="row">
                 <div class="owl-carousel owl-theme " id="owl-2">
                     <div class="item ">
                         <div class="col-xs-6 ">
                             <div class="card h-100 ">
+                                <div id="vi"></div>
                                 <a href="# "> <img class="card-img-top img-fluid " src="../img/arboard24-1580985424.jpg "></a>
                                 <div class="card-body ">
                                     <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
@@ -709,9 +710,13 @@
                                     </div>
                                     <h5>Kệ Vuông Beyours 2 Tầng</h5>
                                     <div class="face-2 ">
-                                        <a href="# "><i class="far fa-eye " style="font-size: 20px; "></i></a>
-                                        <a href="# "><i class="fas fa-shopping-cart" style="font-size: 20px;"></i></a>
-                                        <button class="float-right close" id="buy">Mua Ngay</button>
+                                        <div class="icon-buy  justify-content-center">
+                                            <div id="p1"> <a href="# "><i class="far fa-eye " ></i></a></div>
+                                            <div id="p2"> <a href="# "><i class="fas fa-shopping-cart " ></i></a></div>
+                                        </div>
+                                        <div id="buy">
+                                            <a href="#">Mua Ngay</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -720,6 +725,7 @@
                     <div class="item ">
                         <div class="col-xs-6 ">
                             <div class="card h-100 ">
+                                <div id="vi"></div>
                                 <a href="# "> <img class="card-img-top img-fluid " src="../img/c1.jpg "></a>
                                 <div class="card-body ">
                                     <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
@@ -731,9 +737,13 @@
                                     </div>
                                     <h5>Kệ Vuông Beyours 2 Tầng</h5>
                                     <div class="face-2 ">
-                                        <a href="# "><i class="far fa-eye " style="font-size: 20px; "></i></a>
-                                        <a href="# "><i class="fas fa-shopping-cart" style="font-size: 20px;"></i></a>
-                                        <button class="float-right close" id="buy">Mua Ngay</button>
+                                        <div class="icon-buy  justify-content-center">
+                                            <a href="# "><i class="far fa-eye " ></i></a>
+                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
+                                        </div>
+                                        <div id="buy">
+                                            <a href="#">Mua Ngay</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -742,6 +752,7 @@
                     <div class="item ">
                         <div class="col-xs-6 ">
                             <div class="card h-100 ">
+                                <div id="vi"></div>
                                 <a href="# "> <img class="card-img-top img-fluid " src="../img/c13.jpg "></a>
                                 <div class="card-body ">
                                     <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
@@ -753,9 +764,13 @@
                                     </div>
                                     <h5>Kệ Vuông Beyours 2 Tầng</h5>
                                     <div class="face-2 ">
-                                        <a href="# "><i class="far fa-eye " style="font-size: 20px; "></i></a>
-                                        <a href="# "><i class="fas fa-shopping-cart" style="font-size: 20px;"></i></a>
-                                        <button class="float-right close" id="buy">Mua Ngay</button>
+                                        <div class="icon-buy  justify-content-center">
+                                            <a href="# "><i class="far fa-eye " ></i></a>
+                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
+                                        </div>
+                                        <div id="buy">
+                                            <a href="#">Mua Ngay</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -764,6 +779,7 @@
                     <div class="item ">
                         <div class="col-xs-6 ">
                             <div class="card h-100 ">
+                                <div id="vi"></div>
                                 <a href="# "> <img class="card-img-top img-fluid " src="../img/c3.png"></a>
                                 <div class="card-body ">
                                     <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
@@ -775,9 +791,13 @@
                                     </div>
                                     <h5>Kệ Vuông Beyours 2 Tầng</h5>
                                     <div class="face-2 ">
-                                        <a href="# "><i class="far fa-eye " style="font-size: 20px; "></i></a>
-                                        <a href="# "><i class="fas fa-shopping-cart" style="font-size: 20px;"></i></a>
-                                        <button class="float-right close" id="buy">Mua Ngay</button>
+                                        <div class="icon-buy  justify-content-center">
+                                            <a href="# "><i class="far fa-eye " ></i></a>
+                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
+                                        </div>
+                                        <div id="buy">
+                                            <a href="#">Mua Ngay</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -786,6 +806,7 @@
                     <div class="item ">
                         <div class="col-xs-6 ">
                             <div class="card h-100 ">
+                                <div id="vi"></div>
                                 <a href="# "> <img class="card-img-top img-fluid " src="../img/c4.jpg "></a>
                                 <div class="card-body ">
                                     <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
@@ -797,9 +818,13 @@
                                     </div>
                                     <h5>Kệ Vuông Beyours 2 Tầng</h5>
                                     <div class="face-2 ">
-                                        <a href="# "><i class="far fa-eye " style="font-size: 20px; "></i></a>
-                                        <a href="# "><i class="fas fa-shopping-cart" style="font-size: 20px;"></i></a>
-                                        <button class="float-right close" id="buy">Mua Ngay</button>
+                                        <div class="icon-buy  justify-content-center">
+                                            <a href="# "><i class="far fa-eye " ></i></a>
+                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
+                                        </div>
+                                        <div id="buy">
+                                            <a href="#">Mua Ngay</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -808,6 +833,7 @@
                     <div class="item ">
                         <div class="col-xs-6 ">
                             <div class="card h-100 ">
+                                <div id="vi"></div>
                                 <a href="# "> <img class="card-img-top img-fluid " src="../img/c6.jpg "></a>
                                 <div class="card-body ">
                                     <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
@@ -819,9 +845,13 @@
                                     </div>
                                     <h5>Kệ Vuông Beyours 2 Tầng</h5>
                                     <div class="face-2 ">
-                                        <a href="# "><i class="far fa-eye " style="font-size: 20px; "></i></a>
-                                        <a href="# "><i class="fas fa-shopping-cart" style="font-size: 20px;"></i></a>
-                                        <button class="float-right close" id="buy">Mua Ngay</button>
+                                        <div class="icon-buy  justify-content-center">
+                                            <a href="# "><i class="far fa-eye " ></i></a>
+                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
+                                        </div>
+                                        <div id="buy">
+                                            <a href="#">Mua Ngay</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -830,6 +860,7 @@
                     <div class="item ">
                         <div class="col-xs-6 ">
                             <div class="card h-100 ">
+                                <div id="vi"></div>
                                 <a href="# "> <img class="card-img-top img-fluid " src="../img/c7.jpg "></a>
                                 <div class="card-body ">
                                     <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
@@ -841,9 +872,13 @@
                                     </div>
                                     <h5>Kệ Vuông Beyours 2 Tầng</h5>
                                     <div class="face-2 ">
-                                        <a href="# "><i class="far fa-eye " style="font-size: 20px; "></i></a>
-                                        <a href="# "><i class="fas fa-shopping-cart" style="font-size: 20px;"></i></a>
-                                        <button class="float-right close" id="buy">Mua Ngay</button>
+                                        <div class="icon-buy  justify-content-center">
+                                            <a href="# "><i class="far fa-eye " ></i></a>
+                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
+                                        </div>
+                                        <div id="buy">
+                                            <a href="#">Mua Ngay</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -852,6 +887,7 @@
                     <div class="item ">
                         <div class="col-xs-6 ">
                             <div class="card h-100 ">
+                                <div id="vi"></div>
                                 <a href="# "> <img class="card-img-top img-fluid " src="../img/c8.jpg "></a>
                                 <div class="card-body ">
                                     <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
@@ -863,9 +899,13 @@
                                     </div>
                                     <h5>Kệ Vuông Beyours 2 Tầng</h5>
                                     <div class="face-2 ">
-                                        <a href="# "><i class="far fa-eye " style="font-size: 20px; "></i></a>
-                                        <a href="# "><i class="fas fa-shopping-cart" style="font-size: 20px;"></i></a>
-                                        <button class="float-right close" id="buy">Mua Ngay</button>
+                                        <div class="icon-buy  justify-content-center">
+                                            <a href="# "><i class="far fa-eye " ></i></a>
+                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
+                                        </div>
+                                        <div id="buy">
+                                            <a href="#">Mua Ngay</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -874,6 +914,7 @@
                     <div class="item ">
                         <div class="col-xs-6 ">
                             <div class="card h-100 ">
+                                <div id="vi"></div>
                                 <a href="# "> <img class="card-img-top img-fluid " src="../img/c9.jpg "></a>
                                 <div class="card-body ">
                                     <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
@@ -885,9 +926,13 @@
                                     </div>
                                     <h5>Kệ Vuông Beyours 2 Tầng</h5>
                                     <div class="face-2 ">
-                                        <a href="# "><i class="far fa-eye " style="font-size: 20px; "></i></a>
-                                        <a href="# "><i class="fas fa-shopping-cart" style="font-size: 20px;"></i></a>
-                                        <button class="float-right close" id="buy">Mua Ngay</button>
+                                        <div class="icon-buy  justify-content-center">
+                                            <a href="# "><i class="far fa-eye " ></i></a>
+                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
+                                        </div>
+                                        <div id="buy">
+                                            <a href="#">Mua Ngay</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -896,7 +941,8 @@
                     <div class="item ">
                         <div class="col-xs-6 ">
                             <div class="card h-100 ">
-                                <a href="# "> <img class="card-img-top img-fluid " src="../img/c10.jpg"></a>
+                                <div id="vi"></div>
+                                <a href="# "> <img class="card-img-top img-fluid " src="../img/c10.jpg "></a>
                                 <div class="card-body ">
                                     <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
                                         <i class="fas fa-star"></i>
@@ -907,9 +953,13 @@
                                     </div>
                                     <h5>Kệ Vuông Beyours 2 Tầng</h5>
                                     <div class="face-2 ">
-                                        <a href="# "><i class="far fa-eye " style="font-size: 20px; "></i></a>
-                                        <a href="# "><i class="fas fa-shopping-cart" style="font-size: 20px;"></i></a>
-                                        <button class="float-right close" id="buy">Mua Ngay</button>
+                                        <div class="icon-buy  justify-content-center">
+                                            <a href="# "><i class="far fa-eye " ></i></a>
+                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
+                                        </div>
+                                        <div id="buy">
+                                            <a href="#">Mua Ngay</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -918,6 +968,7 @@
                     <div class="item ">
                         <div class="col-xs-6 ">
                             <div class="card h-100 ">
+                                <div id="vi"></div>
                                 <a href="# "> <img class="card-img-top img-fluid " src="../img/c11.jpg "></a>
                                 <div class="card-body ">
                                     <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
@@ -929,9 +980,13 @@
                                     </div>
                                     <h5>Kệ Vuông Beyours 2 Tầng</h5>
                                     <div class="face-2 ">
-                                        <a href="# "><i class="far fa-eye " style="font-size: 20px; "></i></a>
-                                        <a href="# "><i class="fas fa-shopping-cart" style="font-size: 20px;"></i></a>
-                                        <button class="float-right close" id="buy">Mua Ngay</button>
+                                        <div class="icon-buy  justify-content-center">
+                                            <a href="# "><i class="far fa-eye " ></i></a>
+                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
+                                        </div>
+                                        <div id="buy">
+                                            <a href="#">Mua Ngay</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -940,6 +995,7 @@
                     <div class="item ">
                         <div class="col-xs-6 ">
                             <div class="card h-100 ">
+                                <div id="vi"></div>
                                 <a href="# "> <img class="card-img-top img-fluid " src="../img/c12.jpg "></a>
                                 <div class="card-body ">
                                     <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
@@ -951,9 +1007,13 @@
                                     </div>
                                     <h5>Kệ Vuông Beyours 2 Tầng</h5>
                                     <div class="face-2 ">
-                                        <a href="# "><i class="far fa-eye " style="font-size: 20px; "></i></a>
-                                        <a href="# "><i class="fas fa-shopping-cart" style="font-size: 20px;"></i></a>
-                                        <button class="float-right close" id="buy">Mua Ngay</button>
+                                        <div class="icon-buy  justify-content-center">
+                                            <a href="# "><i class="far fa-eye " ></i></a>
+                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
+                                        </div>
+                                        <div id="buy">
+                                            <a href="#">Mua Ngay</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -962,6 +1022,7 @@
                     <div class="item ">
                         <div class="col-xs-6 ">
                             <div class="card h-100 ">
+                                <div id="vi"></div>
                                 <a href="# "> <img class="card-img-top img-fluid " src="../img/c13.jpg "></a>
                                 <div class="card-body ">
                                     <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
@@ -973,9 +1034,13 @@
                                     </div>
                                     <h5>Kệ Vuông Beyours 2 Tầng</h5>
                                     <div class="face-2 ">
-                                        <a href="# "><i class="far fa-eye " style="font-size: 20px; "></i></a>
-                                        <a href="# "><i class="fas fa-shopping-cart" style="font-size: 20px;"></i></a>
-                                        <button class="float-right close" id="buy">Mua Ngay</button>
+                                        <div class="icon-buy  justify-content-center">
+                                            <a href="# "><i class="far fa-eye " ></i></a>
+                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
+                                        </div>
+                                        <div id="buy">
+                                            <a href="#">Mua Ngay</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -984,6 +1049,7 @@
                     <div class="item ">
                         <div class="col-xs-6 ">
                             <div class="card h-100 ">
+                                <div id="vi"></div>
                                 <a href="# "> <img class="card-img-top img-fluid " src="../img/c14.jpg "></a>
                                 <div class="card-body ">
                                     <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
@@ -995,9 +1061,13 @@
                                     </div>
                                     <h5>Kệ Vuông Beyours 2 Tầng</h5>
                                     <div class="face-2 ">
-                                        <a href="# "><i class="far fa-eye " style="font-size: 20px; "></i></a>
-                                        <a href="# "><i class="fas fa-shopping-cart" style="font-size: 20px;"></i></a>
-                                        <button class="float-right close" id="buy">Mua Ngay</button>
+                                        <div class="icon-buy  justify-content-center">
+                                            <a href="# "><i class="far fa-eye " ></i></a>
+                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
+                                        </div>
+                                        <div id="buy">
+                                            <a href="#">Mua Ngay</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1043,18 +1113,17 @@
                 <h5>Sản Phẩm Bán Chạy</h5>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-3" style="border:1px solid black;  color: white; background-color: white; text-align: center;height: 50px;;line-height: 50px;">
-                <button type="button" id="myBtn4" class="btn " style="color: white; background-color: black;"><span><<</span></button>
-                <button type="button" id="myBtn5" class="btn" style="color: white; background-color: black;"><span>>></span></button>
-            </div>
-        </div>
-        <div class="mt-5">
+
+        <div class="mt-5" id="hang">
+
+            <div id="prev"><button type="button" id="myBtn4" class="btn "><span><</span></button></div>
+            <div id="next"><button type="button" id="myBtn5" class="btn"><span>></span></button></div>
             <div class="row ">
                 <div class="owl-carousel owl-theme " id="owl-3">
                     <div class="item ">
                         <div class="col-xs-6 ">
                             <div class="card h-100 ">
+                                <div id="vi"></div>
                                 <a href="# "> <img class="card-img-top img-fluid " src="../img/a1.jpg "></a>
                                 <div class="card-body ">
                                     <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
@@ -1066,9 +1135,13 @@
                                     </div>
                                     <h5>Kệ Vuông Beyours 2 Tầng</h5>
                                     <div class="face-2 ">
-                                        <a href="# "><i class="far fa-eye " style="font-size: 20px; "></i></a>
-                                        <a href="# "><i class="fas fa-shopping-cart" style="font-size: 20px;"></i></a>
-                                        <button class="float-right close" id="buy">Mua Ngay</button>
+                                        <div class="icon-buy  justify-content-center">
+                                            <a href="# "><i class="far fa-eye " ></i></a>
+                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
+                                        </div>
+                                        <div id="buy">
+                                            <a href="#">Mua Ngay</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1077,6 +1150,7 @@
                     <div class="item ">
                         <div class="col-xs-6 ">
                             <div class="card h-100 ">
+                                <div id="vi"></div>
                                 <a href="# "> <img class="card-img-top img-fluid " src="../img/a2.jpg "></a>
                                 <div class="card-body ">
                                     <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
@@ -1088,9 +1162,13 @@
                                     </div>
                                     <h5>Kệ Vuông Beyours 2 Tầng</h5>
                                     <div class="face-2 ">
-                                        <a href="# "><i class="far fa-eye " style="font-size: 20px; "></i></a>
-                                        <a href="# "><i class="fas fa-shopping-cart" style="font-size: 20px;"></i></a>
-                                        <button class="float-right close" id="buy">Mua Ngay</button>
+                                        <div class="icon-buy  justify-content-center">
+                                            <a href="# "><i class="far fa-eye " ></i></a>
+                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
+                                        </div>
+                                        <div id="buy">
+                                            <a href="#">Mua Ngay</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1099,6 +1177,7 @@
                     <div class="item ">
                         <div class="col-xs-6 ">
                             <div class="card h-100 ">
+                                <div id="vi"></div>
                                 <a href="# "> <img class="card-img-top img-fluid " src="../img/a3.jpg"></a>
                                 <div class="card-body ">
                                     <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
@@ -1110,9 +1189,13 @@
                                     </div>
                                     <h5>Kệ Vuông Beyours 2 Tầng</h5>
                                     <div class="face-2 ">
-                                        <a href="# "><i class="far fa-eye " style="font-size: 20px; "></i></a>
-                                        <a href="# "><i class="fas fa-shopping-cart" style="font-size: 20px;"></i></a>
-                                        <button class="float-right close" id="buy">Mua Ngay</button>
+                                        <div class="icon-buy  justify-content-center">
+                                            <a href="# "><i class="far fa-eye " ></i></a>
+                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
+                                        </div>
+                                        <div id="buy">
+                                            <a href="#">Mua Ngay</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1121,6 +1204,7 @@
                     <div class="item ">
                         <div class="col-xs-6 ">
                             <div class="card h-100 ">
+                                <div id="vi"></div>
                                 <a href="# "> <img class="card-img-top img-fluid " src="../img/a4.jpg "></a>
                                 <div class="card-body ">
                                     <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
@@ -1132,9 +1216,13 @@
                                     </div>
                                     <h5>Kệ Vuông Beyours 2 Tầng</h5>
                                     <div class="face-2 ">
-                                        <a href="# "><i class="far fa-eye " style="font-size: 20px; "></i></a>
-                                        <a href="# "><i class="fas fa-shopping-cart" style="font-size: 20px;"></i></a>
-                                        <button class="float-right close" id="buy">Mua Ngay</button>
+                                        <div class="icon-buy  justify-content-center">
+                                            <a href="# "><i class="far fa-eye " ></i></a>
+                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
+                                        </div>
+                                        <div id="buy">
+                                            <a href="#">Mua Ngay</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1143,6 +1231,7 @@
                     <div class="item ">
                         <div class="col-xs-6 ">
                             <div class="card h-100 ">
+                                <div id="vi"></div>
                                 <a href="# "> <img class="card-img-top img-fluid " src="../img/a5.jpg "></a>
                                 <div class="card-body ">
                                     <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
@@ -1154,9 +1243,13 @@
                                     </div>
                                     <h5>Kệ Vuông Beyours 2 Tầng</h5>
                                     <div class="face-2 ">
-                                        <a href="# "><i class="far fa-eye " style="font-size: 20px; "></i></a>
-                                        <a href="# "><i class="fas fa-shopping-cart" style="font-size: 20px;"></i></a>
-                                        <button class="float-right close" id="buy">Mua Ngay</button>
+                                        <div class="icon-buy  justify-content-center">
+                                            <a href="# "><i class="far fa-eye " ></i></a>
+                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
+                                        </div>
+                                        <div id="buy">
+                                            <a href="#">Mua Ngay</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1165,6 +1258,7 @@
                     <div class="item ">
                         <div class="col-xs-6 ">
                             <div class="card h-100 ">
+                                <div id="vi"></div>
                                 <a href="# "> <img class="card-img-top img-fluid " src="../img/a6.jpg"></a>
                                 <div class="card-body ">
                                     <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
@@ -1176,9 +1270,13 @@
                                     </div>
                                     <h5>Kệ Vuông Beyours 2 Tầng</h5>
                                     <div class="face-2 ">
-                                        <a href="# "><i class="far fa-eye " style="font-size: 20px; "></i></a>
-                                        <a href="# "><i class="fas fa-shopping-cart" style="font-size: 20px;"></i></a>
-                                        <button class="float-right close" id="buy">Mua Ngay</button>
+                                        <div class="icon-buy  justify-content-center">
+                                            <a href="# "><i class="far fa-eye " ></i></a>
+                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
+                                        </div>
+                                        <div id="buy">
+                                            <a href="#">Mua Ngay</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1187,6 +1285,7 @@
                     <div class="item ">
                         <div class="col-xs-6 ">
                             <div class="card h-100 ">
+                                <div id="vi"></div>
                                 <a href="# "> <img class="card-img-top img-fluid " src="../img/a7.jpg"></a>
                                 <div class="card-body ">
                                     <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
@@ -1198,9 +1297,13 @@
                                     </div>
                                     <h5>Kệ Vuông Beyours 2 Tầng</h5>
                                     <div class="face-2 ">
-                                        <a href="# "><i class="far fa-eye " style="font-size: 20px; "></i></a>
-                                        <a href="# "><i class="fas fa-shopping-cart" style="font-size: 20px;"></i></a>
-                                        <button class="float-right close" id="buy">Mua Ngay</button>
+                                        <div class="icon-buy  justify-content-center">
+                                            <a href="# "><i class="far fa-eye " ></i></a>
+                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
+                                        </div>
+                                        <div id="buy">
+                                            <a href="#">Mua Ngay</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1209,6 +1312,7 @@
                     <div class="item ">
                         <div class="col-xs-6 ">
                             <div class="card h-100 ">
+                                <div id="vi"></div>
                                 <a href="# "> <img class="card-img-top img-fluid " src="../img/a8.jpg"></a>
                                 <div class="card-body ">
                                     <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
@@ -1220,9 +1324,13 @@
                                     </div>
                                     <h5>Kệ Vuông Beyours 2 Tầng</h5>
                                     <div class="face-2 ">
-                                        <a href="# "><i class="far fa-eye " style="font-size: 20px; "></i></a>
-                                        <a href="# "><i class="fas fa-shopping-cart" style="font-size: 20px;"></i></a>
-                                        <button class="float-right close" id="buy">Mua Ngay</button>
+                                        <div class="icon-buy  justify-content-center">
+                                            <a href="# "><i class="far fa-eye " ></i></a>
+                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
+                                        </div>
+                                        <div id="buy">
+                                            <a href="#">Mua Ngay</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1231,6 +1339,7 @@
                     <div class="item ">
                         <div class="col-xs-6 ">
                             <div class="card h-100 ">
+                                <div id="vi"></div>
                                 <a href="# "> <img class="card-img-top img-fluid " src="../img/a9.jpg"></a>
                                 <div class="card-body ">
                                     <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
@@ -1242,9 +1351,13 @@
                                     </div>
                                     <h5>Kệ Vuông Beyours 2 Tầng</h5>
                                     <div class="face-2 ">
-                                        <a href="# "><i class="far fa-eye " style="font-size: 20px; "></i></a>
-                                        <a href="# "><i class="fas fa-shopping-cart" style="font-size: 20px;"></i></a>
-                                        <button class="float-right close" id="buy">Mua Ngay</button>
+                                        <div class="icon-buy  justify-content-center">
+                                            <a href="# "><i class="far fa-eye " ></i></a>
+                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
+                                        </div>
+                                        <div id="buy">
+                                            <a href="#">Mua Ngay</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1253,6 +1366,7 @@
                     <div class="item ">
                         <div class="col-xs-6 ">
                             <div class="card h-100 ">
+                                <div id="vi"></div>
                                 <a href="# "> <img class="card-img-top img-fluid " src="../img/a10.jpg"></a>
                                 <div class="card-body ">
                                     <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
@@ -1264,9 +1378,13 @@
                                     </div>
                                     <h5>Kệ Vuông Beyours 2 Tầng</h5>
                                     <div class="face-2 ">
-                                        <a href="# "><i class="far fa-eye " style="font-size: 20px; "></i></a>
-                                        <a href="# "><i class="fas fa-shopping-cart" style="font-size: 20px;"></i></a>
-                                        <button class="float-right close" id="buy">Mua Ngay</button>
+                                        <div class="icon-buy  justify-content-center">
+                                            <a href="# "><i class="far fa-eye " ></i></a>
+                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
+                                        </div>
+                                        <div id="buy">
+                                            <a href="#">Mua Ngay</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1275,6 +1393,7 @@
                     <div class="item ">
                         <div class="col-xs-6 ">
                             <div class="card h-100 ">
+                                <div id="vi"></div>
                                 <a href="# "> <img class="card-img-top img-fluid " src="../img/a11.jpg"></a>
                                 <div class="card-body ">
                                     <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
@@ -1286,9 +1405,13 @@
                                     </div>
                                     <h5>Kệ Vuông Beyours 2 Tầng</h5>
                                     <div class="face-2 ">
-                                        <a href="# "><i class="far fa-eye " style="font-size: 20px; "></i></a>
-                                        <a href="# "><i class="fas fa-shopping-cart" style="font-size: 20px;"></i></a>
-                                        <button class="float-right close" id="buy">Mua Ngay</button>
+                                        <div class="icon-buy  justify-content-center">
+                                            <a href="# "><i class="far fa-eye " ></i></a>
+                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
+                                        </div>
+                                        <div id="buy">
+                                            <a href="#">Mua Ngay</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1297,6 +1420,7 @@
                     <div class="item ">
                         <div class="col-xs-6 ">
                             <div class="card h-100 ">
+                                <div id="vi"></div>
                                 <a href="# "> <img class="card-img-top img-fluid " src="../img/a12.jpg"></a>
                                 <div class="card-body ">
                                     <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
@@ -1308,9 +1432,13 @@
                                     </div>
                                     <h5>Kệ Vuông Beyours 2 Tầng</h5>
                                     <div class="face-2 ">
-                                        <a href="# "><i class="far fa-eye " style="font-size: 20px; "></i></a>
-                                        <a href="# "><i class="fas fa-shopping-cart" style="font-size: 20px;"></i></a>
-                                        <button class="float-right close" id="buy">Mua Ngay</button>
+                                        <div class="icon-buy  justify-content-center">
+                                            <a href="# "><i class="far fa-eye " ></i></a>
+                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
+                                        </div>
+                                        <div id="buy">
+                                            <a href="#">Mua Ngay</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1319,6 +1447,7 @@
                     <div class="item ">
                         <div class="col-xs-6 ">
                             <div class="card h-100 ">
+                                <div id="vi"></div>
                                 <a href="# "> <img class="card-img-top img-fluid " src="../img/a13.jpg"></a>
                                 <div class="card-body ">
                                     <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
@@ -1330,9 +1459,13 @@
                                     </div>
                                     <h5>Kệ Vuông Beyours 2 Tầng</h5>
                                     <div class="face-2 ">
-                                        <a href="# "><i class="far fa-eye " style="font-size: 20px; "></i></a>
-                                        <a href="# "><i class="fas fa-shopping-cart" style="font-size: 20px;"></i></a>
-                                        <button class="float-right close" id="buy">Mua Ngay</button>
+                                        <div class="icon-buy  justify-content-center">
+                                            <a href="# "><i class="far fa-eye " ></i></a>
+                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
+                                        </div>
+                                        <div id="buy">
+                                            <a href="#">Mua Ngay</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1351,18 +1484,16 @@
                 <h5>Sản Phẩm Bán Chạy</h5>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-3" style="border:1px solid black;  color: white; background-color: white; text-align: center;height: 50px;;line-height: 50px;">
-                <button type="button" id="myBtn6" class="btn " style="color: white; background-color: black;"><span><<</span></button>
-                <button type="button" id="myBtn7" class="btn" style="color: white; background-color: black;"><span>>></span></button>
-            </div>
-        </div>
-        <div class="mt-5">
+
+        <div class="mt-5" id="hang">
+            <div id="prev"><button type="button" id="myBtn6" class="btn "><span><</span></button></div>
+            <div id="next"><button type="button" id="myBtn7" class="btn"><span>></span></button></div>
             <div class="row">
                 <div class="owl-carousel owl-theme " id="owl-4">
                     <div class="item ">
                         <div class="col-xs-6 ">
                             <div class="card h-100 ">
+                                <div id="vi"></div>
                                 <a href="# "> <img class="card-img-top img-fluid " src="../img/aa.png "></a>
                                 <div class="card-body ">
                                     <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
@@ -1374,9 +1505,13 @@
                                     </div>
                                     <h5>Kệ Vuông Beyours 2 Tầng</h5>
                                     <div class="face-2 ">
-                                        <a href="# "><i class="far fa-eye " style="font-size: 20px; "></i></a>
-                                        <a href="# "><i class="fas fa-shopping-cart" style="font-size: 20px;"></i></a>
-                                        <button class="float-right close" id="buy">Mua Ngay</button>
+                                        <div class="icon-buy  justify-content-center">
+                                            <a href="# "><i class="far fa-eye " ></i></a>
+                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
+                                        </div>
+                                        <div id="buy">
+                                            <a href="#">Mua Ngay</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1385,6 +1520,7 @@
                     <div class="item ">
                         <div class="col-xs-6 ">
                             <div class="card h-100 ">
+                                <div id="vi"></div>
                                 <a href="# "> <img class="card-img-top img-fluid " src="../img/bb.png "></a>
                                 <div class="card-body ">
                                     <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
@@ -1396,9 +1532,13 @@
                                     </div>
                                     <h5>Kệ Vuông Beyours 2 Tầng</h5>
                                     <div class="face-2 ">
-                                        <a href="# "><i class="far fa-eye " style="font-size: 20px; "></i></a>
-                                        <a href="# "><i class="fas fa-shopping-cart" style="font-size: 20px;"></i></a>
-                                        <button class="float-right close" id="buy">Mua Ngay</button>
+                                        <div class="icon-buy  justify-content-center">
+                                            <a href="# "><i class="far fa-eye " ></i></a>
+                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
+                                        </div>
+                                        <div id="buy">
+                                            <a href="#">Mua Ngay</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1407,6 +1547,7 @@
                     <div class="item ">
                         <div class="col-xs-6 ">
                             <div class="card h-100 ">
+                                <div id="vi"></div>
                                 <a href="# "> <img class="card-img-top img-fluid " src="../img/cc.png "></a>
                                 <div class="card-body ">
                                     <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
@@ -1418,9 +1559,13 @@
                                     </div>
                                     <h5>Kệ Vuông Beyours 2 Tầng</h5>
                                     <div class="face-2 ">
-                                        <a href="# "><i class="far fa-eye " style="font-size: 20px; "></i></a>
-                                        <a href="# "><i class="fas fa-shopping-cart" style="font-size: 20px;"></i></a>
-                                        <button class="float-right close" id="buy">Mua Ngay</button>
+                                        <div class="icon-buy  justify-content-center">
+                                            <a href="# "><i class="far fa-eye " ></i></a>
+                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
+                                        </div>
+                                        <div id="buy">
+                                            <a href="#">Mua Ngay</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1429,6 +1574,7 @@
                     <div class="item ">
                         <div class="col-xs-6 ">
                             <div class="card h-100 ">
+                                <div id="vi"></div>
                                 <a href="# "> <img class="card-img-top img-fluid " src="../img/dd.png "></a>
                                 <div class="card-body ">
                                     <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
@@ -1440,9 +1586,13 @@
                                     </div>
                                     <h5>Kệ Vuông Beyours 2 Tầng</h5>
                                     <div class="face-2 ">
-                                        <a href="# "><i class="far fa-eye " style="font-size: 20px; "></i></a>
-                                        <a href="# "><i class="fas fa-shopping-cart" style="font-size: 20px;"></i></a>
-                                        <button class="float-right close" id="buy">Mua Ngay</button>
+                                        <div class="icon-buy  justify-content-center">
+                                            <a href="# "><i class="far fa-eye " ></i></a>
+                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
+                                        </div>
+                                        <div id="buy">
+                                            <a href="#">Mua Ngay</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1451,6 +1601,7 @@
                     <div class="item ">
                         <div class="col-xs-6 ">
                             <div class="card h-100 ">
+                                <div id="vi"></div>
                                 <a href="# "> <img class="card-img-top img-fluid " src="../img/ee.jpg "></a>
                                 <div class="card-body ">
                                     <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
@@ -1462,9 +1613,13 @@
                                     </div>
                                     <h5>Kệ Vuông Beyours 2 Tầng</h5>
                                     <div class="face-2 ">
-                                        <a href="# "><i class="far fa-eye " style="font-size: 20px; "></i></a>
-                                        <a href="# "><i class="fas fa-shopping-cart" style="font-size: 20px;"></i></a>
-                                        <button class="float-right close" id="buy">Mua Ngay</button>
+                                        <div class="icon-buy  justify-content-center">
+                                            <a href="# "><i class="far fa-eye " ></i></a>
+                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
+                                        </div>
+                                        <div id="buy">
+                                            <a href="#">Mua Ngay</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1473,6 +1628,7 @@
                     <div class="item ">
                         <div class="col-xs-6 ">
                             <div class="card h-100 ">
+                                <div id="vi"></div>
                                 <a href="# "> <img class="card-img-top img-fluid " src="../img/ff.jpg"></a>
                                 <div class="card-body ">
                                     <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
@@ -1484,9 +1640,13 @@
                                     </div>
                                     <h5>Kệ Vuông Beyours 2 Tầng</h5>
                                     <div class="face-2 ">
-                                        <a href="# "><i class="far fa-eye " style="font-size: 20px; "></i></a>
-                                        <a href="# "><i class="fas fa-shopping-cart" style="font-size: 20px;"></i></a>
-                                        <button class="float-right close" id="buy">Mua Ngay</button>
+                                        <div class="icon-buy  justify-content-center">
+                                            <a href="# "><i class="far fa-eye " ></i></a>
+                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
+                                        </div>
+                                        <div id="buy">
+                                            <a href="#">Mua Ngay</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1495,6 +1655,7 @@
                     <div class="item ">
                         <div class="col-xs-6 ">
                             <div class="card h-100 ">
+                                <div id="vi"></div>
                                 <a href="# "> <img class="card-img-top img-fluid " src="../img/gg.png"></a>
                                 <div class="card-body ">
                                     <div style="border-bottom:1px solid black ;margin-bottom: 10px; ">
@@ -1506,9 +1667,13 @@
                                     </div>
                                     <h5>Kệ Vuông Beyours 2 Tầng</h5>
                                     <div class="face-2 ">
-                                        <a href="# "><i class="far fa-eye " style="font-size: 20px; "></i></a>
-                                        <a href="# "><i class="fas fa-shopping-cart" style="font-size: 20px;"></i></a>
-                                        <button class="float-right close" id="buy">Mua Ngay</button>
+                                        <div class="icon-buy  justify-content-center">
+                                            <a href="# "><i class="far fa-eye " ></i></a>
+                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
+                                        </div>
+                                        <div id="buy">
+                                            <a href="#">Mua Ngay</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1521,7 +1686,37 @@
         </div>
     </div>
     <!--card-->
-
+    <div class="container mt-5">
+        <div class="row" id="th">
+            <div class="col-sm-5">
+                <hr>
+            </div>
+            <div class="col-sm-2">Thương Hiệu</div>
+            <div class="col-sm-5">
+                <hr>
+            </div>
+        </div>
+        <div class="row mt-3" id="aaa">
+            <div class="col-sm-2">
+                <img src="../img/brand_1.jpg" alt="" class=" img-fluid">
+            </div>
+            <div class="col-sm-2">
+                <img src="../img/brand_2.jpg" alt="" class=" img-fluid">
+            </div>
+            <div class="col-sm-2">
+                <img src="../img/brand_3.jpg" alt="" class=" img-fluid">
+            </div>
+            <div class="col-sm-2">
+                <img src="../img/brand_4.jpg" alt="" class=" img-fluid">
+            </div>
+            <div class="col-sm-2">
+                <img src="../img/brand_5.jpg" alt=" " class=" img-fluid">
+            </div>
+            <div class="col-sm-2">
+                <img src="../img/brand_6.jpg" alt="" class=" img-fluid">
+            </div>
+        </div>
+    </div>
     <div class="container-fluid mt-5 " style="border:1px solid black;background-color:white; border: none;padding: 10px;box-shadow: 5px 10px 8px 10px #888888; ">
         <div class="jumbotron mb-0 mt-5 ">
             <div class="row ">
