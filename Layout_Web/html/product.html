@@ -5,342 +5,153 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LHL Furniture</title>
-    <link rel="stylesheet" type="text/css" href="../css/home.css">
+    <link rel="stylesheet" type="text/css" href="">
     <link rel="stylesheet" type="text/css" href="../css/product.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="../OwlCarousel2-2.3.4/src/js/owl.carousel.js">
     <link rel="stylesheet" href="../OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="../OwlCarousel2-2.3.4/dist/assets/owl.theme.green.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+
+
 </head>
 <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="../js/jquery-3.5.0.min.js"></script>
+<script type="text/javascript" src="../js/jquery/jquery-3.5.0.min.js"></script>
 <script src="../OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
 
+
 <body>
+    <!-- Modal -->
+    <div class="modal fade" id="elegantModalForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="z-index: 123313123;">
+        <div class="modal-dialog modal-dialog-centered " role="document">
 
-    <header class="" style="background-color: black;">
-        <div class="container-fluid">
-            <div class="row" style="height: 50px;">
-                <div class="col-md-2 col-sm-4 col-xs-12 " style="color: #fff;line-height: 50px;">
-                    <p><i class="fa fa-phone" aria-hidden="true"></i>
-                        <span>Phone</span> 0403501119
-                    </p>
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-12 " style="color: #fff;line-height: 50px;">
-                    <p><i class="fa fa-envelope" aria-hidden="true"></i>
-                        <span>Email</span>
-                        <a href="#">LHL.gmail.com</a>
-                    </p>
-                </div>
-                <div class="col-md-5 col-sm-4 col-xs-12 " style="line-height: 50px;">
+            <div class="modal-content form-elegant">
 
+                <div class="modal-header text-center">
+                    <h3 class="modal-title w-100 dark-grey-text font-weight-bold my-3" id="myModalLabel"><strong>Sign in</strong></h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+                </div>
+                <div class="modal-body mx-4">
+                    <div class="md-form mb-5">
+                        <input type="email" id="Form-email1" class="form-control validate">
+                        <label data-error="wrong" data-success="right" for="Form-email1">Your email</label>
+                    </div>
+                    <div class="md-form pb-3">
+                        <input type="password" id="Form-pass1" class="form-control validate">
+                        <label data-error="wrong" data-success="right" for="Form-pass1">Your password</label>
+                    </div>
+                    <div class="text-center mb-3">
+                        <button type="button" class="btn blue-gradient btn-block btn-rounded z-depth-1a">Sign in</button>
+                    </div>
+                    <p class="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2"> or Sign in with:
+                    </p>
+                    <div class="row my-3 d-flex justify-content-center">
+                        <button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a"><i class="fab fa-facebook-f text-center"></i></button>
+                        <button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a"><i class="fab fa-twitter"></i></button>
+                        <button type="button" class="btn btn-white btn-rounded z-depth-1a"><i class="fab fa-google-plus-g"></i></button>
+                    </div>
+                </div>
+
+                <div class="modal-footer mx-5 pt-3 mb-1">
+                    <p class="font-small grey-text d-flex justify-content-end">Not a member? <a href="#" class="blue-text ml-1">
+        Sign Up</a></p>
                 </div>
             </div>
         </div>
-    </header>
-    <nav class="navbar navbar-expand-md  navbar-dark bg-dark sticky-top">
-        <!-- Brand -->
-
-        <a class="navbar-brand" href="Home.html"><img src="../img/LogoLHL.png" width="40px"></a>
-        <!-- Toggler/collapsibe Button -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-          <i class="fa fa-bars" aria-hidden="true"></i>
-        </button>
-        <!--#region Navbar links -->
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav ">
-                <li class="nav-item">
-                    <a class="nav-link ml-2" href="Home.html">Trang Chủ</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link ml-2" href="#">Liên Hệ</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link ml-2" href="#">Trợ Giúp</a>
-                </li>
-                <li id="dropdown" class="nav-item dropdown  ml-2 ">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                      Sản phẩm
-                    </a>
-                    <div class="drop-down dropdown-menu " style="background-color: lightcyan;">
-                        <div class=" container ">
-                            <div class="row ">
-                                <div class="  col-xs-4 mr-bt-10 ">
-                                    <div class="dropdown-header " style="font-weight: bold;">Giường</div>
-                                    <ul class=" list-unstyled " style="font-size: 12px; ">
-                                        <li>
-                                            <a href=" ">Giường Đôi</a>
-                                        </li>
-                                        <li>
-                                            <a href=" ">Giường Đơn</a>
-                                        </li>
-                                        <li>
-                                            <a href=" ">Giường Tầng</a>
-                                        </li>
-                                        <li>
-                                            <a href=" ">Giường Kéo</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class=" col-xs-4 mr-bt-10 ">
-                                    <div class="dropdown-header " style="font-weight: bold;">Tủ</div>
-                                    <ul class=" list-unstyled " style="font-size: 12px; ">
-                                        <li>
-                                            <a href=" ">Tủ Trang Trí</a>
-                                        </li>
-                                        <li>
-                                            <a href=" ">Tủ Ngăn</a>
-                                        </li>
-                                        <li>
-                                            <a href=" ">Tủ Quần Áo</a>
-                                        </li>
-                                        <li>
-                                            <a href=" ">Tủ Giày</a>
-                                        </li>
-                                        <li>
-                                            <a href=" ">Tủ Bếp</a>
-                                        </li>
-
-                                    </ul>
-                                </div>
-                                <div class="   col-xs-4 mr-bt-10 ">
-                                    <span class="dropdown-header " style="font-weight: bold;">Bàn</span>
-                                    <ul class=" list-unstyled " style="font-size: 12px;">
-                                        <li>
-                                            <a href=" ">Bàn Làm Việc</a>
-                                        </li>
-                                        <li>
-                                            <a href=" ">Bàn Ăn</a>
-                                        </li>
-                                        <li>
-                                            <a href=" ">Bàn Bar</a>
-                                        </li>
-                                        <li>
-                                            <a href=" ">Bàn Trang Điểm</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="  col-xs-4 mr-bt-10">
-                                    <div class="dropdown-header " style="font-weight: bold;">Ghế</div>
-                                    <ul class=" list-unstyled " style="font-size: 12px; ">
-                                        <li>
-                                            <a href=" ">Ghế Làm Việc</a>
-                                        </li>
-                                        <li>
-                                            <a href=" ">Bàn Ăn</a>
-                                        </li>
-                                        <li>
-                                            <a href=" ">Bàn Bar</a>
-                                        </li>
-                                        <li>
-                                            <a href=" ">Bàn Thư Giãn</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="row ">
-                                <div class="col-xs-4 mr-bt-10 ">
-                                    <div class="dropdown-header " style="font-weight: bold;">SoFa Đơn</div>
-                                    <ul class=" list-unstyled " style="font-size: 12px; ">
-                                        <li>
-                                            <a href=" ">SoFa Đôn</a>
-                                        </li>
-                                        <li>
-                                            <a href=" ">Ghế Băng</a>
-                                        </li>
-                                        <li>
-                                            <a href=" ">Ghế Đọc Sách</a>
-                                        </li>
-                                        <li>
-                                            <a href=" ">Ghế Bằng</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="  col-xs-4 mr-bt-10 ">
-                                    <div class="dropdown-header " style="font-weight: bold;">SoFa</div>
-                                    <ul class=" list-unstyled " style="font-size: 12px; ">
-                                        <li>
-                                            <a href=" ">SoFa gốc</a>
-                                        </li>
-                                        <li>
-                                            <a href=" ">Sofa Giường</a>
-                                        </li>
-                                        <li>
-                                            <a href=" ">Sofa 2 chỗ</a>
-                                        </li>
-                                        <li>
-                                            <a href=" ">Sofa 3 chổ</a>
-                                        </li>
-
-                                    </ul>
-                                </div>
-                                <div class=" col-xs-4 mr-bt-10">
-                                    <div class="dropdown-header " style="font-weight: bold;">Bàn Cafe</div>
-                                    <ul class=" list-unstyled " style="font-size: 12px; ">
-                                        <li>
-                                            <a href=" ">Bàn Trang Trí</a>
-                                        </li>
-                                        <li>
-                                            <a href=" ">Bàn Gốc</a>
-                                        </li>
-                                        <li>
-                                            <a href=" ">Bàn CAFE</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="   col-xs-4 mr-bt-10 ">
-                                    <div class="dropdown-header " style="font-weight: bold;">Kệ</div>
-                                    <ul class=" list-unstyled " style="font-size: 12px; ">
-                                        <li>
-                                            <a href=" ">Kệ Treo Giường</a>
-                                        </li>
-                                        <li>
-                                            <a href=" ">Kệ Sách</a>
-                                        </li>
-                                        <li>
-                                            <a href=" ">Kệ TiVi</a>
-                                        </li>
-
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="row ">
-                                <div class="col-xs-4 mr-bt-10 ">
-                                    <div class="dropdown-header " style="font-weight: bold;">Phụ Kiện</div>
-                                    <ul class=" list-unstyled " style="font-size: 12px; ">
-                                        <li>
-                                            <a href=" ">Gối</a>
-                                        </li>
-                                        <li>
-                                            <a href=" ">Nệm</a>
-                                        </li>
-                                        <li>
-                                            <a href=" ">Khăn</a>
-                                        </li>
-                                        <li>
-                                            <a href=" ">Thảm</a>
-                                        </li>
-                                        <li>
-                                            <a href=" ">Thùng Rác</a>
-                                        </li>
-                                        <li>
-                                            <a href=" ">Rương</a>
-                                        </li>
-                                        <li>
-                                            <a href=" ">Giỏ</a>
-                                        </li>
-                                        <li>
-                                            <a href=" ">Đồ Gia Dụng</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="  col-xs-4 mr-bt-10 ">
-                                    <div class="dropdown-header " style="font-weight: bold;">Trang Trí</div>
-                                    <ul class=" list-unstyled " style="font-size: 12px; ">
-                                        <li>
-                                            <a href=" ">Tranh</a>
-                                        </li>
-                                        <li>
-                                            <a href=" ">lọ Trang Trí</a>
-                                        </li>
-                                        <li>
-                                            <a href=" ">Cây Trang Trí</a>
-                                        </li>
-                                        <li>
-                                            <a href=" ">Đồng Hồ</a>
-                                        </li>
-                                        <li>
-                                            <a href=" ">Nến </a>
-                                        </li>
-                                        <li>
-                                            <a href=" ">Đèn</a>
-                                        </li>
-
-
-                                    </ul>
-                                </div>
-
-
-                            </div>
-
-
-                        </div>
-
-                    </div>
-                </li>
-                <li id="dropdown" class="nav-item dropdown  ml-2 ">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                        <i class="fas fa-search" aria-hidden="true"></i>
-                    </a>
-                    <div class="drop-down dropdown-menu ">
-                        <form class="form-inline d-flex justify-content-center md-form form-sm mt-0">
-                            <i class="fas fa-search" aria-hidden="true"></i>
-                            <input class="form-control form-control-sm ml-3 w-75" type="text" id="txt" placeholder="Search" aria-label="Search">
-                        </form>
-
-                    </div>
-                </li>
-            </ul>
-
-
-            <!--#region Dropdown-menu-->
-
-            <ul class="nav navbar-nav ml-auto ">
-                <li class="nav-item dropdown ">
-                    <a class="nav-link dropdown-toggle  text-decoration-none mr-4" href="#" id="navbardrop" data-toggle="dropdown">
-                        <i class="fas fa-user"></i> Đăng nhập
-                    </a>
-
-                    <div class="dropdown-menu dropdown-menu-right log" style="width:300px;">
-                        <form class="px-3 py-2 ">
-                            <h3>Đăng nhập</h1>
-                                <div class="signin">
-
-                                    <div class="form-group">
-                                        <label for="exampleDropdownFormEmail1 ">Tên tài khoản hoặc email</label>
-                                        <input type="email" class="form-control" id="txtUsername" placeholder="Nhập tên tài khoản">
-                                        <p id="txtErrUser" style="color: red;"></p>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleDropdownFormPassword1">Mật khẩu</label>
-                                        <input type="password" class="form-control" id="txtPassword" placeholder="Nhập mật khẩu">
-                                        <p id="txtErrPass" style="color: red;"></p>
-                                    </div>
-                                    <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" id="ckRem">
-                                        <label class="form-check-label" for="dropdownCheck">Nhớ mật khẩu</label>
-                                    </div>
-                                    <button type="submit" class="btn btn-success btn-block" id="btnLogin">Đăng nhập</button>
-                                    <div class="dropdown-divider"></div>
-                                    <a href="#" target="_blank" class="forgot-password">Quên mật khẩu</a>
-                                    <span>hoặc</span>
-                                    <a href="SignUp.html" target="_blank" class="signup">Đăng ký</a>
-
-                        </form>
-                        </div>
-                </li>
-            </ul>
-            <!--#endregion Dropdown-menu-->
-            </div>
-            <!--#endregion Navbar links-->
-
-
-    </nav>
-    <div class="container mt-3">
-        <img src="../img/collection_image_default.jpg" alt="" class=" img-fluid">
     </div>
     <!---->
+    <!--modal-search-->
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="z-index: 123313123;">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <form class="form-inline d-flex justify-content-center md-form form-sm mt-0 w-100" action="">
+                    <input class=" form-control form-control-sm ml-3 w-100" type="text" placeholder="Search" aria-label="Search" style=" border:none;" id="search">
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('.search-item ').search({
 
-    <!---->
+        });
+    </script>
+    <!--end-->
+    <div class="container-fluid menu">
+        <nav class="navbar navbar-expand-md   navbar11 " style=" ">
+            <a class="navbar-brand " href="Home.html"><img src="../img/LogoLHL.png" width="40px"></a>
+            <button class="navbar-toggler btn-light" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+                            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <div class=" " style="margin:0px auto;">
+                    <ul class="navbar-nav ">
+                        <li class="nav-item">
+                            <a class="nav-link ml-2" href="Home.html">Trang Chủ <span></span></a>
+                        </li>
+                        <li class="nav-item">
+
+                            <a class="nav-link ml-2" href="#"> <span></span>Liên Hệ</a>
+
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link ml-2" href="#"><span></span>Trợ Giúp</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link ml-2" href="#"><span></span>Sản Phẩm</a>
+                            <div class="container " style=" background-color:white">
+                                <ul class="sub-menu ">
+
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link ml-2" href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><span></span>Tìm kiếm</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link ml-2" href="#"><span></span>Giỏ Hàng</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link ml-2" href="#" data-toggle="modal" data-target="#elegantModalForm"><span></span>Tài Khoản</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </nav>
+    </div>
+    <div class="">
+
+        <div class=""><img src="https://demo.goodlayers.com/inteco/wp-content/uploads/2018/09/shutterstock_543421996.jpg" alt="" class=" img-fluid-1"></div>
 
 
+    </div>
+    <script>
+        $(window).scroll(function() {
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 50) {
+                $(".navbar11").addClass("scroll-navbar");
+
+            } else {
+                $(".navbar11").removeClass("scroll-navbar");
+            }
+        });
+    </script>
+    </div>
     <!--mục chọn-->
-    <div class="container-fluid">
+    <div class="container-fluid  mt-5">
         <div class="row">
             <div class="col-md-3 col-xs-12 col-sm-4" id="col-box">
                 <div class="slider-box" aria-expanded="true">
@@ -352,32 +163,38 @@
                     <div class="box-muc">
                         <p data-toggle="collapse" data-target="#collapseExample0" aria-expanded="false" aria-controls="collapseExample" id="muc11">
                             Loại sản phẩm
-                            <i class="fas fa-angle-right float-md-right " style="border-bottom:none;" id="tick0"></i>
+                            <i class="fas fa-angle-right float-md-right " style="border-bottom:none;" id="tick0" name="sp"></i>
                         </p>
-                        <div class="collapse" id="collapseExample0">
+                        <div class="collapse show" id="collapseExample0">
                             <div class="box-muc2">
                                 <div class="box-item">
                                     <label>
-                                <input  type="checkbox" value="product_type:nội thất phòng tắm">
-                                <span> nội thất phòng tắm</span>
+                                <input  type="radio" value="product_type:nội thất phòng tắm" value="all" class=" btn" id="all"name="sp">
+                                <span> TẤT CẢ</span>
                             </label>
                                 </div>
                                 <div class="box-item">
                                     <label>
-                                <input  type="checkbox" value="product_type:phòng ngủ">
-                                <span> phòng ngủ</span>
+                                <input  type="radio" value="product_type:nội thất phòng tắm" value="SOFA" class=" btn" id="sofa"name="sp" v-model="picked">
+                                <span> SOFA</span>
                             </label>
                                 </div>
                                 <div class="box-item">
                                     <label>
-                                <input  type="checkbox" value="product_type:nội thất văn phòng">
-                                <span> nội thất văn phòng</span>
+                                <input  type="radio" value="product_type:phòng ngủ" value="CHAIR" class=" btn" id="chair"name="sp">
+                                <span> CHAIR</span>
                             </label>
                                 </div>
                                 <div class="box-item">
                                     <label>
-                                <input  type="checkbox" value="product_type:nội thất phòng khách ">
-                                <span>nội thất phòng khách</span>
+                                <input  type="radio" value="product_type:nội thất văn phòng" value="LAMP"class=" btn" id="lamp"name="sp">
+                                <span> LAMP</span>
+                            </label>
+                                </div>
+                                <div class="box-item">
+                                    <label>
+                                <input  type="radio" value="product_type:nội thất phòng khách " value="TABLE" class=" btn" id="table" name="sp">
+                                <span>TABLE</span>
                             </label>
                                 </div>
                             </div>
@@ -388,18 +205,19 @@
                             Thương Hiệu
                             <i class="fas fa-angle-right float-md-right " style="border-bottom:none;" id="tick1"></i>
                         </p>
-                        <div class="collapse" id="collapseExample1">
+
+                        <div class="collapse show" id="collapseExample1">
                             <div class="box-muc2">
                                 <div>
                                     <div class="box-item">
                                         <label>
-                                <input  type="checkbox" value="">
+                                <input  type="radio" value="" name="th">
                                 <span> thương Hiệu 1</span>
                                 </label>
                                     </div>
                                     <div class="box-item">
                                         <label>
-                                <input  type="checkbox" value="">
+                                <input  type="radio" value="" name="th">
                                 <span> thương Hiệu 1</span>
                                 </label>
                                     </div>
@@ -412,35 +230,35 @@
                             Giá
                             <i class="fas fa-angle-right float-md-right " style="border-bottom:none;" id="tick2"></i>
                         </p>
-                        <div class="collapse" id="collapseExample2">
+                        <div class="collapse show" id="collapseExample2">
                             <div class="box-muc2">
                                 <div class="box-item">
                                     <label>
-                                <input  type="checkbox" value="" id="" name="">
+                                <input  type="radio" value=""  name="coin" class=" btn" id="all" v-model="picked">
                                 <span> Tất cả</span>
                             </label>
                                 </div>
                                 <div class="box-item">
                                     <label>
-                                <input  type="checkbox" value="" id="" name="">
+                                <input  type="radio" value="" name="coin"  class=" btn" id="motlit" v-model="picked">
                                 <span> 0 Đ ~ 100.000 Đ</span>
                             </label>
                                 </div>
                                 <div class="box-item">
                                     <label>
-                                <input  type="checkbox" value="" id="" name="">
+                                <input  type="radio" value=""  name="coin" class=" btn" id="motcu">
                                 <span> 100.000 Đ ~ 1.000.000Đ</span>
                             </label>
                                 </div>
                                 <div class="box-item">
                                     <label>
-                                <input  type="checkbox" value="" id="" name="">
+                                <input  type="radio" value="" name="coin" class=" btn" id="haicu">
                                 <span> 1.000.000Đ ~ 2.000.000 Đ</span>
                             </label>
                                 </div>
                                 <div class="box-item">
                                     <label>
-                                <input  type="checkbox" value="" id="" name="">
+                                <input  type="radio" value="" id="" name="coin">
                                 <span> 2.000.000Đ ~ 5.000.000 Đ</span>
                             </label>
                                 </div>
@@ -448,26 +266,28 @@
                             </div>
                         </div>
                     </div>
-                    <div class="box-muc">
+                    <div class="box-muc ">
                         <p data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample" id="muc44">
-                            Màu Sắc
+                            Mau Sắc
                             <i class="fas fa-angle-right float-md-right " style="border-bottom:none;" id="tick3"></i>
                         </p>
-                        <div class="collapse" id="collapseExample3">
-                            <div class="box-muc2">
-                                <div class="box-item">
-                                    <label>
-                                <input  type="checkbox" value="">
-                                <span> Cam</span>
-                            </label>
-                                </div>
-                                <div class="box-item ">
-                                    <label>
-                                <input  type="checkbox" value="">
-                                <span> Đỏ</span>
-                            </label>
-                                </div>
 
+                        <div class="collapse show" id="collapseExample3">
+                            <div class="box-muc2">
+                                <div>
+                                    <div class="box-item">
+                                        <label>
+                                <input  type="checkbox" value="">
+                                <span> cam</span>
+                                </label>
+                                    </div>
+                                    <div class="box-item">
+                                        <label>
+                                <input  type="checkbox" value="">
+                                <span> đỏ</span>
+                                </label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -476,7 +296,7 @@
                             Vật Liệu
                             <i class="fas fa-angle-right float-md-right " style="border-bottom:none;" id="tick4"></i>
                         </p>
-                        <div class="collapse" id="collapseExample4">
+                        <div class="collapse show" id="collapseExample4">
                             <div class="box-muc2">
                                 <div class="box-item">
                                     <label>
@@ -515,249 +335,304 @@
                 </div>
             </div>
             <div class="col-md-9 col-sm-12 col-xs-12">
-                <img src="../img/collection_image_default.jpg" alt="" class=" img-fluid">
-                <div id="btnContainer">
-                    <button class="btn" onclick="listView()"><i class="fa fa-bars"></i> List</button>
-                    <button class="btn active" onclick="gridView()"><i class="fa fa-th-large"></i> Grid</button>
-                </div>
-                <br>
+                <div class="wrapper">
+                    <div class="links">
+                        <ul>
+                            <li class="li-list active" data-view="list-view"> <i class=" fas fa-th-list">list view</i></li>
 
-                <div class="row">
-                    <div class="column1">
-                        <div class="boxx1" style="border: 1px solid black;">
-                            <div class="boxx-product"> <img src="../img/188.jpg_v_1469672971717_medium.jpg" alt="" class=" img-fluid"></div>
-                            <div class="icon-111 ">
-                                <a href="#"><i class="fas fa-shopping-cart"></i></a>
-                                <a href="#"><i class="fas fa-search-plus"></i></a>
-                            </div>
-                            <div class="title-product-11 text-center">
-                                <p>name-product</p>
-                                <span>3.300.000Dd</span>
+                            <li class=" li grid " data-view="grid-view"> <i class=" fas fa-th-large">grid view</i> </li>
+                        </ul>
+                    </div>
+                    <div class="view-main">
+                        <div class="view-wrap list-view" style=" display:block;">
+                            <div class="row" id="parent">
+                                <div class="col-md-4 col-sm-5 col-7 box sofa motlit">
+                                    <div class="view-item">
+                                        <div class="card h-100 ">
+                                            <div id="vi"></div>
+                                            <a href="# "> <img class="card-img-top img-fluid " src="../img/arboard24-1580985424.jpg "></a>
+                                            <div class="card-body ">
+                                                <div style="margin-bottom: 10px;text-align: center; ">
+                                                    <h5 class="name">Sanpham</h5>
+                                                    <p class=" text-center" class="tien">100.000đ</p>
+                                                </div>
+                                                <div class="face-2 ">
+                                                    <div class="icon-buy  justify-content-center">
+                                                        <div> <a href="# "><i class="far fa-eye " ></i></a></div>
+                                                        <div> <a href="# "><i class="fas fa-shopping-cart " ></i></a></div>
+                                                    </div>
+
+                                                    <div id="buy">
+                                                        <a href="#">Mua Ngay</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-5 col-7 box sofa motcu">
+                                    <div class="view-item">
+                                        <div class="card h-100 ">
+                                            <div id="vi"></div>
+                                            <a href="# "> <img class="card-img-top img-fluid " src="../img/arboard24-1580985424.jpg "></a>
+                                            <div class="card-body ">
+                                                <div style="margin-bottom: 10px;text-align: center; ">
+                                                    <h5 class="name">San pham 2</h5>
+                                                    <p class=" text-center" class="tien">1.000.000đ</p>
+                                                </div>
+                                                <div class="face-2 ">
+                                                    <div class="icon-buy  justify-content-center">
+                                                        <div> <a href="# "><i class="far fa-eye " ></i></a></div>
+                                                        <div> <a href="# "><i class="fas fa-shopping-cart " ></i></a></div>
+                                                    </div>
+
+                                                    <div id="buy">
+                                                        <a href="#">Mua Ngay</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-5 col-7 box table haicu">
+                                    <div class="view-item">
+                                        <div class="card h-100 ">
+                                            <div id="vi"></div>
+                                            <a href="# "> <img class="card-img-top img-fluid " src="../img/arboard24-1580985424.jpg "></a>
+                                            <div class="card-body ">
+                                                <div style="margin-bottom: 10px;text-align: center; ">
+                                                    <h5 class="name">Sản Phẩm 3</h5>
+                                                    <p class=" text-center">100.000.000đ</p>
+                                                </div>
+                                                <div class="face-2 ">
+                                                    <div class="icon-buy  justify-content-center">
+                                                        <div> <a href="# "><i class="far fa-eye " ></i></a></div>
+                                                        <div> <a href="# "><i class="fas fa-shopping-cart " ></i></a></div>
+                                                    </div>
+
+                                                    <div id="buy">
+                                                        <a href="#">Mua Ngay</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="column1">
-                        <div class="boxx1" style="border: 1px solid black;">
-                            <div class="boxx-product"> <img src="../img/188.jpg_v_1469672971717_medium.jpg" alt="" class=" img-fluid"></div>
-                            <div class="icon-111 ">
-                                <a href="#"><i class="fas fa-shopping-cart"></i></a>
-                                <a href="#"><i class="fas fa-search-plus"></i></a>
-                            </div>
-                            <div class="title-product-11 text-center">
-                                <p>name-product</p>
-                                <span>3.300.000Dd</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column1">
-                        <div class="boxx1" style="border: 1px solid black;">
-                            <div class="boxx-product"> <img src="../img/188.jpg_v_1469672971717_medium.jpg" alt="" class=" img-fluid"></div>
-                            <div class="icon-111 ">
-                                <a href="#"><i class="fas fa-shopping-cart"></i></a>
-                                <a href="#"><i class="fas fa-search-plus"></i></a>
-                            </div>
-                            <div class="title-product-11 text-center">
-                                <p>name-product</p>
-                                <span>3.300.000Dd</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column1">
-                        <div class="boxx1" style="border: 1px solid black;">
-                            <div class="boxx-product"> <img src="../img/188.jpg_v_1469672971717_medium.jpg" alt="" class=" img-fluid"></div>
-                            <div class="icon-111 ">
-                                <a href="#"><i class="fas fa-shopping-cart"></i></a>
-                                <a href="#"><i class="fas fa-search-plus"></i></a>
-                            </div>
-                            <div class="title-product-11 text-center">
-                                <p>name-product</p>
-                                <span>3.300.000Dd</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    <div class="view-wrap grid-view" style=" display:none;">
+                        <div class="row" id="parent">
+                            <div class="col-md-12 box sofa motlit">
+                                <div class="view-item">
+                                    <div class="card h-60 ">
+                                        <div id="vi"></div>
+                                        <div class="row ">
+                                            <div class="col-md-5  ">
+                                                <a href="# "> <img class="card-img-top img-fluid " src="../img/arboard24-1580985424.jpg "></a>
+                                            </div>
+                                            <div class="col-md-7">
+                                                <div style="text-align: center;" class="text-product">
+                                                    <p class=" text-center">Sản phẩm là mọi thứ có thể chào bán trên thị trường để chú ý, mua, sử dụng hay tiêu dùng, có thể thỏa mãn được một mong muốn hay nhu cầu.</p>
+                                                </div>
+                                                <div style="margin-bottom: 10px;text-align: center; ">
+                                                    <h5>Sản Phẩm 1</h5>
+                                                    <p class=" text-center">100.0000đ</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body ">
+                                            <div class="face-2 ">
+                                                <div class="icon-buy  justify-content-center">
+                                                    <div> <a href="# "><i class="far fa-eye " ></i></a></div>
+                                                    <div> <a href="# "><i class="fas fa-shopping-cart " ></i></a></div>
+                                                </div>
 
-                <div class="row">
-                    <div class="column1">
-                        <div class="boxx1" style="border: 1px solid black;">
-                            <div class="boxx-product"> <img src="../img/188.jpg_v_1469672971717_medium.jpg" alt="" class=" img-fluid"></div>
-                            <div class="icon-111 ">
-                                <a href="#"><i class="fas fa-shopping-cart"></i></a>
-                                <a href="#"><i class="fas fa-search-plus"></i></a>
+                                                <div id="buy">
+                                                    <a href="#">Mua Ngay</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="title-product-11 text-center">
-                                <p>name-product</p>
-                                <span>3.300.000Dd</span>
+                            <div class="col-md-12 box sofa motlit">
+                                <div class="view-item">
+                                    <div class="card h-60 ">
+                                        <div id="vi"></div>
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <a href="# "> <img class="card-img-top img-fluid " src="../img/arboard24-1580985424.jpg "></a>
+                                            </div>
+                                            <div class="col-md-7">
+                                                <div style="text-align: center;" class="text-product">
+                                                    <p class=" text-center">Sản phẩm là mọi thứ có thể chào bán trên thị trường để chú ý, mua, sử dụng hay tiêu dùng, có thể thỏa mãn được một mong muốn hay nhu cầu.</p>
+                                                </div>
+                                                <div style="margin-bottom: 10px;text-align: center; ">
+                                                    <h5>Sản Phẩm 1</h5>
+                                                    <p class=" text-center">100.0000đ</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body ">
+                                            <div class="face-2 ">
+                                                <div class="icon-buy  justify-content-center">
+                                                    <div> <a href="# "><i class="far fa-eye " ></i></a></div>
+                                                    <div> <a href="# "><i class="fas fa-shopping-cart " ></i></a></div>
+                                                </div>
+
+                                                <div id="buy">
+                                                    <a href="#">Mua Ngay</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 ">
+                                <div class="view-item">
+                                    <div class="card h-60 ">
+                                        <div id="vi"></div>
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <a href="# "> <img class="card-img-top img-fluid " src="../img/arboard24-1580985424.jpg "></a>
+                                            </div>
+                                            <div class="col-md-7">
+                                                <div style="text-align: center;" class="text-product">
+                                                    <p class=" text-center">Sản phẩm là mọi thứ có thể chào bán trên thị trường để chú ý, mua, sử dụng hay tiêu dùng, có thể thỏa mãn được một mong muốn hay nhu cầu.</p>
+                                                </div>
+                                                <div style="margin-bottom: 10px;text-align: center; ">
+                                                    <h5>Sản Phẩm 1</h5>
+                                                    <p class=" text-center">100.0000đ</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body ">
+                                            <div class="face-2 ">
+                                                <div class="icon-buy  justify-content-center">
+                                                    <div> <a href="# "><i class="far fa-eye " ></i></a></div>
+                                                    <div> <a href="# "><i class="fas fa-shopping-cart " ></i></a></div>
+                                                </div>
+
+                                                <div id="buy">
+                                                    <a href="#">Mua Ngay</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
-                    </div>
-                    <div class="column1">
-                        <div class="boxx1" style="border: 1px solid black;">
-                            <div class="boxx-product"> <img src="../img/188.jpg_v_1469672971717_medium.jpg" alt="" class=" img-fluid"></div>
-                            <div class="icon-111 ">
-                                <a href="#"><i class="fas fa-shopping-cart"></i></a>
-                                <a href="#"><i class="fas fa-search-plus"></i></a>
-                            </div>
-                            <div class="title-product-11 text-center">
-                                <p>name-product</p>
-                                <span>3.300.000Dd</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column1">
-                        <div class="boxx1" style="border: 1px solid black;">
-                            <div class="boxx-product"> <img src="../img/188.jpg_v_1469672971717_medium.jpg" alt="" class=" img-fluid"></div>
-                            <div class="icon-111 ">
-                                <a href="#"><i class="fas fa-shopping-cart"></i></a>
-                                <a href="#"><i class="fas fa-search-plus"></i></a>
-                            </div>
-                            <div class="title-product-11 text-center">
-                                <p>name-product</p>
-                                <span>3.300.000Dd</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column1">
-                        <div class="boxx1" style="border: 1px solid black;">
-                            <div class="boxx-product"> <img src="../img/188.jpg_v_1469672971717_medium.jpg" alt="" class=" img-fluid"></div>
-                            <div class="icon-111 ">
-                                <a href="#"><i class="fas fa-shopping-cart"></i></a>
-                                <a href="#"><i class="fas fa-search-plus"></i></a>
-                            </div>
-                            <div class="title-product-11 text-center">
-                                <p>name-product</p>
-                                <p></p>
-                                <span>3.300.000Dd</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <script>
-                var elements = document.getElementsByClassName("column1");
-                var i;
-
-                function listView() {
-                    for (i = 0; i < elements.length; i++) {
-                        elements[i].style.width = "60%";
-                    }
-                    $(".title-product-11").css({
-                        top: "10px",
-                        fontSize: "30px",
-                    });
-                    var str = $("title-product-11 >p").first().text();
-                    $("title-product-11 >p").last().html(str);
-                }
-
-                function gridView() {
-                    for (i = 0; i < elements.length; i++) {
-                        elements[i].style.width = "25%";
-                    }
-                }
-                var container = document.getElementById("btnContainer");
-                var btns = container.getElementsByClassName("btn");
-                for (var i = 0; i < btns.length; i++) {
-                    btns[i].addEventListener("click", function() {
-                        var current = document.getElementsByClassName("active");
-                        current[0].className = current[0].className.replace(" active", "");
-                        this.className += " active";
-                    });
-                }
-            </script>
-
-            <!---->
-            <div class="container-fluid mt-5 " style="border:1px solid black;background-color:white; border: none;padding: 10px;box-shadow: 5px 10px 8px 10px #888888; ">
-                <div class="jumbotron mb-0 mt-5 ">
-                    <div class="row ">
-                        <div class="col-sm-4 col-xs-12 ">
-                            <h7> THÔNG TIN</h7>
-                            <ul class="let ">
-                                <li>
-                                    <a href="# ">Tài khoản</a>
-                                </li>
-                                <li> <a href="# ">khanh toán</a></li>
-                                <li> <a href="# ">Liên hệ</a></li>
-                                <li> <a href="# ">Giới thiệu</a></li>
-                                <li> <a href="# ">Hỗ trợ</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-sm-2 col-xs-12 ">
-                            <h7>CHÍNH SÁCH</h7>
-                            <ul class="let ">
-                                <li><a href="# ">Vận chuyển</a></li>
-                                <li> <a href="# ">Tuyển dụng</a></li>
-                                <li> <a href="# ">Đối tác</a></li>
-                                <li> <a href="# ">Trợ giúp</a></li>
-                                <li> <a href="# ">Khuyến mãi</a>
-                                </li>
-                        </div>
-                        <div class="col-sm-3 col-xs-12 ">
-                            <a href="# "><i class="fab fa-twitter "></i></a>
-                            <a href="# "><i class="fab fa-youtube "></i></a>
-                            <a href="# "><i class="fab fa-facebook-f "></i></a>
-                            <a href="# "><i class="fab fa-instagram "></i></a>
-
-                        </div>
-                        <div class="col-sm-3 col-xs-12 ">
-                            <h7>CHÍNH SÁCH</h7>
-
-
-                        </div>
-
-
                     </div>
                 </div>
             </div>
-            <footer style="text-align: center;background-color: black ">
-                <h7 style="color: white; ">Copyrights © 2018 by Suplo. Powered by Haravan</h7>
-            </footer>
-            <!--end mục chọn-->
-
-            <!--jquery-->
-
-
-            <script>
-                $(document).ready(function() {
-                    $('#muc11').click(function() {
-                        $('#tick0').toggleClass('slow');
-                    });
-                    $('#muc22').click(function() {
-                        $('#tick1').toggleClass('slow1');
-                    });
-                    $('#muc33').click(function() {
-                        $('#tick2').toggleClass('slow2');
-                    });
-                    $('#muc44').click(function() {
-                        $('#tick3').toggleClass('slow3');
-                    });
-                    $('#muc55').click(function() {
-                        $('#tick4').toggleClass('slow4');
-                    });
-                });
-            </script>
-            <script>
-                $(document).ready(function() {
-                    $('.tittle').click(function() {
-                        $('.box-muc').toggle(1000);
-                    });
-                });
-            </script>
-            <!--lỗi-->
-            <script>
-                $(document).ready(function() {
-                    var box = $('.box-muc');
-                    if (window.matchMedia("(max-width: 655px) ").matches) {
-                        box.hide();
+        </div>
+        <!---->
+        <script>
+            $(document).ready(function() {
+                var $btns = $('.btn').click(function() {
+                    if (this.id == 'all') {
+                        $('#parent > div').fadeIn(450);
                     } else {
-                        box.show();
+                        var $el = $('.' + this.id).fadeIn(450);
+                        $('#parent > div').not($el).hide();
                     }
-                });
-            </script>
-            <!---->
 
-            <!--end-->
+                })
+
+                var $search = $("#search").on('input', function() {
+                    var matcher = new RegExp($(this).val(), 'ig');
+                    $('.box').show().not(function() {
+                        return matcher.test($(this).find('.name, .tien').text())
+                    }).hide();
+                })
+            })
+        </script>
+
+        <!--end mục chọn-->
+
+
+        <!---->
+        <div class="mt-5 " style="background-color:rgb(24, 6, 6); border: none;padding: 10px;box-shadow: 5px 10px 8px 10px #888888; ">
+            <div style="font-size: 20px; margin-left: 10px;">
+                <a href="# " style=" border-radius:100%;border: 1px solid black;padding: 5px 10px;color: white;"><i class="fab fa-twitter "></i></a>
+                <a href="# " style=" border-radius:100%;border: 1px solid black;padding: 5px 10px;color: white;"><i class=" fab fa-youtube "></i></a>
+                <a href="# " style=" border-radius:100%;border: 1px solid black;padding: 5px 10px;color: white; "><i class="fab fa-facebook-f "></i></a>
+                <a href="# " style=" border-radius:100%;border: 1px solid black;padding: 5px 10px; color: white;"><i class=" fab fa-instagram "></i></a>
+            </div>
+        </div>
+        <footer style="text-align: center;background-color: black ">
+            <h7 style="color: white; ">Copyrights © 2019 by LHL</h7>
+        </footer>
+        <!---->
+        <!--jquery-->
+        <!--list/grid-->
+
+        <script src="grid.js"></script>
+        <!--end-->
+        <script>
+            $(document).ready(function() {
+                $('#muc11').click(function() {
+                    $('#tick0').toggleClass('slow');
+                });
+                $('#muc22').click(function() {
+                    $('#tick1').toggleClass('slow1');
+                });
+                $('#muc33').click(function() {
+                    $('#tick2').toggleClass('slow2');
+                });
+                $('#muc44').click(function() {
+                    $('#tick3').toggleClass('slow3');
+                });
+                $('#muc55').click(function() {
+                    $('#tick4').toggleClass('slow4');
+                });
+            });
+        </script>
+        <script>
+            $(document).ready(function() {
+                $('.tittle').click(function() {
+                    $('.box-muc').toggle(1000);
+                });
+            });
+        </script>
+        <!--lỗi-->
+        <script>
+            $(document).ready(function() {
+                var box = $('.box-muc');
+                if (window.matchMedia("(max-width: 655px) ").matches) {
+                    box.hide();
+                } else {
+                    box.show();
+                }
+            });
+        </script>
+        <!---->
+        <!--end-->
+        <script>
+            var li_links = document.querySelectorAll(".links ul li");
+            var view_wraps = document.querySelectorAll(".view-wrap");
+
+            li_links.forEach(function(link) {
+                link.addEventListener("click", function() {
+                    li_links.forEach(function(item) {
+                        item.classList.remove("acitve");
+                    })
+                    link.classList.add("active");
+                    var li_view = link.getAttribute("data-view");
+                    view_wraps.forEach(function(view) {
+                        view.style.display = "none";
+                    })
+                    if (li_view == "list-view") {
+                        document.querySelector("." + li_view).style.display = "block";
+                    } else {
+                        document.querySelector("." + li_view).style.display = "block";
+                    }
+                })
+            })
+        </script>
+
 </body>
 
 
