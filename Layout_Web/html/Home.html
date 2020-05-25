@@ -30,16 +30,14 @@
 
 <body>
     <!-- Modal -->
-    <div class="modal fade" id="elegantModalForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="z-index: 123313123;">
+    <div class="modal fade show" id="elegantModalForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="z-index: 123313123;">
         <div class="modal-dialog modal-dialog-centered " role="document">
-
             <div class="modal-content form-elegant">
-
                 <div class="modal-header text-center">
                     <h3 class="modal-title w-100 dark-grey-text font-weight-bold my-3" id="myModalLabel"><strong>Sign in</strong></h3>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+                    <button type="button" class="close " data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
                 <div class="modal-body mx-4">
                     <div class="md-form mb-5">
@@ -53,18 +51,17 @@
                     <div class="text-center mb-3">
                         <button type="button" class="btn blue-gradient btn-block btn-rounded z-depth-1a">Sign in</button>
                     </div>
-                    <p class="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2"> or Sign in with:
-                    </p>
+                    <p class="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2"> or Sign in with:</p>
                     <div class="row my-3 d-flex justify-content-center">
                         <button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a"><i class="fab fa-facebook-f text-center"></i></button>
                         <button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a"><i class="fab fa-twitter"></i></button>
                         <button type="button" class="btn btn-white btn-rounded z-depth-1a"><i class="fab fa-google-plus-g"></i></button>
                     </div>
                 </div>
-
                 <div class="modal-footer mx-5 pt-3 mb-1">
-                    <p class="font-small grey-text d-flex justify-content-end">Not a member? <a href="#" class="blue-text ml-1">
-            Sign Up</a></p>
+                    <p class="font-small grey-text d-flex justify-content-end">Not a member?
+                        <a href="#" class="blue-text ml-1">Sign Up</a>
+                    </p>
                 </div>
             </div>
         </div>
@@ -83,12 +80,12 @@
     <!--end-->
 
     <!--#region Thanh công cụ-->
-    <div class="container-fluid menu">
-        <nav class="navbar navbar-expand-md   navbar11 " style=" border-bottom: 1px solid black;">
+    <div class="container-fluid menu pl-0 pr-0">
+        <nav class="navbar navbar-expand-md  navbar11 " style="background-color: #333;" >
             <a class="navbar-brand " href="Home.html"><img src="../img/LogoLHL.png" width="40px"></a>
-            <button class="navbar-toggler btn-light" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-          <i class="fa fa-bars" aria-hidden="true"></i>
-                            </button>
+            <button class="navbar-toggler btn-secondary" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <div class=" " style="margin:0px auto;">
                     <ul class="navbar-nav ">
@@ -106,21 +103,26 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link ml-2" href="#"><span></span>Sản Phẩm</a>
+                            <a class="nav-link ml-2" href="#"><span></span>Sản Phẩm
+                                <img src="../img/icon/arrow-204-48.png" class="icon-product"/>
+                            </a>
                             <div class="container " style=" background-color:white">
                                 <ul class="sub-menu ">
 
                                 </ul>
                             </div>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link ml-2" href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><span></span>Tìm kiếm</a>
-                        </li>
+                        
                         <li class="nav-item">
                             <a class="nav-link ml-2" href="#"><span></span>Giỏ Hàng</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link ml-2" href="#" data-toggle="modal" data-target="#elegantModalForm"><span></span>Tài Khoản</a>
+                        </li>
+                        <li class="nav-item item-right">
+                            <a class="nav-link ml-2" href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><span></span>
+                                <img src="../img/icon/search-3-48.png" width="25px"/>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -159,6 +161,7 @@
             </div>
         </div>
     </div>
+
     <!--scroll-->
     <script>
         $(window).scroll(function() {
@@ -486,9 +489,10 @@
 
     <!--ketthuc-product-owl-->
     <div class="container mt-5">
-        <div class="row" style="border-bottom:1px solid black;">
-            <div class="col-md-3" style="border:1px solid black;  color: white; background-color: black; text-align: center;height: 30px;;line-height: 30px;">
-                <h5>Sản Phẩm Bán Chạy</h5>
+
+        <div class="row" style="border-bottom:1px solid #999; margin-bottom: 50px; margin-top: 70px;">
+            <div class="text-left" >
+                <h3>Sản Phẩm Mới</h3>
             </div>
         </div>
         <div class="mt-5" id="hang">
@@ -721,9 +725,10 @@
     </script>
     <!--second-2-->
     <div class="container mt-5">
-        <div class="row" style="border-bottom:1px solid black;">
-            <div class="col-md-3" style="border:1px solid black;  color: white; background-color: black; text-align: center;height: 30px;;line-height: 30px;">
-                <h5>Sản Phẩm Bán Chạy</h5>
+    
+        <div class="row" style="border-bottom:1px solid #999; margin-bottom: 50px; margin-top: 70px;">
+            <div class="text-left" >
+                <h3>Sản Phẩm Bán Chạy</h3>
             </div>
         </div>
 
@@ -1245,7 +1250,7 @@
     </footer>
     <!---->
     <div class="button_scroll2top pos-relative " onclick="page_scroll2top() ">
-        <div class="position-absolute " style="left: 50%; top: 50%;transform: translate(-50%,-50%); "><img src="../img/Up.png " id="arr "></div>
+        <div class="position-absolute " style="left: 50%; top: 50%;transform: translate(-50%,-50%); "><img src="../img/icon/up-circular-48.png " id="arr "></div>
 
         <!--owl product-->
 
