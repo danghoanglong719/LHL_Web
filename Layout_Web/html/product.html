@@ -78,11 +78,6 @@
             </div>
         </div>
     </div>
-    <script>
-        $('.search-item ').search({
-
-        });
-    </script>
     <!--end-->
     <div class="container-fluid menu">
         <nav class="navbar navbar-expand-md   navbar11 " style=" ">
@@ -118,8 +113,8 @@
                         <li class="nav-item">
                             <a class="nav-link ml-2" href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><span></span>Tìm kiếm</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link ml-2" href="#"><span></span>Giỏ Hàng</a>
+                        <li class="nav-item cart">
+                            <a class="nav-link ml-2" href="cart.html">Giỏ Hàng <p>0</p></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link ml-2" href="#" data-toggle="modal" data-target="#elegantModalForm"><span></span>Tài Khoản</a>
@@ -137,6 +132,7 @@
 
 
     </div>
+    <!---->
     <script>
         $(window).scroll(function() {
             var scroll = $(window).scrollTop();
@@ -149,7 +145,7 @@
             }
         });
     </script>
-    </div>
+    <!---->
     <!--mục chọn-->
     <div class="container-fluid  mt-5">
         <div class="row">
@@ -353,13 +349,13 @@
                                             <a href="# "> <img class="card-img-top img-fluid " src="../img/arboard24-1580985424.jpg "></a>
                                             <div class="card-body ">
                                                 <div style="margin-bottom: 10px;text-align: center; ">
-                                                    <h5 class="name">Sanpham</h5>
-                                                    <p class=" text-center" class="tien">100.000đ</p>
+                                                    <h5 class="name">Sản Phẩm 1</h5>
+                                                    <p class=" text-center" class="tien">100000đ</p>
                                                 </div>
                                                 <div class="face-2 ">
                                                     <div class="icon-buy  justify-content-center">
                                                         <div> <a href="# "><i class="far fa-eye " ></i></a></div>
-                                                        <div> <a href="# "><i class="fas fa-shopping-cart " ></i></a></div>
+                                                        <div> <a href="# "><i class="add-cart fas fa-shopping-cart " ></i></a></div>
                                                     </div>
 
                                                     <div id="buy">
@@ -374,16 +370,16 @@
                                     <div class="view-item">
                                         <div class="card h-100 ">
                                             <div id="vi"></div>
-                                            <a href="# "> <img class="card-img-top img-fluid " src="../img/arboard24-1580985424.jpg "></a>
+                                            <a href="# "> <img class="card-img-top img-fluid " src="../img/5-sofa-1587982024.jpg "></a>
                                             <div class="card-body ">
                                                 <div style="margin-bottom: 10px;text-align: center; ">
-                                                    <h5 class="name">San pham 2</h5>
-                                                    <p class=" text-center" class="tien">1.000.000đ</p>
+                                                    <h5 class="name">Sản Phẩm 2</h5>
+                                                    <p class=" text-center" class="tien">1000000đ</p>
                                                 </div>
                                                 <div class="face-2 ">
                                                     <div class="icon-buy  justify-content-center">
                                                         <div> <a href="# "><i class="far fa-eye " ></i></a></div>
-                                                        <div> <a href="# "><i class="fas fa-shopping-cart " ></i></a></div>
+                                                        <div> <a href="# "><i class=" add-cart fas fa-shopping-cart " ></i></a></div>
                                                     </div>
 
                                                     <div id="buy">
@@ -402,12 +398,12 @@
                                             <div class="card-body ">
                                                 <div style="margin-bottom: 10px;text-align: center; ">
                                                     <h5 class="name">Sản Phẩm 3</h5>
-                                                    <p class=" text-center">100.000.000đ</p>
+                                                    <p class=" text-center">100000000đ</p>
                                                 </div>
                                                 <div class="face-2 ">
                                                     <div class="icon-buy  justify-content-center">
                                                         <div> <a href="# "><i class="far fa-eye " ></i></a></div>
-                                                        <div> <a href="# "><i class="fas fa-shopping-cart " ></i></a></div>
+                                                        <div> <a href="# "><i class="add-cart fas fa-shopping-cart " ></i></a></div>
                                                     </div>
 
                                                     <div id="buy">
@@ -540,7 +536,6 @@
                     }
 
                 })
-
                 var $search = $("#search").on('input', function() {
                     var matcher = new RegExp($(this).val(), 'ig');
                     $('.box').show().not(function() {
@@ -569,7 +564,6 @@
         <!--jquery-->
         <!--list/grid-->
 
-        <script src="grid.js"></script>
         <!--end-->
         <script>
             $(document).ready(function() {
@@ -632,8 +626,12 @@
                 })
             })
         </script>
+        <!---->
+        <script src="../js/main.js"></script>
 
 </body>
 
+
+</html>
 
 </html>
