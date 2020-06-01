@@ -41,6 +41,20 @@ body {
     left: 0;
     transition: 0.5s;
 }
+.navbar-nav .item-right{
+    position: absolute;
+    right:10px;
+}
+.navbar button {
+    position: absolute;
+    left: 10px;
+    top: 17px;
+}
+.icon-product {
+    width: 8px;
+    margin-left: 2px;
+    opacity: 0.3;
+}
 
 
 /*end*/
@@ -522,20 +536,32 @@ body {
 }
 
 .scroll-navbar {
-    background-color: black;
-    color: black !important;
+    background-color: #333;
+    color: #333 !important;
     transition: 1s;
     top: 0;
     left: 0;
     width: 100%;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    border-bottom:1px solid #fff;
 }
 
 
 /*end */
 
 .pro-1 .pro-2 {
+    overflow: hidden;
     position: relative;
+}
+.pro-1 .pro-2 img {
+    
+    transition: .5s ease-in-out;
+    -webkit-transition: .5s all ease-in-out;
+    -moz-transition: .5s all ease-in-out;
+    -ms-transition: .5s all ease-in-out;
+    -o-transition: .5#s all ease-in-out;
+}
+.pro-1 .pro-2:hover img {
+    transform: scale(1.1);
 }
 
 .pro-1 .pro-2 .pro-3 {
@@ -555,7 +581,7 @@ body {
 .pro-1 .pro-2 .btn-seen a {
     text-decoration: none;
     padding: 15px;
-    background-color: rgba(34, 14, 14, 0.5);
+    background-color: rgba(75, 75, 75, 0.5);
     border-top-right-radius: 50%;
     border-bottom-left-radius: 50%;
     opacity: 0;
@@ -575,7 +601,7 @@ body {
     transition: 0.5s ease-in-out;
 }
 
-.pro-1 .pro-2 a:hover {
+.pro-1 .pro-2 a:hover{
     background-color: #000000;
     color: white;
 }
@@ -644,6 +670,8 @@ body {
 .form-elegant .modal-footer {
     font-weight: 400;
 }
+
+
 
 
 /*end*/
