@@ -59,33 +59,39 @@ body {
     opacity: 0.3;
 }
 
+.navbar-nav .nav-item .bh-nb{
+    position: absolute;
+    text-align: center;
+    top: 0px;
+    right: 0px;
+    line-height: 100%;
+    min-width: 15px;
+    height: 15px;
+    background-color: #f76b6a;
+    border-radius: 50%;
+}
+.navbar-nav .dropdown .dropdown-menu{
+    background-color: #333;
+    border-bottom: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+.navbar-nav .dropdown .dropdown-menu a{
+    color: #fff;
+}
+.navbar-nav .dropdown .dropdown-menu a:hover{
+    background-color: #333;
+}
 
 /*end*/
 
-
-/*#region SignIn*/
-
-.log {
-    -webkit-box-shadow: 1px 0px 13px 20px rgba(0, 0, 0, 0.68);
-    -moz-box-shadow: 1px 0px 13px 20px rgba(0, 0, 0, 0.68);
-    box-shadow: 1px 0px 13px 20px rgba(0, 0, 0, 0.68);
-}
-
-.signin {
-    padding: 10px 10px;
-    margin: 5px;
-}
-
-#btnLogin {
-    margin-top: 10px;
-}
-
-.forgot-password {
-    padding-left: 10px;
-}
-
-
 /*#endregion Navbar*/
+
+.modal .modal-content .close{
+    position: absolute;
+    top:15px;
+    right: 20px;
+}
 
 #header-11 a {
     color: white;
@@ -645,7 +651,7 @@ body {
 }
 
 
-/*modal*/
+/*modal Signin*/
 
 .form-elegant .font-small {
     font-size: 0.8rem;
@@ -674,6 +680,5 @@ body {
 .form-elegant .modal-footer {
     font-weight: 400;
 }
-
 
 /*end*/
