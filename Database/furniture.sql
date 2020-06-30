@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 28, 2020 at 05:23 AM
+-- Generation Time: Jun 30, 2020 at 01:03 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.7
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `qlbanhoa`
+-- Database: `furniture`
 --
 
 -- --------------------------------------------------------
@@ -29,59 +29,10 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `chitiethd` (
   `SoDH` int(11) NOT NULL,
-  `MaHoa` int(11) NOT NULL,
+  `MaSP` int(11) NOT NULL,
   `MaHD` int(11) NOT NULL,
   `SoLuong` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `hoa`
---
-
-CREATE TABLE `hoa` (
-  `MaHoa` int(11) NOT NULL,
-  `MaLoai` int(11) NOT NULL,
-  `TenHoa` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  `GiaBan` int(11) NOT NULL,
-  `ThanhPhan` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
-  `Hinh` varchar(50) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dumping data for table `hoa`
---
-
-INSERT INTO `hoa` (`MaHoa`, `MaLoai`, `TenHoa`, `GiaBan`, `ThanhPhan`, `Hinh`) VALUES
-(1, 1, 'Đón xuân', 50000, 'Hồng xanh dương', 'hh2.jpg'),
-(2, 1, 'Hồn nhiên', 60000, 'Hoa giỏ', 'hh3.jpg'),
-(3, 1, 'Tím thuỷ chung', 45000, 'Hoa lan bó', 'hh4.jpg'),
-(4, 1, 'Nét duyên tím', 40000, 'Hoa hồng màu tím nhạt', 'hh5.jpg'),
-(5, 1, 'Cùng khoe sắc', 70000, 'Hoa hồng các màu', 'hh6.jpg'),
-(6, 1, 'Trắng thơ ngây', 65000, 'Hồng nhung', 'hh7.jpg'),
-(7, 2, 'Dây tơ hồng', 250000, 'Hoa hồng màu hồng đậm', 'hc1.jpg'),
-(8, 2, 'Cầu thuỷ tinh', 220000, 'Hoa hồng xanh dương', 'hc2.jpg'),
-(9, 2, 'Duyên thầm', 260000, 'Hoa cúc trắng, baby,', 'hc3.jpg'),
-(10, 2, 'Đâm chồi nảy lộc', 180000, 'Hoa hồng trắng và cá', 'hc4.jpg'),
-(11, 2, 'Hoà quyện', 270000, 'Hoa hồng trắng, lá t', 'hc5.jpg'),
-(12, 2, 'Nồng nàn', 210000, 'Hoa hồng đỏ, lá thuỷ', 'hc6.jpg'),
-(13, 3, 'Together', 120000, 'Hồng xác pháo, cúc t', 'hoa_sn_dam-me.jpg'),
-(14, 3, 'Long trip', 85000, 'Hoa hồng đỏ, lá kim ', 'hoa_sn_may-man.jpg'),
-(15, 3, 'Beautiful life', 100000, 'Hoa hồng đỏ, lá măng', 'hoa_sn_may-man-2.jpg'),
-(16, 3, 'Morning Sun', 75000, 'Hoa hồng vàng\r\n', 'hoa_sn_nang-diu-dang.jpg'),
-(17, 3, 'Pretty Bloom', 65000, 'Hoa hồng trắng và lá', 'hoa_sn_toa-nang.jpg'),
-(18, 3, 'Red Rose', 45000, 'Hoa hồng đỏ và lá mă', 'hoa_sn_yeu-thuong.jpg'),
-(19, 5, 'Vấn vương', 150000, 'Hoa hồng đỏ, hồng đậ', 'hoa_tuoi_bo_hanh-phuc.jpg'),
-(20, 5, 'Nắng nhẹ nhàng', 50000, 'Hoa cúc xanh, hoa ly', 'hoa_tuoi_bo_ngay-chung-doi.jpg'),
-(21, 5, 'Thanh tao', 120000, 'Hoa thủy tiên, cúa t', 'hoa_tuoi_bo_ngay-moi.jpg'),
-(22, 5, 'Tinh khiết', 110000, 'Hồng trắng và salem\r', 'hoa_tuoi_bo_nong-am.jpg'),
-(23, 5, 'Mùa xuân chín', 150000, 'Hồmg cam, cúc xanh, ', 'hoa_tuoi_bo_sac-thu.jpg'),
-(24, 5, 'Rực rỡ nắng vàng', 75000, 'Hồng vàng và cúc vàn', 'hoa_tuoi_bo_toa-nang.jpg'),
-(25, 3, 'Love Candy', 95000, 'Hoa hồng trắng tinh ', 'hh11.jpg'),
-(26, 2, 'Happy Wedding', 210000, 'Hoa hồng môn và các ', 'hx2.jpg'),
-(27, 1, 'Cúc nhiệt đới', 150000, 'Cúc vàng - hồng cam ', 'hx7.jpg'),
-(28, 1, 'Hoa cúc', 123456, '3253232523', 'hx10.jpg');
 
 -- --------------------------------------------------------
 
@@ -104,52 +55,82 @@ CREATE TABLE `hoadon` (
 --
 
 CREATE TABLE `khachhang` (
+  `MaKH` int(11) NOT NULL,
   `TenDN` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `MatKhau` varchar(32) COLLATE utf8_unicode_ci NOT NULL,
   `HoTen` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `DiaChi` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
   `DienThoai` int(11) DEFAULT NULL,
-  `Email` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `MaKH` int(11) NOT NULL
+  `Email` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `khachhang`
 --
 
-INSERT INTO `khachhang` (`TenDN`, `MatKhau`, `HoTen`, `DiaChi`, `DienThoai`, `Email`, `MaKH`) VALUES
-('admin', 'admin', 'Quản trị Hệ thống', '280 An Dương Vương, P4, Q5', 989366990, 'admin@hoadep.com', 1),
-('hienlth', 'hienlth', 'Lương Trần Hy Hiến', '396 Dương Bá Trạc, Q8', 989366990, 'hienlth@hcmup.edu.vn', 2),
-('cuong', 'cuong', 'Chung Quốc Cường', '1bis Nguyễn Văn Trỗi Q.1', 912345678, 'cqcuong@hcmuns.edu.vn', 3),
-('tung', 'tung', 'Lưu Hải Tùng', '1 Mạc Đỉnh Chi Q.1', 989766569, 'lhtung@yahoo.com', 4),
-('dlthien', 'dlthien', 'Đỗ Lâm Thiên', '357 Lê Hồng Phong Q.10 ', 903123456, 'dlthien@hcmuns.edu.vn', 5),
-('thanh', 'thanh', 'Nguyễn Ngọc Thanh', '357 Lê Hồng Phong Q.10', 903456789, 'lthanh@hcmuns.edu.vn', 6),
-('hoadalat', '123456', 'Hoa Đà Lạt', '123 Hai Bà Trưng', 902314340, 'hoadalat@gmail.com', 7),
-('hoainfo', '123123', 'Shop Hoa', '123 Đà Nẵng', 123213213, 'hoa@hoa.com', 8);
+INSERT INTO `khachhang` (`MaKH`, `TenDN`, `MatKhau`, `HoTen`, `DiaChi`, `DienThoai`, `Email`) VALUES
+(1, 'admin', 'admin', 'Quản trị Hệ thống', '280 An Dương Vương, P4, Q5', 989366990, 'admin@hoadep.com'),
+(2, 'hienlth', 'hienlth', 'Lương Trần Hy Hiến', '396 Dương Bá Trạc, Q8', 989366990, 'hienlth@hcmup.edu.vn'),
+(3, 'cuong', 'cuong', 'Chung Quốc Cường', '1bis Nguyễn Văn Trỗi Q.1', 912345678, 'cqcuong@hcmuns.edu.vn'),
+(4, 'tung', 'tung', 'Lưu Hải Tùng', '1 Mạc Đỉnh Chi Q.1', 989766569, 'lhtung@yahoo.com'),
+(5, 'dlthien', 'dlthien', 'Đỗ Lâm Thiên', '357 Lê Hồng Phong Q.10 ', 903123456, 'dlthien@hcmuns.edu.vn'),
+(6, 'thanh', 'thanh', 'Nguyễn Ngọc Thanh', '357 Lê Hồng Phong Q.10', 903456789, 'lthanh@hcmuns.edu.vn'),
+(7, 'hoadalat', '123456', 'Hoa Đà Lạt', '123 Hai Bà Trưng', 902314340, 'hoadalat@gmail.com'),
+(8, 'hoainfo', '123123', 'Shop Hoa', '123 Đà Nẵng', 123213213, 'hoa@hoa.com'),
+(9, '12310', '12310', 'LocTran', '783 CMT8', 382944169, 'LocTran12310@gmail.com');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `loaihoa`
+-- Table structure for table `loaisp`
 --
 
-CREATE TABLE `loaihoa` (
+CREATE TABLE `loaisp` (
   `MaLoai` int(11) NOT NULL,
   `TenLoai` varchar(50) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `loaihoa`
+-- Dumping data for table `loaisp`
 --
 
-INSERT INTO `loaihoa` (`MaLoai`, `TenLoai`) VALUES
-(1, 'Hoa tình yêu'),
-(2, 'Hoa cưới'),
-(3, 'Hoa sinh nhật'),
-(4, 'Hoa văn phòng'),
-(5, 'Hoa tươi bó'),
-(6, 'Hoa tươi giỏ'),
-(7, 'Hoa khai trương');
+INSERT INTO `loaisp` (`MaLoai`, `TenLoai`) VALUES
+(1, 'SOFA'),
+(2, 'CHAIR'),
+(3, 'LAMP'),
+(4, 'TABLE');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sanpham`
+--
+
+CREATE TABLE `sanpham` (
+  `MaSP` int(11) NOT NULL,
+  `MaLoai` int(11) NOT NULL,
+  `TenSanPham` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `GiaBan` int(11) NOT NULL,
+  `MauSac` varchar(10) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `VatLieu` varchar(10) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `MoTa` varchar(250) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `Hinh` varchar(50) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `sanpham`
+--
+
+INSERT INTO `sanpham` (`MaSP`, `MaLoai`, `TenSanPham`, `GiaBan`, `MauSac`, `VatLieu`, `MoTa`, `Hinh`) VALUES
+(1, 1, 'Sofa 1', 70000, 'Xanh', NULL, 'Sofa 1', '5-sofa-1587982024.jpg'),
+(2, 2, 'Chair 1', 150000, 'Xanh', NULL, 'Chair 1 - Sản phẩm là mọi thứ có thể chào bán trên thị trường để chú ý, mua, sử dụng hay tiêu dùng, có thể thỏa mãn được một mong muốn hay nhu cầu.', '2-ghe-1587981944.jpg'),
+(3, 2, 'Chair 2', 250000, NULL, 'Go', 'Chair 2 - Sản phẩm là mọi thứ có thể chào bán trên thị trường để chú ý, mua, sử dụng hay tiêu dùng, có thể thỏa mãn được một mong muốn hay nhu cầu.', 'a.jpg'),
+(4, 4, 'Table 1', 250000, NULL, 'Go', 'Table - San pham duy nhat', '1-ban-1587981900.jpg'),
+(5, 3, 'Lamp 1', 400000, 'Den', NULL, 'Den - Den so mot', '8-den-1587982122.jpg'),
+(6, 4, 'Table 2', 500000, 'Den', 'Nhua', 'Ban Nhua 4 chan mau Den', 'c12.jpg'),
+(7, 2, 'Chair 3', 200000, NULL, 'Go', 'Ghe go don gian', 'c11.jpg'),
+(8, 2, 'Chair 4', 230000, NULL, 'Go', 'Ghe go co dem ngoi', 'g.jpg'),
+(9, 2, 'Chair 5', 400000, 'Xam', NULL, 'Ghe dem', 'c.jpg');
 
 --
 -- Indexes for dumped tables
@@ -160,22 +141,15 @@ INSERT INTO `loaihoa` (`MaLoai`, `TenLoai`) VALUES
 --
 ALTER TABLE `chitiethd`
   ADD PRIMARY KEY (`SoDH`),
-  ADD KEY `fk_chitiethd_hoa` (`MaHoa`),
-  ADD KEY `fk_chitiethd_hoadon` (`MaHD`);
-
---
--- Indexes for table `hoa`
---
-ALTER TABLE `hoa`
-  ADD PRIMARY KEY (`MaHoa`),
-  ADD KEY `maLoai` (`MaLoai`);
+  ADD KEY `fk_chitiethd_hoadon` (`MaHD`),
+  ADD KEY `fk_chitiethd_masp` (`MaSP`) USING BTREE;
 
 --
 -- Indexes for table `hoadon`
 --
 ALTER TABLE `hoadon`
   ADD PRIMARY KEY (`MaHD`),
-  ADD KEY `maKH` (`MaKH`);
+  ADD KEY `fk_hoadon_makh` (`MaKH`) USING BTREE;
 
 --
 -- Indexes for table `khachhang`
@@ -184,20 +158,21 @@ ALTER TABLE `khachhang`
   ADD PRIMARY KEY (`MaKH`);
 
 --
--- Indexes for table `loaihoa`
+-- Indexes for table `loaisp`
 --
-ALTER TABLE `loaihoa`
+ALTER TABLE `loaisp`
   ADD PRIMARY KEY (`MaLoai`);
+
+--
+-- Indexes for table `sanpham`
+--
+ALTER TABLE `sanpham`
+  ADD PRIMARY KEY (`MaSP`) USING BTREE,
+  ADD KEY `fk_sp_loaisp` (`MaLoai`) USING BTREE;
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
-
---
--- AUTO_INCREMENT for table `hoa`
---
-ALTER TABLE `hoa`
-  MODIFY `MaHoa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `hoadon`
@@ -209,13 +184,19 @@ ALTER TABLE `hoadon`
 -- AUTO_INCREMENT for table `khachhang`
 --
 ALTER TABLE `khachhang`
-  MODIFY `MaKH` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `MaKH` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT for table `loaihoa`
+-- AUTO_INCREMENT for table `loaisp`
 --
-ALTER TABLE `loaihoa`
-  MODIFY `MaLoai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+ALTER TABLE `loaisp`
+  MODIFY `MaLoai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- AUTO_INCREMENT for table `sanpham`
+--
+ALTER TABLE `sanpham`
+  MODIFY `MaSP` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Constraints for dumped tables
@@ -225,20 +206,20 @@ ALTER TABLE `loaihoa`
 -- Constraints for table `chitiethd`
 --
 ALTER TABLE `chitiethd`
-  ADD CONSTRAINT `fk_chitiethd_hoa` FOREIGN KEY (`MaHoa`) REFERENCES `hoa` (`MaHoa`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `fk_chitiethd_hoadon` FOREIGN KEY (`MaHD`) REFERENCES `hoadon` (`MaHD`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `hoa`
---
-ALTER TABLE `hoa`
-  ADD CONSTRAINT `fk_hoa_loaihoa` FOREIGN KEY (`MaLoai`) REFERENCES `loaihoa` (`MaLoai`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `fk_chitiethd_hoadon` FOREIGN KEY (`MaHD`) REFERENCES `hoadon` (`MaHD`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_chitiethd_masp` FOREIGN KEY (`MaSP`) REFERENCES `hoadon` (`MaHD`);
 
 --
 -- Constraints for table `hoadon`
 --
 ALTER TABLE `hoadon`
-  ADD CONSTRAINT `fk_hoadon_khachhang` FOREIGN KEY (`MaKH`) REFERENCES `khachhang` (`MaKH`) ON DELETE NO ACTION ON UPDATE CASCADE;
+  ADD CONSTRAINT `fk_hoadon_makh` FOREIGN KEY (`MaKH`) REFERENCES `khachhang` (`MaKH`) ON DELETE NO ACTION ON UPDATE CASCADE;
+
+--
+-- Constraints for table `sanpham`
+--
+ALTER TABLE `sanpham`
+  ADD CONSTRAINT `fk_sp_loaisp` FOREIGN KEY (`MaLoai`) REFERENCES `loaisp` (`MaLoai`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
