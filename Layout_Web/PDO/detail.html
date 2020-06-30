@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/detail.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="../OwlCarousel2-2.3.4/src/js/owl.carousel.js">
+    <link rel="stylesheet" href="../OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="../OwlCarousel2-2.3.4/dist/assets/owl.theme.green.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+
+
+</head>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/jquery/jquery-3.5.0.min.js"></script>
+<script src="../OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+
+
+<body>
+    <!-- Modal -->
+    <div class="modal fade" id="elegantModalForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="z-index: 123313123;">
+        <form method="POST" action="" name="form_login" id="Form_login">
+            <div class="modal-dialog modal-dialog-centered " role="document">
+                <div class="modal-content form-elegant">
+                    <div class="modal-header text-center">
+                        <h3 class="modal-title w-80 dark-grey-text font-weight-bold my-3" id="myModalLabel"><strong>Sign in</strong></h3>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-10">
+                        <div class="modal-body mx-3">
+                            <div class="md-form mb-4 row">
+                                <label data-error="wrong" data-success="right" for="Form-email1" class="col-form-label col-sm-3">Username</label>
+                                <input type="email" id="Form-email1" class="form-control validate col-sm-7">
+                            </div>
+                            <div class="md-form mb-4 row">
+                                <label data-error="wrong" data-success="right" for="Form-pass1" class="col-form-label col-sm-3">Password</label>
+                                <input type="password" id="Form-pass1" class="form-control validate col-sm-7">
+                            </div>
+                            <div class="text-center mb-3 row">
+                                <button type="button" class="btn btn-primary btn-block btn-rounded z-depth-1a">Sign in</button>
+                            </div>
+                            <p class="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2"> or Sign in with:
+                            </p>
+                            <div class="row my-3 d-flex justify-content-center">
+                                <button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a"><i class="fab fa-facebook-f text-center"></i></button>
+                                <button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a"><i class="fab fa-twitter"></i></button>
+                                <button type="button" class="btn btn-white btn-rounded z-depth-1a"><i class="fab fa-google-plus-g"></i></button>
+                            </div>
+                        </div>
+                        <div class="modal-footer mx-5 pt-3 mb-1 justify-content-center">
+                            <p class="font-small grey-text d-flex ">Not a member? 
+                                <a href="#" class="blue-text ml-1">Sign Up</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!---->
+    <!--modal-search-->
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="z-index: 123313123;">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <form class="form-inline d-flex justify-content-center md-form form-sm mt-0 w-100 " action="https://tiki.vn/">
+                    <input class="form-control form-control-sm w-100 pl-3" type="text" placeholder="Search..." aria-label="Search" style=" border:none;" name="search?q">
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--end-->
+
+    <!--#region Thanh công cụ-->
+    <div class="container-fluid menu pl-0 pr-0">
+        <nav class="navbar navbar-expand-md  navbar11 ">
+            <a class="navbar-brand " href="Home.html"><img src="../img/LogoLHL.png" width="40px"></a>
+            <button class="navbar-toggler btn-secondary" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <div class=" " style="margin:0px auto;">
+                    <ul class="navbar-nav ">
+                        <li class="nav-item">
+                            <a class="nav-link ml-2" href="Home.html">Trang Chủ <span></span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link ml-2" href="#"> <span></span>Liên Hệ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link ml-2" href="#"><span></span>Trợ Giúp</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link ml-2" href="#" data-toggle="dropdown"><span></span>Sản Phẩm
+                                <img src="../img/icon/arrow-204-48.png" class="icon-product"/>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#"><span></span>SOFA</a>
+                                <a class="dropdown-item" href="#"><span></span>CHAIR</a>
+                                <a class="dropdown-item" href="#"><span></span>LAMP</a>
+                                <a class="dropdown-item" href="#"><span></span>TABLE</a>
+                            </div>
+                        </li>
+                        <li class="nav-item cart">
+                            <a class="nav-link ml-2" href="cart.html"><span></span>
+                                <img src="../img/icon/cart-78-32.png" width="25px"><div class="bh-nb"><div class="nb-pds">0</div></div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link ml-2" href="#" data-toggle="modal" data-target="#elegantModalForm"><span></span>
+                                <img src="../img/icon/user-32.png" width="25px">
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link ml-2" href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><span></span>
+                                <img src="../img/icon/search-3-48.png" width="25px"/>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="">
+
+        <div class=""><img src="https://demo.goodlayers.com/inteco/wp-content/uploads/2018/09/shutterstock_543421996.jpg" alt="" class=" img-fluid-1"></div>
+    </div>
+    <!---->
+    <script>
+        $(window).scroll(function() {
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 50) {
+                $(".navbar11").addClass("scroll-navbar");
+
+            } else {
+                $(".navbar11").removeClass("scroll-navbar");
+            }
+        });
+    </script>
+    <!--
+    <script>
+        $(document).ready(function() {
+            let url = decodeURIComponent(window.location.search);
+            url = url.substring(4);
+            if (url.search('_') != -1) {
+                url = url.replace(/_/g, " ");
+            } else {
+                url = url.replace(/\+/g, " ");
+            }
+            $('img', '#imm').attr('src', '..\/img\/' + url)
+            console.log(url);
+        })
+    </script>
+    -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-5">
+                <div id='imm' class="mt-3">
+                    <img src="../img/1.jpg" alt="Product" style="height: 400px;width: 500px;">
+                </div>
+            </div>
+            <div class="col-md-5 mt-5">
+                <div id='imm-1' class="mt-5">
+                    <div class="row">
+                        <div class="">
+                            <h5>Sản Phẩm </h5>
+                            <p class=" text-center">Giá Tiền</p>
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="">
+                            <button class="mr-4">Mua Ngay</button>
+                            <button>add to cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="box-detail">
+            <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">CHi TIẾT</a>
+                    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">BÌNH LUẬN</a>
+
+                </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">Bộ đếm sản phẩm 3 số nhỏ thiết kế đẹp và gọn bởi công ty LDNam Bộ đếm sản phẩm giúp bạn có thể tiết kiệm được thời gian và chi phí nhân công Giúp kiểm soát tốt trong sản xuất hướng tới tự động hóa Giá cả hợp lý – độ bền cao – mang lại
+                    nhiều lợi ích cho khách hàng – Cách sử dụng khá đơn giản vì bên mình sẽ lắp sẵn dây cảm biến và nguồn khi giao – Sử dụng đươc trong nhiều lĩnh vực như: Sản xuất dây chuyền, trên băng tải, đếm vận tốc, đếm số vòng dây, …. đếm được tất
+                    cả các loại sản phẩm – Giá trị có thể đặt được, tự động báo hoặc dừng băng tải khi đủ số lượng. – Đếm được từ 0-999 sản phẩm – Vẫn lưu trữ lại nếu bị mất điện – Dùng cảm biến quang (có thể thay thế bằng cảm biến khác tùy thuộc vào
+                    loại sản phẩm cần đếm) – Cảm biến sắt + 100.000 nhé ( nếu sản phẩm của khách bằng sắt hoặc kim loại) – Bộ đếm sản phẩm hiển thị số trên Led 7 đoạn rỏ và sắc nét, có nhiều kích thước Led tùy vào mục đích sử dụng – Công xuât tiểu thụ
+                    < 3W – Điện áp: 5v, 12v, 24v</div>
+                        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---->
+    <div class="mt-5 " style="background-color:rgb(24, 6, 6); border: none;padding: 10px;box-shadow: 5px 10px 8px 10px #888888; ">
+        <div style="font-size: 20px; margin-left: 10px;">
+            <a href="# " style=" border-radius:100%;border: 1px solid black;padding: 5px 10px;color: white;"><i class="fab fa-twitter "></i></a>
+            <a href="# " style=" border-radius:100%;border: 1px solid black;padding: 5px 10px;color: white;"><i class=" fab fa-youtube "></i></a>
+            <a href="# " style=" border-radius:100%;border: 1px solid black;padding: 5px 10px;color: white; "><i class="fab fa-facebook-f "></i></a>
+            <a href="# " style=" border-radius:100%;border: 1px solid black;padding: 5px 10px; color: white;"><i class=" fab fa-instagram "></i></a>
+        </div>
+    </div>
+    <footer style="text-align: center;background-color: black ">
+        <h7 style="color: white; ">Copyrights © 2020 by LHL</h7>
+    </footer>
+
+</body>
+
+</html>

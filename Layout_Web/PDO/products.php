@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products</title>
     <link rel="stylesheet" type="text/css" href="">
-    <link rel="stylesheet" type="text/css" href="../css/product.css">
+    <link rel="stylesheet" type="text/css" href="products.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="../OwlCarousel2-2.3.4/src/js/owl.carousel.js">
@@ -163,11 +163,11 @@
                     </div>
                     <div></div>
                     <div class="box-muc">
-                        <p data-toggle="collapse" data-target="#collapseExample0" aria-expanded="false" aria-controls="collapseExample" id="muc11">
+                        <p data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample" id="muc11">
                             Loại sản phẩm
                             <i class="fas fa-angle-right float-md-right " style="border-bottom:none;" id="tick0" name="sp"></i>
                         </p>
-                        <div class="collapse show" id="collapseExample0">
+                        <div class="collapse show" id="collapseExample1">
                             <div class="box-muc2">
                                 <div class="box-item">
                                     <label>
@@ -202,31 +202,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="box-muc ">
-                        <p data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample" id="muc22">
-                            Thương Hiệu
-                            <i class="fas fa-angle-right float-md-right " style="border-bottom:none;" id="tick1"></i>
-                        </p>
-
-                        <div class="collapse show" id="collapseExample1">
-                            <div class="box-muc2">
-                                <div>
-                                    <div class="box-item">
-                                        <label>
-                                <input  type="radio" value="" name="th">
-                                <span> thương Hiệu 1</span>
-                                </label>
-                                    </div>
-                                    <div class="box-item">
-                                        <label>
-                                <input  type="radio" value="" name="th">
-                                <span> thương Hiệu 1</span>
-                                </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="box-muc">
                         <p data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample" id="muc33">
                             Giá
@@ -236,32 +211,32 @@
                             <div class="box-muc2">
                                 <div class="box-item">
                                     <label>
-                                <input  type="radio" value=""  name="coin" class=" btn" id="all" v-model="picked">
+                                <input  type="radio" value="TatCa"  name="coin" class=" btn" id="all" v-model="picked">
                                 <span> Tất cả</span>
                             </label>
                                 </div>
                                 <div class="box-item">
                                     <label>
                                 <input  type="radio" value="" name="coin"  class=" btn" id="motlit" v-model="picked">
-                                <span> 0 Đ ~ 100.000 Đ</span>
+                                <span> 0đ ~ 100.000đ</span>
                             </label>
                                 </div>
                                 <div class="box-item">
                                     <label>
                                 <input  type="radio" value=""  name="coin" class=" btn" id="motcu">
-                                <span> 100.000 Đ ~ 1.000.000Đ</span>
+                                <span> 100.000đ ~ 1.000.000đ</span>
                             </label>
                                 </div>
                                 <div class="box-item">
                                     <label>
                                 <input  type="radio" value="" name="coin" class=" btn" id="haicu">
-                                <span> 1.000.000Đ ~ 2.000.000 Đ</span>
+                                <span> 1.000.000đ ~ 2.000.000đ</span>
                             </label>
                                 </div>
                                 <div class="box-item">
                                     <label>
                                 <input  type="radio" value="" id="" name="coin">
-                                <span> 2.000.000Đ ~ 5.000.000 Đ</span>
+                                <span> 2.000.000đ ~ 5.000.000đ</span>
                             </label>
                                 </div>
 
@@ -336,200 +311,133 @@
                     </div>
                 </div>
             </div>
+            
             <div class="col-md-9 col-sm-12 col-xs-12">
                 <div class="wrapper">
                     <div class="links">
                         <ul>
-                            <li class="li-list active" data-view="list-view"> <i class=" fas fa-th-list">list view</i></li>
+                            <li class="li-list active" data-view="list-view"> <i class=" fas fa-th-list"> List View</i></li>
 
-                            <li class=" li grid " data-view="grid-view"> <i class=" fas fa-th-large">grid view</i> </li>
+                            <li class="li-grid " data-view="grid-view"> <i class=" fas fa-th-large"> Grid View</i> </li>
                         </ul>
                     </div>
+                    <!--PHP Phan Trang-->
+                    <?php
+                        include_once('DataProvider.php');
+                        $sosp1trang = 6;
+                        if( isset($_GET["page"]) ){
+                            $trang = $_GET["page"];
+                            settype($trang, "int");
+                        }else{
+                            $trang = 1;
+                        }
+                    ?>
+                    <!--end Phan Trang-->
                     <div class="view-main">
                         <div class="view-wrap list-view" style=" display:block;">
                             <div class="row" id="parent">
-                                <div class="col-md-4 col-sm-5 col-7 box sofa motlit">
+                            <?php
+                            include_once('DataProvider.php');
+                            $from = ($trang - 1) * $sosp1trang;
+                            $sqlSanPham = "SELECT MaSP, TenSanPham, GiaBan,MoTa, Hinh FROM sanpham LIMIT $from, $sosp1trang";
+                            $dsSanPham = DataProvider::ExecuteQuery($sqlSanPham);
+                            while($row = $dsSanPham->fetch())
+                            {
+                                $gia = number_format($row['GiaBan']);
+                                $chuoi = <<< EOD
+                                <div class="col-md-4 col-sm-5 col-7 box sofa">
                                     <div class="view-item">
-                                        <div class="card h-100 ">
+                                        <div class="card h-100 mb-3">
                                             <div id="vi"></div>
-                                            <a href="# "> <img class="card-img-top img-fluid " src="../img/arboard24-1580985424.jpg "></a>
-                                            <div class="card-body ">
+                                            <a href="# "> <img class="card-img-top img-fluid " src="../img/{$row['Hinh']}"></a>
+                                            <div class="card-body col-md-12">
                                                 <div style="margin-bottom: 10px;text-align: center; ">
-                                                    <h5 class="name">Sản Phẩm 1</h5>
-                                                    <p class=" text-center" class="tien">100000đ</p>
+                                                    <h5 class="name">{$row['TenSanPham']}</h5>
+                                                    <p class=" text-center" class="tien">{$gia}đ</p>
                                                 </div>
-                                                <div class="face-2 ">
-                                                    <div class="icon-buy  justify-content-center">
-                                                        <div> <a href="# "><i class="far fa-eye " ></i></a></div>
-                                                        <div> <a href="# "><i class="add-cart fas fa-shopping-cart " ></i></a></div>
-                                                    </div>
-
+                                                <div class="face-2">
                                                     <div id="buy">
-                                                        <a href="#">Mua Ngay</a>
+                                                        <a href="#"><i class="far fa-eye"></i></a>
+                                                    </div>
+                                                    <div class="icon-buy  justify-content-center">
+                                                        <div> <a href="# "><i class="add-cart fas fa-shopping-cart "></i></a></div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-4 col-sm-5 col-7 box sofa motcu">
-                                    <div class="view-item">
-                                        <div class="card h-100 ">
-                                            <div id="vi"></div>
-                                            <a href="# "> <img class="card-img-top img-fluid " src="../img/5-sofa-1587982024.jpg "></a>
-                                            <div class="card-body ">
-                                                <div style="margin-bottom: 10px;text-align: center; ">
-                                                    <h5 class="name">Sản Phẩm 2</h5>
-                                                    <p class=" text-center" class="tien">1000000đ</p>
-                                                </div>
-                                                <div class="face-2 ">
-                                                    <div class="icon-buy  justify-content-center">
-                                                        <div> <a href="# "><i class="far fa-eye " ></i></a></div>
-                                                        <div> <a href="# "><i class=" add-cart fas fa-shopping-cart " ></i></a></div>
+EOD;
+	echo $chuoi;
+}
+?>
+                            </div>
+                        </div>
+                        <div class="view-wrap grid-view" style=" display:none;">
+                            <div class="row" id="parent">
+                                <?php
+                                include_once('DataProvider.php');
+                                $sqlSanPham = "SELECT MaSP, TenSanPham, GiaBan,MoTa, Hinh FROM sanpham LIMIT $from, $sosp1trang";
+                                $dsSanPham = DataProvider::ExecuteQuery($sqlSanPham);
+                                while($row = $dsSanPham->fetch())
+                                    {
+                                        $gia = number_format($row['GiaBan']);
+                                        $chuoi = <<< EOD
+                                        <div class="col-md-12 box sofa">
+                                            <div class="view-item">
+                                                <div class="card h-60 mb-3">
+                                                    <div id="vi"></div>
+                                                    <div class="row ">
+                                                        <div class="col-md-5  ">
+                                                            <a href="# "> <img class="card-img-top img-fluid " src="../img/{$row['Hinh']}"></a>
+                                                        </div>
+                                                        <div class="col-md-7">
+                                                            <div style="text-align: center;" class="text-product">
+                                                                <p class=" text-center justify-content-center">{$row['MoTa']}</p>
+                                                            </div>
+                                                            <div style="margin-bottom: 10px;text-align: center; ">
+                                                                <h5>{$row['TenSanPham']}</h5>
+                                                                <p class=" text-center">{$gia}đ</p>
+                                                            </div>
+                                                        </div>
                                                     </div>
-
-                                                    <div id="buy">
-                                                        <a href="#">Mua Ngay</a>
+                                                    <div class="card-body col-md-12">
+                                                        <div class="face-2">
+                                                            <div id="buy">
+                                                                <a href="#"><i class="far fa-eye"></i></a>
+                                                            </div>
+                                                            <div class="icon-buy  justify-content-center">
+                                                                <div> <a href="# "><i class="add-cart fas fa-shopping-cart "></i></a></div>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-5 col-7 box table haicu">
-                                    <div class="view-item">
-                                        <div class="card h-100 ">
-                                            <div id="vi"></div>
-                                            <a href="# "> <img class="card-img-top img-fluid " src="../img/arboard24-1580985424.jpg "></a>
-                                            <div class="card-body ">
-                                                <div style="margin-bottom: 10px;text-align: center; ">
-                                                    <h5 class="name">Sản Phẩm 3</h5>
-                                                    <p class=" text-center">100000000đ</p>
-                                                </div>
-                                                <div class="face-2 ">
-                                                    <div class="icon-buy  justify-content-center">
-                                                        <div> <a href="# "><i class="far fa-eye " ></i></a></div>
-                                                        <div> <a href="# "><i class="add-cart fas fa-shopping-cart " ></i></a></div>
-                                                    </div>
-
-                                                    <div id="buy">
-                                                        <a href="#">Mua Ngay</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+EOD;
+    echo $chuoi;
+}
+?>
                             </div>
                         </div>
                     </div>
-                    <div class="view-wrap grid-view" style=" display:none;">
-                        <div class="row" id="parent">
-                            <div class="col-md-12 box sofa motlit">
-                                <div class="view-item">
-                                    <div class="card h-60 ">
-                                        <div id="vi"></div>
-                                        <div class="row ">
-                                            <div class="col-md-5  ">
-                                                <a href="# "> <img class="card-img-top img-fluid " src="../img/arboard24-1580985424.jpg "></a>
-                                            </div>
-                                            <div class="col-md-7">
-                                                <div style="text-align: center;" class="text-product">
-                                                    <p class=" text-center">Sản phẩm là mọi thứ có thể chào bán trên thị trường để chú ý, mua, sử dụng hay tiêu dùng, có thể thỏa mãn được một mong muốn hay nhu cầu.</p>
-                                                </div>
-                                                <div style="margin-bottom: 10px;text-align: center; ">
-                                                    <h5>Sản Phẩm 1</h5>
-                                                    <p class=" text-center">100.0000đ</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card-body ">
-                                            <div class="face-2 ">
-                                                <div class="icon-buy  justify-content-center">
-                                                    <div> <a href="# "><i class="far fa-eye " ></i></a></div>
-                                                    <div> <a href="# "><i class="fas fa-shopping-cart " ></i></a></div>
-                                                </div>
-
-                                                <div id="buy">
-                                                    <a href="#">Mua Ngay</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12 box sofa motlit">
-                                <div class="view-item">
-                                    <div class="card h-60 ">
-                                        <div id="vi"></div>
-                                        <div class="row">
-                                            <div class="col-md-5">
-                                                <a href="# "> <img class="card-img-top img-fluid " src="../img/arboard24-1580985424.jpg "></a>
-                                            </div>
-                                            <div class="col-md-7">
-                                                <div style="text-align: center;" class="text-product">
-                                                    <p class=" text-center">Sản phẩm là mọi thứ có thể chào bán trên thị trường để chú ý, mua, sử dụng hay tiêu dùng, có thể thỏa mãn được một mong muốn hay nhu cầu.</p>
-                                                </div>
-                                                <div style="margin-bottom: 10px;text-align: center; ">
-                                                    <h5>Sản Phẩm 1</h5>
-                                                    <p class=" text-center">100.0000đ</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card-body ">
-                                            <div class="face-2 ">
-                                                <div class="icon-buy  justify-content-center">
-                                                    <div> <a href="# "><i class="far fa-eye " ></i></a></div>
-                                                    <div> <a href="# "><i class="fas fa-shopping-cart " ></i></a></div>
-                                                </div>
-
-                                                <div id="buy">
-                                                    <a href="#">Mua Ngay</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12 ">
-                                <div class="view-item">
-                                    <div class="card h-60 ">
-                                        <div id="vi"></div>
-                                        <div class="row">
-                                            <div class="col-md-5">
-                                                <a href="# "> <img class="card-img-top img-fluid " src="../img/arboard24-1580985424.jpg "></a>
-                                            </div>
-                                            <div class="col-md-7">
-                                                <div style="text-align: center;" class="text-product">
-                                                    <p class=" text-center">Sản phẩm là mọi thứ có thể chào bán trên thị trường để chú ý, mua, sử dụng hay tiêu dùng, có thể thỏa mãn được một mong muốn hay nhu cầu.</p>
-                                                </div>
-                                                <div style="margin-bottom: 10px;text-align: center; ">
-                                                    <h5>Sản Phẩm 1</h5>
-                                                    <p class=" text-center">100.0000đ</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card-body ">
-                                            <div class="face-2 ">
-                                                <div class="icon-buy  justify-content-center">
-                                                    <div> <a href="# "><i class="far fa-eye " ></i></a></div>
-                                                    <div> <a href="# "><i class="fas fa-shopping-cart " ></i></a></div>
-                                                </div>
-
-                                                <div id="buy">
-                                                    <a href="#">Mua Ngay</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
+                    <div id="phantrang" style="text-align:center">
+<?php
+    include_once('DataProvider.php');
+    $sqlrow ="SELECT MaSP FROM sanpham";
+    $rows = DataProvider::ExecuteQuery($sqlrow);
+    $x = $rows->fetchAll(PDO::FETCH_ASSOC);
+    $tongsosp = count($x);
+    $sotrang = ceil($tongsosp / $sosp1trang);
+    for($i=1; $i<=$sotrang; $i++){
+        echo "<a href='products.php?page=$i'>Trang $i</a> - ";
+    }
+?>
                     </div>
                 </div>
             </div>
         </div>
+
         <!---->
         <script>
             $(document).ready(function() {
@@ -550,7 +458,7 @@
                 })
             })
         </script>
-
+    </div>
         <!--end mục chọn-->
 
 
