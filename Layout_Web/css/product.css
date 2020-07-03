@@ -359,3 +359,7 @@
     background-color: black;
 }
 
+#parent{
+    display:inline-block;
+    float:left;
+}
