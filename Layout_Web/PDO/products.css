@@ -372,3 +372,24 @@
 #parent-lv > .box,#parent-gv > .box{
     margin: 0 0;
 }
+a.sp{
+    text-decoration: none;
+    color: black;
+}
+
+a.sp:hover{
+    text-decoration: none;
+    color:black;
+}
+a.pt_a{
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+a.pt_a.active{
+    background-color: #F76B68;
+    color: white;
+}
+a.pt_a:hover:not(.active){
+    background-color: #ddd;
+}

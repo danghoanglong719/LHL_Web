@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="products.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    <link rel="stylesheet" href="../OwlCarousel2-2.3.4/src/js/owl.carousel.js">
+    <!--<link rel="stylesheet" href="../OwlCarousel2-2.3.4/src/js/owl.carousel.js">-->
     <link rel="stylesheet" href="../OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="../OwlCarousel2-2.3.4/dist/assets/owl.theme.green.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
@@ -178,34 +178,29 @@
                             <div class="box-muc2">
                                 <div class="box-item">
                                     <label>
-                                <input type="radio" value="all" class=" btn" id="all" name="sp" checked>
-                                <span> TẤT CẢ</span>
-                            </label>
+                                        <input  type="radio" value="0"  name="sp" class=" btn" v-model="picked" checked>
+                                            <a class='sp' href='products.php?id=0'>TẤT CẢ</a>
+                                        </input>
+                                    </label>
                                 </div>
-                                <div class="box-item">
-                                    <label>
-                                <input type="radio" value="1" class=" btn" id="sofa" name="sp" v-model="picked">
-                                <span> SOFA</span>
-                            </label>
-                                </div>
-                                <div class="box-item">
-                                    <label>
-                                <input type="radio" value="2" class=" btn" id="chair" name="sp">
-                                <span> CHAIR</span>
-                            </label>
-                                </div>
-                                <div class="box-item">
-                                    <label>
-                                <input type="radio" value="3" class=" btn" id="lamp" name="sp">
-                                <span> LAMP</span>
-                            </label>
-                                </div>
-                                <div class="box-item">
-                                    <label>
-                                <input type="radio" value="4" class=" btn" id="table" name="sp">
-                                <span>TABLE</span>
-                            </label>
-                                </div>
+                                <?php
+                                    include_once("DataProvider.php");
+                                    $sqlSanPham = "SELECT MaLoai, TenLoai FROM loaisp";
+                                    $dsSanPham = DataProvider::ExecuteQuery($sqlSanPham);
+                                    while($row = $dsSanPham->fetch()){
+                                        $chuoi = <<< EOD
+                                        <div class='box-item'>
+                                            <label>
+                                                <input type="radio" value="{$row['MaLoai']}"  name="sp" class=" btn">
+                                                    <a class='sp' href='products.php?id={$row['MaLoai']}'>{$row['TenLoai']}</a>
+                                                </input>
+                                            </label>
+                                        </div>
+                                        
+EOD;
+    echo $chuoi;
+}
+?>
                             </div>
                         </div>
                     </div>
@@ -218,31 +213,31 @@
                             <div class="box-muc2">
                                 <div class="box-item">
                                     <label>
-                                <input  type="radio" value="all"  name="price" class=" btn" v-model="picked" checked>
-                                <span> Tất cả</span>
-                            </label>
+                                        <input  type="radio" value="all"  name="price" class=" btn" v-model="picked" checked>
+                                        <span> TẤT CẢ</span>
+                                    </label>
                                 </div>
                                 <div class="box-item">
                                     <label>
-                                <input  type="radio" value="100000" name="price"  class=" btn" id="motlit" v-model="picked">
+                                <input  type="radio" value="100000" name="price"  class=" btn" v-model="picked">
                                 <span> 0đ ~ 100.000đ</span>
                             </label>
                                 </div>
                                 <div class="box-item">
                                     <label>
-                                <input  type="radio" value="1000000"  name="price" class=" btn" id="motcu">
+                                <input  type="radio" value="1000000"  name="price" class=" btn" >
                                 <span> 100.000đ ~ 1.000.000đ</span>
                             </label>
                                 </div>
                                 <div class="box-item">
                                     <label>
-                                <input  type="radio" value="2000000" name="price" class=" btn" id="haicu">
+                                <input  type="radio" value="2000000" name="price" class=" btn" >
                                 <span> 1.000.000đ ~ 2.000.000đ</span>
                             </label>
                                 </div>
                                 <div class="box-item">
                                     <label>
-                                <input  type="radio" value="5000000" id="" name="price">
+                                <input  type="radio" value="5000000"  name="price">
                                 <span> 2.000.000đ ~ 5.000.000đ</span>
                             </label>
                                 </div>
@@ -330,35 +325,181 @@
                     
                     <div class="view-main">
                         <div class="view-wrap list-view" style=" display:block;">
-                            <div class="row" id="parent-lv"></div>
+                            <div class="row" id="parent-lv">
+                                    <?php
+                                include_once('DataProvider.php');
+                                $sosp1trang = 3;
+                                if(isset($_GET['page'])){
+                                    $trang = $_GET['page'];
+                                    settype($trang, "int");
+                                }else{
+                                    $trang = 1;
+                                }
+                                $from = ($trang - 1) * $sosp1trang;
+
+                                if(isset($_GET['id']) && $_GET['id'] != "0" ){
+                                    $qrloai = "MaLoai = {$_GET['id']}";
+                                }
+                                else {
+                                    $qrloai = "1 = 1";
+                                }
+                                if(isset($_REQUEST['gia_sp']) && $_REQUEST['gia_sp'] != "all" ){
+                                    $qrgia = "GiaBan <= $_REQUEST[gia_sp] ORDER BY GiaBan";
+                                }
+                                else {
+                                    $qrgia = "1 = 1";
+                                }
+
+                                $sqlSanPham = "SELECT MaSP, MaLoai, TenSanPham, GiaBan, MoTa, Hinh FROM sanpham WHERE {$qrloai} AND {$qrgia} LIMIT $from, $sosp1trang";
+                                $dsSanPham = DataProvider::ExecuteQuery($sqlSanPham);
+                                while($row = $dsSanPham->fetch())
+                                {
+                                    $gia = number_format($row['GiaBan']);
+                                    $chuoi = <<< EOD
+                                    <div class="col-md-4 col-sm-5 col-7 box">
+                                        <div class="view-item">
+                                            <div class="card h-100 mb-3">
+                                                <div id="vi"></div>
+                                                <a href="# "> <img class="card-img-top img-fluid " src="../img/{$row['Hinh']}"></a>
+                                                <div class="card-body col-md-12">
+                                                    <div style="margin-bottom: 10px;text-align: center; ">
+                                                        <h5 class="name">{$row['TenSanPham']}</h5>
+                                                        <p class=" text-center" class="tien">{$gia}đ</p>
+                                                    </div>
+                                                    <div class="face-2">
+                                                        <div class="buy">
+                                                            <a href="#"><i class="far fa-eye"></i></a>
+                                                        </div>
+                                                        <div class="icon-buy  justify-content-center">
+                                                            <div> <a href="# "><i class="add-cart fas fa-shopping-cart "></i></a></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+EOD;
+	echo $chuoi;
+}
+?>
+                            </div>
                         </div>
                         <div class="view-wrap grid-view" style=" display:none;">
                             <div class="row" id="parent-gv">
+                                <?php
+                                    include_once('DataProvider.php');
+                                    $sosp1trang = 3;
+                                    if(isset($_GET['page'])){
+                                        $trang = $_GET['page'];
+                                        settype($trang, "int");
+                                    }else{
+                                        $trang = 1;
+                                    }
+                                    $from = ($trang - 1) * $sosp1trang;
+    
+                                    if(isset($_GET['id']) && $_GET['id'] != "0" ){
+                                        $qrloai = "MaLoai = {$_GET['id']}";
+                                    }
+                                    else {
+                                        $qrloai = "1 = 1";
+                                    }
+                                    if(isset($_REQUEST['gia_sp']) && $_REQUEST['gia_sp'] != "all" ){
+                                        $qrgia = "GiaBan <= $_REQUEST[gia_sp] ORDER BY GiaBan";
+                                    }
+                                    else {
+                                        $qrgia = "1 = 1";
+                                    }
+                                    
+                                    $sqlSanPham = "SELECT MaSP, MaLoai, TenSanPham, GiaBan, MoTa, Hinh FROM sanpham WHERE {$qrloai} AND {$qrgia} LIMIT $from, $sosp1trang";
+                                    $dsSanPham = DataProvider::ExecuteQuery($sqlSanPham);
+                                    while($row = $dsSanPham->fetch())
+                                    {
+                                        $gia = number_format($row['GiaBan']);
+                                        $chuoi = <<< EOD
+                                        <div class="col-md-12 box sofa">
+                                            <div class="view-item">
+                                                <div class="card h-60 mb-3">
+                                                    <div id="vi"></div>
+                                                    <div class="row ">
+                                                        <div class="col-md-5  ">
+                                                            <a href="# "> <img class="card-img-top img-fluid " src="../img/{$row['Hinh']}"></a>
+                                                        </div>
+                                                        <div class="col-md-7">
+                                                            <div style="text-align: center;" class="text-product">
+                                                                <p class=" text-center justify-content-center">{$row['MoTa']}</p>
+                                                            </div>
+                                                            <div style="margin-bottom: 10px;text-align: center; ">
+                                                                <h5>{$row['TenSanPham']}</h5>
+                                                                <p class=" text-center">{$gia}đ</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-body col-md-12">
+                                                        <div class="face-2">
+                                                            <div class="buy">
+                                                                <a href="#"><i class="far fa-eye"></i></a>
+                                                            </div>
+                                                            <div class="icon-buy  justify-content-center">
+                                                                <div> <a href="# "><i class="add-cart fas fa-shopping-cart "></i></a></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+EOD;
+    echo $chuoi;
+}
+
+?>
                             </div>
                         </div>
-                    </div>    
-                    <!--PhanTrang-->
-                    <?php
-                        include_once('DataProvider.php');
-                        $sosp1trang = 3;
-                        if( isset($_GET['page']) ){
-                            $trang = $_GET["page"];
-                            settype($trang, "int");
-                        }
-                        else{
-                            $trang = 1;
-                        }
-                        echo $trang;
-                        echo "<input type='number' min='1' name='ptht' value='$trang'></input>";
-                    ?>
-                    <!--endPhanTrang-->
-                    <div class="row" id="phantrang_" style="text-align:center">
-                        <div class="col-md-2">
-                            <?php
-                                echo "<input type='number' min='1' name='ptht' value='$trang'></input>"
-                            ?>
+                    </div>
+                    <div class="row" style="text-align:center">
+                        <div class="col-md-12" id="phantrang">
+                                <?php
+                                    if(isset ($_GET['id'])){
+                                        $product_id = $_GET['id'];
+                                        settype($trang, "int");
+                                    }
+                                    else{
+                                        $product_id = 0;
+                                    }
+                                ?>
+
+                                <?php
+                            $sosp1trang = 3;
+                            if(isset($_GET['page'])){
+                                $trang = $_GET['page'];
+                                settype($trang, "int");
+                            }else{
+                                $trang = 1;
+                            }
+                            $from = ($trang - 1) * $sosp1trang;
+
+                            if(isset($_GET['id']) && $_GET['id'] != "0" ){
+                                $qrloai = "MaLoai = {$_GET['id']}";
+                            }
+                            else {
+                                $qrloai = "1 = 1";
+                            }
+                            if(isset($_REQUEST['gia_sp']) && $_REQUEST['gia_sp'] != "all" ){
+                                $qrgia = "GiaBan <= $_REQUEST[gia_sp] ORDER BY GiaBan";
+                            }
+                            else {
+                                $qrgia = "1 = 1";
+                            }
+                            $sqlrow = "SELECT MaSP, MaLoai, TenSanPham, GiaBan, MoTa, Hinh FROM sanpham WHERE {$qrloai} AND {$qrgia}";
+                            $rows = DataProvider::ExecuteQuery($sqlrow);
+                            $count = $rows->fetchAll(PDO::FETCH_ASSOC);
+                            $tongsosp = count($count);
+                            $sotrang = ceil($tongsosp / $sosp1trang);
+                            
+                            for($i=1; $i<=$sotrang; $i++){
+                                echo "<a class='pt_a' href='products.php?id=$product_id&page=$i' value='$i'> $i </a>";
+                            }
+?>
                         </div>
-                        <div class="col-md-10" id="phantrang"></div>
                     </div>
                 </div>
             </div>
@@ -510,7 +651,18 @@
         });
     }
     $(function(){
-        LaySanPham();
+        //LaySanPham();
+        /*
+        $('a[class="sp"]').click(function (e) {
+            var maloai = $("input[name='sp']:checked").val();
+            var gia = $("input[name='price']:checked").val();
+            var trang = 1;
+            LaySanPham(maloai, gia, trang);
+            e.stopPropagation();
+        });
+        */
+        $("input[value='<?php echo $product_id; ?>']").prop('checked', true);
+
         $("input[name='sp']").change(function(){
             var maloai = $("input[name='sp']:checked").val();
             var gia = $("input[name='price']:checked").val();
@@ -520,29 +672,37 @@
         $("input[name='price']").change(function(){
             var maloai = $("input[name='sp']:checked").val();
             var gia = $("input[name='price']:checked").val();
-            var trang = 1;
-            LaySanPham(maloai, gia, trang);
-        });
-        $("input[name='ptht']").change(function(){
-            var maloai = $("input[name='sp']:checked").val();
-            var gia = $("input[name='price']:checked").val();
-            var trang = $("input[name='ptht']").val();
+            var trang = <?php echo $trang; ?>;
             LaySanPham(maloai, gia, trang);
         });
     });
+
+    $(function(){
+        var url = "products.php";
+        var choice = "";
+
+        $('input[name="sp"]').click(function(){
+            choice = "";
+            $('input[name="sp"]').each(function (){
+                if (this.checked)
+                    if (choice.length == 0)
+                        choice += '?id=' + this.val;
+                    else
+                        choice += '&cid=' + this.val;
+            });
+        });
+    });
     </script>
-    <!--
     <script>
-    $(document).ready(function() {
-        var $ptht = $('pt_a').click(function(){
-            var maloai = $("input[name='sp']:checked").val();
-            var gia = $("input[name='price']:checked").val();
-            var trang = $("input[name='ptht']").val();
-            LaySanPham(maloai, gia, trang);
-        })
-    })
+    $(function(){
+        //$(".pt_a[value='1']").addClass('active');
+        $('.pt_a').click(function() {
+            console.log("changed");
+            $('.pt_a').removeClass('active');
+            $(this).addClass('active');
+        });
+    });
     </script>
-    -->
 </body>
 
 
