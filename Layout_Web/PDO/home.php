@@ -106,18 +106,34 @@
                                 <img src="../img/icon/search-3-48.png" width="25px"/>
                             </a>
                         </li>
-                        <li class="nav-item "  id="hover" style="position:relative;">
-                      <img src="../img/icon/user-32.png" width="25px"><span></span>
-                        <ul id="detail-person" style="position:absolute;border:1px solid red;">
-                                <li>Name is  <p style="color:red;"><?php echo$_SESSION['dangnhap'];?></p> </li>
-                                
-                                <li><a href="">Thông Tin</a></li>
-                                <li><a href="dangky.php">Đăng Kí</a></li>
-                                <li><a href="login.php">Login</a></li>
-                                <li><a href="logoutcode.php" ><input type="button" name="log"> Logout</a></li>
-                        </ul>
-                       
-                       
+                        <li class="nav-item dropdown">
+                            <a class="nav-link ml-2" href="#" data-toggle="dropdown"><span></span>
+                                <img src="../img/icon/user-32.png" width="25px">
+                            </a>
+                            <div class="dropdown-menu ">
+                                <?php 
+                                if(isset($_SESSION['dangnhap'])){
+                                    $dangnhap = $_SESSION['dangnhap'];
+                                    $login = <<< EOD
+                                    <div style="color:#fff; text-align:center;">Xin chào 
+                                        <div style="text-decoration:underline; display:inline;">$dangnhap</div>
+                                    </div>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href=""><span></span>Thông tin</a>
+                                    <a class="dropdown-item" href=""><span></span>Đổi mật khẩu</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="logoutcode.php"><span></span>Đăng xuất</a>
+EOD;
+    echo $login;
+                                }
+                                else{
+                                    echo '<p style="color:#fff; text-align:center; opacity:0.5;" >Bạn chưa đăng nhập</p>';
+                                    echo'<div class="dropdown-divider"></div>';
+                                    echo '<a class="dropdown-item" href="login.php"><span></span>Đăng nhập</a>';
+                                    echo '<a class="dropdown-item" href="dangky.php"><span></span>Đăng ký</a>';
+                                }
+                                ?>
+                            </div>
                         </li>
                     </ul>
                 </div>

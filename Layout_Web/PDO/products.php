@@ -27,26 +27,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="../js/jquery/jquery-3.5.0.min.js"></script>
 <script src="../OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
-<style>
-    #detail-person
-    {
-        background-color:black;
-        opacity:0.5;
-        display:none;
-        width:200px;
-        
-    }
-    #hover:hover #detail-person{
-            display:block;
-    }
-    #hover:hover #detail-person li {
-        list-style-type:none;
-    }
-    #hover:hover #detail-person li a{
-
-          color:#fff;
-    }
-</style>
 <body>
 
     <!--modal-search-->
@@ -105,20 +85,35 @@
                                 <img src="../img/icon/search-3-48.png" width="25px"/>
                             </a>
                         </li>
-                        <li class="nav-item "  id="hover" style="position:relative;">
-                      <img src="../img/icon/user-32.png" width="25px"><span></span>
-                        <ul id="detail-person" style="position:absolute;border:1px solid red;">
-                                <li>Name is  <p style="color:red;"><?php echo$_SESSION['dangnhap'].'<br>';?></p> </li>
-                                <li><a href="">Thông Tin</a></li>
-                                <li><a href="dangky.php">Đăng Kí</a></li>
-                                <li><a href="login.php">Login</a></li>
-                                <li><a href="">Logout</a></li>
-                        </ul>
-                       
-                       
+                        <li class="nav-item dropdown">
+                            <a class="nav-link ml-2" href="#" data-toggle="dropdown"><span></span>
+                                <img src="../img/icon/user-32.png" width="25px">
+                            </a>
+                            <div class="dropdown-menu ">
+                                <?php 
+                                if(isset($_SESSION['dangnhap'])){
+                                    $dangnhap = $_SESSION['dangnhap'];
+                                    $login = <<< EOD
+                                    <div style="color:#fff; text-align:center;">Xin chào 
+                                        <div style="text-decoration:underline; display:inline;">$dangnhap</div>
+                                    </div>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href=""><span></span>Thông tin</a>
+                                    <a class="dropdown-item" href=""><span></span>Đổi mật khẩu</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="logoutcode.php"><span></span>Đăng xuất</a>
+EOD;
+    echo $login;
+                                }
+                                else{
+                                    echo '<p style="color:#fff; text-align:center; opacity:0.5;" >Bạn chưa đăng nhập</p>';
+                                    echo'<div class="dropdown-divider"></div>';
+                                    echo '<a class="dropdown-item" href="login.php"><span></span>Đăng nhập</a>';
+                                    echo '<a class="dropdown-item" href="dangky.php"><span></span>Đăng ký</a>';
+                                }
+                                ?>
+                            </div>
                         </li>
-                    
-                       
                     </ul>
                 </div>
             </div>
