@@ -49,6 +49,7 @@
     }
 </style>
 <body>
+
     <?php
     
     ?>
@@ -258,63 +259,7 @@
     <!-- Button trigger modal -->
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalCenterTitle">Chi Tiết</h5>
-                </div>
-                <div class="modal-body">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-xs-8">
-                                <a href="# "> <img class="card-img-top img-fluid " src="../img/arboard24-1580985424.jpg "></a>
-                            </div>
-                            <div class="col-xs-4 ml-auto mt-5">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="introduce text-center">
-                                            <div style="margin-bottom: 10px;text-align: center; ">
-                                                <h5>Sản Phẩm 1</h5>
-                                                <p class=" text-center">100.0000đ</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="">
-                                            <label for="color">Màu Sắc</label>
-                                            <select name="color" id="" class="w-50 ml-2">
-                                                <option value="">Đen</option>
-                                                <option value="">Đỏ</option>
-                                                <option value="">Cam</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div>
-                                            <label for="sl">Số Lượng</label>
-                                            <input type="number" name="sl" placeholder="1" class=" w-50" min=1>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Mua Ngay</button>
-                    <button type="button" class="btn btn-primary">Add To Cart</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!---->
+    
 
     <!--ketthuc-product-owl-->
     <div class="container mt-5">
@@ -340,7 +285,7 @@
                                     </div>
                                     <div class="face-2 ">
                                         <div class="icon-buy  justify-content-center">
-                                            <div><a href="detail.html?xe=c1"><i class="far fa-eye"></i></a></div>
+                                            <div><a href="chitiet.php?id=c1.jpg"><i class="far fa-eye"></i></a></div>
                                             <div><a href=" "><i class="fas fa-shopping-cart"></i></a></div>
                                         </div>
                                         <div id="buy">
@@ -363,7 +308,7 @@
                                     </div>
                                     <div class="face-2 ">
                                         <div class="icon-buy  justify-content-center">
-                                            <div> <a href="detail.html" id="spham"><i class="far fa-eye " ></i></a></div>
+                                            <div> <a href="chitiet.php?id=c13.jpg"></i></a></div>
                                             <a href="# "><i class="fas fa-shopping-cart " ></i></a>
                                         </div>
                                         <div id="buy">
@@ -386,7 +331,7 @@
                                     </div>
                                     <div class="face-2 ">
                                         <div class="icon-buy  justify-content-center">
-                                            <div> <a href="# " data-toggle="modal" data-target="#exampleModalCenter"><i class="far fa-eye " ></i></a></div>
+                                            <div> <a href="chitiet.php?id=c4.jpg"><i class="far fa-eye " ></i></a></div>
                                             <a href="# "><i class="fas fa-shopping-cart " ></i></a>
                                         </div>
                                         <div id="buy">
@@ -409,7 +354,7 @@
                                     </div>
                                     <div class="face-2 ">
                                         <div class="icon-buy  justify-content-center">
-                                            <div> <a href="# " data-toggle="modal" data-target="#exampleModalCenter"><i class="far fa-eye " ></i></a></div>
+                                            <div> <a href="chitiet.php?id=c6.jpg"><i class="far fa-eye " ></i></a></div>
                                             <a href="# "><i class="fas fa-shopping-cart " ></i></a>
                                         </div>
                                         <div id="buy">
@@ -433,7 +378,7 @@
                                     </div>
                                     <div class="face-2 ">
                                         <div class="icon-buy  justify-content-center">
-                                            <div> <a href="# " data-toggle="modal" data-target="#exampleModalCenter"><i class="far fa-eye " ></i></a></div>
+                                            <div> <a href="chitiet.php?id=c8.jpg"><i class="far fa-eye " ></i></a></div>
                                             <a href="# "><i class="fas fa-shopping-cart " ></i></a>
                                         </div>
                                         <div id="buy">
@@ -456,7 +401,7 @@
                                     </div>
                                     <div class="face-2 ">
                                         <div class="icon-buy  justify-content-center">
-                                            <div> <a href="# " data-toggle="modal" data-target="#exampleModalCenter"><i class="far fa-eye " ></i></a></div>
+                                            <div><a href="chitiet.php?id=c9.jpg"><i class="far fa-eye " ></i></a></div>
                                             <a href="# "><i class="fas fa-shopping-cart " ></i></a>
                                         </div>
                                         <div id="buy">
@@ -479,7 +424,7 @@
                                     </div>
                                     <div class="face-2 ">
                                         <div class="icon-buy  justify-content-center">
-                                            <div> <a href="# " data-toggle="modal" data-target="#exampleModalCenter"><i class="far fa-eye " ></i></a></div>
+                                            <div> <a href="chitiet.php?id=c10.jpg"><i class="far fa-eye " ></i></a></div>
                                             <a href="# "><i class="fas fa-shopping-cart " ></i></a>
                                         </div>
                                         <div id="buy">
@@ -502,7 +447,7 @@
                                     </div>
                                     <div class="face-2 ">
                                         <div class="icon-buy  justify-content-center">
-                                            <div> <a href="# " data-toggle="modal" data-target="#exampleModalCenter"><i class="far fa-eye " ></i></a></div>
+                                            <div> <a href="chitiet.php?id=c11.jpg"><i class="far fa-eye " ></i></a></div>
                                             <a href="# "><i class="fas fa-shopping-cart " ></i></a>
                                         </div>
                                         <div id="buy">
@@ -569,7 +514,7 @@
                                     </div>
                                     <div class="face-2 ">
                                         <div class="icon-buy  justify-content-center">
-                                            <div> <a href="# " data-toggle="modal" data-target="#exampleModalCenter2"><i class="far fa-eye " ></i></a></div>
+                                            <div> <a href="chitiet.php?id=a1.jpg"  ><i class="far fa-eye " ></i></a></div>
                                             <a href="# "><i class="fas fa-shopping-cart " ></i></a>
                                         </div>
                                         <div id="buy">
@@ -592,7 +537,7 @@
                                     </div>
                                     <div class="face-2 ">
                                         <div class="icon-buy  justify-content-center">
-                                            <div> <a href="# " data-toggle="modal" data-target="#exampleModalCenter"><i class="far fa-eye " ></i></a></div>
+                                            <div> <a href="chitiet.php?id=a2.jpg"><i class="far fa-eye " ></i></a></div>
                                             <a href="# "><i class="fas fa-shopping-cart " ></i></a>
                                         </div>
                                         <div id="buy">
@@ -615,7 +560,7 @@
                                     </div>
                                     <div class="face-2 ">
                                         <div class="icon-buy  justify-content-center">
-                                            <div> <a href="# " data-toggle="modal" data-target="#exampleModalCenter"><i class="far fa-eye " ></i></a></div>
+                                            <div> <a href="chitiet.php?id=a3.jpg"><i class="far fa-eye " ></i></a></div>
                                             <a href="# "><i class="fas fa-shopping-cart " ></i></a>
                                         </div>
                                         <div id="buy">
@@ -638,7 +583,7 @@
                                     </div>
                                     <div class="face-2 ">
                                         <div class="icon-buy  justify-content-center">
-                                            <div> <a href="# " data-toggle="modal" data-target="#exampleModalCenter"><i class="far fa-eye " ></i></a></div>
+                                            <div> <a href="chitiet.php?id=a4.jpg"><i class="far fa-eye " ></i></a></div>
                                             <a href="# "><i class="fas fa-shopping-cart " ></i></a>
                                         </div>
                                         <div id="buy">
@@ -661,7 +606,7 @@
                                     </div>
                                     <div class="face-2 ">
                                         <div class="icon-buy  justify-content-center">
-                                            <div> <a href="# " data-toggle="modal" data-target="#exampleModalCenter"><i class="far fa-eye " ></i></a></div>
+                                            <div> <a href="chitiet.php?id=a5.jpg"><i class="far fa-eye " ></i></a></div>
                                             <a href="# "><i class="fas fa-shopping-cart " ></i></a>
                                         </div>
                                         <div id="buy">
@@ -684,7 +629,7 @@
                                     </div>
                                     <div class="face-2 ">
                                         <div class="icon-buy  justify-content-center">
-                                            <div> <a href="# " data-toggle="modal" data-target="#exampleModalCenter"><i class="far fa-eye " ></i></a></div>
+                                            <div> <a href="chitiet.php?id=a6.jpg"><i class="far fa-eye " ></i></a></div>
                                             <a href="# "><i class="fas fa-shopping-cart " ></i></a>
                                         </div>
                                         <div id="buy">
@@ -707,7 +652,7 @@
                                     </div>
                                     <div class="face-2 ">
                                         <div class="icon-buy  justify-content-center">
-                                            <div> <a href="# " data-toggle="modal" data-target="#exampleModalCenter"><i class="far fa-eye " ></i></a></div>
+                                            <div> <a href="chitiet.php?id=a7.jpg"><i class="far fa-eye " ></i></a></div>
                                             <a href="# "><i class="fas fa-shopping-cart " ></i></a>
                                         </div>
                                         <div id="buy">
@@ -730,7 +675,7 @@
                                     </div>
                                     <div class="face-2 ">
                                         <div class="icon-buy  justify-content-center">
-                                            <div> <a href="# " data-toggle="modal" data-target="#exampleModalCenter"><i class="far fa-eye " ></i></a></div>
+                                            <div> <a href="chitiet.php?id=a8.jpg"><i class="far fa-eye " ></i></a></div>
                                             <a href="# "><i class="fas fa-shopping-cart " ></i></a>
                                         </div>
                                         <div id="buy">
@@ -793,7 +738,7 @@
                                     </div>
                                     <div class="face-2 ">
                                         <div class="icon-buy  justify-content-center">
-                                            <div> <a href="# " data-toggle="modal" data-target="#exampleModalCenter3"><i class="far fa-eye " ></i></a></div>
+                                            <div> <<a href="chitiet.php?id=aa.jpg"><i class="far fa-eye " ></i></a></div>
                                             <a href="# "><i class="fas fa-shopping-cart " ></i></a>
                                         </div>
                                         <div id="buy">
@@ -816,7 +761,7 @@
                                     </div>
                                     <div class="face-2 ">
                                         <div class="icon-buy  justify-content-center">
-                                            <div> <a href="# " data-toggle="modal" data-target="#exampleModalCenter"><i class="far fa-eye " ></i></a></div>
+                                            <div> <a href="chitiet.php?id=bb.jpg"><i class="far fa-eye " ></i></a></div>
                                             <a href="# "><i class="fas fa-shopping-cart " ></i></a>
                                         </div>
                                         <div id="buy">
@@ -839,7 +784,7 @@
                                     </div>
                                     <div class="face-2 ">
                                         <div class="icon-buy  justify-content-center">
-                                            <div> <a href="# " data-toggle="modal" data-target="#exampleModalCenter"><i class="far fa-eye " ></i></a></div>
+                                            <div> <a href="chitiet.php?id=cc.jpg"><i class="far fa-eye " ></i></a></div>
                                             <a href="# "><i class="fas fa-shopping-cart " ></i></a>
                                         </div>
                                         <div id="buy">
@@ -862,7 +807,7 @@
                                     </div>
                                     <div class="face-2 ">
                                         <div class="icon-buy  justify-content-center">
-                                            <div> <a href="# " data-toggle="modal" data-target="#exampleModalCenter"><i class="far fa-eye " ></i></a></div>
+                                            <div><a href="chitiet.php?id=dd.jpg"><i class="far fa-eye " ></i></a></div>
                                             <a href="# "><i class="fas fa-shopping-cart " ></i></a>
                                         </div>
                                         <div id="buy">
@@ -885,7 +830,7 @@
                                     </div>
                                     <div class="face-2 ">
                                         <div class="icon-buy  justify-content-center">
-                                            <div> <a href="# " data-toggle="modal" data-target="#exampleModalCenter"><i class="far fa-eye " ></i></a></div>
+                                            <div> <a href="chitiet.php?id=ee.jpg"><i class="far fa-eye " ></i></a></div>
                                             <a href="# "><i class="fas fa-shopping-cart " ></i></a>
                                         </div>
                                         <div id="buy">
@@ -908,7 +853,7 @@
                                     </div>
                                     <div class="face-2 ">
                                         <div class="icon-buy  justify-content-center">
-                                            <div> <a href="# " data-toggle="modal" data-target="#exampleModalCenter"><i class="far fa-eye " ></i></a></div>
+                                            <div> <a href="chitiet.php?id=ff.jpg"><i class="far fa-eye " ></i></a></div>
                                             <a href="# "><i class="fas fa-shopping-cart " ></i></a>
                                         </div>
                                         <div id="buy">
@@ -931,7 +876,7 @@
                                     </div>
                                     <div class="face-2 ">
                                         <div class="icon-buy  justify-content-center">
-                                            <div> <a href="# " data-toggle="modal" data-target="#exampleModalCenter"><i class="far fa-eye " ></i></a></div>
+                                            <div> <a href="chitiet.php?id=gg.jpg"><i class="far fa-eye " ></i></a></div>
                                             <a href="# "><i class="fas fa-shopping-cart " ></i></a>
                                         </div>
                                         <div id="buy">
@@ -1070,7 +1015,7 @@
 
         <script src="../js/login.js "></script>
         <script src="../js/Home.js "></script>
-        <script src="../js/main.js "></script>
+
 
 </body>
 

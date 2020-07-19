@@ -48,12 +48,7 @@
     }
 </style>
 <body>
-   
- 
-  
-    <!--PHP DangNhap-->
-           
-    <!--end-->
+
     <!--modal-search-->
     <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="z-index: 123313123;">
         <div class="modal-dialog modal-lg modal-dialog-centered">
