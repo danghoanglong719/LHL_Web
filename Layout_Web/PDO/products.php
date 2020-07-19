@@ -27,54 +27,33 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="../js/jquery/jquery-3.5.0.min.js"></script>
 <script src="../OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+<style>
+    #detail-person
+    {
+        background-color:black;
+        opacity:0.5;
+        display:none;
+        width:200px;
+        
+    }
+    #hover:hover #detail-person{
+            display:block;
+    }
+    #hover:hover #detail-person li {
+        list-style-type:none;
+    }
+    #hover:hover #detail-person li a{
 
-
+          color:#fff;
+    }
+</style>
 <body>
-    <!-- Modal -->
-    <div class="modal fade" id="elegantModalForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="z-index: 123313123;">
-        <form method="POST" action="" name="form_login" id="Form_login">
-            <div class="modal-dialog modal-dialog-centered " role="document">
-                <div class="modal-content form-elegant">
-                    <div class="modal-header text-center">
-                        <h3 class="modal-title w-80 dark-grey-text font-weight-bold my-3" id="myModalLabel"><strong>Sign in</strong></h3>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="col-sm-1"></div>
-                    <div class="col-sm-10">
-                        <div class="modal-body mx-3">
-                            <div class="md-form mb-4 row">
-                                <label data-error="wrong" data-success="right" for="Form-email1" class="col-form-label col-sm-3">Username</label>
-                                <input type="email" id="Form-email1" class="form-control validate col-sm-7">
-                            </div>
-                            <div class="md-form mb-4 row">
-                                <label data-error="wrong" data-success="right" for="Form-pass1" class="col-form-label col-sm-3">Password</label>
-                                <input type="password" id="Form-pass1" class="form-control validate col-sm-7">
-                            </div>
-                            <div class="text-center mb-3 row">
-                                <button type="button" class="btn btn-primary btn-block btn-rounded z-depth-1a">Sign in</button>
-                            </div>
-                            <p class="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2"> or Sign in with:
-                            </p>
-                            <div class="row my-3 d-flex justify-content-center">
-                                <button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a"><i class="fab fa-facebook-f text-center"></i></button>
-                                <button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a"><i class="fab fa-twitter"></i></button>
-                                <button type="button" class="btn btn-white btn-rounded z-depth-1a"><i class="fab fa-google-plus-g"></i></button>
-                            </div>
-                        </div>
-                        <div class="modal-footer mx-5 pt-3 mb-1 justify-content-center">
-                            <p class="font-small grey-text d-flex ">Not a member? 
-                                <a href="#" class="blue-text ml-1">Sign Up</a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-sm-1"></div>
-                </div>
-            </div>
-        </form>
-    </div>
-    <!---->
+   
+ 
+  
+    <!--PHP DangNhap-->
+           
+    <!--end-->
     <!--modal-search-->
     <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="z-index: 123313123;">
         <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -98,7 +77,7 @@
                 <div class=" " style="margin:0px auto;">
                     <ul class="navbar-nav ">
                         <li class="nav-item">
-                            <a class="nav-link ml-2" href="Home.html">Trang Chủ <span></span></a>
+                            <a class="nav-link ml-2" href="Home.php">Trang Chủ <span></span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link ml-2" href="#"> <span></span>Liên Hệ</a>
@@ -125,17 +104,26 @@
                             <a class="nav-link ml-2" href="cart.html"><span></span>
                                 <img src="../img/icon/cart-78-32.png" width="25px"><div class="bh-nb"><div class="nb-pds">0</div></div>
                             </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link ml-2" href="#" data-toggle="modal" data-target="#elegantModalForm"><span></span>
-                                <img src="../img/icon/user-32.png" width="25px">
-                            </a>
-                        </li>
+                        </li>    
                         <li class="nav-item ">
                             <a class="nav-link ml-2" href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><span></span>
                                 <img src="../img/icon/search-3-48.png" width="25px"/>
                             </a>
                         </li>
+                        <li class="nav-item "  id="hover" style="position:relative;">
+                      <img src="../img/icon/user-32.png" width="25px"><span></span>
+                        <ul id="detail-person" style="position:absolute;border:1px solid red;">
+                                <li>Name is  <p style="color:red;"><?php echo$_SESSION['dangnhap'].'<br>';?></p> </li>
+                                <li><a href="">Thông Tin</a></li>
+                                <li><a href="dangky.php">Đăng Kí</a></li>
+                                <li><a href="login.php">Login</a></li>
+                                <li><a href="">Logout</a></li>
+                        </ul>
+                       
+                       
+                        </li>
+                    
+                       
                     </ul>
                 </div>
             </div>
