@@ -127,10 +127,9 @@ EOD;
 
  <div class="">
         <div class=""><img src="https://demo.goodlayers.com/inteco/wp-content/uploads/2018/09/shutterstock_543421996.jpg" alt="" class=" img-fluid-1"></div>
-</div>
+    </div>
 
-
-    <div id="txtFist">
+<div id="txtFist">
         <h1>Quản lý trang web</h1>
         <div class="container-fluid " id="managerpro">
             <div class="row">
@@ -140,40 +139,84 @@ EOD;
                         <a href="#" class="list-group-item list-group-item-action active">
                                 Quản lý
                               </a>
-                        <form method="post" class ="list-group-item list-group-item-action">
-                            <input type="submit" name="produce" class="list-group-item list-group-item-action" value="Sản phẩm">
-                            <input type = "submit" name ="user" class="list-group-item list-group-item-action" value = "User">
-                       </form>
+                        <a href="Manager.php" class="list-group-item list-group-item-action">Sản phẩm</a>
+                        <a href="QuanLyAccount.php" class="list-group-item list-group-item-action">AccountUser</a>
+                       
                     </div>
                 </div>
 
+                <!--cột giữa-->
+    <div class="col-8" id="centercot">
+         <table class="table table-hover">
+             <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Họ tên</th>
+                <th scope="col">Tài khoản</th>
+                <th scope="col">Địa chỉ</th>
+                <th scope="col">SĐT</th>
+                <th scope="col">Email</th>
+            </tr>
+    <?php
+       include_once("../DataProvider.php");
+        $sql = "SELECT * FROM khachhang";
+         $result = DataProvider::ExecuteQuery($sql);
+            while($row = $result->fetch())
+                 {
+                    $_SESSION['MaKH'] =$row['MaKH'];
+                    $_SESSION['HoTen'] =$row['HoTen'];
+                    $_SESSION['TenDN'] =$row['TenDN'];
+                    $_SESSION['DiaChi'] =$row['DiaChi'];
+                    $_SESSION['DienThoai'] =$row['DienThoai'] ;
+                    $_SESSION['Email'] =$row['Email'];                
+     ?>
+        <tr>
+            <td><?= $row['MaKH'] ?></td>
+            <td><?= $row['HoTen'] ?></td>
+            <td><?= $row['TenDN'] ?></td>
+            <td><?= $row['DiaChi'] ?></td>
+            <td><?= $row['DienThoai'] ?></td>
+            <td><?= $row['Email'] ?></td>
+          
+           <td><a href="Manager.php?id=<?= $row['MaKH'] ?> "onclick="Notification()" >Xóa</a></td>
+           <td><a href="edit.php?edit=<?= $row['MaKH'] ?> " >Sửa</a></td>
 
+        </tr>
+        
+    <?php }?>
+    </table>
+                </div>
+           
+                <div class="col-md-2 col-sm-3 col-xs-12" id="rightcot">
+                   
+                </div>
+                
+                   
 
-                 <div class="col-8" id="centercot">
-	                <?php
-	                	if(isset($_REQUEST['user'])){
-	                		include_once("M_user.php");
-	                	}
-                        else include_once("M_product.php")
-	                ?>
-
-
-	            </div>		
-
-
-	            
-	            <div class="col-md-2 col-sm-3 col-xs-12" id="rightcot">
-                    <table class="table table-hover">
-                       <tr><a href="Add_product.php"> <input type="button" class="btn btn-secondary" value="Thêm Sp"></a></tr>
-                       <tr><a href="Add_user.php"> <input type="button" class="btn btn-secondary" value="Thêm Admin"></a></tr>
-    		      </table>
-              </div>
-              
-
+                </div>
             </div>
         </div>
-    </div>
+     
+        <?php
 
+
+   @ include_once("DataProvider.php");
+     if(isset($_GET['id']))
+     {
+                $user_id = $_GET['id'];
+               
+                $sql = "DELETE FROM `khachhang` WHERE  `MaKH` = '$user_id'";
+                $result = DataProvider::ExecuteQuery($sql);
+                if($result==true)
+                {
+                   @  header("location:Manager.php");
+                }
+                else{
+                    echo "that bai";
+                }
+     }
+                
+
+?>
 
 </body>
 

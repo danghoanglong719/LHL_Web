@@ -36,7 +36,8 @@
     include_once("../DataProvider.php");
     //var_dump($_GET['edit']);exit;
     if(isset($_GET['edit']) && isset($_POST['dangky']))
-    {   $MaSP = $_POST['MaSP'];
+    {   
+        $MaSP = $_POST['MaSP'];
         $MaLoai = $_POST['ID'];
         $TenSanPham = $_POST['TenSP'];
         $GiaBan = $_POST['GiaBan'];
