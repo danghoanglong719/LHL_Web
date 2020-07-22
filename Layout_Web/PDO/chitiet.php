@@ -139,51 +139,75 @@ EOD;
     <!---->
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-5">
+            <div class="col-md-4">
                 <div id='imm' class="mt-3">
                    
                             <?php
-                                    include_once("./DataProvider.php");
+                                    include_once("DataProvider.php");
                                     if(isset($_GET['id']))
-                                    $id= $_GET['id'];
-                                    $sql = "SELECT * FROM sanpham where `Hinh` = '$id'" ;
+                                        $id= $_GET['id'];
+                                    
+                                    $sql = "SELECT * FROM sanpham where `MaSP` = '{$id}'" ;
                                     $result = DataProvider::ExecuteQuery($sql);
                                     
                                   while($row = $result->fetch())
                                     {
                                     ?>
                                         <img src="../img/<?= $row['Hinh'] ?> "style="width:350px;" />
-                               
-                                <?php }?>                                        
-                </div>
+
+                                        </div>
             </div>
-            <div class="col-md-5 mt-5">
+            <div class="col-md-3 mt-3 border">
                 <div id='imm-1' class="mt-5">
                     <div class="row">
                         <div class="">
-                            <h5>Sản Phẩm </h5>
-                            <p class=" text-center">Giá Tiền</p>
+                            <h1><?= $row['TenSanPham'] ?></h1>
+                            
                         </div>
                     </div>
-                    <div class="row mt-5">
-                        <div class="">
-                            <button class="mr-4">Mua Ngay</button>
-                            <button>add to cart</button>
-                        </div>
+
+                    <div class="row mt-5 ">
+
+                        <table class="table table-striped">                       
+                          <tbody>
+                              <th scope="row">Giá</th>
+                              <td><?= number_format($row['GiaBan']) ?> đ</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Màu Sắc</th>
+                              <td><?= $row['MauSac'] ?></td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Chất liệu</th>
+                              <td><?= $row['VatLieu'] ?></td>
+                            </tr>
+
+                            <tr>
+                                <td><button class="mr-4">Mua Ngay</button></td>
+                                <td><button>Thêm vào giỏ hàng</button></td>
+                            </tr>
+
+                          </tbody>
+                        </table>
+           
                     </div>
+
+                  
                 </div>
             </div>
+            <div class="col-md-4 mt-3 border">
+ 
+                            <h3> Mô tả </h3>
+                            <p><?= $row['MoTa'] ?></p>
+            </div>
+                               
+        <?php }?>                                        
+                
         </div>
     </div>
     <div class="container-fluid">
         <div class="box-detail">
-            <nav>
-                <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">CHi TIẾT</a>
-                    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">BÌNH LUẬN</a>
-
-                </div>
-            </nav>
+            
             <div class="tab-content" id="nav-tabContent">
                 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                 <?php

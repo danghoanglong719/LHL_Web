@@ -28,7 +28,7 @@
 
     <body>
        <?php
-     @       include_once("dangkycode.php");
+     @       include_once("../dangkycode.php");
        ?>
         <div class="container-fluid "> 
             <div class="row">
@@ -40,7 +40,7 @@
                             <div class="form-inline">
                                 
                                         <label for="ipFirstname" class="col-sm-4">HọTên</label>
-                                        <input type="text" name="firstname" id="ipFirstname" class="form-control col-sm-8" placeholder="Họ">
+                                        <input type="text" name="firstname" id="ipFirstname" class="form-control col-sm-8" placeholder="Họ và tên">
                                   
                             </div>
                         </div>

@@ -60,11 +60,7 @@
 
 
           }
-        }
-    
-
-         
-
+    }
 
 ?>
 <div class="container-fluid bg"> 
@@ -75,12 +71,10 @@
                         <h2>Thay Đổi</h2>
                         <div class="form-group">
                             <div class="form-inline">
-                                <div class="col-sm-12">
-                                    <div class="form-inline">
-                                        <label for="ipFirstname" class="col-sm-3">Mã Sản Phẩm</label>
-                                        <input type="text" name="MaSP" id="ipFirstname" class="form-control col-sm-9" value=" <?php echo $_SESSION['MaSP'] ;?>"  >
-                                    </div>
-                                </div>
+                       
+                                        <label for="ipFirstname" class="col-sm-4">Mã Sản Phẩm</label>
+                                        <input type="text" name="MaSP" id="ipFirstname" class="form-control col-sm-8" value=" <?php echo $_SESSION['MaSP'] ;?>"  >
+                                
                             </div>
                         </div>
                         <div class="form-group">
