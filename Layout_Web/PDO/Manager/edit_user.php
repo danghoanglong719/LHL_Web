@@ -32,7 +32,7 @@
      
         if(isset($_POST['dangky']))
         {
-            $idu  = $_GET['idu'];
+            $id  = $_GET['edit'];
             $firstname = $_POST['firstname'];
             $username = $_POST['user'];
             $password = $_POST['pass'];
@@ -40,7 +40,7 @@
             $diachi = $_POST['address'];
             $sdt   = $_POST['sdt'];
             $email  = $_POST['email'];
-            $sql = "UPDATE `khachhang` SET `TenDN` = '$username', `MatKhau` = '$password', `HoTen` = 'firstname', `DiaChi` = '$diachi', `DienThoai` = '$sdt', `Email` = '$email' WHERE `khachhang`.`MaKH` = $idu";
+            $sql = "UPDATE `khachhang` SET `TenDN` = '$username', `MatKhau` = '$password', `HoTen` = '$firstname', `DiaChi` = '$diachi', `DienThoai` = '$sdt', `Email` = '$email' WHERE `khachhang`.`MaKH` = $id";
 
 
             if($password == $Repass)
@@ -48,7 +48,7 @@
                 
                 $result = DataProvider::ExecuteQuery($sql);
 
-                header("location:Manager.php");
+                header("location:QuanLyAccount.php");
             }
            
 

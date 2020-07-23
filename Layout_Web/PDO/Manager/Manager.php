@@ -142,7 +142,7 @@ EOD;
                               </a>
                         <form method="post" class ="list-group-item list-group-item-action">
                             <input type="submit" name="produce" class="list-group-item list-group-item-action" value="Sản phẩm">
-                            <input type = "submit" name ="user" class="list-group-item list-group-item-action" value = "User">
+                            <a class="list-group-item list-group-item-action" href="QuanLyAccount.php">User</a>
                        </form>
                     </div>
                 </div>
@@ -151,10 +151,7 @@ EOD;
 
                  <div class="col-8" id="centercot">
 	                <?php
-	                	if(isset($_REQUEST['user'])){
-	                		include_once("M_user.php");
-	                	}
-                        else include_once("M_product.php")
+	                	 include_once("M_product.php")
 	                ?>
 
 
@@ -170,12 +167,7 @@ EOD;
                                 <td scope="col" ><a href="Add_product.php"> <input type="button" class="btn btn-success btn-block"  value="Thêm Sp"></a></td>
                                 
                             </tr>
-                    
-                        
-                            <tr>
-                                <td scope="col" ><a href="Add_user.php"> <input type="button" class="btn btn-success btn-block" value="Thêm Admin"></a> </td>
 
-                            </tr>
                         
     		      </table>
               </div>
