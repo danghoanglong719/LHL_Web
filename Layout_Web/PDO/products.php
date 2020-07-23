@@ -27,8 +27,11 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="../js/jquery/jquery-3.5.0.min.js"></script>
 <script src="../OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
-<body>
 
+<body>
+<?php
+include_once("./Cart/MyCart.php");
+?>
     <!--modal-search-->
     <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="z-index: 123313123;">
         <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -77,7 +80,11 @@
                         </li>
                         <li class="nav-item cart">
                             <a class="nav-link ml-2" href="cart.html"><span></span>
-                                <img src="../img/icon/cart-78-32.png" width="25px"><div class="bh-nb"><div class="nb-pds">0</div></div>
+                                <img src="../img/icon/cart-78-32.png" width="25px"><div class="bh-nb"><div class="nb-pds">
+                                    <?php 
+                                        $sum = json_decode(Cart::Display());
+                                        echo $sum->Count;
+                                    ?></div></div>
                             </a>
                         </li>    
                         <li class="nav-item ">
@@ -304,7 +311,7 @@ EOD;
                     <div class="view-main">
                         <div class="view-wrap list-view" style=" display:block;">
                             <div class="row" id="parent-lv">
-                                    <?php
+                                <?php
                                 include_once('DataProvider.php');
                                 $sosp1trang = 3;
                                 if(isset($_GET['page'])){
@@ -350,7 +357,7 @@ EOD;
                                                                 <i class="far fa-eye"></i></a>
                                                         </div>
                                                         <div class="icon-buy  justify-content-center">
-                                                            <div> <a href="# "><i class="add-cart fas fa-shopping-cart "></i></a></div>
+                                                            <div> <button class="mua" data-masp={$row['MaSP']}><i class="add-cart fas fa-shopping-cart "></i></button></div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -421,7 +428,7 @@ EOD;
                                                                 </a>
                                                             </div>
                                                             <div class="icon-buy  justify-content-center">
-                                                                <div> <a href="# "><i class="add-cart fas fa-shopping-cart "></i></a></div>
+                                                                <div> <button class="mua" data-masp={$row['MaSP']}><i class="add-cart fas fa-shopping-cart "></i></button></div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -551,8 +558,28 @@ EOD;
             $('.tittle').click(function() {
                 $('.box-muc').toggle(1000);
             });
+            
         });
 
+    </script>
+    <script>
+        $(document).ready(function() {
+            $(".mua").click(function(){
+                $.ajax({
+                    url: "./Cart/XLGioHang.php",
+                    data: {
+                        "ma_sp": $(this).data("masp"), 
+                        "hanh_dong": "them"
+                    },
+                    dataType: "json",
+                    success: function(data){
+                        $(".nb-pds").html(data.Count);
+                        console.log(data.Count)
+                    }
+                });
+                console.log("damua");
+            });
+        });
     </script>
     <!--lỗi-->
     <script>
@@ -602,8 +629,23 @@ EOD;
                 ma_loai_sp: maloai,
                 gia_sp: gia
             },
-            success: function(data){
-                $("#parent-lv").html(data);
+            success: function(response){
+                $("#parent-lv").html(response);
+
+                $(".mua").click(function(){
+					$.ajax({
+						url: "./Cart/XLGioHang.php",
+						data: {
+							"ma_sp": $(this).data("masp"), 
+							"hanh_dong": "them"
+						},
+						dataType: "json",
+						success: function(data){
+							$(".nb-pds").html(data.Count);
+						}
+                    });
+                    console.log("damua");
+				});
             }
         });
 
@@ -615,8 +657,22 @@ EOD;
                 ma_loai_sp: maloai,
                 gia_sp: gia
             },
-            success: function(data){
-                $("#parent-gv").html(data);
+            success: function(response){
+                $("#parent-gv").html(response);
+
+                $(".mua").click(function(){
+					$.ajax({
+						url: "./Cart/XLGioHang.php",
+						data: {
+							"ma_sp": $(this).data("masp"), 
+							"hanh_dong": "them"
+						},
+						dataType: "json",
+						success: function(data){
+							$(".nb-pds").html(data.Count);
+						}
+					});
+				});
             }
         });
         $.ajax({

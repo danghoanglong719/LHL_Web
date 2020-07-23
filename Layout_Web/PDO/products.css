@@ -309,7 +309,7 @@
     margin-right: 15px;
 }
 
-.face-2 .icon-buy a {
+.face-2 .icon-buy button {
     border: 1px solid black;
     padding: 5px 10px;
     color: white;
@@ -353,7 +353,7 @@
     opacity: 1;
 }
 
-.card .icon-buy a:hover {
+.card .icon-buy button:hover {
     background-color: black;
 }
 

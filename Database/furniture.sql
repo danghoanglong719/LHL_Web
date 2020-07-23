@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 30, 2020 at 01:03 PM
+-- Generation Time: Jul 23, 2020 at 09:07 AM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.7
 
@@ -69,7 +69,6 @@ CREATE TABLE `khachhang` (
 --
 
 INSERT INTO `khachhang` (`MaKH`, `TenDN`, `MatKhau`, `HoTen`, `DiaChi`, `DienThoai`, `Email`) VALUES
-(1, 'admin', 'admin', 'Quản trị Hệ thống', '280 An Dương Vương, P4, Q5', 989366990, 'admin@hoadep.com'),
 (2, 'hienlth', 'hienlth', 'Lương Trần Hy Hiến', '396 Dương Bá Trạc, Q8', 989366990, 'hienlth@hcmup.edu.vn'),
 (3, 'cuong', 'cuong', 'Chung Quốc Cường', '1bis Nguyễn Văn Trỗi Q.1', 912345678, 'cqcuong@hcmuns.edu.vn'),
 (4, 'tung', 'tung', 'Lưu Hải Tùng', '1 Mạc Đỉnh Chi Q.1', 989766569, 'lhtung@yahoo.com'),
@@ -77,7 +76,8 @@ INSERT INTO `khachhang` (`MaKH`, `TenDN`, `MatKhau`, `HoTen`, `DiaChi`, `DienTho
 (6, 'thanh', 'thanh', 'Nguyễn Ngọc Thanh', '357 Lê Hồng Phong Q.10', 903456789, 'lthanh@hcmuns.edu.vn'),
 (7, 'hoadalat', '123456', 'Hoa Đà Lạt', '123 Hai Bà Trưng', 902314340, 'hoadalat@gmail.com'),
 (8, 'hoainfo', '123123', 'Shop Hoa', '123 Đà Nẵng', 123213213, 'hoa@hoa.com'),
-(9, '12310', '12310', 'LocTran', '783 CMT8', 382944169, 'LocTran12310@gmail.com');
+(9, '12310', '12310', 'LocTran', '783 CMT8', 382944169, 'LocTran12310@gmail.com'),
+(12, 'l12310', '123456', ' LT', '01239765', 912849543, 'jjj12310@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -123,7 +123,6 @@ CREATE TABLE `sanpham` (
 
 INSERT INTO `sanpham` (`MaSP`, `MaLoai`, `TenSanPham`, `GiaBan`, `MauSac`, `VatLieu`, `MoTa`, `Hinh`) VALUES
 (1, 1, 'Sofa 1', 70000, 'Xanh', NULL, 'Sofa 1', '5-sofa-1587982024.jpg'),
-(2, 2, 'Chair 1', 150000, 'Xanh', NULL, 'Chair 1 - Sản phẩm là mọi thứ có thể chào bán trên thị trường để chú ý, mua, sử dụng hay tiêu dùng, có thể thỏa mãn được một mong muốn hay nhu cầu.', '2-ghe-1587981944.jpg'),
 (3, 2, 'Chair 2', 250000, NULL, 'Go', 'Chair 2 - Sản phẩm là mọi thứ có thể chào bán trên thị trường để chú ý, mua, sử dụng hay tiêu dùng, có thể thỏa mãn được một mong muốn hay nhu cầu.', 'a.jpg'),
 (4, 4, 'Table 1', 250000, NULL, 'Go', 'Table - San pham duy nhat', '1-ban-1587981900.jpg'),
 (5, 3, 'Lamp 1', 400000, 'Den', NULL, 'Den - Den so mot', '8-den-1587982122.jpg'),
@@ -131,6 +130,18 @@ INSERT INTO `sanpham` (`MaSP`, `MaLoai`, `TenSanPham`, `GiaBan`, `MauSac`, `VatL
 (7, 2, 'Chair 3', 200000, NULL, 'Go', 'Ghe go don gian', 'c11.jpg'),
 (8, 2, 'Chair 4', 230000, NULL, 'Go', 'Ghe go co dem ngoi', 'g.jpg'),
 (9, 2, 'Chair 5', 400000, 'Xam', NULL, 'Ghe dem', 'c.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `xemganday`
+--
+
+CREATE TABLE `xemganday` (
+  `Id` int(11) NOT NULL,
+  `MaSP` int(11) NOT NULL,
+  `MaKH` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Indexes for dumped tables
@@ -171,6 +182,13 @@ ALTER TABLE `sanpham`
   ADD KEY `fk_sp_loaisp` (`MaLoai`) USING BTREE;
 
 --
+-- Indexes for table `xemganday`
+--
+ALTER TABLE `xemganday`
+  ADD KEY `fk_xgd_masp` (`MaSP`) USING BTREE,
+  ADD KEY `fk_xgd_makh` (`MaKH`) USING BTREE;
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -184,7 +202,7 @@ ALTER TABLE `hoadon`
 -- AUTO_INCREMENT for table `khachhang`
 --
 ALTER TABLE `khachhang`
-  MODIFY `MaKH` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `MaKH` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `loaisp`
@@ -220,6 +238,13 @@ ALTER TABLE `hoadon`
 --
 ALTER TABLE `sanpham`
   ADD CONSTRAINT `fk_sp_loaisp` FOREIGN KEY (`MaLoai`) REFERENCES `loaisp` (`MaLoai`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `xemganday`
+--
+ALTER TABLE `xemganday`
+  ADD CONSTRAINT `fk_xgd_makh` FOREIGN KEY (`MaKH`) REFERENCES `khachhang` (`MaKH`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_xgd_masp` FOREIGN KEY (`MaSP`) REFERENCES `sanpham` (`MaSP`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
