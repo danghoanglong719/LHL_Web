@@ -52,7 +52,7 @@
                 <div class=" " style="margin:0px auto;">
                     <ul class="navbar-nav ">
                         <li class="nav-item">
-                            <a class="nav-link ml-2" href="Home.php">Trang Chủ <span></span></a>
+                            <a class="nav-link ml-2" href="home.php">Trang Chủ <span></span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link ml-2" href="#"> <span></span>Liên Hệ</a>
@@ -76,7 +76,7 @@
                             </div>
                         </li>
                         <li class="nav-item cart">
-                            <a class="nav-link ml-2" href="cart.html"><span></span>
+                            <a class="nav-link ml-2" href="Cart/GioHang.php"><span></span>
                                 <img src="../img/icon/cart-78-32.png" width="25px"><div class="bh-nb"><div class="nb-pds">0</div></div>
                             </a>
                         </li>    

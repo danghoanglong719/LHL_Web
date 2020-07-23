@@ -68,7 +68,7 @@
     <!--#region Thanh công cụ-->
     <div class="container-fluid menu pl-0 pr-0">
         <nav class="navbar navbar-expand-md  navbar11 ">
-            <a class="navbar-brand " href="Home.html"><img src="../img/LogoLHL.png" width="40px"></a>
+            <a class="navbar-brand " href="home.php"><img src="../img/LogoLHL.png" width="40px"></a>
             <button class="navbar-toggler btn-secondary" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                 <i class="fa fa-bars" aria-hidden="true"></i>
             </button>
@@ -76,7 +76,7 @@
                 <div class=" " style="margin:0px auto;">
                     <ul class="navbar-nav ">
                         <li class="nav-item">
-                            <a class="nav-link ml-2" href="Home.html">Trang Chủ <span></span></a>
+                            <a class="nav-link ml-2" href="home.php">Trang Chủ <span></span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link ml-2" href="#"> <span></span>Liên Hệ</a>
@@ -96,7 +96,9 @@
                             </div>
                         </li>
                         <li class="nav-item cart">
-                            <a class="nav-link ml-2" href="cart.html"><span></span>
+
+                          
+                            <a class="nav-link ml-2" href="Cart/GioHang.php"><span></span>
                                 <img src="../img/icon/cart-78-32.png" width="25px"><div class="bh-nb"><div class="nb-pds">0</div></div>
                             </a>
                         </li>

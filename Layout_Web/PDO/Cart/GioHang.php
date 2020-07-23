@@ -9,8 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart</title>
 
-    <link rel="stylesheet" href="../cart.css">
-    <link rel="stylesheet" type="text/css" href="../../css/cart.css">
+
+    <link rel="stylesheet" href="../products.css">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="../../OwlCarousel2-2.3.4/src/js/owl.carousel.js">
@@ -46,7 +47,7 @@ include_once("MyCart.php");
     <!--#region Thanh công cụ-->
     <div class="container-fluid menu pl-0 pr-0">
         <nav class="navbar navbar-expand-md  navbar11">
-            <a class="navbar-brand " href="Home.php"><img src="../../img/LogoLHL.png" width="40px"></a>
+            <a class="navbar-brand " href="../home.php"><img src="../../img/LogoLHL.png" width="40px"></a>
             <button class="navbar-toggler btn-secondary" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                 <i class="fa fa-bars" aria-hidden="true"></i>
             </button>
@@ -54,7 +55,7 @@ include_once("MyCart.php");
                 <div class=" " style="margin:0px auto;">
                     <ul class="navbar-nav ">
                         <li class="nav-item">
-                            <a class="nav-link ml-2" href="../Home.php">Trang Chủ <span></span></a>
+                            <a class="nav-link ml-2" href="../home.php">Trang Chủ <span></span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link ml-2" href="#"> <span></span>Liên Hệ</a>
@@ -74,7 +75,7 @@ include_once("MyCart.php");
                             </div>
                         </li>
                         <li class="nav-item cart">
-                            <a class="nav-link ml-2" href="Cart/GioHang.php"><span></span>
+                            <a class="nav-link ml-2" href="GioHang.php"><span></span>
                                 <img src="../../img/icon/cart-78-32.png" width="25px"><div class="bh-nb"><div class="nb-pds">
                                     <?php 
                                         $sum = json_decode(Cart::Display());
@@ -140,88 +141,90 @@ EOD;
         });
     </script>
     <!---->
-    <div class="main">
-        <div class="cart-products">
-            <div class="cart-inner">
-                <h2 class="cart-products-title">GIỎ HÀNG</h2>
-                <div class="cart-products-inner">
-                    <ul class="cart-products__products">
-                    <?php
-                include_once("../DataProvider.php");
-                if(isset($_SESSION['Cart'])){
-                    foreach($_SESSION['Cart'] as $MaSP => $SoLuong){
-                        $sqlSanPham = "SELECT * FROM sanpham WHERE MaSP = $MaSP";
-                        $rs= DataProvider::ExecuteQuery($sqlSanPham);
-                        $row = $rs->fetch();
-                        $sum = $SoLuong * $row['GiaBan'];
-                        $gia = number_format($row['GiaBan']);
-                        $chuoi = <<< EOD
-                        <li class="cart-products__product">
-                            <div class="cart-products__inner">
-                                <div class="cart-products__img">
-                                    <img src="../../img/{$row['Hinh']}">
-                                </div>
-                                <div class="cart-products__content">
-                                    <div class="cart-products__desc">
-                                        <p class="cart-products__name">{$row['TenSanPham']}</p>
-                                        <p class="cart-products__actions">
-                                            <span class="cart-products__del">Xóa</span>
-                                        </p>
-                                    </div>
-                                    <div class="cart-products__details">
-                                        <div class="cart-products__prices">
-                                            <p class="cart-products__real-prices">{$gia}đ</p>
-                                        </div>
-                                        <div class="cart-products__qty">
-                                            <div class="qtty">
-                                                <span class="qty-decrease">-</span>
-                                                <input type="tel" class="qty-input" value="$SoLuong">
-                                                <span class="qty-increase">+</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+
+
+<h1 align="center">Giỏ hàng của bạn</h1>
+
+    <div class="container-fluid " id="managerpro">
+        <div class="row">
+
+                <div class="col-md-4 col-sm-1">
+                    <div class="card" style="width: 100%;">
+                      <div class="list-group-item list-group-item-action active" width=100%>
+                        Thành tiền
+                      </div>
+                      <ul class="list-group-item list-group-item-action">
+                        <li class="list-group-item list-group-item-action">
+                            <?php $totalfinal = json_decode(Cart::Display()); 
+                                                echo number_format($totalfinal->TotalFinal);
+                                            ?>đ
+                                          
                         </li>
-                    
-EOD;
-		echo $chuoi;
-                }
-            }
-        ?>
-                    </ul>
-                </div>
-            </div>
-            <div class="cart-total-prices">
-                <div class="cart-total-prices__inner">
-                    <div class="prices">
-                        <div class="prices__total">
-                            <span class="prices__text">Thành tiền</span>
-                            <span class="prices__value--final">
-                                <?php $totalfinal = json_decode(Cart::Display()); 
-                                    echo number_format($totalfinal->TotalFinal);
-                                ?>
-                                đ
-                            </span>
-                        </div>
+                        <li class="list-group-item list-group-item-action">
+                            <button class="btn-warning">Tiến hành đặt hàng</button>
+                        </li>
+                        
+                      </ul>
                     </div>
-                    <button class="cart__submit">Tiến hành đặt hàng</button>
+           
                 </div>
+               
+                <div class="col-sm-8">
+
+                     <table class="table table-hover">
+                         <tr>
+                            <th scope="col"></th>
+                            <td scope="col">Tên SP</td>
+                            <th scope="col">Giá</th>
+                            <th scope="col">Số lượng</th>
+                            <th scope="col" >Xóa</th> 
+                        </tr>
+
+
+                            <?php
+                            include_once("../DataProvider.php");
+                            if(isset($_SESSION['Cart'])){
+                                foreach($_SESSION['Cart'] as $MaSP => $SoLuong){
+                                    $sqlSanPham = "SELECT * FROM sanpham WHERE MaSP = $MaSP";
+                                    $rs= DataProvider::ExecuteQuery($sqlSanPham);
+                                    $row = $rs->fetch();
+                                    $sum = $SoLuong * $row['GiaBan'];
+                                    $gia = number_format($row['GiaBan']);
+                                    $chuoi = <<< EOD
+                                        <tr>
+                                            <td><a href="# "> <img class="card-img-top img-fluid"  style="width:80px; height=80px" src="../../img/{$row['Hinh']}"></a></td>
+                                            <td>{$row['TenSanPham']}</td>
+                                            <td>{$gia}</td>
+                                            <td><div class="qtty">
+                                                <button class="qty-decrease" name="tru">-</button>
+                                                <input type="tel" class="qty-input" value="$SoLuong">
+                                                <button class="qty-increase" name ="cong">+</button>
+                                                </div></td>
+                                            <td> <button class="cart-products__del btn-danger " name="deletecart">Xóa</button></td>
+                                        </tr>                            
+EOD;
+            		echo $chuoi;
+                            }
+                        }
+                    ?>
+                </table>
+        </div>
+    </div>    
+               
+
+               
+        <!---->
+        <div class="mt-5 " style="background-color:rgb(24, 6, 6); border: none;padding: 10px;box-shadow: 5px 10px 8px 10px #888888; ">
+            <div style="font-size: 20px; margin-left: 10px;">
+                <a href="# " style=" border-radius:100%;border: 1px solid black;padding: 5px 10px;color: white;"><i class="fab fa-twitter "></i></a>
+                <a href="# " style=" border-radius:100%;border: 1px solid black;padding: 5px 10px;color: white;"><i class=" fab fa-youtube "></i></a>
+                <a href="# " style=" border-radius:100%;border: 1px solid black;padding: 5px 10px;color: white; "><i class="fab fa-facebook-f "></i></a>
+                <a href="# " style=" border-radius:100%;border: 1px solid black;padding: 5px 10px; color: white;"><i class=" fab fa-instagram "></i></a>
             </div>
         </div>
-    </div>
-    <!---->
-    <div class="mt-5 " style="background-color:rgb(24, 6, 6); border: none;padding: 10px;box-shadow: 5px 10px 8px 10px #888888; ">
-        <div style="font-size: 20px; margin-left: 10px;">
-            <a href="# " style=" border-radius:100%;border: 1px solid black;padding: 5px 10px;color: white;"><i class="fab fa-twitter "></i></a>
-            <a href="# " style=" border-radius:100%;border: 1px solid black;padding: 5px 10px;color: white;"><i class=" fab fa-youtube "></i></a>
-            <a href="# " style=" border-radius:100%;border: 1px solid black;padding: 5px 10px;color: white; "><i class="fab fa-facebook-f "></i></a>
-            <a href="# " style=" border-radius:100%;border: 1px solid black;padding: 5px 10px; color: white;"><i class=" fab fa-instagram "></i></a>
-        </div>
-    </div>
-    <footer style="text-align: center;background-color: black ">
-        <h7 style="color: white; ">Copyrights © 2020 by LHL</h7>
-    </footer>
-</body>
+        <footer style="text-align: center;background-color: black ">
+            <h7 style="color: white; ">Copyrights © 2020 by LHL</h7>
+        </footer>
+    </body>
 
 </html>

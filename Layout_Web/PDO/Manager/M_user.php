@@ -30,7 +30,7 @@
             <td><?= $row['Email'] ?></td>
           
            <td><a href="Manager.php?idu=<?= $row['MaKH'] ?> "onclick="Notification()" >Xóa</a></td>
-           <td><a href="edit_user.php?edit=<?= $row['MaKH'] ?> " >Sửa</a></td>
+           <td><a href="edit_user.php?idu=<?= $row['MaKH'] ?> " >Sửa</a></td>
 
         </tr>
         

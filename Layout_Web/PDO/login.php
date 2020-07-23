@@ -5,6 +5,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../bootstrap-4.4.1-dist/css/bootstrap.css">
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
 form {border: 3px solid #f1f1f1;}
@@ -71,29 +72,29 @@ span.psw {
 </head>
 <body>
 
-<h2>Login Form</h2>
+<h2 align="center">Đăng nhập </h2>
 
 <form method="post">
-  <div class="imgcontainer">
-    <img src="img_avatar2.png" alt="Avatar" class="avatar">
-  </div>
+  
+    <div class="container-fluid bg"> 
+            <div class="row">
+                <div class="col-md-4 col-sm-3 col-xs-12"></div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
 
-  <div class="container">
-    <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-        
-    <button type="submit" name="dangnhap">Login</button>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
-  </div>
-
-    
-    <span class="psw">Forgot <a href="#">password?</a></span>
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+                        
+                    <button type="submit" name="dangnhap">Login</button>
+                   
+                  </div>
+                   
+                 <div class="col-md-4 col-sm-3 col-xs-12"></div>
+            </div>  
     </div>
+
+
   </form>
   <?php
     include_once("logincode.php");
