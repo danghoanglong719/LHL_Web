@@ -29,14 +29,6 @@
 
 
 <body>
-<script>
-        function Notification()
-        {
-            return confirm('Bạn Có Chắc Muốn Thay Đổi');
-        }
-
-</script>
-
  <!--modal-search-->
     <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="z-index: 123313123;">
         <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -52,7 +44,7 @@
     <!--#region Thanh công cụ-->
     <div class="container-fluid menu pl-0 pr-0">
         <nav class="navbar navbar-expand-md  navbar11 bg-dark">
-            <a class="navbar-brand " href="../home.php"><img src="../../img/LogoLHL.png" width="40px"></a>
+            <a class="navbar-brand " href="Home.html"><img src="../../img/LogoLHL.png" width="40px"></a>
             <button class="navbar-toggler btn-secondary" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                 <i class="fa fa-bars" aria-hidden="true"></i>
             </button>
@@ -60,7 +52,7 @@
                 <div class=" " style="margin:0px auto;">
                     <ul class="navbar-nav ">
                         <li class="nav-item">
-                            <a class="nav-link ml-2" href="../home.php">Trang Chủ <span></span></a>
+                            <a class="nav-link ml-2" href="../Home.php">Trang Chủ <span></span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link ml-2" href="#"> <span></span>Liên Hệ</a>
@@ -80,7 +72,7 @@
                             </div>
                         </li>
                         <li class="nav-item cart">
-                            <a class="nav-link ml-2" href="../Cart/GioHang.php"><span></span>
+                            <a class="nav-link ml-2" href="cart.html"><span></span>
                                 <img src="../../img/icon/cart-78-32.png" width="25px"><div class="bh-nb"><div class="nb-pds">0</div></div>
                             </a>
                         </li>
@@ -127,10 +119,9 @@ EOD;
 
  <div class="">
         <div class=""><img src="https://demo.goodlayers.com/inteco/wp-content/uploads/2018/09/shutterstock_543421996.jpg" alt="" class=" img-fluid-1"></div>
-</div>
+    </div>
 
-
-    <div id="txtFist">
+<div id="txtFist">
         <h1>Quản lý trang web</h1>
         <div class="container-fluid " id="managerpro">
             <div class="row">
@@ -140,45 +131,91 @@ EOD;
                         <a href="#" class="list-group-item list-group-item-action active">
                                 Quản lý
                               </a>
-                        <form method="post" class ="list-group-item list-group-item-action">
-                            <input type="submit" name="produce" class="list-group-item list-group-item-action" value="Sản phẩm">
-                            <a class="list-group-item list-group-item-action" href="QuanLyAccount.php?QTV = <?php echo  $_SESSION['QTV']?>">User
-                                  
-                            </a>
-                            <a class="list-group-item list-group-item-action" href="QuanLyAdmin.php">Admin</a>
-                       </form>
+                        <a href="Manager.php" class="list-group-item list-group-item-action">Sản phẩm</a>
+                        <a href="QuanLyAccount.php" class="list-group-item list-group-item-action">AccountUser</a>
+                       
                     </div>
                 </div>
 
+                <!--cột giữa-->
+    <div class="col-8" id="centercot">
+         <table class="table table-hover">
+             <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Họ tên</th>
+                <th scope="col">Tài khoản</th>
+                <th scope="col">Địa chỉ</th>
+                <th scope="col">SĐT</th>
+                <th scope="col">Email</th>
+                <th scope="col">Status</th>
+            </tr>
+    <?php
+       include_once("../DataProvider.php");
+        $sql = "SELECT * FROM admin";
+         $result = DataProvider::ExecuteQuery($sql);
+            while($row = $result->fetch())
+                 {
+                    $_SESSION['MaKH'] =$row['id_admin'];
+                    $_SESSION['HoTen'] =$row['HoTen'];
+                    $_SESSION['TenDN'] =$row['TaiKhoan'];
+                    $_SESSION['DiaChi'] =$row['DiaChi'];
+                    $_SESSION['DienThoai'] =$row['DienThoai'] ;
+                    $_SESSION['Email'] =$row['Email'];     
+                    $_SESSION['status'] =$row['Block'];  
+                    $_SESSION['pass'] =$row['MATKHAU'];               
+     ?>
+        <tr>
+            <td><?= $row['id_admin'] ?></td>
+            <td><?= $row['HoTen'] ?></td>
+            <td><?= $row['TaiKhoan'] ?></td>
+            <td><?= $row['DiaChi'] ?></td>
+            <td><?= $row['DienThoai'] ?></td>
+            <td><?= $row['Email'] ?></td>
+            <td><?= $row['Block'] ?></td>
+          
+           <td><a href="QuanLyAdmin.php?id=<?= $row['id_admin'] ?> "onclick="return confirm('Bạn Có Chắc Muốn Xóa');" >Xóa</a></td>
+           <td><a href="editAdmin.php?editAdmin=<?= $row['id_admin'] ?> " >Sửa</a></td>
 
+        </tr>
+        
+    <?php }?>
+    </table>
+                </div>
+           
+                <div class="col-md-2 col-sm-3 col-xs-12" id="rightcot">
+                   
+                </div>
+                
+                   
 
-                 <div class="col-8" id="centercot">
-	                <?php
-	                	 include_once("M_product.php");
-	                ?>
-                       
-
-	            </div>		
-
-
-	            
-	            <div class="col-md-2 col-sm-3 col-xs-12" id="rightcot">
-
-                    <table class="table table-hover">
-                      
-                            <tr>
-                                <td scope="col" ><a href="Add_product.php"> <input type="button" class="btn btn-success btn-block"  value="Thêm Sp"></a></td>
-                               
-                            </tr>
-                            <tr> <td scope="col" ><a href="../dangkyAdmin.php"> <input type="button" class="btn btn-success btn-block"  value="add_admin"></a></td></tr>
-    		      </table>
-              </div>
-              
-
+                </div>
             </div>
         </div>
-    </div>
+     
 
+    
+                            
+        <?php
+
+
+   include_once("../DataProvider.php");
+     if(isset($_GET['id']))
+     {
+                $user_id = $_GET['id'];
+               
+                $sql = "DELETE FROM `admin` WHERE  `id_admin` = '$user_id'";
+                $result = DataProvider::ExecuteQuery($sql);
+                if($result==true)
+                {
+                        echo "thanhcong";
+                }
+                else{
+                    echo "that bai";
+                }
+     }
+                
+
+?>
 
 </body>
 

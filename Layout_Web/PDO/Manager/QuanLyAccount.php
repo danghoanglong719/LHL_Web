@@ -29,14 +29,6 @@
 
 
 <body>
-<script>
-        function Notification()
-        {
-            return confirm('Bạn Có Chắc Muốn Thay Đổi');
-        }
-
-</script>
-
  <!--modal-search-->
     <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="z-index: 123313123;">
         <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -177,7 +169,7 @@ EOD;
             <td><?= $row['DienThoai'] ?></td>
             <td><?= $row['Email'] ?></td>
           
-           <td><a href="Manager.php?id=<?= $row['MaKH'] ?> "onclick="Notification()" >Xóa</a></td>
+           <td><a href="QuanLyAccount.php?id=<?= $row['MaKH'] ?> "onclick="return confirm('Bạn Có Chắc Muốn Xóa');" >Xóa</a></td>
            <td><a href="edit_user.php?edit=<?= $row['MaKH'] ?> " >Sửa</a></td>
 
         </tr>
@@ -195,11 +187,11 @@ EOD;
                 </div>
             </div>
         </div>
-     
+      
         <?php
 
 
-   @ include_once("DataProvider.php");
+   include_once("DataProvider.php");
      if(isset($_GET['id']))
      {
                 $user_id = $_GET['id'];
@@ -208,7 +200,7 @@ EOD;
                 $result = DataProvider::ExecuteQuery($sql);
                 if($result==true)
                 {
-                   @  header("location:Manager.php");
+                        echo "thanhcong";
                 }
                 else{
                     echo "that bai";
