@@ -170,6 +170,7 @@
     background-color: #F76B68;
     color: white;
     padding: 10px;
+    cursor: pointer;
 }
 
 .box-muc {
@@ -178,6 +179,7 @@
     font-family: monospace;
     color: black;
     margin-top: 10px;
+    cursor: pointer;
 }
 
 .box-muc p {

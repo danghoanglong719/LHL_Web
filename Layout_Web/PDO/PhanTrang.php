@@ -1,6 +1,6 @@
 <?php
     include_once('DataProvider.php');
-    $sosp1trang = 3;
+    $sosp1trang = 6;
     if(isset($_REQUEST['trang_ht'])){
         $trang = $_REQUEST['trang_ht'];
         settype($trang, "int");
@@ -31,18 +31,18 @@
             $preprice = 2000000;
         }
 
-        $qrgia = "GiaBan <= {$_REQUEST['gia_sp']} AND GiaBan >= {$preprice} ORDER BY GiaBan";
+        $qrgia = "GiaBan <= {$_REQUEST['gia_sp']} AND GiaBan >= {$preprice}";
     }
     else {
         $qrgia = "1 = 1";
     }
-    $sqlrow = "SELECT MaSP, MaLoai, TenSanPham, GiaBan, MoTa, Hinh FROM sanpham WHERE {$qrloai} AND {$qrgia}";
+    $sqlrow = "SELECT MaSP, MaLoai, TenSanPham, GiaBan, MoTa, Hinh FROM sanpham WHERE {$qrloai} AND {$qrgia} ORDER BY GiaBan";
     $rows = DataProvider::ExecuteQuery($sqlrow);
     $count = $rows->fetchAll(PDO::FETCH_ASSOC);
     $tongsosp = count($count);
     $sotrang = ceil($tongsosp / $sosp1trang);
     
     for($i=1; $i<=$sotrang; $i++){
-        echo "<a class='pt_a' href='products.php?id=$pro_id&page=$i' value='$i'>Trang $i</a> - ";
+        echo "<a class='pt_a' href='products.php?id=$pro_id&page=$i' value='$i'> $i</a>";
     }
 ?>

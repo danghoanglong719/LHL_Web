@@ -1,6 +1,6 @@
 <?php
     include_once('DataProvider.php');
-    $sosp1trang = 5;
+    $sosp1trang = 6;
     if(isset($_REQUEST['trang_ht'])){
         $trang = $_REQUEST['trang_ht'];
         settype($trang, "int");
@@ -65,7 +65,7 @@
                                 <a href="#"><i class="far fa-eye"></i></a>
                             </div>
                             <div class="icon-buy  justify-content-center">
-                                <div> <a href="# "><i class="add-cart fas fa-shopping-cart "></i></a></div>
+                                <div> <button class="mua" data-masp={$row['MaSP']}><i class="add-cart fas fa-shopping-cart "></i></button></div>
                             </div>
                         </div>
                     </div>

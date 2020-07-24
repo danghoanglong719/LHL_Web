@@ -313,7 +313,7 @@ EOD;
                             <div class="row" id="parent-lv">
                                 <?php
                                 include_once('DataProvider.php');
-                                $sosp1trang = 3;
+                                $sosp1trang = 6;
                                 if(isset($_GET['page'])){
                                     $trang = $_GET['page'];
                                     settype($trang, "int");
@@ -374,7 +374,7 @@ EOD;
                             <div class="row" id="parent-gv">
                                 <?php
                                     include_once('DataProvider.php');
-                                    $sosp1trang = 3;
+                                    $sosp1trang = 6;
                                     if(isset($_GET['page'])){
                                         $trang = $_GET['page'];
                                         settype($trang, "int");
@@ -456,7 +456,7 @@ EOD;
                                 ?>
 
                                 <?php
-                            $sosp1trang = 3;
+                            $sosp1trang = 6;
                             if(isset($_GET['page'])){
                                 $trang = $_GET['page'];
                                 settype($trang, "int");
@@ -574,10 +574,15 @@ EOD;
                     dataType: "json",
                     success: function(data){
                         $(".nb-pds").html(data.Count);
-                        console.log(data.Count)
                     }
                 });
-                console.log("damua");
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Thêm vào giỏ hàng thành công',
+                    showConfirmButton: false,
+                    timer: 1000
+                })
             });
         });
     </script>
@@ -642,9 +647,16 @@ EOD;
 						dataType: "json",
 						success: function(data){
 							$(".nb-pds").html(data.Count);
+                            
 						}
                     });
-                    console.log("damua");
+                    Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Thêm vào giỏ hàng thành công',
+                    showConfirmButton: false,
+                    timer: 1000
+                })
 				});
             }
         });
@@ -672,6 +684,13 @@ EOD;
 							$(".nb-pds").html(data.Count);
 						}
 					});
+                    Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Thêm vào giỏ hàng thành công',
+                    showConfirmButton: false,
+                    timer: 1000
+                })
 				});
             }
         });
