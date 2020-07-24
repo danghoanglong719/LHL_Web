@@ -399,7 +399,7 @@ EOD;
                                     $sqlSanPham = "SELECT MaSP, MaLoai, TenSanPham, GiaBan, MoTa, Hinh FROM sanpham WHERE {$qrloai} AND {$qrgia} LIMIT $from, $sosp1trang";
                                     $dsSanPham = DataProvider::ExecuteQuery($sqlSanPham);
                                     while($row = $dsSanPham->fetch())
-                                    {
+                                    {   $_SESSION['SanP']= $row['TenSanPham'];
                                         $gia = number_format($row['GiaBan']);
                                         $chuoi = <<< EOD
                                         <div class="col-md-12 box sofa">
@@ -424,7 +424,7 @@ EOD;
                                                         <div class="face-2">
                                                             <div class="buy">
                                                                 <a href="chitiet.php?id={$row['MaSP']}">
-                                                                    <i class="far fa-eye"></i>
+                                                                 <button type="submit" name="xemganday">   <i class="far fa-eye"></i></button>
                                                                 </a>
                                                             </div>
                                                             <div class="icon-buy  justify-content-center">

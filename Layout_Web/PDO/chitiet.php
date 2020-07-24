@@ -230,6 +230,41 @@ EOD;
             </div>
         </div>
     </div>
+    <?php
+     include_once("DataProvider.php");
+     if (isset($_GET['id'])) {
+        if (!isset($_SESSION['xemganday']))
+        $_SESSION['xemganday'] = array();
+        $id = $_GET['id'];
+        $sql = "SELECT * FROM XemGanDay where `MaSP` = '$id'";
+        $result = DataProvider::ExecuteQuery($sql);
+        array_unshift($_SESSION['xemganday'], $id);
+    } else {
+        echo "<script>history.go(-1);</script>";
+      
+    }
+?>
+
+    <div class="contain">
+         <h3>Xem Gần Đây</h3>
+         <ul>
+                        <?php if (isset($_SESSION['xemganday'])) {
+                            $danhsach_xem = $_SESSION['xemganday'];
+                            $i = 0;
+                            foreach ($danhsach_xem as $item) {
+                                if ($i == 3) break;
+                                $i++;
+                                $sql = "SELECT * FROM sanpham where `MaSP` = '$id'";
+                                $result = DataProvider::ExecuteQuery($sql);
+                               while($row = $result->fetch()){
+                        ?>
+                                <li><a href="chitiet.php?id=<?php echo $row['MaSp'] ?>"><?php echo $row['TenSanPham'] ?></a></li>
+                               <?php }?>
+                        <?php }
+                        } ?>
+        </ul>
+
+    </div>
     <!---->
     <div class="mt-5 " style="background-color:rgb(24, 6, 6); border: none;padding: 10px;box-shadow: 5px 10px 8px 10px #888888; ">
         <div style="font-size: 20px; margin-left: 10px;">
