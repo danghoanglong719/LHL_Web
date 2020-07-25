@@ -240,7 +240,7 @@ EOD;
         $result = DataProvider::ExecuteQuery($sql);
         array_unshift($_SESSION['xemganday'], $id);
     } else {
-        echo "<script>history.go(-1);</script>";
+        echo "";
       
     }
 ?>
