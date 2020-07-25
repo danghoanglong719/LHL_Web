@@ -52,13 +52,13 @@
         if($result==true)
         {
             echo"thanhcong";
-            //header("location:Manager.php");
+            header("location:Manager.php");
         }
         else{
             echo"thatbai";
         }
     }
-    echo "khong vao duoc";
+
 ?>
 <?php
     //placeholder
@@ -77,7 +77,7 @@
     <div class="row">
         <div class="col-md-4 col-sm-3 col-xs-12"></div>
         <div class="col-md-4 col-sm-6 col-xs-12 border border-success rounded">
-            <form class="form-container" id="formEditProduct" method="POST" enctype="multipart/form-data">
+            <form class="form-container" id="formEditProduct" method="POST" >
                 <h3>Thay đổi thông tin sản phẩm</h3>
                 <div class="form-group">
                     <div class="form-inline">
@@ -119,6 +119,7 @@
                     <div class="form-inline">
                         <label for="ipHinh" class="col-sm-4">Hình</label>
                         <input type="file" name="Hinh"  class="form-control col-sm-8"  value="<?php echo $img ;?>">
+        
                     </div>
                 </div>
                 <div id="myErr"></div>
