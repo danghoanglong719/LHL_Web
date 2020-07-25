@@ -248,20 +248,20 @@ EOD;
     <div class="contain">
          <h3>Xem Gần Đây</h3>
          <ul>
-                        <?php if (isset($_SESSION['xemganday'])) {
+                        <?php if (isset($_SESSION['xemganday']) ) {
                             $danhsach_xem = $_SESSION['xemganday'];
                             $i = 0;
-                            foreach ($danhsach_xem as $item) {
-                                if ($i == 3) break;
+                            foreach ($danhsach_xem as $row) {
+                                if ($i ==  5) break;
                                 $i++;
-                                $sql = "SELECT * FROM sanpham where `MaSP` = '$id'";
+                                $sql = "SELECT * FROM sanpham where `MaSP` = '$row' ";
                                 $result = DataProvider::ExecuteQuery($sql);
-                               while($row = $result->fetch()){
+                                $row = $result->fetch();
                         ?>
-                                <li><a href="chitiet.php?id=<?php echo $row['MaSp'] ?>"><?php echo $row['TenSanPham'] ?></a></li>
-                               <?php }?>
-                        <?php }
-                        } ?>
+                                <li><a href="chitiet.php?id=<?php echo $row['MaSP']?>"><?php echo $row ['TenSanPham'] ?></a></li>
+                               <?php }
+                      }?>
+                     
         </ul>
 
     </div>
