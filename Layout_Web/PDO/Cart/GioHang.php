@@ -36,8 +36,8 @@ include_once("MyCart.php");
     <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="z-index: 123313123;">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
-                <form class="form-inline d-flex justify-content-center md-form form-sm mt-0 w-100 " action="https://tiki.vn/">
-                    <input class="form-control form-control-sm w-100 pl-3" type="text" placeholder="Search..." aria-label="Search" style=" border:none;" name="search?q">
+                <form class="form-inline d-flex justify-content-center md-form form-sm mt-0 w-100 " action="../products.php">
+                    <input class="form-control form-control-sm w-100 pl-3" type="text" placeholder="Search..." aria-label="Search" style=" border:none;" name="search" id="search">
                 </form>
             </div>
         </div>
@@ -94,8 +94,22 @@ include_once("MyCart.php");
                                 <img src="../../img/icon/user-32.png" width="25px">
                             </a>
                             <div class="dropdown-menu ">
-                                <?php 
-                                if(isset($_SESSION['dangnhap'])){
+                            <?php 
+                                if(isset($_SESSION['dangnhap']) && isset($_SESSION['QTV'])){
+                                    $dangnhap = $_SESSION['dangnhap'];
+                                    $login = <<< EOD
+                                    <div style="color:#fff; text-align:center;">Xin chào 
+                                        <div style="text-decoration:underline; display:inline;">$dangnhap</div>
+                                    </div>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="../Manager/Manager.php"><span></span>Quản Lý</a>
+                                    <a class="dropdown-item" href=""><span></span>Đổi mật khẩu</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="logoutcode.php"><span></span>Đăng xuất</a>
+EOD;
+    echo $login;
+                                }
+                                else if(isset($_SESSION['dangnhap'])){
                                     $dangnhap = $_SESSION['dangnhap'];
                                     $login = <<< EOD
                                     <div style="color:#fff; text-align:center;">Xin chào 
@@ -105,15 +119,15 @@ include_once("MyCart.php");
                                     <a class="dropdown-item" href=""><span></span>Thông tin</a>
                                     <a class="dropdown-item" href=""><span></span>Đổi mật khẩu</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="../logoutcode.php"><span></span>Đăng xuất</a>
+                                    <a class="dropdown-item" href="logoutcode.php"><span></span>Đăng xuất</a>
 EOD;
     echo $login;
                                 }
                                 else{
                                     echo '<p style="color:#fff; text-align:center; opacity:0.5;" >Bạn chưa đăng nhập</p>';
                                     echo'<div class="dropdown-divider"></div>';
-                                    echo '<a class="dropdown-item" href="../login.php"><span></span>Đăng nhập</a>';
-                                    echo '<a class="dropdown-item" href="../dangky.php"><span></span>Đăng ký</a>';
+                                    echo '<a class="dropdown-item" href="login.php"><span></span>Đăng nhập</a>';
+                                    echo '<a class="dropdown-item" href="dangky.php"><span></span>Đăng ký</a>';
                                 }
                                 ?>
                             </div>
@@ -147,78 +161,49 @@ EOD;
             <h2 class="cart-products-title">GIỎ HÀNG CỦA BẠN</h2>
             <div class="cart-products-inner">
                 <ul class="cart-products__products">
-                <?php
-            include_once("../DataProvider.php");
-            if(isset($_SESSION['Cart'])){
-                foreach($_SESSION['Cart'] as $MaSP => $SoLuong){
-                    $sqlSanPham = "SELECT * FROM sanpham WHERE MaSP = $MaSP";
-                    $rs= DataProvider::ExecuteQuery($sqlSanPham);
-                    $row = $rs->fetch();
-                    $sum = $SoLuong * $row['GiaBan'];
-                    $gia = number_format($row['GiaBan']);
-                    $chuoi = <<< EOD
-                    <li class="cart-products__product">
-                        <div class="cart-products__inner">
-                            <div class="cart-products__img">
-                                <img src="../../img/{$row['Hinh']}">
-                            </div>
-                            <div class="cart-products__content">
-                                <div class="cart-products__desc">
-                                    <p class="cart-products__name">{$row['TenSanPham']}</p>
-                                    <p class="cart-products__actions">
-                                        <span class="cart-products__del">Xóa</span>
-                                    </p>
-                                </div>
-                                <div class="cart-products__details">
-                                    <div class="cart-products__prices">
-                                        <p class="cart-products__real-prices">{$gia}đ</p>
-                                    </div>
-                                    <div class="cart-products__qty">
-                                        <div class="qtty">
-                                            <span class="qty-decrease">-</span>
-                                            <input type="tel" class="qty-input" value="$SoLuong">
-                                            <span class="qty-increase">+</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                
-EOD;
-    echo $chuoi;
-            }
-        }
-    ?>
+                    <?php
+                    if(isset($_SESSION['Cart']) && $sum->Count >0){
+                        include_once("DisplayGioHang.php");
+                    }
+                    else{
+                        echo '<div class="empty">';
+                        echo '<p class="empty__note">Không có sản phẩm nào trong giỏ hàng của bạn.</p>';
+                        echo '<a href="../home.php" class="empty__btn">Tiếp tục mua sắm</a>';
+                        echo '</div>';
+                    }
+                    ?>
                 </ul>
             </div>
         </div>
-        <div class="cart-total-prices">
-            <div class="cart-total-prices__inner">
-                <div class="prices">
-                    <div class="prices__total">
-                        <span class="prices__text">Thành tiền</span>
-                        <span class="prices__value--final">
-                            <?php $totalfinal = json_decode(Cart::Display()); 
-                                echo number_format($totalfinal->TotalFinal);
-                            ?>
-                            đ
-                        </span>
-                    </div>
-                </div>
-                <?php 
-                    if(isset($_SESSION["dangnhap"]) && $totalfinal->TotalFinal > 0){
-                        echo "<a href='Payment.php' class='cart__submit'>Tiến hành đặt hàng</a>";
-                    }
-                    else if(!isset($_SESSION["dangnhap"]) && $totalfinal->TotalFinal > 0){
-                        echo "<a href='../login.php' class='cart__submit'>Tiến hành đặt hàng</a>";
-                    }
-                    else{
-                        echo "<div class='cart__submit err' value='0'>Tiến hành đặt hàng</div>";
-                    }
-                ?>
-            </div>
-        </div>
+        <?php
+            $sum = json_decode(Cart::Display());
+            if(isset($_SESSION['Cart']) && $sum->Count >0){
+            echo '<div class="cart-total-prices">';
+            echo '<div class="cart-total-prices__inner">';
+            echo '  <div class="prices">';
+            echo '    <div class="prices__total">';
+            echo '      <span class="prices__text">Thành tiền</span>';
+            echo '      <span class="prices__value--final">';
+                            $totalfinal = json_decode(Cart::Display()); 
+                            echo number_format($totalfinal->TongTien);
+                            echo'đ';
+            echo '      </span>';
+            echo '    </div>';
+            echo '  </div>';
+            
+                if(isset($_SESSION["dangnhap"]) && $totalfinal->TongTien > 0){
+                    echo "<a href='Payment.php' class='cart__submit'>Tiến hành đặt hàng</a>";
+                }
+                else if(!isset($_SESSION["dangnhap"]) && $totalfinal->TongTien > 0){
+                    echo "<a href='../login.php' class='cart__submit'>Tiến hành đặt hàng</a>";
+                }
+                else{
+                    echo "<div class='cart__submit err' value='0'>Tiến hành đặt hàng</div>";
+                }
+            }
+            echo '</div>';
+            echo '</div>';
+        ?>
     </div>
 </div>
     <!---->
@@ -242,7 +227,106 @@ EOD;
                 title: 'Giỏ hàng rỗng',
             })
         });
+        $('.qty-input').change(function(){
+            $.ajax({
+                url: "XLGioHang.php",
+                data: {
+                    "ma_sp": $(this).data("masp"),
+                    "so_luong": $(this).val(),
+                    "hanh_dong": "update"
+                },
+                dataType: "json",
+                success: function(data){
+                    $(".nb-pds").html(data.Count);
+                    $('.prices__value--final').html(number_format(data.TongTien)+' đ');
+                }
+            });
+        });
+        $(".qty-increase").click(function(){
+            $.ajax({
+                url: "XLGioHang.php",
+                data: {
+                    "ma_sp": $(this).data("masp"),
+                    "so_luong": 1, 
+                    "hanh_dong": "them"
+                },
+                dataType: "json",
+                success: function(data){
+                    $(".nb-pds").html(data.Count);
+                    $('.prices__value--final').html(number_format(data.TongTien)+' đ');
+                }
+            });
+            var text = Number($(this).parent().find(".qty-input").val())+Number(1);
+            $(this).parent().find(".qty-input").val(text);
+        });
+        $(".qty-decrease").click(function(){
+            if($(this).parent().find(".qty-input").val() > 1 ){
+                $.ajax({
+                    url: "XLGioHang.php",
+                    data: {
+                        "ma_sp": $(this).data("masp"),
+                        "so_luong": 1,
+                        "hanh_dong": "bot"
+                    },
+                    dataType: "json",
+                    success: function(data){
+                        $(".nb-pds").html(data.Count);
+                        $('.prices__value--final').html(number_format(data.TongTien)+' đ');
+                    }
+                });
+                var text = Number($(this).parent().find(".qty-input").val())-Number(1);
+                $(this).parent().find(".qty-input").val(text);
+            }
+        });
+        $('.cart-products__del').click(function(){
+            $.ajax({
+                url: "XLGioHang.php",
+                data: {
+                    "ma_sp": $(this).data("masp"),
+                    "hanh_dong": "xoa"
+                },
+                dataType: "json",
+                success: function(data){
+                    $(".nb-pds").html(data.Count);
+                    $('.prices__value--final').html(number_format(data.TongTien)+' đ');
+                    LaySPGioHang();
+                }
+            });
+        });
 	});
+</script>
+<script>
+function validate(e) {
+    var charCode = e.keyCode? e.keyCode : e.charCode
+    if (!(charCode >= 48 && charCode <= 57)) {
+        if(!(charCode>=37 && charCode<=40))
+            if(charCode!=8 && charCode!=46)
+            return false;
+    }
+}
+function number_format (number, decimals, dec_point, thousands_sep) {
+    // Strip all characters but numerical ones.
+    number = (number + '').replace(/[^0-9+\-Ee.]/g, '');
+    var n = !isFinite(+number) ? 0 : +number,
+        prec = !isFinite(+decimals) ? 0 : Math.abs(decimals),
+        sep = (typeof thousands_sep === 'undefined') ? ',' : thousands_sep,
+        dec = (typeof dec_point === 'undefined') ? '.' : dec_point,
+        s = '',
+        toFixedFix = function (n, prec) {
+            var k = Math.pow(10, prec);
+            return '' + Math.round(n * k) / k;
+        };
+    // Fix for IE parseFloat(0.55).toFixed(0) = 0;
+    s = (prec ? toFixedFix(n, prec) : '' + Math.round(n)).split('.');
+    if (s[0].length > 3) {
+        s[0] = s[0].replace(/\B(?=(?:\d{3})+(?!\d))/g, sep);
+    }
+    if ((s[1] || '').length < prec) {
+        s[1] = s[1] || '';
+        s[1] += new Array(prec - s[1].length + 1).join('0');
+    }
+    return s.join(dec);
+}
 </script>
 
 </html>

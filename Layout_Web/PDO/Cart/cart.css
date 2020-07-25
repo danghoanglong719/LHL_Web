@@ -400,6 +400,7 @@
     cursor: pointer;
     border-right: 1px solid rgb(200, 200, 200);
     padding: 6px 12px;
+    width: 36px;
 }
 .qtty .qty-increase  {
     display: inline-block;
@@ -427,4 +428,37 @@
 
 .cart-products ul li:nth-child(even){
     background: rgba(255, 255, 255, 0.644);
+}
+
+.qty-decrease:active, .qty-increase:active{
+    outline: 1px solid rgb(153, 153, 153);
+}
+.empty {
+    text-align: center;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    padding: 40px 20px;
+    border-radius: 4px;
+}
+.empty__note {
+    margin: 15px 0px 30px;
+}
+.empty__btn {
+    background-color: rgb(255, 66, 78);
+    color: #fff;
+    font-weight: 500;
+    display: inline-block;
+    padding: 10px 55px;
+    border-radius: 4px;
+}
+.empty__btn:hover{
+    text-decoration: none;
+    background-color: rgb(245, 29, 43);
+    color:#fff;
+}
+
+.empty {
+    background:rgba(243, 243, 243, 0.486);
+    margin: 0px;
+    border-radius: 4px;
 }

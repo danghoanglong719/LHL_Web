@@ -37,7 +37,7 @@ include_once("./Cart/MyCart.php");
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <form class="form-inline d-flex justify-content-center md-form form-sm mt-0 w-100 " action="#">
-                    <input class="form-control form-control-sm w-100 pl-3" type="text" placeholder="Search..." aria-label="Search" style=" border:none;" name="search?q" id ="search">
+                    <input class="form-control form-control-sm w-100 pl-3" type="text" placeholder="Search..." aria-label="Search" style=" border:none;" name="search" id ="search">
                 </form>
             </div>
         </div>
@@ -88,7 +88,7 @@ include_once("./Cart/MyCart.php");
                             </a>
                         </li>    
                         <li class="nav-item ">
-                            <a class="nav-link ml-2" href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><span></span>
+                            <a class="nav-link ml-2" href="" data-toggle="modal" data-target=".bd-example-modal-lg"><span></span>
                                 <img src="../img/icon/search-3-48.png" width="25px"/>
                             </a>
                         </li>
@@ -98,7 +98,21 @@ include_once("./Cart/MyCart.php");
                             </a>
                             <div class="dropdown-menu ">
                                 <?php 
-                                if(isset($_SESSION['dangnhap'])){
+                                if(isset($_SESSION['dangnhap']) && isset($_SESSION['QTV'])){
+                                    $dangnhap = $_SESSION['dangnhap'];
+                                    $login = <<< EOD
+                                    <div style="color:#fff; text-align:center;">Xin chào 
+                                        <div style="text-decoration:underline; display:inline;">$dangnhap</div>
+                                    </div>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="./Manager/Manager.php"><span></span>Quản Lý</a>
+                                    <a class="dropdown-item" href=""><span></span>Đổi mật khẩu</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="logoutcode.php"><span></span>Đăng xuất</a>
+EOD;
+    echo $login;
+                                }
+                                else if(isset($_SESSION['dangnhap'])){
                                     $dangnhap = $_SESSION['dangnhap'];
                                     $login = <<< EOD
                                     <div style="color:#fff; text-align:center;">Xin chào 

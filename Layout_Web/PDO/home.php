@@ -120,8 +120,22 @@ include_once("Cart/MyCart.php");
                                 <img src="../img/icon/user-32.png" width="25px">
                             </a>
                             <div class="dropdown-menu ">
-                                <?php 
-                                if(isset($_SESSION['dangnhap'])){
+                            <?php 
+                                if(isset($_SESSION['dangnhap']) && isset($_SESSION['QTV'])){
+                                    $dangnhap = $_SESSION['dangnhap'];
+                                    $login = <<< EOD
+                                    <div style="color:#fff; text-align:center;">Xin chào 
+                                        <div style="text-decoration:underline; display:inline;">$dangnhap</div>
+                                    </div>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="./Manager/Manager.php"><span></span>Quản Lý</a>
+                                    <a class="dropdown-item" href=""><span></span>Đổi mật khẩu</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="logoutcode.php"><span></span>Đăng xuất</a>
+EOD;
+    echo $login;
+                                }
+                                else if(isset($_SESSION['dangnhap'])){
                                     $dangnhap = $_SESSION['dangnhap'];
                                     $login = <<< EOD
                                     <div style="color:#fff; text-align:center;">Xin chào 
