@@ -48,6 +48,9 @@
           color:#fff;
     }
 </style>
+<?php
+include_once("Cart/MyCart.php");
+?>
 <body>
 
     <?php
@@ -99,7 +102,11 @@
 
                           
                             <a class="nav-link ml-2" href="Cart/GioHang.php"><span></span>
-                                <img src="../img/icon/cart-78-32.png" width="25px"><div class="bh-nb"><div class="nb-pds">0</div></div>
+                                <img src="../img/icon/cart-78-32.png" width="25px"><div class="bh-nb"><div class="nb-pds">
+                                    <?php 
+                                        $sum = json_decode(Cart::Display());
+                                        echo $sum->Count; 
+                                    ?></div></div>
                             </a>
                         </li>
                       

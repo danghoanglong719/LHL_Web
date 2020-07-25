@@ -87,7 +87,7 @@ span.psw {
                     <label for="psw"><b>Password</b></label>
                     <input type="password" placeholder="Enter Password" name="psw" required>
                     <label for="psw"><b>User</b></label>
-                    <input type="radio"  name="radio"  value="0" required>
+                    <input type="radio"  name="radio"  value="0" required checked>
                     <label for="psw"><b>Admin</b></label>
                     <input type="radio"  name="radio" value="1" required>
                     <button type="submit" name="dangnhap">Login</button>

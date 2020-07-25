@@ -11,7 +11,7 @@
 
 
     <link rel="stylesheet" href="../products.css">
-
+    <link rel="stylesheet" href="cart.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="../../OwlCarousel2-2.3.4/src/js/owl.carousel.js">
@@ -141,90 +141,108 @@ EOD;
         });
     </script>
     <!---->
-
-
-<h1 align="center">Giỏ hàng của bạn</h1>
-
-    <div class="container-fluid " id="managerpro">
-        <div class="row">
-
-                <div class="col-md-4 col-sm-1">
-                    <div class="card" style="width: 100%;">
-                      <div class="list-group-item list-group-item-action active" width=100%>
-                        Thành tiền
-                      </div>
-                      <ul class="list-group-item list-group-item-action">
-                        <li class="list-group-item list-group-item-action">
-                            <?php $totalfinal = json_decode(Cart::Display()); 
-                                                echo number_format($totalfinal->TotalFinal);
-                                            ?>đ
-                                          
-                        </li>
-                        <li class="list-group-item list-group-item-action">
-                            <button class="btn-warning">Tiến hành đặt hàng</button>
-                        </li>
-                        
-                      </ul>
-                    </div>
-           
-                </div>
-               
-                <div class="col-sm-8">
-
-                     <table class="table table-hover">
-                         <tr>
-                            <th scope="col"></th>
-                            <td scope="col">Tên SP</td>
-                            <th scope="col">Giá</th>
-                            <th scope="col">Số lượng</th>
-                            <th scope="col" >Xóa</th> 
-                        </tr>
-
-
-                            <?php
-                            include_once("../DataProvider.php");
-                            if(isset($_SESSION['Cart'])){
-                                foreach($_SESSION['Cart'] as $MaSP => $SoLuong){
-                                    $sqlSanPham = "SELECT * FROM sanpham WHERE MaSP = $MaSP";
-                                    $rs= DataProvider::ExecuteQuery($sqlSanPham);
-                                    $row = $rs->fetch();
-                                    $sum = $SoLuong * $row['GiaBan'];
-                                    $gia = number_format($row['GiaBan']);
-                                    $chuoi = <<< EOD
-                                        <tr>
-                                            <td><a href="# "> <img class="card-img-top img-fluid"  style="width:80px; height=80px" src="../../img/{$row['Hinh']}"></a></td>
-                                            <td>{$row['TenSanPham']}</td>
-                                            <td>{$gia}</td>
-                                            <td><div class="qtty">
-                                                <button class="qty-decrease" name="tru">-</button>
-                                                <input type="tel" class="qty-input" value="$SoLuong">
-                                                <button class="qty-increase" name ="cong">+</button>
-                                                </div></td>
-                                            <td> <button class="cart-products__del btn-danger " name="deletecart">Xóa</button></td>
-                                        </tr>                            
+<div class="main">
+    <div class="cart-products">
+        <div class="cart-inner">
+            <h2 class="cart-products-title">GIỎ HÀNG CỦA BẠN</h2>
+            <div class="cart-products-inner">
+                <ul class="cart-products__products">
+                <?php
+            include_once("../DataProvider.php");
+            if(isset($_SESSION['Cart'])){
+                foreach($_SESSION['Cart'] as $MaSP => $SoLuong){
+                    $sqlSanPham = "SELECT * FROM sanpham WHERE MaSP = $MaSP";
+                    $rs= DataProvider::ExecuteQuery($sqlSanPham);
+                    $row = $rs->fetch();
+                    $sum = $SoLuong * $row['GiaBan'];
+                    $gia = number_format($row['GiaBan']);
+                    $chuoi = <<< EOD
+                    <li class="cart-products__product">
+                        <div class="cart-products__inner">
+                            <div class="cart-products__img">
+                                <img src="../../img/{$row['Hinh']}">
+                            </div>
+                            <div class="cart-products__content">
+                                <div class="cart-products__desc">
+                                    <p class="cart-products__name">{$row['TenSanPham']}</p>
+                                    <p class="cart-products__actions">
+                                        <span class="cart-products__del">Xóa</span>
+                                    </p>
+                                </div>
+                                <div class="cart-products__details">
+                                    <div class="cart-products__prices">
+                                        <p class="cart-products__real-prices">{$gia}đ</p>
+                                    </div>
+                                    <div class="cart-products__qty">
+                                        <div class="qtty">
+                                            <span class="qty-decrease">-</span>
+                                            <input type="tel" class="qty-input" value="$SoLuong">
+                                            <span class="qty-increase">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                
 EOD;
-            		echo $chuoi;
-                            }
-                        }
-                    ?>
-                </table>
-        </div>
-    </div>    
-               
-
-               
-        <!---->
-        <div class="mt-5 " style="background-color:rgb(24, 6, 6); border: none;padding: 10px;box-shadow: 5px 10px 8px 10px #888888; ">
-            <div style="font-size: 20px; margin-left: 10px;">
-                <a href="# " style=" border-radius:100%;border: 1px solid black;padding: 5px 10px;color: white;"><i class="fab fa-twitter "></i></a>
-                <a href="# " style=" border-radius:100%;border: 1px solid black;padding: 5px 10px;color: white;"><i class=" fab fa-youtube "></i></a>
-                <a href="# " style=" border-radius:100%;border: 1px solid black;padding: 5px 10px;color: white; "><i class="fab fa-facebook-f "></i></a>
-                <a href="# " style=" border-radius:100%;border: 1px solid black;padding: 5px 10px; color: white;"><i class=" fab fa-instagram "></i></a>
+    echo $chuoi;
+            }
+        }
+    ?>
+                </ul>
             </div>
         </div>
-        <footer style="text-align: center;background-color: black ">
-            <h7 style="color: white; ">Copyrights © 2020 by LHL</h7>
-        </footer>
-    </body>
+        <div class="cart-total-prices">
+            <div class="cart-total-prices__inner">
+                <div class="prices">
+                    <div class="prices__total">
+                        <span class="prices__text">Thành tiền</span>
+                        <span class="prices__value--final">
+                            <?php $totalfinal = json_decode(Cart::Display()); 
+                                echo number_format($totalfinal->TotalFinal);
+                            ?>
+                            đ
+                        </span>
+                    </div>
+                </div>
+                <?php 
+                    if(isset($_SESSION["dangnhap"]) && $totalfinal->TotalFinal > 0){
+                        echo "<a href='Payment.php' class='cart__submit'>Tiến hành đặt hàng</a>";
+                    }
+                    else if(!isset($_SESSION["dangnhap"]) && $totalfinal->TotalFinal > 0){
+                        echo "<a href='../login.php' class='cart__submit'>Tiến hành đặt hàng</a>";
+                    }
+                    else{
+                        echo "<div class='cart__submit err' value='0'>Tiến hành đặt hàng</div>";
+                    }
+                ?>
+            </div>
+        </div>
+    </div>
+</div>
+    <!---->
+    <div class="mt-5 " style="background-color:rgb(24, 6, 6); border: none;padding: 10px;box-shadow: 5px 10px 8px 10px #888888; ">
+        <div style="font-size: 20px; margin-left: 10px;">
+            <a href="# " style=" border-radius:100%;border: 1px solid black;padding: 5px 10px;color: white;"><i class="fab fa-twitter "></i></a>
+            <a href="# " style=" border-radius:100%;border: 1px solid black;padding: 5px 10px;color: white;"><i class=" fab fa-youtube "></i></a>
+            <a href="# " style=" border-radius:100%;border: 1px solid black;padding: 5px 10px;color: white; "><i class="fab fa-facebook-f "></i></a>
+            <a href="# " style=" border-radius:100%;border: 1px solid black;padding: 5px 10px; color: white;"><i class=" fab fa-instagram "></i></a>
+        </div>
+    </div>
+    <footer style="text-align: center;background-color: black ">
+        <h7 style="color: white; ">Copyrights © 2020 by LHL</h7>
+    </footer>
+</body>
+<script>
+    $(document).ready(function() {
+        $(".err").click(function(){
+            Swal.fire({
+                icon: 'error',
+                title: 'Giỏ hàng rỗng',
+            })
+        });
+	});
+</script>
 
 </html>
