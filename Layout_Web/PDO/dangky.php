@@ -25,11 +25,10 @@
     <script src="../js/jQueryValidation1.19.1/jquery.validate.js"></script>
     
 
-
+<?php
+   // @include_once("dangkycode.php");
+?>
     <body>
-       <?php
-            include_once("dangkycode.php");
-       ?>
         <div class="container-fluid bg"> 
             <div class="row">
                 <div class="col-md-4 col-sm-3 col-xs-12"></div>
@@ -38,13 +37,8 @@
                         <h2>Đăng ký</h2>
                         <div class="form-group">
                             <div class="form-inline">
-                                <div class="col-sm-12">
-                                    <div class="form-inline">
-                                        <label for="ipFirstname" class="col-sm-3">HọTên</label>
-                                        <input type="text" name="firstname" id="ipFirstname" class="form-control col-sm-9" placeholder="Họ">
-                                    </div>
-                                </div>
-                               
+                                <label for="ipFirstname" class="col-sm-4">Họ Tên</label>
+                                <input type="text" name="firstname" id="ipFirstname" class="form-control col-sm-8" placeholder="Họ">
                             </div>
                         </div>
                         <div class="form-group">

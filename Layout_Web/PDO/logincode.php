@@ -1,6 +1,4 @@
-
-<?php        
- 
+<?php    
     include_once("DataProvider.php");
     if(isset($_POST['dangnhap']))
     {
@@ -12,29 +10,34 @@
             echo '<p>Xin Nhập Đầy Đủ</P>';
         }
         else {
-            $sql = "SELECT * FROM khachhang ";
-            $result = DataProvider::ExecuteQuery($sql);
-            while( $row = $result->fetch()){
-                if($username == $row['TenDN'] && $password == $row['MatKhau'] && $radioval == "0"){ 
-                    $_SESSION['dangnhap'] = $row['HoTen'];
-                    if(isset($_SESSION['dangnhap']) && isset($_SESSION['Cart'])) {
-                        header("location:./Cart/Giohang.php");
-                    }
-                    else{
-                        $_SESSION['makh'] = $row['MaKH'];
-                        $_SESSION['sdt'] = $row['DienThoai'];
-                        $_SESSION['diachi'] = $row['DiaChi'];
-                        if($username == $row['TaiKhoan'] && $password == $row['MATKHAU'] && $radioval == "1" && $row['Block'] == 'Active'){
-
-                            $_SESSION['QTV'] = $row['Lever'];
-                            header("location:./Manager/Manager.php");
+            if($radioval == "0"){
+                $sql = "SELECT * FROM khachhang ";
+                $result = DataProvider::ExecuteQuery($sql);
+                while( $row = $result->fetch()){
+                    if($username == $row['TenDN'] && $password == $row['MatKhau']){ 
+                        $_SESSION['dangnhap'] = $row['HoTen'];
+                        if(isset($_SESSION['dangnhap']) && isset($_SESSION['Cart'])) {
+                            header("location:./Cart/Giohang.php");
                         }
-                        
-                        header("location:home.php");
+                        else{
+                            $_SESSION['makh'] = $row['MaKH'];
+                            $_SESSION['sdt'] = $row['DienThoai'];
+                            $_SESSION['diachi'] = $row['DiaChi'];
+                            header("location:home.php");
+                        }
                     }
                 }
-                else {
-                    echo '';
+                echo "<p style='color:red'>*Thông tin đăng nhập không đúng</p>";
+            }
+            else{
+                $sql = "SELECT * FROM `admin`";
+                $result = DataProvider::ExecuteQuery($sql);
+                while( $row = $result->fetch()){
+                    if($username == $row['TaiKhoan'] && $password == $row['MatKhau']  && $row['Status'] == 'Active'){
+                        $_SESSION['dangnhap'] = $row['HoTenAdmin'];
+                        $_SESSION['QTV'] = $row['Level'];
+                        header("location:./Manager/Manager.php");
+                    }
                 }
             }
         }

@@ -15,12 +15,7 @@
 
             if($password == $Repass)
             {
-            
                 header("location:login.php");
             }
-           
-
         }
-
-
     ?>

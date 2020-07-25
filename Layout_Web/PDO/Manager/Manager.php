@@ -51,7 +51,7 @@
 
     <!--#region Thanh công cụ-->
     <div class="container-fluid menu pl-0 pr-0">
-        <nav class="navbar navbar-expand-md  navbar11 bg-dark">
+        <nav class="navbar navbar-expand-md  navbar11">
             <a class="navbar-brand " href="../home.php"><img src="../../img/LogoLHL.png" width="40px"></a>
             <button class="navbar-toggler btn-secondary" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                 <i class="fa fa-bars" aria-hidden="true"></i>
@@ -125,61 +125,78 @@ EOD;
         </nav>
     </div>
 
- <div class="">
-        <div class=""><img src="https://demo.goodlayers.com/inteco/wp-content/uploads/2018/09/shutterstock_543421996.jpg" alt="" class=" img-fluid-1"></div>
+<div class="">
+    <div class=""><img src="https://demo.goodlayers.com/inteco/wp-content/uploads/2018/09/shutterstock_543421996.jpg" alt="" class=" img-fluid-1"></div>
 </div>
-
-
-    <div id="txtFist">
-        <h1>Quản lý trang web</h1>
-        <div class="container-fluid " id="managerpro">
-            <div class="row">
-                <!--cột trái-->
-                <div class="col-2" id="leftcot">
-                    <div class="list-group">
-                        <a href="#" class="list-group-item list-group-item-action active">
-                                Quản lý
-                              </a>
-                        <form method="post" class ="list-group-item list-group-item-action">
-                            <input type="submit" name="produce" class="list-group-item list-group-item-action" value="Sản phẩm">
-                            <a class="list-group-item list-group-item-action" href="QuanLyAccount.php?QTV = <?php echo  $_SESSION['QTV']?>">User
-                                  
-                            </a>
-                            <a class="list-group-item list-group-item-action" href="QuanLyAdmin.php">Admin</a>
-                       </form>
-                    </div>
+    
+<div id="txtFist">
+    <h1>Quản lý trang web</h1>
+    <div class="container-fluid " id="managerpro">
+        <div class="row">
+            <!--cột trái-->
+            <div class="col-2" id="leftcot">
+                <div class="list-group">
+                    <span href="#" class="list-group-item list-group-item-action active">Quản lý</span>
+                    <?php
+                        if(isset($_SESSION['QTV'])){
+                            echo '<a class="list-group-item list-group-item-action" href="Manager.php">Sản Phẩm</a>';
+                        }
+                    ?>
+                    <?php
+                        if($_SESSION['QTV'] == 'Admin_1'){
+                            echo "<a class='list-group-item list-group-item-action' href='QuanLyAccount.php'>User</a>";
+                            echo "<a class='list-group-item list-group-item-action' href='QuanLyAdmin.php'>Admin</a>";
+                        }
+                    ?>
                 </div>
-
-
-
-                 <div class="col-8" id="centercot">
-	                <?php
-	                	 include_once("M_product.php");
-	                ?>
-                       
-
-	            </div>		
-
-
-	            
-	            <div class="col-md-2 col-sm-3 col-xs-12" id="rightcot">
-
-                    <table class="table table-hover">
-                      
-                            <tr>
-                                <td scope="col" ><a href="Add_product.php"> <input type="button" class="btn btn-success btn-block"  value="Thêm Sp"></a></td>
-                               
-                            </tr>
-                            <tr> <td scope="col" ><a href="../dangkyAdmin.php"> <input type="button" class="btn btn-success btn-block"  value="add_admin"></a></td></tr>
-    		      </table>
-              </div>
-              
-
+            </div>
+            <!--cột giữa-->
+            <div class="col-8" id="centercot">
+                <?php
+                    include_once("M_product.php");
+                ?>
+            </div>		
+            <!--cột phải-->
+            <div class="col-md-2 col-sm-3 col-xs-12" id="rightcot">
+                <table class="table table-hover">
+                    <tr><td scope="col" ><a href="Add_product.php"> <input type="button" class="btn btn-success btn-block"  value="Thêm Sản phẩm"></a></td></tr>
+                    <?php
+                        if($_SESSION['QTV'] == 'Admin_1'){
+                            echo '<tr><td scope="col" ><a href="../dangkyAdmin.php"> <input type="button" class="btn btn-success btn-block"  value="Thêm Admin"></a></td></tr>';
+                        }
+                    ?>
+                </table>
             </div>
         </div>
     </div>
+</div>
+<!---->
+<div class="mt-5" style="background-color:rgb(24, 6, 6); border: none;padding: 10px;box-shadow: 5px 10px 8px 10px #888888; ">
+    <div style="font-size: 20px; margin-left: 10px;">
+        <a href="# " style=" border-radius:100%;border: 1px solid black;padding: 5px 10px;color: white;"><i class="fab fa-twitter "></i></a>
+        <a href="# " style=" border-radius:100%;border: 1px solid black;padding: 5px 10px;color: white;"><i class=" fab fa-youtube "></i></a>
+        <a href="# " style=" border-radius:100%;border: 1px solid black;padding: 5px 10px;color: white; "><i class="fab fa-facebook-f "></i></a>
+        <a href="# " style=" border-radius:100%;border: 1px solid black;padding: 5px 10px; color: white;"><i class=" fab fa-instagram "></i></a>
+    </div>
+</div>
+<footer style="text-align: center;background-color: black ">
+    <h7 style="color: white; ">Copyrights © 2020 by LHL</h7>
+</footer>
+<!---->
+<!---->
+<script>
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
 
+        if (scroll >= 50) {
+            $(".navbar11").addClass("scroll-navbar");
 
+        } else {
+            $(".navbar11").removeClass("scroll-navbar");
+        }
+    });
+</script>
+<!---->
 </body>
 
 </html>

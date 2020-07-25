@@ -30,7 +30,7 @@
     <?php
         session_start();
         include_once("DataProvider.php");
-        if(isset($_POST['dangky']))
+        if(isset($_POST['dangkyAdmin']))
         {
             $firstname = $_POST['firstname'];
             $username = $_POST['user'];
@@ -39,37 +39,29 @@
             $diachi = $_POST['address'];
             $sdt   = $_POST['sdt'];
             $email  = $_POST['email'];
-            $Lever  = $_POST['Lever'];
-            $Block  = $_POST['Block'];
-            $sql = "INSERT INTO admin (`HoTenAdmin`, `TaiKhoan`, `MATKHAU`,`DiaChi`, `DienThoai`, `Email`,`Lever`,`Block`)VALUES ('$username' , '$password' ,' $firstname' , '$diachi' ,'$sdt' , '$email','$Lever','$Block' )";
+            $Level  = $_POST['Level'];
+            $status  = $_POST['status'];
+            echo $firstname;
+            $sql = "INSERT INTO `admin` (`HoTenAdmin`, `TaiKhoan`, `MatKhau`,`DiaChi`, `DienThoai`, `Email`,`Level`,`Status`)VALUES ('$firstname' , '$username' ,' $password' , '$diachi' ,'$sdt' , '$email','$Level','$status' )";
+            echo $sql;
             $result = DataProvider::ExecuteQuery($sql);
 
             if($password == $Repass)
             {
-            
-                header("location:QuanLyAdmin.php");
+                header("location:Manager/QuanLyAdmin.php");
             }
-           
-
         }
-
-
     ?>
         <div class="container-fluid bg"> 
             <div class="row">
                 <div class="col-md-4 col-sm-3 col-xs-12"></div>
                 <div class="col-md-4 col-sm-6 col-xs-12">
-                    <form class="form-container" id="formLogin" method="POST">
-                        <h2>Đăng ký</h2>
+                    <form class="form-container" id="formSignUpAdmin" method="POST">
+                        <h2>Đăng ký Admin</h2>
                         <div class="form-group">
                             <div class="form-inline">
-                                <div class="col-sm-12">
-                                    <div class="form-inline">
-                                        <label for="ipFirstname" class="col-sm-3">HọTên</label>
-                                        <input type="text" name="firstname" id="ipFirstname" class="form-control col-sm-9" placeholder="Họ">
-                                    </div>
-                                </div>
-                               
+                                <label for="ipFirstname" class="col-sm-4">HọTên</label>
+                                <input type="text" name="firstname" id="ipFirstname" class="form-control col-sm-8" placeholder="Họ">
                             </div>
                         </div>
                         <div class="form-group">
@@ -110,18 +102,18 @@
                         </div>
                         <div class="form-group">
                             <div class="form-inline">
-                                <label for="ipSdt" class="col-sm-4">Lever</label>
-                                <input type="text" name="Lever" id="ipSdt" class="form-control col-sm-8" placeholder=" Nhập Quyền" >
+                                <label for="ipSdt" class="col-sm-4">Level</label>
+                                <input type="text" name="Level" id="ipSdt" class="form-control col-sm-8" placeholder='"Admin_1" hoặc "Admin_2"' >
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="form-inline">
-                                <label for="ipSdt" class="col-sm-4">Block</label>
-                                <input type="text" name="Block" id="ipSdt" class="form-control col-sm-8" placeholder="Nhập Trạng Thái" >
+                                <label for="ipSdt" class="col-sm-4">Status</label>
+                                <input type="text" name="status" id="ipSdt" class="form-control col-sm-8" placeholder='"Active" hoặc "Disable"' >
                             </div>
                         </div>
                         <div id="myErr"></div>
-                        <button type="submit" class="btn btn-success btn-block" id="btnSignUp" value="SignUp" name="dangky">Đăng ký</button>
+                        <button type="submit" class="btn btn-success btn-status" id="btnSignUpAdmin" value="SignUpAdmin" name="dangkyAdmin">Tạo tài khoản</button>
                         
                     </form>
                 </div>
@@ -133,7 +125,7 @@
     <!--#region Script-->
     <script>
         $(document).ready(function(){
-            $('#formLogin').validate({
+            $('#formSignUpAdmin').validate({
                 rules: {
                     firstname:{required:true},
                     lastname:{required:true},

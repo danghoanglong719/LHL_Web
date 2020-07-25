@@ -43,7 +43,7 @@
 
     <!--#region Thanh công cụ-->
     <div class="container-fluid menu pl-0 pr-0">
-        <nav class="navbar navbar-expand-md  navbar11 bg-dark">
+        <nav class="navbar navbar-expand-md  navbar11">
             <a class="navbar-brand " href="Home.html"><img src="../../img/LogoLHL.png" width="40px"></a>
             <button class="navbar-toggler btn-secondary" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                 <i class="fa fa-bars" aria-hidden="true"></i>
@@ -122,99 +122,132 @@ EOD;
     </div>
 
 <div id="txtFist">
-        <h1>Quản lý trang web</h1>
-        <div class="container-fluid " id="managerpro">
-            <div class="row">
-                <!--cột trái-->
-                <div class="col-2" id="leftcot">
-                    <div class="list-group">
-                        <a href="#" class="list-group-item list-group-item-action active">
-                                Quản lý
-                              </a>
-                        <a href="Manager.php" class="list-group-item list-group-item-action">Sản phẩm</a>
-                        <a href="QuanLyAccount.php" class="list-group-item list-group-item-action">AccountUser</a>
-                       
-                    </div>
-                </div>
-
-                <!--cột giữa-->
-    <div class="col-8" id="centercot">
-         <table class="table table-hover">
-             <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Họ tên</th>
-                <th scope="col">Tài khoản</th>
-                <th scope="col">Địa chỉ</th>
-                <th scope="col">SĐT</th>
-                <th scope="col">Email</th>
-                <th scope="col">Status</th>
-            </tr>
-    <?php
-       include_once("../DataProvider.php");
-        $sql = "SELECT * FROM admin";
-         $result = DataProvider::ExecuteQuery($sql);
-            while($row = $result->fetch())
-                 {
-                    $_SESSION['MaKH'] =$row['id_admin'];
-                    $_SESSION['HoTen'] =$row['HoTen'];
-                    $_SESSION['TenDN'] =$row['TaiKhoan'];
-                    $_SESSION['DiaChi'] =$row['DiaChi'];
-                    $_SESSION['DienThoai'] =$row['DienThoai'] ;
-                    $_SESSION['Email'] =$row['Email'];     
-                    $_SESSION['status'] =$row['Block'];  
-                    $_SESSION['pass'] =$row['MATKHAU'];               
-     ?>
-        <tr>
-            <td><?= $row['id_admin'] ?></td>
-            <td><?= $row['HoTen'] ?></td>
-            <td><?= $row['TaiKhoan'] ?></td>
-            <td><?= $row['DiaChi'] ?></td>
-            <td><?= $row['DienThoai'] ?></td>
-            <td><?= $row['Email'] ?></td>
-            <td><?= $row['Block'] ?></td>
-          
-           <td><a href="QuanLyAdmin.php?id=<?= $row['id_admin'] ?> "onclick="return confirm('Bạn Có Chắc Muốn Xóa');" >Xóa</a></td>
-           <td><a href="editAdmin.php?editAdmin=<?= $row['id_admin'] ?> " >Sửa</a></td>
-
-        </tr>
-        
-    <?php }?>
-    </table>
-                </div>
-           
-                <div class="col-md-2 col-sm-3 col-xs-12" id="rightcot">
-                   
-                </div>
-                
-                   
-
+    <h1>Quản lý trang web</h1>
+    <div class="container-fluid " id="managerpro">
+        <div class="row">
+            <!--cột trái-->
+            <div class="col-2" id="leftcot">
+                <div class="list-group">
+                    <span href="#" class="list-group-item list-group-item-action active">Quản lý</span>
+                    <?php
+                        if(isset($_SESSION['QTV'])){
+                            echo '<a class="list-group-item list-group-item-action" href="Manager.php">Sản Phẩm</a>';
+                        }
+                    ?>
+                    <?php
+                        if($_SESSION['QTV'] == 'Admin_1'){
+                            echo "<a class='list-group-item list-group-item-action' href='QuanLyAccount.php'>User</a>";
+                            echo "<a class='list-group-item list-group-item-action' href='QuanLyAdmin.php'>Admin</a>";
+                        }
+                    ?>
                 </div>
             </div>
-        </div>
-     
 
-    
-                            
-        <?php
+            <!--cột giữa-->
+            <div class="col-8" id="centercot">
+                <table class="table table-hover">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Họ tên</th>
+                        <th scope="col">Tài khoản</th>
+                        <th scope="col">Địa chỉ</th>
+                        <th scope="col">SĐT</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Status</th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                    </tr>
+                    <?php
+                        include_once("../DataProvider.php");
+                        $sql = "SELECT * FROM `admin`";
+                        $result = DataProvider::ExecuteQuery($sql);
+                        while($row = $result->fetch())
+                        {
+                        $_SESSION['MaKH'] =$row['id_admin'];
+                        $_SESSION['HoTen'] =$row['HoTenAdmin'];
+                        $_SESSION['TenDN'] =$row['TaiKhoan'];
+                        $_SESSION['DiaChi'] =$row['DiaChi'];
+                        $_SESSION['DienThoai'] =$row['DienThoai'] ;
+                        $_SESSION['Email'] =$row['Email'];     
+                        $_SESSION['status'] =$row['Status'];  
+                        $_SESSION['pass'] =$row['MatKhau'];               
+                    ?>
+                    <tr>
+                        <td><?= $row['id_admin'] ?></td>
+                        <td><?= $row['HoTenAdmin'] ?></td>
+                        <td><?= $row['TaiKhoan'] ?></td>
+                        <td><?= $row['DiaChi'] ?></td>
+                        <td><?= $row['DienThoai'] ?></td>
+                        <td><?= $row['Email'] ?></td>
+                        <td><?= $row['Status'] ?></td>
+                    
+                    <td><a href="QuanLyAdmin.php?id=<?= $row['id_admin'] ?> "onclick="return confirm('Bạn Có Chắc Muốn Xóa');" >Xóa</a></td>
+                    <td><a href="editAdmin.php?editAdmin=<?= $row['id_admin'] ?> " >Sửa</a></td>
 
-
-   include_once("../DataProvider.php");
-     if(isset($_GET['id']))
-     {
-                $user_id = $_GET['id'];
-               
-                $sql = "DELETE FROM `admin` WHERE  `id_admin` = '$user_id'";
-                $result = DataProvider::ExecuteQuery($sql);
-                if($result==true)
-                {
-                        echo "thanhcong";
-                }
-                else{
-                    echo "that bai";
-                }
-     }
+                    </tr>
                 
+                    <?php }?>
+                </table>
+            </div>
+           
+            <!--cột phải-->
+            <div class="col-md-2 col-sm-3 col-xs-12" id="rightcot">
+                <table class="table table-hover">
+                    <tr><td scope="col" ><a href="Add_product.php"> <input type="button" class="btn btn-success btn-block"  value="Thêm Sản phẩm"></a></td></tr>
+                    <?php
+                        if($_SESSION['QTV'] == 'Admin_1'){
+                            echo '<tr><td scope="col" ><a href="../dangkyAdmin.php"> <input type="button" class="btn btn-success btn-block"  value="Thêm Admin"></a></td></tr>';
+                        }
+                    ?>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!---->
+<div class="mt-5" style="background-color:rgb(24, 6, 6); border: none;padding: 10px;box-shadow: 5px 10px 8px 10px #888888; ">
+    <div style="font-size: 20px; margin-left: 10px;">
+        <a href="# " style=" border-radius:100%;border: 1px solid black;padding: 5px 10px;color: white;"><i class="fab fa-twitter "></i></a>
+        <a href="# " style=" border-radius:100%;border: 1px solid black;padding: 5px 10px;color: white;"><i class=" fab fa-youtube "></i></a>
+        <a href="# " style=" border-radius:100%;border: 1px solid black;padding: 5px 10px;color: white; "><i class="fab fa-facebook-f "></i></a>
+        <a href="# " style=" border-radius:100%;border: 1px solid black;padding: 5px 10px; color: white;"><i class=" fab fa-instagram "></i></a>
+    </div>
+</div>
+<footer style="text-align: center;background-color: black ">
+    <h7 style="color: white; ">Copyrights © 2020 by LHL</h7>
+</footer>
+<!---->
+<!---->
+<script>
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
 
+        if (scroll >= 50) {
+            $(".navbar11").addClass("scroll-navbar");
+
+        } else {
+            $(".navbar11").removeClass("scroll-navbar");
+        }
+    });
+</script>
+<!---->
+                            
+<?php
+    include_once("../DataProvider.php");
+    if(isset($_GET['id']))
+    {
+        $user_id = $_GET['id'];
+        
+        $sql = "DELETE FROM `admin` WHERE  `id_admin` = '$user_id'";
+        $result = DataProvider::ExecuteQuery($sql);
+        if($result==true)
+        {
+                echo "thanhcong";
+        }
+        else{
+            echo "that bai";
+        }
+    }
 ?>
 
 </body>

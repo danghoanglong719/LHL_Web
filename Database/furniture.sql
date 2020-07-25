@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 23, 2020 at 09:07 AM
+-- Generation Time: Jul 25, 2020 at 08:01 AM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.7
 
@@ -24,6 +24,33 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `id_admin` int(20) NOT NULL,
+  `HoTenAdmin` varchar(50) NOT NULL,
+  `TaiKhoan` varchar(50) NOT NULL,
+  `MatKhau` varchar(50) NOT NULL,
+  `DiaChi` varchar(20) NOT NULL,
+  `DienThoai` int(20) NOT NULL,
+  `Email` varchar(50) NOT NULL,
+  `Level` varchar(50) NOT NULL,
+  `Status` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`id_admin`, `HoTenAdmin`, `TaiKhoan`, `MatKhau`, `DiaChi`, `DienThoai`, `Email`, `Level`, `Status`) VALUES
+(1, 'Trần Trung Hiếu', 'hieupro123', 'hieupro123', 'TPHCM', 352460179, 'trantrunghieu777888555@gmail.com', 'Admin_1', 'Active'),
+(3, 'VU12345', 'VU12345', 'VU12345', 'TPHCM', 123, 'trantrunghieu777888555@gmail.com', 'Admin_2', 'Active '),
+(9, 'admin2', 'admin2', ' 123456', 'odaucungduoc', 957303812, 'admin2@gmail.com', 'Admin_2', 'Active');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `chitiethd`
 --
 
@@ -34,6 +61,20 @@ CREATE TABLE `chitiethd` (
   `SoLuong` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Dumping data for table `chitiethd`
+--
+
+INSERT INTO `chitiethd` (`SoDH`, `MaSP`, `MaHD`, `SoLuong`) VALUES
+(2, 3, 1, 2),
+(3, 5, 5, 1),
+(4, 1, 7, 1),
+(5, 7, 8, 1),
+(6, 7, 9, 1),
+(7, 9, 9, 1),
+(8, 1, 11, 2),
+(9, 0, 11, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -43,10 +84,27 @@ CREATE TABLE `chitiethd` (
 CREATE TABLE `hoadon` (
   `MaHD` int(11) NOT NULL,
   `NgayDat` datetime NOT NULL,
-  `NoiGiao` varchar(11) COLLATE utf8_unicode_ci NOT NULL,
-  `MaKH` int(5) NOT NULL,
+  `NoiGiao` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `MaKH` int(11) NOT NULL,
   `TinhTrang` enum('Mới đặt','Đã thanh toán','Đã giao hàng','Hủy đơn hàng') COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `hoadon`
+--
+
+INSERT INTO `hoadon` (`MaHD`, `NgayDat`, `NoiGiao`, `MaKH`, `TinhTrang`) VALUES
+(1, '2020-07-24 17:49:38', ', , , ', 12, 'Mới đặt'),
+(2, '2020-07-24 17:51:45', ', , , ', 12, 'Mới đặt'),
+(3, '2020-07-24 17:51:56', ', , , ', 12, 'Mới đặt'),
+(4, '2020-07-24 17:55:01', ', , , ', 12, 'Mới đặt'),
+(5, '2020-07-24 17:55:43', '123123, ádasd, qưeqwe, ấ', 12, 'Mới đặt'),
+(6, '2020-07-24 17:59:34', '123123, ádasd, qưeqwe, ấ', 12, 'Mới đặt'),
+(7, '2020-07-24 19:43:38', ', , , ', 12, 'Mới đặt'),
+(8, '2020-07-24 20:05:07', ', , , ', 12, 'Mới đặt'),
+(9, '2020-07-24 20:31:01', ', , , ', 12, 'Mới đặt'),
+(10, '2020-07-24 20:31:15', ', , , ', 12, 'Mới đặt'),
+(11, '2020-07-24 20:43:19', ', , , ', 12, 'Mới đặt');
 
 -- --------------------------------------------------------
 
@@ -122,9 +180,9 @@ CREATE TABLE `sanpham` (
 --
 
 INSERT INTO `sanpham` (`MaSP`, `MaLoai`, `TenSanPham`, `GiaBan`, `MauSac`, `VatLieu`, `MoTa`, `Hinh`) VALUES
-(1, 1, 'Sofa 1', 70000, 'Xanh', NULL, 'Sofa 1', '5-sofa-1587982024.jpg'),
+(0, 4, '    LAMP 2', 250000, ' Go', '     Go', '     LAMP - San pham duy nhat', ''),
+(1, 1, 'Sofa 1', 700000, 'Xanh', '', 'Sofa 1', ''),
 (3, 2, 'Chair 2', 250000, NULL, 'Go', 'Chair 2 - Sản phẩm là mọi thứ có thể chào bán trên thị trường để chú ý, mua, sử dụng hay tiêu dùng, có thể thỏa mãn được một mong muốn hay nhu cầu.', 'a.jpg'),
-(4, 4, 'Table 1', 250000, NULL, 'Go', 'Table - San pham duy nhat', '1-ban-1587981900.jpg'),
 (5, 3, 'Lamp 1', 400000, 'Den', NULL, 'Den - Den so mot', '8-den-1587982122.jpg'),
 (6, 4, 'Table 2', 500000, 'Den', 'Nhua', 'Ban Nhua 4 chan mau Den', 'c12.jpg'),
 (7, 2, 'Chair 3', 200000, NULL, 'Go', 'Ghe go don gian', 'c11.jpg'),
@@ -146,6 +204,12 @@ CREATE TABLE `xemganday` (
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id_admin`);
 
 --
 -- Indexes for table `chitiethd`
@@ -193,10 +257,22 @@ ALTER TABLE `xemganday`
 --
 
 --
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id_admin` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `chitiethd`
+--
+ALTER TABLE `chitiethd`
+  MODIFY `SoDH` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
 -- AUTO_INCREMENT for table `hoadon`
 --
 ALTER TABLE `hoadon`
-  MODIFY `MaHD` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `MaHD` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `khachhang`
@@ -225,7 +301,7 @@ ALTER TABLE `sanpham`
 --
 ALTER TABLE `chitiethd`
   ADD CONSTRAINT `fk_chitiethd_hoadon` FOREIGN KEY (`MaHD`) REFERENCES `hoadon` (`MaHD`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `fk_chitiethd_masp` FOREIGN KEY (`MaSP`) REFERENCES `hoadon` (`MaHD`);
+  ADD CONSTRAINT `fk_chitiethd_masp` FOREIGN KEY (`MaSP`) REFERENCES `sanpham` (`MaSP`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `hoadon`

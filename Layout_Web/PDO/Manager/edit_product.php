@@ -17,6 +17,10 @@
     <link rel="stylesheet" href="../OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="../OwlCarousel2-2.3.4/dist/assets/owl.theme.green.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <style type="text/css">    
+        label.error {   color:red;}
+        input.error {   color:red;}
+    </style>
 </head>
 <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
@@ -29,102 +33,116 @@
 
 
 <body>
-        
-
-</body>
 <?php
     include_once("../DataProvider.php");
     //var_dump($_GET['edit']);exit;
-    if(isset($_GET['edit']) && isset($_POST['dangky']))
+    if(isset($_GET['edit']) && isset($_POST['editproduct']))
     {   
-        $MaSP = $_POST['MaSP'];
         $MaLoai = $_POST['ID'];
         $TenSanPham = $_POST['TenSP'];
         $GiaBan = $_POST['GiaBan'];
-        $MauSac = $_POST['Color'];
+        $MauSac = $_POST['MauSac'];
         $VatLieu = $_POST['VatLieu'];
         $MoTa = $_POST['MoTa'];
-        $Hinh = $_POST['image'];
+        $Hinh = $_POST['Hinh'];
         $id= $_GET['edit'];
-        $sql = "UPDATE `sanpham` SET `MaSP` = '$MaSP',`MaLoai`='$MaLoai',`TenSanPham`='$TenSanPham',`GiaBan`='$GiaBan',`MauSac`='$MauSac',`VatLieu`='$VatLieu',`MoTa`='$MoTa',`Hinh`='$Hinh' where  MaSP='$id' and MaLoai <=' $MaLoai' ";
+        $sql = "UPDATE `sanpham` SET `MaLoai`='$MaLoai',`TenSanPham`='$TenSanPham',`GiaBan`='$GiaBan',`MauSac`='$MauSac',`VatLieu`='$VatLieu',`MoTa`='$MoTa',`Hinh`='$Hinh' where  MaSP='$id' and MaLoai ='$MaLoai' ";
         $result = DataProvider::ExecuteQuery($sql);
      
         if($result==true)
-            {
-             echo "thanh cong";
-             header("location:Manager.php");
-         }
-                else {
-                  echo "that bai";
-                
-
-
-          }
+        {
+            echo"thanhcong";
+            //header("location:Manager.php");
+        }
+        else{
+            echo"thatbai";
+        }
     }
-
+    echo "khong vao duoc";
+?>
+<?php
+    //placeholder
+    $sqlEdit = "SELECT * FROM sanpham WHERE MaSP = {$_GET['edit']}";
+    $SpEdit = DataProvider::ExecuteQuery($sqlEdit);
+    $row = $SpEdit->fetch();
+    $mloai = $row['MaLoai'];
+    $tspham = $row['TenSanPham'];
+    $gban = $row['GiaBan'];
+    $msac = $row['MauSac'];
+    $vlieu = $row['VatLieu'];
+    $mta = $row['MoTa'];
+    $img = $row['Hinh'];
 ?>
 <div class="container-fluid bg"> 
-            <div class="row">
-                <div class="col-md-4 col-sm-3 col-xs-12"></div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <form class="form-container" id="formLogin" method="POST">
-                        <h2>Thay Đổi</h2>
-                        <div class="form-group">
-                            <div class="form-inline">
-                       
-                                        <label for="ipFirstname" class="col-sm-4">Mã Sản Phẩm</label>
-                                        <input type="text" name="MaSP" id="ipFirstname" class="form-control col-sm-8" value=" <?php echo $_SESSION['MaSP'] ;?>"  >
-                                
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="form-inline">
-                                <label for="ipTk" class="col-sm-4">Ma Loai</label>
-                                <input type="text" name="ID"  class="form-control col-sm-8"value=" <?php echo $_SESSION['MaLoai'] ;?>"  >
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="form-inline">
-                                <label for="ipTk" class="col-sm-4">Tên Sản Phẩm</label>
-                                <input type="text" name="TenSP"  class="form-control col-sm-8"value=" <?php echo $_SESSION['TenSanPham'] ;?>" >
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="form-inline">
-                                <label for="ipPass" class="col-sm-4">Giá Bán</label>
-                                <input type="text" name="GiaBan" class="form-control col-sm-8"value=" <?php echo $_SESSION['GiaBan'] ;?>" >
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="form-inline">
-                                <label for="ipRePass" class="col-sm-4">Màu Sắc</label>
-                                <input type="text" name="Color"  class="form-control col-sm-8" value=" <?php echo $_SESSION['MauSac'] ;?>">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="form-inline">
-                                <label for="ipSdt" class="col-sm-4">Vật Liệu</label>
-                                <input type="text" name="VatLieu" class="form-control col-sm-8"value=" <?php echo $_SESSION['VatLieu'] ;?>">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="form-inline">
-                                <label for="ipSdt" class="col-sm-4">Mô tả</label>
-                                <input type="text" name="MoTa"  class="form-control col-sm-8" value=" <?php echo $_SESSION['MoTa'] ;?>" >
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="form-inline">
-                                <label for="ipSdt" class="col-sm-4">Hinh</label>
-                
-                                <input type="file" name="image"  class="form-control col-sm-8"  value=" <?php echo $_SESSION['Hinh'] ;?>">
-                            </div>
-                        </div>
-                        <div id="myErr"></div>
-                        <button type="submit" class="btn btn-success btn-block" id="btnSignUp" value="SignUp" name="dangky" onclick="return confirm('Bạn Có Chắc Muốn Thay Đổi');">Đồng Ý</button>
-                        
-                    </form>
+    <div class="row">
+        <div class="col-md-4 col-sm-3 col-xs-12"></div>
+        <div class="col-md-4 col-sm-6 col-xs-12 border border-success rounded">
+            <form class="form-container" id="formEditProduct" method="POST" enctype="multipart/form-data">
+                <h3>Thay đổi thông tin sản phẩm</h3>
+                <div class="form-group">
+                    <div class="form-inline">
+                        <label for="ipMaLoai" class="col-sm-4">Mã loại</label>
+                        <input type="text" name="ID"  class="form-control col-sm-8"value="<?php echo $mloai;?>"  >
+                    </div>
                 </div>
-            </div>
+                <div class="form-group">
+                    <div class="form-inline">
+                        <label for="ipTenSanPham" class="col-sm-4">Tên sản phẩm</label>
+                        <input type="text" name="TenSP"  class="form-control col-sm-8"value="<?php echo $tspham ;?>" >
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-inline">
+                        <label for="ipGiaBan" class="col-sm-4">Giá bán</label>
+                        <input type="text" name="GiaBan" class="form-control col-sm-8"value="<?php echo $gban ;?>" >
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-inline">
+                        <label for="ipMauSac" class="col-sm-4">Màu sắc</label>
+                        <input type="text" name="MauSac"  class="form-control col-sm-8" value="<?php echo $msac ;?>">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-inline">
+                        <label for="ipVatLieu" class="col-sm-4">Vật liệu</label>
+                        <input type="text" name="VatLieu" class="form-control col-sm-8"value="<?php echo $vlieu ;?>">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-inline">
+                        <label for="ipMoTa" class="col-sm-4">Mô tả</label>
+                        <input type="text" name="MoTa"  class="form-control col-sm-8" value="<?php echo $mta ;?>" >
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-inline">
+                        <label for="ipHinh" class="col-sm-4">Hình</label>
+                        <input type="file" name="Hinh"  class="form-control col-sm-8"  value="<?php echo $img ;?>">
+                    </div>
+                </div>
+                <div id="myErr"></div>
+                <button type="submit" class="btn btn-success btn-block" id="btnEdit" value="EditProduct" name="editproduct" onclick="return confirm('Bạn Có Chắc Muốn Thay Đổi');">Đồng Ý</button>
+            </form>
         </div>
+    </div>
+</div>
+</body>
+<script>
+    $(document).ready(function(){
+        $('#formEditProduct').validate({
+            rules: {
+                "ID":{required:true},
+                "TenSP":{required:true},
+                "GiaBan":{required:true, digits:true,},
+                image:{required:true,},
+            },
+            messages:{
+                "ID":{required:"Không được bỏ trống",},
+                "TenSP":{required:"Không được bỏ trống",},
+                "GiaBan":{required:"Không được bỏ trống",digits:"Chỉ nhập số"},
+            },
+        });
+    })
+</script>
 </html>

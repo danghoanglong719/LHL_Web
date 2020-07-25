@@ -75,39 +75,28 @@ span.psw {
 <h2 align="center">Đăng nhập </h2>
 
 <form method="post">
-  
-    <div class="container-fluid bg"> 
-            <div class="row">
-                <div class="col-md-4 col-sm-3 col-xs-12"></div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <label for="uname"><b>Username</b></label>
-                    <input type="text" placeholder="Enter Username" name="uname" required>
-
-                    <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" required>
-                    <label for="psw"><b>User</b></label>
-                    <input type="radio"  name="radio"  value="0" required checked>
-                    <label for="psw"><b>Admin</b></label>
-                    <input type="radio"  name="radio" value="1" required>
-                    <button type="submit" name="dangnhap">Login</button>
-                   
-                  </div>
-                   
-                 <div class="col-md-4 col-sm-3 col-xs-12"></div>
-            </div>  
-    </div>
-
-
-  </form>
-  <?php
-    include_once("logincode.php");
-  ?>
-
-
-
-
-
+  <div class="container-fluid bg"> 
+    <div class="row">
+      <div class="col-md-4 col-sm-3 col-xs-12"></div>
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <?php
+          include_once("logincode.php");
+        ?>
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+        <label for="psw"><b>User</b></label>
+        <input type="radio"  name="radio"  value="0" required checked>
+        <label for="psw"><b>Admin</b></label>
+        <input type="radio"  name="radio" value="1" required>
+        <button type="submit" name="dangnhap">Login</button>
+      </div>
+      <div class="col-md-4 col-sm-3 col-xs-12"></div>
+    </div>  
+  </div>
 </form>
+
 
 </body>
 </html>
