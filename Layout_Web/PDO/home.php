@@ -52,16 +52,12 @@
 include_once("Cart/MyCart.php");
 ?>
 <body>
-
-    <?php
-    
-    ?>
     <!--modal-search-->
     <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="z-index: 123313123;">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
-                <form class="form-inline d-flex justify-content-center md-form form-sm mt-0 w-100 " action="https://tiki.vn/">
-                    <input class="form-control form-control-sm w-100 pl-3" type="text" placeholder="Search..." aria-label="Search" style=" border:none;" name="search?q">
+                <form class="form-inline d-flex justify-content-center md-form form-sm mt-0 w-100 " action="products.php" method="GET">
+                    <input class="form-control form-control-sm w-100 pl-3" type="text" placeholder="Search..." aria-label="Search" style=" border:none;" name="search" id ="search">
                 </form>
             </div>
         </div>

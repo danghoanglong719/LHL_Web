@@ -36,7 +36,7 @@ include_once("./Cart/MyCart.php");
     <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="z-index: 123313123;">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
-                <form class="form-inline d-flex justify-content-center md-form form-sm mt-0 w-100 " action="#">
+                <form class="form-inline d-flex justify-content-center md-form form-sm mt-0 w-100 " action="products.php" method="GET">
                     <input class="form-control form-control-sm w-100 pl-3" type="text" placeholder="Search..." aria-label="Search" style=" border:none;" name="search" id ="search">
                 </form>
             </div>
@@ -326,67 +326,76 @@ EOD;
                         <div class="view-wrap list-view" style=" display:block;">
                             <div class="row" id="parent-lv">
                                 <?php
-                                include_once('DataProvider.php');
-                                $sosp1trang = 6;
-                                if(isset($_GET['page'])){
-                                    $trang = $_GET['page'];
-                                    settype($trang, "int");
-                                }else{
-                                    $trang = 1;
-                                }
-                                $from = ($trang - 1) * $sosp1trang;
+                                    if(isset($_GET['search'])){
+                                        include_once("searchlv.php");
+                                    }
+                                    else{
+                                        include_once('DataProvider.php');
+                                        $sosp1trang = 6;
+                                        if(isset($_GET['page'])){
+                                            $trang = $_GET['page'];
+                                            settype($trang, "int");
+                                        }else{
+                                            $trang = 1;
+                                        }
+                                        $from = ($trang - 1) * $sosp1trang;
 
-                                if(isset($_GET['id']) && $_GET['id'] != "0" ){
-                                    $qrloai = "MaLoai = {$_GET['id']}";
-                                }
-                                else {
-                                    $qrloai = "1 = 1";
-                                }
-                                if(isset($_REQUEST['gia_sp']) && $_REQUEST['gia_sp'] != "all" ){
-                                    $qrgia = "GiaBan <= $_REQUEST[gia_sp] ORDER BY GiaBan";
-                                }
-                                else {
-                                    $qrgia = "1 = 1";
-                                }
+                                        if(isset($_GET['id']) && $_GET['id'] != "0" ){
+                                            $qrloai = "MaLoai = {$_GET['id']}";
+                                        }
+                                        else {
+                                            $qrloai = "1 = 1";
+                                        }
+                                        if(isset($_REQUEST['gia_sp']) && $_REQUEST['gia_sp'] != "all" ){
+                                            $qrgia = "GiaBan <= $_REQUEST[gia_sp] ORDER BY GiaBan";
+                                        }
+                                        else {
+                                            $qrgia = "1 = 1";
+                                        }
 
-                                $sqlSanPham = "SELECT MaSP, MaLoai, TenSanPham, GiaBan, MoTa, Hinh FROM sanpham WHERE {$qrloai} AND {$qrgia} LIMIT $from, $sosp1trang";
-                                $dsSanPham = DataProvider::ExecuteQuery($sqlSanPham);
-                                while($row = $dsSanPham->fetch())
-                                {
-                                    $gia = number_format($row['GiaBan']);
-                                    $chuoi = <<< EOD
-                                    <div class="col-md-4 col-sm-5 col-7 box">
-                                        <div class="view-item">
-                                            <div class="card h-100 mb-3">
-                                                <div id="vi"></div>
-                                                <a href="# "> <img class="card-img-top img-fluid " src="../img/{$row['Hinh']}"></a>
-                                                <div class="card-body col-md-12">
-                                                    <div style="margin-bottom: 10px;text-align: center; ">
-                                                        <h5 class="name">{$row['TenSanPham']}</h5>
-                                                        <p class=" text-center" class="tien">{$gia}đ</p>
-                                                    </div>
-                                                    <div class="face-2">
-                                                        <div class="buy">
-                                                            <a href="chitiet.php?id={$row['MaSP']}">
-                                                                <i class="far fa-eye"></i></a>
-                                                        </div>
-                                                        <div class="icon-buy  justify-content-center">
-                                                            <div> <button class="mua" data-masp={$row['MaSP']}><i class="add-cart fas fa-shopping-cart "></i></button></div>
+                                        $sqlSanPham = "SELECT MaSP, MaLoai, TenSanPham, GiaBan, MoTa, Hinh FROM sanpham WHERE {$qrloai} AND {$qrgia} LIMIT $from, $sosp1trang";
+                                        $dsSanPham = DataProvider::ExecuteQuery($sqlSanPham);
+                                        while($row = $dsSanPham->fetch())
+                                        {
+                                            $gia = number_format($row['GiaBan']);
+                                            $chuoi = <<< EOD
+                                            <div class="col-md-4 col-sm-5 col-7 box">
+                                                <div class="view-item">
+                                                    <div class="card h-100 mb-3">
+                                                        <div id="vi"></div>
+                                                        <a href="# "> <img class="card-img-top img-fluid " src="../img/{$row['Hinh']}"></a>
+                                                        <div class="card-body col-md-12">
+                                                            <div style="margin-bottom: 10px;text-align: center; ">
+                                                                <h5 class="name">{$row['TenSanPham']}</h5>
+                                                                <p class=" text-center" class="tien">{$gia}đ</p>
+                                                            </div>
+                                                            <div class="face-2">
+                                                                <div class="buy">
+                                                                    <a href="chitiet.php?id={$row['MaSP']}"name="xemganday">
+                                                                        <i class="far fa-eye"></i></a>
+                                                                </div>
+                                                                <div class="icon-buy  justify-content-center">
+                                                                    <div> <button class="mua" data-masp={$row['MaSP']}><i class="add-cart fas fa-shopping-cart "></i></button></div>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
 EOD;
 	echo $chuoi;
 }
-?>
+                                    }
+                                ?>
                             </div>
                         </div>
                         <div class="view-wrap grid-view" style=" display:none;">
                             <div class="row" id="parent-gv">
                                 <?php
+                                if(isset($_GET['search'])){
+                                    include_once("searchgv.php");
+                                }
+                                else{
                                     include_once('DataProvider.php');
                                     $sosp1trang = 6;
                                     if(isset($_GET['page'])){
@@ -437,8 +446,8 @@ EOD;
                                                     <div class="card-body col-md-12">
                                                         <div class="face-2">
                                                             <div class="buy">
-                                                                <a href="chitiet.php?id={$row['MaSP']}">
-                                                                 <button type="submit" name="xemganday">   <i class="far fa-eye"></i></button>
+                                                                <a href="chitiet.php?id={$row['MaSP']}"name="xemganday">
+                                                                    <i class="far fa-eye"></i>
                                                                 </a>
                                                             </div>
                                                             <div class="icon-buy  justify-content-center">
@@ -452,7 +461,7 @@ EOD;
 EOD;
     echo $chuoi;
 }
-
+                                }
 ?>
                             </div>
                         </div>
@@ -519,12 +528,6 @@ EOD;
                     }
 
                 })
-                var $search = $("#search").on('input', function() {
-                    var matcher = new RegExp($(this).val(), 'ig');
-                    $('.box').show().not(function() {
-                        return matcher.test($(this).find('.name, .tien').text())
-                    }).hide();
-                })
             })
         </script>
     </div>
@@ -582,7 +585,8 @@ EOD;
                 $.ajax({
                     url: "./Cart/XLGioHang.php",
                     data: {
-                        "ma_sp": $(this).data("masp"), 
+                        "ma_sp": $(this).data("masp"),
+                        "so_luong": 1,
                         "hanh_dong": "them"
                     },
                     dataType: "json",
@@ -655,7 +659,8 @@ EOD;
 					$.ajax({
 						url: "./Cart/XLGioHang.php",
 						data: {
-							"ma_sp": $(this).data("masp"), 
+							"ma_sp": $(this).data("masp"),
+                            "so_luong": 1, 
 							"hanh_dong": "them"
 						},
 						dataType: "json",
@@ -690,7 +695,8 @@ EOD;
 					$.ajax({
 						url: "./Cart/XLGioHang.php",
 						data: {
-							"ma_sp": $(this).data("masp"), 
+							"ma_sp": $(this).data("masp"),
+                            "so_luong": 1, 
 							"hanh_dong": "them"
 						},
 						dataType: "json",

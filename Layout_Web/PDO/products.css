@@ -339,7 +339,7 @@
     text-align: center;
 }
 
-.face-2 .buy a {
+.face-2 .buy a{
     width: 100%;
     border: 1px solid black;
     padding: 20px 25px;
@@ -394,4 +394,11 @@ a.pt_a.active{
 }
 a.pt_a:hover:not(.active){
     background-color: #ddd;
+}
+.wrapper .links ul li {
+    list-style-type: none;
+    cursor: pointer;
+}
+.wrapper .links ul li:hover {
+    background-color: rgba(243, 243, 243, 0.486);
 }

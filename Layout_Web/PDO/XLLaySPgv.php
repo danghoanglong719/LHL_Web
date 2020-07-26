@@ -62,7 +62,8 @@
                     <div class="card-body col-md-12">
                         <div class="face-2">
                             <div class="buy">
-                                <a href="#"><i class="far fa-eye"></i></a>
+                                <a href="chitiet.php?id={$row['MaSP']}"name="xemganday">
+                                    <i class="far fa-eye"></i></a>
                             </div>
                             <div class="icon-buy  justify-content-center">
                                 <div> <button class="mua" data-masp={$row['MaSP']}><i class="add-cart fas fa-shopping-cart "></i></button></div>

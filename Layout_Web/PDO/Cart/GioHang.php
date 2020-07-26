@@ -32,12 +32,12 @@
 include_once("MyCart.php");
 ?>
 <body>
- <!--modal-search-->
+    <!--modal-search-->
     <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="z-index: 123313123;">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
-                <form class="form-inline d-flex justify-content-center md-form form-sm mt-0 w-100 " action="../products.php">
-                    <input class="form-control form-control-sm w-100 pl-3" type="text" placeholder="Search..." aria-label="Search" style=" border:none;" name="search" id="search">
+                <form class="form-inline d-flex justify-content-center md-form form-sm mt-0 w-100 " action="../products.php" method="GET">
+                    <input class="form-control form-control-sm w-100 pl-3" type="text" placeholder="Search..." aria-label="Search" style=" border:none;" name="search" id ="search">
                 </form>
             </div>
         </div>
@@ -289,7 +289,6 @@ EOD;
                 success: function(data){
                     $(".nb-pds").html(data.Count);
                     $('.prices__value--final').html(number_format(data.TongTien)+' đ');
-                    LaySPGioHang();
                 }
             });
         });

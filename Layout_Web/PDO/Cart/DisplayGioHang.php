@@ -17,7 +17,7 @@ if(isset($_SESSION['Cart'])){
                     <div class="cart-products__desc">
                         <p class="cart-products__name">{$row['TenSanPham']}</p>
                         <p class="cart-products__actions">
-                            <span class="cart-products__del" data-masp={$row['MaSP']}>Xóa</span>
+                            <a href="GioHang.php" class="cart-products__del" data-masp={$row['MaSP']}>Xóa</a>
                         </p>
                     </div>
                     <div class="cart-products__details">
