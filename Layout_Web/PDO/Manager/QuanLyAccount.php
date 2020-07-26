@@ -177,7 +177,7 @@ EOD;
                         <td><?= $row['DienThoai'] ?></td>
                         <td><?= $row['Email'] ?></td>
                         
-                        <td><a href="QuanLyAccount.php?id=<?= $row['MaKH'] ?> "onclick="return confirm('Bạn Có Chắc Muốn Xóa');" >Xóa</a></td>
+                        <td><a href="QuanLyAccount.php?delte=<?= $row['MaKH'] ?> "onclick="return confirm('Bạn Có Chắc Muốn Xóa');" >Xóa</a></td>
                         <td><a href="edit_user.php?edit=<?= $row['MaKH'] ?> " >Sửa</a></td>
 
                     </tr>
@@ -230,18 +230,19 @@ EOD;
 
 
     include_once("../DataProvider.php");
-    if(isset($_GET['id']))
+    if(isset($_GET['delte']))
     {
-        $user_id = $_GET['id'];
+        $user_id = $_GET['delte'];
         
         $sql = "DELETE FROM `khachhang` WHERE  `MaKH` = '$user_id'";
         $result = DataProvider::ExecuteQuery($sql);
         if($result==true)
         {
-                echo "thanhcong";
+
+                header("location:QuanLyAccount.php");
         }
         else{
-            echo "that bai";
+            echo "";
         }
     }
                 
