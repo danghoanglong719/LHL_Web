@@ -310,6 +310,12 @@
     display: inline-block;
     margin-bottom: 10px;
 }
+.cart-products__name:hover {
+    color: rgb(36, 36, 36);
+    font-size: 1.01rem;
+    font-weight: 500;
+    text-decoration: none;
+}
 .cart-products__del {
     color: rgb(27, 168, 255);
     display: inline-block;

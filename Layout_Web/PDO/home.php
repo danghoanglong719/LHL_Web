@@ -8,6 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LHL Furniture</title>
+    <link rel="stylesheet" href="products.css">
     <link rel="stylesheet" href="../css/LHL_text.css">
     <link rel="stylesheet" type="text/css" href="../css/Home.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -297,6 +298,7 @@ EOD;
     
 
     <!--ketthuc-product-owl-->
+    <!--second-2-->
     <div class="container mt-5">
         <div class="row" style="border-bottom:1px solid #999; margin-bottom: 50px; margin-top: 70px;">
             <div class="text-left">
@@ -304,224 +306,31 @@ EOD;
             </div>
         </div>
         <div class="mt-5" id="hang">
-            <div id="prev"><button type="button" id="myBtn1" class="btn "><span><</span></button></div>
-            <div id="next"><button type="button" id="myBtn3" class="btn"><span>></span></button></div>
-            <div class="row">
-                <div class="owl-carousel owl-theme " id="owl-2">
-                    <div class="item">
-                        <div class="col-xs-6">
-                            <div class="card h-100 ">
-                                <div id="vi"></div>
-                                <a href="#"> <img class="card-img-top img-fluid" src="../img/c1.jpg"></a>
-                                <div class="card-body">
-                                    <div style="margin-bottom: 10px;text-align: center; ">
-                                        <h5>Sản Phẩm 1</h5>
-                                        <p class=" text-center">100.0000đ</p>
-                                    </div>
-                                    <div class="face-2 ">
-                                        <div class="icon-buy  justify-content-center">
-                                            <div><a href="chitiet.php?id=c1.jpg"><i class="far fa-eye"></i></a></div>
-                                            <div><a href=" "><i class="fas fa-shopping-cart"></i></a></div>
-                                        </div>
-                                        <div id="buy">
-                                            <a href="#">Mua Ngay</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item ">
-                        <div class="col-xs-6 ">
-                            <div class="card h-100 ">
-                                <div id="vi"></div>
-                                <a href="# "> <img class="card-img-top img-fluid " src="../img/c13.jpg "></a>
-                                <div class="card-body ">
-                                    <div style="margin-bottom: 10px;text-align: center; ">
-                                        <h5>Sản Phẩm 1</h5>
-                                        <p class=" text-center">100.0000đ</p>
-                                    </div>
-                                    <div class="face-2 ">
-                                        <div class="icon-buy  justify-content-center">
-                                            <div> <a href="chitiet.php?id=c13.jpg"></i></a></div>
-                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
-                                        </div>
-                                        <div id="buy">
-                                            <a href="#">Mua Ngay</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item ">
-                        <div class="col-xs-6 ">
-                            <div class="card h-100 ">
-                                <div id="vi"></div>
-                                <a href="# "> <img class="card-img-top img-fluid " src="../img/c4.jpg "></a>
-                                <div class="card-body ">
-                                    <div style="margin-bottom: 10px;text-align: center; ">
-                                        <h5>Sản Phẩm 1</h5>
-                                        <p class=" text-center">100.0000đ</p>
-                                    </div>
-                                    <div class="face-2 ">
-                                        <div class="icon-buy  justify-content-center">
-                                            <div> <a href="chitiet.php?id=c4.jpg"><i class="far fa-eye " ></i></a></div>
-                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
-                                        </div>
-                                        <div id="buy">
-                                            <a href="#">Mua Ngay</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item ">
-                        <div class="col-xs-6 ">
-                            <div class="card h-100 ">
-                                <div id="vi"></div>
-                                <a href="# "> <img class="card-img-top img-fluid " src="../img/c6.jpg "></a>
-                                <div class="card-body ">
-                                    <div style="margin-bottom: 10px;text-align: center; ">
-                                        <h5>Sản Phẩm 1</h5>
-                                        <p class=" text-center">100.0000đ</p>
-                                    </div>
-                                    <div class="face-2 ">
-                                        <div class="icon-buy  justify-content-center">
-                                            <div> <a href="chitiet.php?id=c6.jpg"><i class="far fa-eye " ></i></a></div>
-                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
-                                        </div>
-                                        <div id="buy">
-                                            <a href="#">Mua Ngay</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item ">
-                        <div class="col-xs-6 ">
-                            <div class="card h-100 ">
-                                <div id="vi"></div>
-                                <a href="# "> <img class="card-img-top img-fluid " src="../img/c8.jpg "></a>
-                                <div class="card-body ">
-                                    <div style="margin-bottom: 10px;text-align: center; ">
-                                        <h5>Sản Phẩm 1</h5>
-                                        <p class=" text-center">100.0000đ</p>
-                                    </div>
-                                    <div class="face-2 ">
-                                        <div class="icon-buy  justify-content-center">
-                                            <div> <a href="chitiet.php?id=c8.jpg"><i class="far fa-eye " ></i></a></div>
-                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
-                                        </div>
-                                        <div id="buy">
-                                            <a href="#">Mua Ngay</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item ">
-                        <div class="col-xs-6 ">
-                            <div class="card h-100 ">
-                                <div id="vi"></div>
-                                <a href="# "> <img class="card-img-top img-fluid " src="../img/c9.jpg "></a>
-                                <div class="card-body ">
-                                    <div style="margin-bottom: 10px;text-align: center; ">
-                                        <h5>Sản Phẩm 1</h5>
-                                        <p class=" text-center">100.0000đ</p>
-                                    </div>
-                                    <div class="face-2 ">
-                                        <div class="icon-buy  justify-content-center">
-                                            <div><a href="chitiet.php?id=c9.jpg"><i class="far fa-eye " ></i></a></div>
-                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
-                                        </div>
-                                        <div id="buy">
-                                            <a href="#">Mua Ngay</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item ">
-                        <div class="col-xs-6 ">
-                            <div class="card h-100 ">
-                                <div id="vi"></div>
-                                <a href="# "> <img class="card-img-top img-fluid " src="../img/c10.jpg "></a>
-                                <div class="card-body ">
-                                    <div style="margin-bottom: 10px;text-align: center; ">
-                                        <h5>Sản Phẩm 1</h5>
-                                        <p class=" text-center">100.0000đ</p>
-                                    </div>
-                                    <div class="face-2 ">
-                                        <div class="icon-buy  justify-content-center">
-                                            <div> <a href="chitiet.php?id=c10.jpg"><i class="far fa-eye " ></i></a></div>
-                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
-                                        </div>
-                                        <div id="buy">
-                                            <a href="#">Mua Ngay</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item ">
-                        <div class="col-xs-6 ">
-                            <div class="card h-100 ">
-                                <div id="vi"></div>
-                                <a href="# "> <img class="card-img-top img-fluid " src="../img/c11.jpg "></a>
-                                <div class="card-body ">
-                                    <div style="margin-bottom: 10px;text-align: center; ">
-                                        <h5>Sản Phẩm 1</h5>
-                                        <p class=" text-center">100.0000đ</p>
-                                    </div>
-                                    <div class="face-2 ">
-                                        <div class="icon-buy  justify-content-center">
-                                            <div> <a href="chitiet.php?id=c11.jpg"><i class="far fa-eye " ></i></a></div>
-                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
-                                        </div>
-                                        <div id="buy">
-                                            <a href="#">Mua Ngay</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div id="prev"><button type="button" id="myBtn1" class="btn"><span><</span></button></div>
+            <div id="next"><button type="button" id="myBtn2" class="btn"><span>></span></button></div>
+            <div class="row ">
+                <div class="owl-carousel owl-theme " id="owl-1">
+                    <?php
+                        include_once("LaySPMoi.php");
+                    ?>
                 </div>
             </div>
         </div>
     </div>
+    <!--#end-->
     <script>
         $(document).ready(function() {
-            $("#myBtn").click(function() {
+            $("#myBtn1").click(function() {
                 $("#owl-1").owlCarousel("prev");
             });
             $("#myBtn2").click(function() {
                 $("#owl-1").owlCarousel("next");
             });
-            $("#myBtn1").click(function() {
-                $("#owl-2").owlCarousel("prev");
-            });
             $("#myBtn3").click(function() {
-                $("#owl-2").owlCarousel("next");
-            });
-            $("#myBtn4").click(function() {
                 $("#owl-3").owlCarousel("prev");
             });
-            $("#myBtn5").click(function() {
+            $("#myBtn4").click(function() {
                 $("#owl-3").owlCarousel("next");
-            });
-            $("#myBtn6").click(function() {
-                $("#owl-4").owlCarousel("prev");
-            });
-            $("#myBtn7").click(function() {
-                $("#owl-4").owlCarousel("next");
             });
         });
     </script>
@@ -533,211 +342,27 @@ EOD;
             </div>
         </div>
         <div class="mt-5" id="hang">
-            <div id="prev"><button type="button" id="myBtn4" class="btn "><span><</span></button></div>
-            <div id="next"><button type="button" id="myBtn5" class="btn"><span>></span></button></div>
+            <div id="prev"><button type="button" id="myBtn3" class="btn"><span><</span></button></div>
+            <div id="next"><button type="button" id="myBtn4" class="btn"><span>></span></button></div>
             <div class="row ">
                 <div class="owl-carousel owl-theme " id="owl-3">
-                    <div class="item ">
-                        <div class="col-xs-6 ">
-                            <div class="card h-100 ">
-                                <div id="vi"></div>
-                                <a href="# "> <img class="card-img-top img-fluid " src="../img/a1.jpg "></a>
-                                <div class="card-body ">
-                                    <div style="margin-bottom: 10px;text-align: center; ">
-                                        <h5>Sản Phẩm 1</h5>
-                                        <p class=" text-center">100.0000đ</p>
-                                    </div>
-                                    <div class="face-2 ">
-                                        <div class="icon-buy  justify-content-center">
-                                            <div> <a href="chitiet.php?id=a1.jpg"  ><i class="far fa-eye " ></i></a></div>
-                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
-                                        </div>
-                                        <div id="buy">
-                                            <a href="#" data-toggle="modal" data-target="#modalQuickView">Mua Ngay</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item ">
-                        <div class="col-xs-6 ">
-                            <div class="card h-100 ">
-                                <div id="vi"></div>
-                                <a href="# "> <img class="card-img-top img-fluid " src="../img/a2.jpg "></a>
-                                <div class="card-body ">
-                                    <div style="margin-bottom: 10px;text-align: center; ">
-                                        <h5>Sản Phẩm 1</h5>
-                                        <p class=" text-center">100.0000đ</p>
-                                    </div>
-                                    <div class="face-2 ">
-                                        <div class="icon-buy  justify-content-center">
-                                            <div> <a href="chitiet.php?id=a2.jpg"><i class="far fa-eye " ></i></a></div>
-                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
-                                        </div>
-                                        <div id="buy">
-                                            <a href="#">Mua Ngay</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item ">
-                        <div class="col-xs-6 ">
-                            <div class="card h-100 ">
-                                <div id="vi"></div>
-                                <a href="# "> <img class="card-img-top img-fluid " src="../img/a3.jpg"></a>
-                                <div class="card-body ">
-                                    <div style="margin-bottom: 10px;text-align: center; ">
-                                        <h5>Sản Phẩm 1</h5>
-                                        <p class=" text-center">100.0000đ</p>
-                                    </div>
-                                    <div class="face-2 ">
-                                        <div class="icon-buy  justify-content-center">
-                                            <div> <a href="chitiet.php?id=a3.jpg"><i class="far fa-eye " ></i></a></div>
-                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
-                                        </div>
-                                        <div id="buy">
-                                            <a href="#">Mua Ngay</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item ">
-                        <div class="col-xs-6 ">
-                            <div class="card h-100 ">
-                                <div id="vi"></div>
-                                <a href="# "> <img class="card-img-top img-fluid " src="../img/a4.jpg "></a>
-                                <div class="card-body ">
-                                    <div style="margin-bottom: 10px;text-align: center; ">
-                                        <h5>Sản Phẩm 1</h5>
-                                        <p class=" text-center">100.0000đ</p>
-                                    </div>
-                                    <div class="face-2 ">
-                                        <div class="icon-buy  justify-content-center">
-                                            <div> <a href="chitiet.php?id=a4.jpg"><i class="far fa-eye " ></i></a></div>
-                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
-                                        </div>
-                                        <div id="buy">
-                                            <a href="#">Mua Ngay</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item ">
-                        <div class="col-xs-6 ">
-                            <div class="card h-100 ">
-                                <div id="vi"></div>
-                                <a href="# "> <img class="card-img-top img-fluid " src="../img/a5.jpg "></a>
-                                <div class="card-body ">
-                                    <div style="margin-bottom: 10px;text-align: center; ">
-                                        <h5>Sản Phẩm 1</h5>
-                                        <p class=" text-center">100.0000đ</p>
-                                    </div>
-                                    <div class="face-2 ">
-                                        <div class="icon-buy  justify-content-center">
-                                            <div> <a href="chitiet.php?id=a5.jpg"><i class="far fa-eye " ></i></a></div>
-                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
-                                        </div>
-                                        <div id="buy">
-                                            <a href="#">Mua Ngay</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item ">
-                        <div class="col-xs-6 ">
-                            <div class="card h-100 ">
-                                <div id="vi"></div>
-                                <a href="# "> <img class="card-img-top img-fluid " src="../img/a6.jpg"></a>
-                                <div class="card-body ">
-                                    <div style="margin-bottom: 10px;text-align: center; ">
-                                        <h5>Sản Phẩm 1</h5>
-                                        <p class=" text-center">100.0000đ</p>
-                                    </div>
-                                    <div class="face-2 ">
-                                        <div class="icon-buy  justify-content-center">
-                                            <div> <a href="chitiet.php?id=a6.jpg"><i class="far fa-eye " ></i></a></div>
-                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
-                                        </div>
-                                        <div id="buy">
-                                            <a href="#">Mua Ngay</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item ">
-                        <div class="col-xs-6 ">
-                            <div class="card h-100 ">
-                                <div id="vi"></div>
-                                <a href="# "> <img class="card-img-top img-fluid " src="../img/a7.jpg"></a>
-                                <div class="card-body ">
-                                    <div style="margin-bottom: 10px;text-align: center; ">
-                                        <h5>Sản Phẩm 1</h5>
-                                        <p class=" text-center">100.0000đ</p>
-                                    </div>
-                                    <div class="face-2 ">
-                                        <div class="icon-buy  justify-content-center">
-                                            <div> <a href="chitiet.php?id=a7.jpg"><i class="far fa-eye " ></i></a></div>
-                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
-                                        </div>
-                                        <div id="buy">
-                                            <a href="#">Mua Ngay</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item ">
-                        <div class="col-xs-6 ">
-                            <div class="card h-100 ">
-                                <div id="vi"></div>
-                                <a href="# "> <img class="card-img-top img-fluid " src="../img/a8.jpg"></a>
-                                <div class="card-body ">
-                                    <div style="margin-bottom: 10px;text-align: center; ">
-                                        <h5>Sản Phẩm 1</h5>
-                                        <p class=" text-center">100.0000đ</p>
-                                    </div>
-                                    <div class="face-2 ">
-                                        <div class="icon-buy  justify-content-center">
-                                            <div> <a href="chitiet.php?id=a8.jpg"><i class="far fa-eye " ></i></a></div>
-                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
-                                        </div>
-                                        <div id="buy">
-                                            <a href="#">Mua Ngay</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php
+                        include_once("LaySPBanChay.php");
+                    ?>
                 </div>
-
             </div>
         </div>
     </div>
+    <!--#end-->
     <div class="boxbox">
-        <div class="container">
+        <div class="container mb-4">
             <div class="row">
                 <div class="col-md-7 col-sm-8 col-12">
                     <div class="boxtext">
-                        <h5>About Us</h5>
+                        <h2 >VỀ CHÚNG TÔI</h2>
                         <hr>
-                        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
-                        <p> I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents.
-                            I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. When, while the lovely valley. I feel that I never was a greater artist than now. When, while
-                            the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees. Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                            there live the blind texts.</p>
+                        <p>Chúng tôi tạo ra những sản phẩm bàn ghế nhẹ nhàng, tinh tế với mong muốn bạn và gia đình luôn cảm thấy vui vẻ, thoải mái và thư giãn khi sum họp bên bữa cơm gia đình, cảm xúc tự tin khi tiếp đãi Khách đến thăm nhà.</p>
+                        <p>LHL Furniture luôn cam kết “Uy Tín – Chất Lượng – Dịch Vụ Tốt” để đảm bảo cho khách hàng yên tâm và hài lòng nhất.</p>
                     </div>
                 </div>
                 <div class="col-md-5 col-sm-4 col-6 mt-2 ">
@@ -749,184 +374,6 @@ EOD;
             </div>
         </div>
     </div>
-    <!--second 3-->
-    <div class="container mt-5">
-        <div class="row" style="border-bottom:1px solid black;">
-            <div class="col-md-3" style="border:1px solid black;  color: white; background-color: black; text-align: center;height: 30px;;line-height: 30px;">
-                <h5>Sản Phẩm Bán Chạy</h5>
-            </div>
-        </div>
-        <div class="mt-5" id="hang">
-            <div id="prev"><button type="button" id="myBtn6" class="btn "><span><</span></button></div>
-            <div id="next"><button type="button" id="myBtn7" class="btn"><span>></span></button></div>
-            <div class="row">
-                <div class="owl-carousel owl-theme " id="owl-4">
-                    <div class="item ">
-                        <div class="col-xs-6 ">
-                            <div class="card h-100 ">
-                                <div id="vi"></div>
-                                <a href="# "> <img class="card-img-top img-fluid " src="../img/aa.png "></a>
-                                <div class="card-body ">
-                                    <div style="margin-bottom: 10px;text-align: center; ">
-                                        <h5>Sản Phẩm 1</h5>
-                                        <p class=" text-center">100.0000đ</p>
-                                    </div>
-                                    <div class="face-2 ">
-                                        <div class="icon-buy  justify-content-center">
-                                            <div> <<a href="chitiet.php?id=aa.jpg"><i class="far fa-eye " ></i></a></div>
-                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
-                                        </div>
-                                        <div id="buy">
-                                            <a href="#">Mua Ngay</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item ">
-                        <div class="col-xs-6 ">
-                            <div class="card h-100 ">
-                                <div id="vi"></div>
-                                <a href="# "> <img class="card-img-top img-fluid " src="../img/bb.png "></a>
-                                <div class="card-body ">
-                                    <div style="margin-bottom: 10px;text-align: center; ">
-                                        <h5>Sản Phẩm 1</h5>
-                                        <p class=" text-center">100.0000đ</p>
-                                    </div>
-                                    <div class="face-2 ">
-                                        <div class="icon-buy  justify-content-center">
-                                            <div> <a href="chitiet.php?id=bb.jpg"><i class="far fa-eye " ></i></a></div>
-                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
-                                        </div>
-                                        <div id="buy">
-                                            <a href="#">Mua Ngay</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item ">
-                        <div class="col-xs-6 ">
-                            <div class="card h-100 ">
-                                <div id="vi"></div>
-                                <a href="# "> <img class="card-img-top img-fluid " src="../img/cc.png "></a>
-                                <div class="card-body ">
-                                    <div style="margin-bottom: 10px;text-align: center; ">
-                                        <h5>Sản Phẩm 1</h5>
-                                        <p class=" text-center">100.0000đ</p>
-                                    </div>
-                                    <div class="face-2 ">
-                                        <div class="icon-buy  justify-content-center">
-                                            <div> <a href="chitiet.php?id=cc.jpg"><i class="far fa-eye " ></i></a></div>
-                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
-                                        </div>
-                                        <div id="buy">
-                                            <a href="#">Mua Ngay</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item ">
-                        <div class="col-xs-6 ">
-                            <div class="card h-100 ">
-                                <div id="vi"></div>
-                                <a href="# "> <img class="card-img-top img-fluid " src="../img/dd.png "></a>
-                                <div class="card-body ">
-                                    <div style="margin-bottom: 10px;text-align: center; ">
-                                        <h5>Sản Phẩm 1</h5>
-                                        <p class=" text-center">100.0000đ</p>
-                                    </div>
-                                    <div class="face-2 ">
-                                        <div class="icon-buy  justify-content-center">
-                                            <div><a href="chitiet.php?id=dd.jpg"><i class="far fa-eye " ></i></a></div>
-                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
-                                        </div>
-                                        <div id="buy">
-                                            <a href="#">Mua Ngay</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item ">
-                        <div class="col-xs-6 ">
-                            <div class="card h-100 ">
-                                <div id="vi"></div>
-                                <a href="# "> <img class="card-img-top img-fluid " src="../img/ee.jpg "></a>
-                                <div class="card-body ">
-                                    <div style="margin-bottom: 10px;text-align: center; ">
-                                        <h5>Sản Phẩm 1</h5>
-                                        <p class=" text-center">100.0000đ</p>
-                                    </div>
-                                    <div class="face-2 ">
-                                        <div class="icon-buy  justify-content-center">
-                                            <div> <a href="chitiet.php?id=ee.jpg"><i class="far fa-eye " ></i></a></div>
-                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
-                                        </div>
-                                        <div id="buy">
-                                            <a href="#">Mua Ngay</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item ">
-                        <div class="col-xs-6 ">
-                            <div class="card h-100 ">
-                                <div id="vi"></div>
-                                <a href="# "> <img class="card-img-top img-fluid " src="../img/ff.jpg"></a>
-                                <div class="card-body ">
-                                    <div style="margin-bottom: 10px;text-align: center; ">
-                                        <h5>Sản Phẩm 1</h5>
-                                        <p class=" text-center">100.0000đ</p>
-                                    </div>
-                                    <div class="face-2 ">
-                                        <div class="icon-buy  justify-content-center">
-                                            <div> <a href="chitiet.php?id=ff.jpg"><i class="far fa-eye " ></i></a></div>
-                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
-                                        </div>
-                                        <div id="buy">
-                                            <a href="#">Mua Ngay</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item ">
-                        <div class="col-xs-6 ">
-                            <div class="card h-100 ">
-                                <div id="vi"></div>
-                                <a href="# "> <img class="card-img-top img-fluid " src="../img/gg.png"></a>
-                                <div class="card-body ">
-                                    <div style="margin-bottom: 10px;text-align: center; ">
-                                        <h5>Sản Phẩm 1</h5>
-                                        <p class=" text-center">100.0000đ</p>
-                                    </div>
-                                    <div class="face-2 ">
-                                        <div class="icon-buy  justify-content-center">
-                                            <div> <a href="chitiet.php?id=gg.jpg"><i class="far fa-eye " ></i></a></div>
-                                            <a href="# "><i class="fas fa-shopping-cart " ></i></a>
-                                        </div>
-                                        <div id="buy">
-                                            <a href="#">Mua Ngay</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--card-->
 
     <!---->
     <div class="container-fluid" id="background-img">
@@ -936,38 +383,38 @@ EOD;
                 <div id="demo9" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner" id="inner">
                         <div class="carousel-item active">
-                            <div class=" h-100 ">
+                            <div class=" h-100 "style=" color:white;">
                                 <div class="mt-3">
-                                    <img src="../img/200516225059-02-graduate-together-obama-large-169.jpg" alt="Avatar" class="avatar ">
+                                    <img src="../img/LogoLHL.png" alt="Logo" class="avatar ">
                                 </div>
                                 <div class="card-body ">
-                                    <p class=" author" style="color: yellow;"> OBAMA</p>
-                                    <p style=" font-size:20px;color: white; ">Lần đầu tham quan showroom, tôi đã thật sự ngạc nhiên trước sự rộng lớn của showroom Ant Furniture. Ant Furniture có rất nhiều bộ sưu tập đẹp từ cổ điển cho đến hiện đại. Ngoài ra thì công ty còn có nhà máy với máy
-                                        móc hiện đại. Tôi hài lòng với thiết kế của nội thất Ant Furniture: rất đẹp, hài hòa với căn nhà và phù hợp với phong cách của tôi.</p>
+                                    <p class=" author" style=" font-size:30px;">LHL Furniture</p>
+                                    <div class="divider"></div>
+                                    <p class=" text" style=" font-size:18px;color: white; line-height:1.8;">Giá trị đích thực của cái đẹp – đẹp là phải bền, bắt mắt và tối ưu</p>
                                 </div>
                             </div>
                         </div>
                         <div class="carousel-item ">
                             <div class=" h-100 " style=" color:white; ">
                                 <div class="mt-3 ">
-                                    <img src="../img/trumb.jpg " alt="Avatar " class="avatar ">
+                                    <img src="../img/LogoLHL.png" alt="Logo" class="avatar ">
                                 </div>
                                 <div class="card-body ">
-                                    <p class=" author" style="color: yellow;"> D.trumb</p>
-                                    <p style=" font-size:20px; ">Lần đầu tham quan showroom, tôi đã thật sự ngạc nhiên trước sự rộng lớn của showroom Ant Furniture. Ant Furniture có rất nhiều bộ sưu tập đẹp từ cổ điển cho đến hiện đại. Ngoài ra thì công ty còn có nhà máy với máy
-                                        móc hiện đại. Tôi hài lòng với thiết kế của nội thất Ant Furniture: rất đẹp, hài hòa với căn nhà và phù hợp với phong cách của tôi.</p>
+                                    <p class=" author" style=" font-size:30px;">LHL Furniture</p>
+                                    <div class="divider"></div>
+                                    <p class=" text" style=" font-size:18px; line-height:1.8; ">Khi không gian sống là tác phẩm nghệ thuật</p>
                                 </div>
                             </div>
                         </div>
                         <div class="carousel-item ">
                             <div class=" h-100 " style=" color:white; ">
                                 <div class="mt-3 ">
-                                    <img src="../img/binladen.jpg " alt="Avatar " class="avatar ">
+                                    <img src="../img/LogoLHL.png" alt="Logo " class="avatar ">
                                 </div>
                                 <div class="card-body ">
-                                    <p class=" author" style="color: yellow;"> BILADEN</p>
-                                    <p style=" font-size:20px; ">Lần đầu tham quan showroom, tôi đã thật sự ngạc nhiên trước sự rộng lớn của showroom Ant Furniture. Ant Furniture có rất nhiều bộ sưu tập đẹp từ cổ điển cho đến hiện đại. Ngoài ra thì công ty còn có nhà máy với máy
-                                        móc hiện đại. Tôi hài lòng với thiết kế của nội thất Ant Furniture: rất đẹp, hài hòa với căn nhà và phù hợp với phong cách của tôi.</p>
+                                    <p class=" author" style=" font-size:30px;">LHL Furniture</p>
+                                    <div class="divider"></div>
+                                    <p class=" text" style=" font-size:18px; line-height:1.8;"> Đột phá ý tưởng – tạo nên đẳng cấp</p>
                                 </div>
                             </div>
                         </div>
@@ -982,7 +429,7 @@ EOD;
             <div class="col-sm-5 ">
                 <hr>
             </div>
-            <div class="col-sm-2 text-center " style=" color:red ">Thương Hiệu</div>
+            <div class="col-sm-2 text-center " style=" color:#333; font-size:20px;font-style: italic;">Thương Hiệu</div>
             <div class="col-sm-5 ">
                 <hr>
             </div>
@@ -1053,5 +500,29 @@ EOD;
 
 
 </body>
-
+<script>
+        $(document).ready(function() {
+            $(".mua").click(function(){
+                $.ajax({
+                    url: "./Cart/XLGioHang.php",
+                    data: {
+                        "ma_sp": $(this).data("masp"),
+                        "so_luong": 1,
+                        "hanh_dong": "them"
+                    },
+                    dataType: "json",
+                    success: function(data){
+                        $(".nb-pds").html(data.Count);
+                    }
+                });
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Thêm vào giỏ hàng thành công',
+                    showConfirmButton: false,
+                    timer: 1000
+                })
+            });
+        });
+    </script>
 </html>

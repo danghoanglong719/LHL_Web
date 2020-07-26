@@ -68,14 +68,14 @@ include_once("./Cart/MyCart.php");
                                 <img src="../img/icon/arrow-204-48.png" class="icon-product"/>
                             </a>
                             <div class="dropdown-menu">
-                            <?php
-                                include_once("DataProvider.php");
-                                $sqlSanPham = "SELECT MaLoai, TenLoai FROM loaisp";
-                                $dsSanPham = DataProvider::ExecuteQuery($sqlSanPham);
-                                while($row = $dsSanPham->fetch()){
-                                    echo "<a class='dropdown-item' href='products.php?id={$row['MaLoai']}'><span></span>{$row['TenLoai']}</a>";
-                                }
-                            ?>
+                                <?php
+                                    include_once("DataProvider.php");
+                                    $sqlSanPham = "SELECT MaLoai, TenLoai FROM loaisp";
+                                    $dsSanPham = DataProvider::ExecuteQuery($sqlSanPham);
+                                    while($row = $dsSanPham->fetch()){
+                                        echo "<a class='dropdown-item' href='products.php?id={$row['MaLoai']}'><span></span>{$row['TenLoai']}</a>";
+                                    }
+                                ?>
                             </div>
                         </li>
                         <li class="nav-item cart">

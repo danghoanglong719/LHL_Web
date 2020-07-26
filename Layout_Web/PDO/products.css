@@ -401,4 +401,5 @@ a.pt_a:hover:not(.active){
 }
 .wrapper .links ul li:hover {
     background-color: rgba(243, 243, 243, 0.486);
+    cursor: pointer;
 }

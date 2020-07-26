@@ -105,7 +105,7 @@ include_once("MyCart.php");
                                     <a class="dropdown-item" href="../Manager/Manager.php"><span></span>Quản Lý</a>
                                     <a class="dropdown-item" href=""><span></span>Đổi mật khẩu</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="logoutcode.php"><span></span>Đăng xuất</a>
+                                    <a class="dropdown-item" href="../logoutcode.php"><span></span>Đăng xuất</a>
 EOD;
     echo $login;
                                 }
@@ -119,14 +119,14 @@ EOD;
                                     <a class="dropdown-item" href=""><span></span>Thông tin</a>
                                     <a class="dropdown-item" href=""><span></span>Đổi mật khẩu</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="logoutcode.php"><span></span>Đăng xuất</a>
+                                    <a class="dropdown-item" href="../logoutcode.php"><span></span>Đăng xuất</a>
 EOD;
     echo $login;
                                 }
                                 else{
                                     echo '<p style="color:#fff; text-align:center; opacity:0.5;" >Bạn chưa đăng nhập</p>';
                                     echo'<div class="dropdown-divider"></div>';
-                                    echo '<a class="dropdown-item" href="login.php"><span></span>Đăng nhập</a>';
+                                    echo '<a class="dropdown-item" href="../login.php"><span></span>Đăng nhập</a>';
                                     echo '<a class="dropdown-item" href="dangky.php"><span></span>Đăng ký</a>';
                                 }
                                 ?>

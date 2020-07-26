@@ -214,17 +214,10 @@ body {
     opacity: 1;
 }
 
-#myBtn {
-    border: 1px solid black;
-    position: absolute;
-    right: 80px;
+.btn {
+    border-radius: 4px;
 }
 
-#myBtn2 {
-    border: 1px solid black;
-    position: absolute;
-    right: 0;
-}
 
 .owl-dots {
     display: none;
@@ -233,16 +226,6 @@ body {
 .card:hover {
     border-bottom: 1px solid aqua;
 }
-
-.card {
-    transition: all 0.5s;
-    position: relative;
-}
-
-.card-body {
-    position: relative;
-}
-
 .card #vi {
     position: absolute;
     top: 0;
@@ -259,21 +242,60 @@ body {
     width: 100%;
     height: 100%;
     opacity: 0.5;
+}   
+.card {
+    transition: all 0.5s;
+    position: relative;
 }
 
+.card-body {
+    padding-top: 0;
+    position: relative;
+}
+
+.card-body .divider {
+    margin-top: -10px;
+    margin-bottom: 10px;
+    width: 50px;
+    border-bottom: 1px solid #fff;
+}
+.card-body .text {    
+    font-style: italic;
+}
+
+.card .vi {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    transition: 0.5s;
+    z-index: 10;
+    opacity: 0;
+    background-color: black;
+}
+
+.card:hover .vi {
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+.face-2{
+    position: relative;
+}
 .face-2 .icon-buy {
-    padding: 20px 0 50px;
+    padding: 0 0 20px;
     opacity: 0;
     position: absolute;
-    bottom: 0px;
-    left: -20px;
+    bottom: 0;
+    right: -20px;
     transition: 0.5s all ease 0s;
     z-index: 100;
     text-align: center;
-    margin-left: 50px;
+    margin-left: 25%;
 }
 
-.face-2 .icon-buy a {
+.face-2 .icon-buy button {
     border: 1px solid black;
     padding: 5px 10px;
     color: white;
@@ -285,12 +307,12 @@ body {
 }
 
 .card:hover .icon-buy {
-    left: 0;
+    right: 0;
     opacity: 1;
     transition-delay: 0.5s;
 }
 
-.face-2 #buy {
+.face-2 .buy {
     width: 100%;
     opacity: 0;
     position: absolute;
@@ -301,7 +323,7 @@ body {
     text-align: center;
 }
 
-.face-2 #buy a {
+.face-2 .buy a{
     width: 100%;
     border: 1px solid black;
     padding: 20px 25px;
@@ -309,18 +331,20 @@ body {
     background-color: rgb(66, 64, 64, 0.6);
     margin-left: 7px;
     text-decoration: none;
+    border-radius: 50%;
 }
 
-.card:hover #buy {
+
+.card:hover .buy {
     bottom: 180px;
     opacity: 1;
 }
 
-.card .icon-buy a:hover {
+.card .icon-buy button:hover {
     background-color: black;
 }
 
-.card #buy a:hover {
+.card .buy a:hover {
     background-color: black;
 }
 
@@ -408,7 +432,7 @@ body {
 
 #hang #next:hover,
 #hang #prev:hover {
-    background-color: yellow;
+    background-color: rgba(107, 107, 107, 0.911);
 }
 
 #th {
@@ -455,8 +479,8 @@ body {
 
 #inner .avatar {
     vertical-align: middle;
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
 }
 
@@ -481,14 +505,13 @@ body {
     position: relative;
 }
 
-.boxbox .boxtext h5 {
-    font-size: 40px;
-    font-weight: 400;
+.boxbox .boxtext h2 {
+    font-weight: 500;
     font-family: sans-serif;
 }
 
 .boxbox .boxtext {
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .boxbox .boxtext p {
@@ -682,3 +705,8 @@ body {
 }
 
 /*end*/
+
+.row .item .card .img-fluid{
+    width:268px;
+    height: 268px;
+}

@@ -27,7 +27,9 @@
 <script src="../../OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
 
 
-
+<?php
+    include_once("../Cart/MyCart.php")
+?>
 <body>
 <script>
         function Notification()
@@ -81,7 +83,11 @@
                         </li>
                         <li class="nav-item cart">
                             <a class="nav-link ml-2" href="../Cart/GioHang.php"><span></span>
-                                <img src="../../img/icon/cart-78-32.png" width="25px"><div class="bh-nb"><div class="nb-pds">0</div></div>
+                                <img src="../../img/icon/cart-78-32.png" width="25px"><div class="bh-nb"><div class="nb-pds">
+                                <?php 
+                                    $sum = json_decode(Cart::Display());
+                                    echo $sum->Count; 
+                                ?></div></div>
                             </a>
                         </li>
                       
@@ -106,7 +112,7 @@
                                     <a class="dropdown-item" href="Manager.php"><span></span>Quản Lý</a>
                                     <a class="dropdown-item" href=""><span></span>Đổi mật khẩu</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="logoutcode.php"><span></span>Đăng xuất</a>
+                                    <a class="dropdown-item" href="../logoutcode.php"><span></span>Đăng xuất</a>
 EOD;
     echo $login;
                                 }
@@ -120,7 +126,7 @@ EOD;
                                     <a class="dropdown-item" href=""><span></span>Thông tin</a>
                                     <a class="dropdown-item" href=""><span></span>Đổi mật khẩu</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="logoutcode.php"><span></span>Đăng xuất</a>
+                                    <a class="dropdown-item" href="../logoutcode.php"><span></span>Đăng xuất</a>
 EOD;
     echo $login;
                                 }

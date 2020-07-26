@@ -59,11 +59,11 @@
                             <div class="form-inline" >
 							<?php
 									if(isset($_SESSION['sdt'])){
-										$plh = "0". $_SESSION['sdt'];
+										$tlp = "0". $_SESSION['sdt'];
 									}
 								?>
                                 <label for="ipTel" class="col-sm-4">Điện thoại di dộng</label>
-                                <input type="text" name="telephone" id="ipTel" class="form-control col-sm-8" placeholder="Nhập số điện thoại" value="<?php echo $plh; ?>">
+                                <input type="text" name="telephone" id="ipTel" class="form-control col-sm-8" placeholder="Nhập số điện thoại" value="<?php echo $tlp; ?>">
                             </div>
                         </div>
                         <div class="form-group">
