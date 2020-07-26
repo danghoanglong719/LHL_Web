@@ -58,7 +58,7 @@
                 $result = DataProvider::ExecuteQuery($sql);
                 if($result==true)
                 {
-                   @  header("location:Manager.php");
+                    header("location:Manager.php");
                 }
                 else{
                     echo "that bai";
