@@ -1,14 +1,17 @@
 <?php
 class Cart
 {
-	public static function InsertCart($id)
+	public static function InsertCart($id,$quantity)
 	{
 		if(isset($_SESSION["Cart"][$id]))
-			$_SESSION["Cart"][$id]++;
+			$_SESSION["Cart"][$id] += $quantity;
 		else
 			$_SESSION["Cart"][$id] = 1;
 	}
-	
+	public static function MinusCart($id,$quantity){
+		if(isset($_SESSION["Cart"][$id]) && $_SESSION["Cart"][$id] > 1)
+			$_SESSION["Cart"][$id] -= $quantity;
+	}
 	public static function DeleteCart($id)
 	{
 		if(isset($_SESSION["Cart"][$id]))
@@ -28,7 +31,6 @@ class Cart
 		$sum = 0;
         $somh = 0;
 		$count = 0;
-		$totalfinal = 0;
 		if(isset($_SESSION['Cart'])){
 			foreach($_SESSION['Cart'] as $MaSP => $SoLuong)
 			{
@@ -36,7 +38,6 @@ class Cart
 				$row = $rs->fetch();
                 $sum += $SoLuong * $row['GiaBan'];
 				$count += $SoLuong;
-				$totalfinal += $sum;
 			}
 			$somh = count($_SESSION['Cart']);
 		}
@@ -44,7 +45,6 @@ class Cart
 			"SoMH" => $somh,
             "TongTien" => $sum,
 			"Count" => $count,
-			"TotalFinal" => $totalfinal
 		);
 
 		return json_encode($result);

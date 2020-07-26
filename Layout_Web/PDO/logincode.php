@@ -35,6 +35,7 @@
                 while( $row = $result->fetch()){
                     if($username == $row['TaiKhoan'] && $password == $row['MatKhau']  && $row['Status'] == 'Active'){
                         $_SESSION['dangnhap'] = $row['HoTenAdmin'];
+                        $_SESSION['makh'] = $row['id_admin'];
                         $_SESSION['QTV'] = $row['Level'];
                         header("location:./Manager/Manager.php");
                     }
