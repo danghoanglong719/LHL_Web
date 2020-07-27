@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 25, 2020 at 08:01 AM
+-- Generation Time: Jul 27, 2020 at 11:14 AM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.7
 
@@ -45,7 +45,6 @@ CREATE TABLE `admin` (
 
 INSERT INTO `admin` (`id_admin`, `HoTenAdmin`, `TaiKhoan`, `MatKhau`, `DiaChi`, `DienThoai`, `Email`, `Level`, `Status`) VALUES
 (1, 'Trần Trung Hiếu', 'hieupro123', 'hieupro123', 'TPHCM', 352460179, 'trantrunghieu777888555@gmail.com', 'Admin_1', 'Active'),
-(3, 'VU12345', 'VU12345', 'VU12345', 'TPHCM', 123, 'trantrunghieu777888555@gmail.com', 'Admin_2', 'Active '),
 (9, 'admin2', 'admin2', ' 123456', 'odaucungduoc', 957303812, 'admin2@gmail.com', 'Admin_2', 'Active');
 
 -- --------------------------------------------------------
@@ -68,12 +67,16 @@ CREATE TABLE `chitiethd` (
 INSERT INTO `chitiethd` (`SoDH`, `MaSP`, `MaHD`, `SoLuong`) VALUES
 (2, 3, 1, 2),
 (3, 5, 5, 1),
-(4, 1, 7, 1),
 (5, 7, 8, 1),
 (6, 7, 9, 1),
 (7, 9, 9, 1),
-(8, 1, 11, 2),
-(9, 0, 11, 1);
+(10, 3, 12, 1),
+(11, 7, 12, 1),
+(24, 7, 20, 1),
+(25, 3, 20, 1),
+(26, 8, 20, 1),
+(27, 9, 20, 1),
+(28, 7, 22, 1);
 
 -- --------------------------------------------------------
 
@@ -104,7 +107,13 @@ INSERT INTO `hoadon` (`MaHD`, `NgayDat`, `NoiGiao`, `MaKH`, `TinhTrang`) VALUES
 (8, '2020-07-24 20:05:07', ', , , ', 12, 'Mới đặt'),
 (9, '2020-07-24 20:31:01', ', , , ', 12, 'Mới đặt'),
 (10, '2020-07-24 20:31:15', ', , , ', 12, 'Mới đặt'),
-(11, '2020-07-24 20:43:19', ', , , ', 12, 'Mới đặt');
+(11, '2020-07-24 20:43:19', ', , , ', 12, 'Mới đặt'),
+(12, '2020-07-25 13:10:01', ', , , ', 12, 'Mới đặt'),
+(13, '2020-07-25 13:10:03', ', , , ', 12, 'Mới đặt'),
+(20, '2020-07-27 16:00:47', '123123, 123123, 1123, ád', 12, 'Mới đặt'),
+(21, '2020-07-27 16:00:51', ', , , ', 12, 'Mới đặt'),
+(22, '2020-07-27 16:02:23', ', , , ', 12, 'Mới đặt'),
+(23, '2020-07-27 16:02:57', ', , , ', 12, 'Mới đặt');
 
 -- --------------------------------------------------------
 
@@ -133,9 +142,8 @@ INSERT INTO `khachhang` (`MaKH`, `TenDN`, `MatKhau`, `HoTen`, `DiaChi`, `DienTho
 (5, 'dlthien', 'dlthien', 'Đỗ Lâm Thiên', '357 Lê Hồng Phong Q.10 ', 903123456, 'dlthien@hcmuns.edu.vn'),
 (6, 'thanh', 'thanh', 'Nguyễn Ngọc Thanh', '357 Lê Hồng Phong Q.10', 903456789, 'lthanh@hcmuns.edu.vn'),
 (7, 'hoadalat', '123456', 'Hoa Đà Lạt', '123 Hai Bà Trưng', 902314340, 'hoadalat@gmail.com'),
-(8, 'hoainfo', '123123', 'Shop Hoa', '123 Đà Nẵng', 123213213, 'hoa@hoa.com'),
-(9, '12310', '12310', 'LocTran', '783 CMT8', 382944169, 'LocTran12310@gmail.com'),
-(12, 'l12310', '123456', ' LT', '01239765', 912849543, 'jjj12310@gmail.com');
+(12, 'l12310', '123456', 'Loc Tran', '783 CMT8', 382944169, '123@gmail.com'),
+(14, 'll12310', '123456', ' loc', '', 0, '');
 
 -- --------------------------------------------------------
 
@@ -172,22 +180,21 @@ CREATE TABLE `sanpham` (
   `MauSac` varchar(10) COLLATE utf8_unicode_ci DEFAULT NULL,
   `VatLieu` varchar(10) COLLATE utf8_unicode_ci DEFAULT NULL,
   `MoTa` varchar(250) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `Hinh` varchar(50) COLLATE utf8_unicode_ci NOT NULL
+  `Hinh` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `Status` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `sanpham`
 --
 
-INSERT INTO `sanpham` (`MaSP`, `MaLoai`, `TenSanPham`, `GiaBan`, `MauSac`, `VatLieu`, `MoTa`, `Hinh`) VALUES
-(0, 4, '    LAMP 2', 250000, ' Go', '     Go', '     LAMP - San pham duy nhat', ''),
-(1, 1, 'Sofa 1', 700000, 'Xanh', '', 'Sofa 1', ''),
-(3, 2, 'Chair 2', 250000, NULL, 'Go', 'Chair 2 - Sản phẩm là mọi thứ có thể chào bán trên thị trường để chú ý, mua, sử dụng hay tiêu dùng, có thể thỏa mãn được một mong muốn hay nhu cầu.', 'a.jpg'),
-(5, 3, 'Lamp 1', 400000, 'Den', NULL, 'Den - Den so mot', '8-den-1587982122.jpg'),
-(6, 4, 'Table 2', 500000, 'Den', 'Nhua', 'Ban Nhua 4 chan mau Den', 'c12.jpg'),
-(7, 2, 'Chair 3', 200000, NULL, 'Go', 'Ghe go don gian', 'c11.jpg'),
-(8, 2, 'Chair 4', 230000, NULL, 'Go', 'Ghe go co dem ngoi', 'g.jpg'),
-(9, 2, 'Chair 5', 400000, 'Xam', NULL, 'Ghe dem', 'c.jpg');
+INSERT INTO `sanpham` (`MaSP`, `MaLoai`, `TenSanPham`, `GiaBan`, `MauSac`, `VatLieu`, `MoTa`, `Hinh`, `Status`) VALUES
+(3, 2, 'Ghế số 2', 500000, 'Cam', 'Gỗ', 'Chair 2 - Sản phẩm là mọi thứ có thể chào bán trên thị trường để chú ý, mua, sử dụng hay tiêu dùng, có thể thỏa mãn được một mong muốn hay nhu cầu.', 'header.jpg', 1),
+(5, 3, 'Lamp 1', 400000, 'Den', NULL, 'Den - Den so mot', '8-den-1587982122.jpg', 2),
+(6, 4, 'Table 2', 500000, 'Den', 'Nhua', 'Ban Nhua 4 chan mau Den', 'c12.jpg', 1),
+(7, 2, 'Chair 3', 200000, NULL, 'Go', 'Ghe go don gian', 'c11.jpg', 2),
+(8, 2, 'Chair 4', 230000, NULL, 'Go', 'Ghe go co dem ngoi', 'g.jpg', 1),
+(9, 2, 'Chair 5', 400000, 'Xam', NULL, 'Ghe dem', 'c.jpg', 2);
 
 -- --------------------------------------------------------
 
@@ -266,19 +273,19 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `chitiethd`
 --
 ALTER TABLE `chitiethd`
-  MODIFY `SoDH` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `SoDH` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `hoadon`
 --
 ALTER TABLE `hoadon`
-  MODIFY `MaHD` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `MaHD` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `khachhang`
 --
 ALTER TABLE `khachhang`
-  MODIFY `MaKH` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `MaKH` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `loaisp`
