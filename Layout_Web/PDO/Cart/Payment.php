@@ -51,6 +51,9 @@
 									if(isset($_SESSION['dangnhap'])){
 										$plh = $_SESSION['dangnhap'];
 									}
+									else{
+										$plh = NULL;
+									}
 								?>
                                 <input type="text" name="name" id="ipName" class="form-control col-sm-8" placeholder="Nhập họ tên" value="<?php echo $plh; ?>">
                             </div>
@@ -60,6 +63,9 @@
 							<?php
 									if(isset($_SESSION['sdt'])){
 										$tlp = "0". $_SESSION['sdt'];
+									}
+									else{
+										$tlp = NULL;
 									}
 								?>
                                 <label for="ipTel" class="col-sm-4">Điện thoại di dộng</label>
@@ -90,9 +96,12 @@
 									if(isset($_SESSION['diachi'])){
 										$plh = $_SESSION['diachi'];
 									}
+									else{
+										$plh = NULL;
+									}
 								?>
                                 <label for="ipDiaChi" class="col-sm-4">Địa Chỉ</label>
-                                <textarea type="textarea" name="diachi" id="ipDiachi" class="form-control col-sm-8" placeholder="Ví dụ: 280 An Dương Vương" value="<?php echo $plh; ?>"></textarea>
+                                <textarea type="textarea" name="diachi" id="ipDiachi" class="form-control col-sm-8" placeholder="Ví dụ: 280 An Dương Vương" value=""><?php echo $plh; ?></textarea>
                             </div>
                         </div>
 						<div id="myErr"></div>

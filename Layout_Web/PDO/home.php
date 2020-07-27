@@ -10,7 +10,7 @@
     <title>LHL Furniture</title>
     <link rel="stylesheet" href="products.css">
     <link rel="stylesheet" href="../css/LHL_text.css">
-    <link rel="stylesheet" type="text/css" href="../css/Home.css">
+    <link rel="stylesheet" type="text/css" href="home.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="../OwlCarousel2-2.3.4/src/js/owl.carousel.js">

@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Đăng ký</title>
-        <link rel="stylesheet" type="text/css" href="../css/SignUp.css">
+        <!--<link rel="stylesheet" type="text/css" href="../css/SignUp.css">-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
         <link rel="stylesheet" href="../OwlCarousel2-2.3.4/src/js/owl.carousel.js">
@@ -55,8 +55,8 @@
         <div class="container-fluid bg"> 
             <div class="row">
                 <div class="col-md-4 col-sm-3 col-xs-12"></div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <form class="form-container" id="formSignUpAdmin" method="POST">
+                <div class="col-md-4 col-sm-6 col-xs-12 border border-success rounded">
+                    <form class="form-container mt-3 mb-3" id="formSignUpAdmin" method="POST">
                         <h2>Đăng ký Admin</h2>
                         <div class="form-group">
                             <div class="form-inline">
@@ -84,8 +84,8 @@
                         </div>
                         <div class="form-group">
                             <div class="form-inline">
-                                <label for="ipSdt" class="col-sm-4">Địa Chỉ</label>
-                                <input type="text" name="address" id="ipSdt" class="form-control col-sm-8" placeholder="Nhập địa chỉ" >
+                                <label for="ipDiaChi" class="col-sm-4">Địa Chỉ</label>
+                                <input type="text" name="address" id="ipDiaChi" class="form-control col-sm-8" placeholder="Nhập địa chỉ" >
                             </div>
                         </div>
                         <div class="form-group">
@@ -96,20 +96,26 @@
                         </div>
                         <div class="form-group">
                             <div class="form-inline">
-                                <label for="ipSdt" class="col-sm-4">Email</label>
-                                <input type="text" name="email" id="ipSdt" class="form-control col-sm-8" placeholder="Nhập email" >
+                                <label for="ipEmail" class="col-sm-4">Email</label>
+                                <input type="text" name="email" id="ipEmail" class="form-control col-sm-8" placeholder="Nhập email" >
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="form-inline">
-                                <label for="ipSdt" class="col-sm-4">Level</label>
-                                <input type="text" name="Level" id="ipSdt" class="form-control col-sm-8" placeholder='"Admin_1" hoặc "Admin_2"' >
+                                <label for="Admin_1" class="col-sm-4">Level</label>
+                                <input type="radio" name="level" class="mr-3" value="Admin_1" id="Admin_1" checked>
+                                <label for="Admin_1">Admin 1</label>
+                                <input type="radio" name="level" class="ml-4 mr-3" value="Admin_2" id="Admin_2">
+                                <label for="Admin_2">Admin 2</label>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="form-inline">
-                                <label for="ipSdt" class="col-sm-4">Status</label>
-                                <input type="text" name="status" id="ipSdt" class="form-control col-sm-8" placeholder='"Active" hoặc "Disable"' >
+                                <label for="Active" class="col-sm-4">Trạng thái</label>
+                                <input type="radio" name="status" class="mr-3" value="Active" id="Active" checked>
+                                <label for="Active">Active</label>
+                                <input type="radio" name="status" class="ml-5 mr-3" value="Block" id="Block">
+                                <label for="Block">Block</label>
                             </div>
                         </div>
                         <div id="myErr"></div>

@@ -173,8 +173,7 @@ EOD;
                         <th scope="col">Địa chỉ</th>
                         <th scope="col">SĐT</th>
                         <th scope="col">Email</th>
-                        <th scope="col"></th>
-                        <th scope="col"></th>
+                        <th scope="col" colspan="2">Thao tác</th>
                     </tr>
                     <?php
                         include_once("../DataProvider.php");
@@ -194,10 +193,10 @@ EOD;
                         <td><?= $row['HoTen'] ?></td>
                         <td><?= $row['TenDN'] ?></td>
                         <td><?= $row['DiaChi'] ?></td>
-                        <td><?= $row['DienThoai'] ?></td>
+                        <td><?= "0".$row['DienThoai'] ?></td>
                         <td><?= $row['Email'] ?></td>
                         
-                        <td><a href="QuanLyAccount.php?delte=<?= $row['MaKH'] ?> "onclick="return confirm('Bạn Có Chắc Muốn Xóa');" >Xóa</a></td>
+                        <td><a href="QuanLyAccount.php?delete=<?= $row['MaKH'] ?> "onclick="return confirm('Bạn Có Chắc Muốn Xóa');" >Xóa</a></td>
                         <td><a href="edit_user.php?edit=<?= $row['MaKH'] ?> " >Sửa</a></td>
 
                     </tr>
@@ -250,9 +249,9 @@ EOD;
 
 
     include_once("../DataProvider.php");
-    if(isset($_GET['delte']))
+    if(isset($_GET['delete']))
     {
-        $user_id = $_GET['delte'];
+        $user_id = $_GET['delete'];
         
         $sql = "DELETE FROM `khachhang` WHERE  `MaKH` = '$user_id'";
         $result = DataProvider::ExecuteQuery($sql);

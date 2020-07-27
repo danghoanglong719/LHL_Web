@@ -4,7 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Sửa thông tin</title>
-        <link rel="stylesheet" type="text/css" href="../../css/SignUp.css">
+        <!--<link rel="stylesheet" type="text/css" href="../../css/SignUp.css">-->
+        <link rel="stylesheet" href="../css/Home.css">
+        <link rel="stylesheet" type="text/css" href="../css/manager.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
         <link rel="stylesheet" href="../../OwlCarousel2-2.3.4/src/js/owl.carousel.js">
@@ -30,7 +32,7 @@
         include_once("../DataProvider.php");
 
      
-        if(isset($_POST['dangky']))
+        if(isset($_POST['EditAdmin']))
         {
             $id  = $_GET['editAdmin'];
             $firstname = $_POST['firstname'];
@@ -39,8 +41,8 @@
             $diachi = $_POST['address'];
             $sdt   = $_POST['sdt'];
             $email  = $_POST['email'];
-            $Block  = $_POST['Block'];
-            $sql = "UPDATE `admin` SET `TaiKhoan` = '$username', `MATKHAU` = '$password', `HoTenAdmin` = '$firstname', `DiaChi` = '$diachi', `DienThoai` = '$sdt', `Email` = '$email' , `Block` ='$Block ' WHERE `id_admin` = $id";
+            $Status  = $_POST['Status'];
+            $sql = "UPDATE `admin` SET `TaiKhoan` = '$username', `MatKhau` = '$password', `HoTenAdmin` = '$firstname', `DiaChi` = '$diachi', `DienThoai` = '$sdt', `Email` = '$email' , `Status` ='$Block ' WHERE `id_admin` = $id";
             $result = DataProvider::ExecuteQuery($sql);
             if($result==true)
             {
@@ -58,64 +60,84 @@
 
 
     ?>
+<?php
+    //placeholder
+    $sqlEdit = "SELECT * FROM `admin` WHERE id_admin = {$_GET['editAdmin']}";
+    $UserEdit = DataProvider::ExecuteQuery($sqlEdit);
+    $row = $UserEdit->fetch();
+    $hten = $row['HoTenAdmin'];
+    $tdnhap = $row['TaiKhoan'];
+    $mkhau = $row['MatKhau'];
+    $dchi = $row['DiaChi'];
+    $dthoai = "0". $row['DienThoai'];
+    $phremail = $row['Email'];
+    $level = $row['Level'];
+    $status = $row['Status'];
+?>
        <div class="container-fluid bg"> 
             <div class="row">
                 <div class="col-md-4 col-sm-3 col-xs-12"></div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <form class="form-container" id="formLogin" method="POST">
-                        <h2>Đăng ký</h2>
+                <div class="col-md-4 col-sm-6 col-xs-12 border border-success rounded">
+                    <form class="form-container mt-2 mb-3" id="formLogin" method="POST">
+                        <h2>Sửa thông tin Admin</h2>
                         <div class="form-group">
                             <div class="form-inline">
-                                <div class="col-sm-12">
-                                    <div class="form-inline">
-                                        <label for="ipFirstname" class="col-sm-3">HọTên</label>
-                                        <input type="text" name="firstname" id="ipFirstname" class="form-control col-sm-9" value="<?php echo  $_SESSION['TenDN']; ?>">
-                                    </div>
-                                </div>
-                               
+                                <label for="ipFirstname" class="col-sm-4">Họ Tên</label>
+                                <input type="text" name="firstname" id="ipFirstname" class="form-control col-sm-8" value="<?php echo  $hten; ?>">
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="form-inline">
                                 <label for="ipTk" class="col-sm-4">Tài khoản</label>
-                                <input type="text" name="user" id="ipTk" class="form-control col-sm-8" value="<?php echo  $_SESSION['TenDN']; ?>">
+                                <input type="text" name="user" id="ipTk" class="form-control col-sm-8" value="<?php echo  $tdnhap; ?>">
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="form-inline">
                                 <label for="ipPass" class="col-sm-4">Mật khẩu</label>
-                                <input type="password" name="pass" id="ipPass" class="form-control col-sm-8" value="<?php echo  $_SESSION['pass']; ?>">
+                                <input type="password" name="pass" id="ipPass" class="form-control col-sm-8" value="<?php echo  $mkhau; ?>">
                             </div>
                         </div>
      
                         <div class="form-group">
                             <div class="form-inline">
-                                <label for="ipSdt" class="col-sm-4">Địa Chỉ</label>
-                                <input type="text" name="address" id="ipSdt" class="form-control col-sm-8" value="<?php echo  $_SESSION['DiaChi']; ?>" >
+                                <label for="ipDiaChi" class="col-sm-4">Địa Chỉ</label>
+                                <input type="text" name="address" id="ipDiaChi" class="form-control col-sm-8" value="<?php echo  $dchi; ?>" >
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="form-inline">
                                 <label for="ipSdt" class="col-sm-4">SĐT</label>
-                                <input type="text" name="sdt" id="ipSdt" class="form-control col-sm-8" value="<?php echo  $_SESSION['DienThoai']; ?>">
+                                <input type="text" name="sdt" id="ipSdt" class="form-control col-sm-8" value="<?php echo  $dthoai; ?>">
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="form-inline">
-                                <label for="ipSdt" class="col-sm-4">Email</label>
-                                <input type="text" name="email" id="ipSdt" class="form-control col-sm-8" value="<?php echo  $_SESSION['Email']; ?>" >
+                                <label for="ipEmail" class="col-sm-4">Email</label>
+                                <input type="text" name="email" id="ipEmail" class="form-control col-sm-8" value="<?php echo  $phremail; ?>" >
                             </div>
                         </div>
-                       
                         <div class="form-group">
                             <div class="form-inline">
-                                <label for="ipSdt" class="col-sm-4">Block</label>
-                                <input type="text" name="Block" id="ipSdt" class="form-control col-sm-8" value="<?php echo$_SESSION['status']; ?>" >
+                                <label for="Admin_1" class="col-sm-4">Level</label>
+                                <input type="radio" name="level" class="" value="Admin_1" id="Admin_1">
+                                <label for="Admin_1">Admin 1</label>
+                                <input type="radio" name="level" class="ml-4 " value="Admin_2" id="Admin_2">
+                                <label for="Admin_2">Admin 2</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-inline">
+                                <label for="Active" class="col-sm-4">Trạng thái</label>
+                                <input type="radio" name="status" class="" value="Active" id="Active">
+                                <label for="Active">Active</label>
+                                <input type="radio" name="status" class="ml-5" value="Block" id="Block">
+                                <label for="Block">Block</label>
                             </div>
                         </div>
                         
                         <div id="myErr"></div>
-                        <button type="submit" class="btn btn-success btn-block" id="btnSignUp" value="SignUp" name="dangky">Sửa</button>
+                        <button type="submit" class="btn btn-success btn-block" id="btnEditAdmin" value="EditAdmin" name="EditAdmin">Sửa</button>
                         
                     </form>
                 </div>
@@ -156,6 +178,13 @@
             });
         })
     </script>
+    <script>
+        $(document).ready(function(){
+            $("input[value='<?php echo $level; ?>']").prop('checked', true);
+            $("input[value='<?php echo $status; ?>']").prop('checked', true);
+        });
+    </script>
+
     <!--#endregion Script-->
    
 </html>

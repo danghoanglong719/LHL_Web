@@ -47,7 +47,7 @@
                     <div id="vi"></div>
                     <div class="row ">
                         <div class="col-md-5  ">
-                            <a href="# "> <img class="card-img-top img-fluid " src="../img/{$row['Hinh']}"></a>
+                            <a href="# "style="width:275px; height:275px;"> <img class="card-img-top img-fluid " src="../img/{$row['Hinh']}"></a>
                         </div>
                         <div class="col-md-7">
                             <div style="text-align: center;" class="text-product">

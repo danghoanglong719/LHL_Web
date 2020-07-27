@@ -173,9 +173,9 @@ EOD;
                         <th scope="col">Địa chỉ</th>
                         <th scope="col">SĐT</th>
                         <th scope="col">Email</th>
-                        <th scope="col">Status</th>
-                        <th scope="col"></th>
-                        <th scope="col"></th>
+                        <th scope="col">Level</th>
+                        <th scope="col">Trạng thái</th>
+                        <th scope="col" colspan="2">Thao tác</th> 
                     </tr>
                     <?php
                         include_once("../DataProvider.php");
@@ -197,8 +197,9 @@ EOD;
                         <td><?= $row['HoTenAdmin'] ?></td>
                         <td><?= $row['TaiKhoan'] ?></td>
                         <td><?= $row['DiaChi'] ?></td>
-                        <td><?= $row['DienThoai'] ?></td>
+                        <td><?= "0".$row['DienThoai'] ?></td>
                         <td><?= $row['Email'] ?></td>
+                        <td><?= $row['Level'] ?></td>
                         <td><?= $row['Status'] ?></td>
                     
                     <td><a href="QuanLyAdmin.php?id=<?= $row['id_admin'] ?> "onclick="return confirm('Bạn Có Chắc Muốn Xóa');" >Xóa</a></td>

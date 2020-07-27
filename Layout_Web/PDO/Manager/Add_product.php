@@ -75,64 +75,59 @@
                         <h2 align="center">Thêm Sản Phẩm</h2>
                         <div class="form-group">
                             <div class="form-inline">
-                                
-                                    <label for="ipFirstname" class="col-sm-4">Mã Sản Phẩm</label>
-                                    <input type="text" name="MaSP" id="ipFirstname" class="form-control col-sm-8"  >
-                                 
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="form-inline">
-                                <label for="ipTk" class="col-sm-4">Ma Loai</label>
-                                <select name ="ID" class="form-control col-sm-8">
-                                <?php
-                                    include_once("../DataProvider.php");
-                                    $sql = "SELECT MaLoai, TenLoai FROM loaisp";
-                                    $query = DataProvider::ExecuteQuery($sql);
-                                    while ($row = $query -> fetch()){
-                                        echo "<option value={$row['MaLoai']}  > {$row['TenLoai']} </option>";
-                                    }
-
-                                ?>  
-
+                                <label for="optMaLoai" class="col-sm-4">Mã Loại</label>
+                                <select id="optMaLoai" class="form-control col-sm-8">
+                                    <?php
+                                        include_once("../DataProvider.php");
+                                        $sql = "SELECT MaLoai, TenLoai FROM loaisp";
+                                        $query = DataProvider::ExecuteQuery($sql);
+                                        while ($row = $query -> fetch()){
+                                            echo "<option value={$row['MaLoai']}> {$row['TenLoai']} </option>";
+                                        }
+                                    ?>  
                                 </select>
-
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="form-inline">
-                                <label for="ipTk" class="col-sm-4">Tên Sản Phẩm</label>
-                                <input type="text" name="TenSP"  class="form-control col-sm-8" >
+                                <label for="TenSP" class="col-sm-4">Tên Sản Phẩm</label>
+                                <input type="text" name="TenSP" id="TenSP" class="form-control col-sm-8" >
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="form-inline">
-                                <label for="ipPass" class="col-sm-4">Giá Bán</label>
-                                <input type="text" name="GiaBan" class="form-control col-sm-8"  >
+                                <label for="GiaBan" class="col-sm-4">Giá Bán</label>
+                                <input type="text" name="GiaBan" id="GiaBan"class="form-control col-sm-8"  >
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="form-inline">
-                                <label for="ipRePass" class="col-sm-4">Màu Sắc</label>
-                                <input type="text" name="Color"  class="form-control col-sm-8" >
+                                <label for="Color" class="col-sm-4">Màu Sắc</label>
+                                <input type="text" name="Color" id="Color" class="form-control col-sm-8" >
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="form-inline">
-                                <label for="ipSdt" class="col-sm-4">Vật Liệu</label>
-                                <input type="text" name="VatLieu" class="form-control col-sm-8">
+                                <label for="VatLieu" class="col-sm-4">Vật Liệu</label>
+                                <input type="text" name="VatLieu" id="VatLieu" class="form-control col-sm-8">
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="form-inline">
-                                <label for="ipSdt" class="col-sm-4">Mô tả</label>
-                                <input type="text" name="MoTa"  class="form-control col-sm-8" >
+                                <label for="MoTa" class="col-sm-4">Mô tả</label>
+                                <input type="text" name="MoTa" id="MoTa" class="form-control col-sm-8" >
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="form-inline">
-                                <label for="ipSdt" class="col-sm-4">Hinh</label>
-                                <input type="file" name="Hinh"  class="form-control col-sm-8"  >
+                                <label for="Status" class="col-sm-4">Trạng thái</label>
+                                <input type="text" name="Status" id="Status" class="form-control col-sm-8" placeholder="Null">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-inline">
+                                <label for="Hinh" class="col-sm-4">Hình</label>
+                                <input type="file" name="Hinh" id="Hinh" class="form-control col-sm-8"  >
                             </div>
                         </div>
                         <div id="myErr"></div>

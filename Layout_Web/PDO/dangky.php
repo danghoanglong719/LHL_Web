@@ -25,9 +25,7 @@
     <script src="../js/jQueryValidation1.19.1/jquery.validate.js"></script>
     
 
-<?php
-   // @include_once("dangkycode.php");
-?>
+
     <body>
         <div class="container-fluid bg"> 
             <div class="row">
@@ -35,6 +33,9 @@
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <form class="form-container" id="formLogin" method="POST">
                         <h2>Đăng ký</h2>
+                        <?php
+                            include_once("dangkycode.php");
+                        ?>
                         <div class="form-group">
                             <div class="form-inline">
                                 <label for="ipFirstname" class="col-sm-4">Họ Tên</label>

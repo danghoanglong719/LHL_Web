@@ -363,7 +363,7 @@ EOD;
                                                 <div class="view-item">
                                                     <div class="card h-100 mb-3">
                                                         <div id="vi"></div>
-                                                        <a href="# "> <img class="card-img-top img-fluid " src="../img/{$row['Hinh']}"></a>
+                                                        <a href="#" style="width:275px; height:275px;"> <img class="card-img-top img-fluid " src="../img/{$row['Hinh']}"></a>
                                                         <div class="card-body col-md-12">
                                                             <div style="margin-bottom: 10px;text-align: center; ">
                                                                 <h5 class="name">{$row['TenSanPham']}</h5>
@@ -431,7 +431,7 @@ EOD;
                                                     <div id="vi"></div>
                                                     <div class="row ">
                                                         <div class="col-md-5  ">
-                                                            <a href="# "> <img class="card-img-top img-fluid " src="../img/{$row['Hinh']}"></a>
+                                                            <a href="# "style="width:275px; height:275px;"> <img class="card-img-top img-fluid " src="../img/{$row['Hinh']}"></a>
                                                         </div>
                                                         <div class="col-md-7">
                                                             <div style="text-align: center;" class="text-product">

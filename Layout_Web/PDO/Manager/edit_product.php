@@ -7,10 +7,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manager</title>
+    <title>Sửa thông tin</title>
 
-    <link rel="stylesheet" href="../css/Home.css">
-    <link rel="stylesheet" type="text/css" href="../css/manager.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="../OwlCarousel2-2.3.4/src/js/owl.carousel.js">
@@ -44,6 +42,7 @@
         $MauSac = $_POST['MauSac'];
         $VatLieu = $_POST['VatLieu'];
         $MoTa = $_POST['MoTa'];
+        $TrangThai = $_POST['Status'];
         $Hinh = $_POST['Hinh'];
         $id= $_GET['edit'];
         $sql = "UPDATE `sanpham` SET `MaLoai`='$MaLoai',`TenSanPham`='$TenSanPham',`GiaBan`='$GiaBan',`MauSac`='$MauSac',`VatLieu`='$VatLieu',`MoTa`='$MoTa',`Hinh`='$Hinh' where  MaSP='$id' and MaLoai ='$MaLoai' ";
@@ -71,13 +70,14 @@
     $msac = $row['MauSac'];
     $vlieu = $row['VatLieu'];
     $mta = $row['MoTa'];
+    $tthai = $row['Status'];
     $img = $row['Hinh'];
 ?>
 <div class="container-fluid bg"> 
     <div class="row">
         <div class="col-md-4 col-sm-3 col-xs-12"></div>
         <div class="col-md-4 col-sm-6 col-xs-12 border border-success rounded">
-            <form class="form-container" id="formEditProduct" method="POST" >
+            <form class="form-container mt-3 mb-3" id="formEditProduct" method="POST" >
                 <h3>Thay đổi thông tin sản phẩm</h3>
                 <div class="form-group">
                     <div class="form-inline">
@@ -113,6 +113,12 @@
                     <div class="form-inline">
                         <label for="ipMoTa" class="col-sm-4">Mô tả</label>
                         <input type="text" name="MoTa"  class="form-control col-sm-8" value="<?php echo $mta ;?>" >
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-inline">
+                        <label for="ipMoTa" class="col-sm-4">Trạng thái</label>
+                        <input type="text" name="Status"  class="form-control col-sm-8" value="<?php echo $tthai ;?>" >
                     </div>
                 </div>
                 <div class="form-group">

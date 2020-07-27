@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Sửa thông tin</title>
-        <link rel="stylesheet" type="text/css" href="../../css/SignUp.css">
+        <!--<link rel="stylesheet" type="text/css" href="../../css/SignUp.css">-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
         <link rel="stylesheet" href="../../OwlCarousel2-2.3.4/src/js/owl.carousel.js">
@@ -30,7 +30,7 @@
         include_once("../DataProvider.php");
 
      
-        if(isset($_POST['dangky']))
+        if(isset($_POST['EditUser']))
         {
             $id  = $_GET['edit'];
             $firstname = $_POST['firstname'];
@@ -56,24 +56,34 @@
 
 
     ?>
+<?php
+    //placeholder
+    $sqlEdit = "SELECT * FROM khachhang WHERE MaKH = {$_GET['edit']}";
+    $UserEdit = DataProvider::ExecuteQuery($sqlEdit);
+    $row = $UserEdit->fetch();
+    $hten = $row['HoTen'];
+    $tdnhap = $row['TenDN'];
+    $mkhau = $row['MatKhau'];
+    $dchi = $row['DiaChi'];
+    $dthoai = $row['DienThoai'];
+    $phremail = $row['Email'];
+?>
         <div class="container-fluid "> 
             <div class="row">
                 <div class="col-md-4 col-sm-3 col-xs-12"></div>
-                <div class="col-md-4 col-sm-6 col-xs-12 " style="padding:20px">
-                    <form class="form-container" id="formLogin" method="POST">
-                        <h2>Sửa thông tin</h2>
+                <div class="col-md-4 col-sm-6 col-xs-12 border border-success rounded" >
+                    <form class="form-container mt-3 mb-3" id="formLogin" method="POST">
+                        <h2>Sửa thông tin User</h2>
                         <div class="form-group">
                             <div class="form-inline">
-                                
-                                        <label for="ipFirstname" class="col-sm-4">HọTên</label>
-                                        <input type="text" name="firstname" id="ipFirstname" class="form-control col-sm-8" placeholder="Họ và tên">
-                                  
+                                <label for="ipFirstname" class="col-sm-4">Họ Tên</label>
+                                <input type="text" name="firstname" id="ipFirstname" class="form-control col-sm-8" value="<?php echo $hten;?>">
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="form-inline">
                                 <label for="ipTk" class="col-sm-4">Tài khoản</label>
-                                <input type="text" name="user" id="ipTk" class="form-control col-sm-8" placeholder="Nhập tài khoản">
+                                <input type="text" name="user" id="ipTk" class="form-control col-sm-8" value="<?php echo $tdnhap;?>">
                             </div>
                         </div>
                         <div class="form-group">
@@ -91,23 +101,23 @@
                         <div class="form-group">
                             <div class="form-inline">
                                 <label for="ipSdt" class="col-sm-4">Địa Chỉ</label>
-                                <input type="text" name="address" id="ipSdt" class="form-control col-sm-8" placeholder="Nhập địa chỉ" >
+                                <input type="text" name="address" id="ipSdt" class="form-control col-sm-8" value="<?php echo $dchi;?>" >
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="form-inline">
                                 <label for="ipSdt" class="col-sm-4">SĐT</label>
-                                <input type="text" name="sdt" id="ipSdt" class="form-control col-sm-8" placeholder="Nhập Số điện thoại" >
+                                <input type="text" name="sdt" id="ipSdt" class="form-control col-sm-8" value="<?php echo $dthoai;?>" >
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="form-inline">
                                 <label for="ipSdt" class="col-sm-4">Email</label>
-                                <input type="text" name="email" id="ipSdt" class="form-control col-sm-8" placeholder="Nhập email" >
+                                <input type="text" name="email" id="ipSdt" class="form-control col-sm-8" value="<?php echo $phremail;?>" >
                             </div>
                         </div>
                         <div id="myErr"></div>
-                        <button type="submit" class="btn btn-success btn-block" id="btnSignUp" value="SignUp" name="dangky">Sửa</button>
+                        <button type="submit" class="btn btn-success btn-block" id="btnSignUp" value="SignUp" name="EditUser">Sửa</button>
                         
                     </form>
                 </div>
