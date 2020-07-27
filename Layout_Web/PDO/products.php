@@ -144,6 +144,19 @@ EOD;
 
         <div class=""><img src="https://demo.goodlayers.com/inteco/wp-content/uploads/2018/09/shutterstock_543421996.jpg" alt="" class=" img-fluid-1"></div>
     </div>
+
+
+
+    
+<script>$(document).ready(function() {
+
+var $search = $("#search1").on('input', function() {
+    var matcher = new RegExp($(this).val(), 'i');
+                 $('.box').show().not(function() {
+                return matcher.test($(this).find('.name').text())
+    }).hide();
+})
+})</script>
     <!---->
     <script>
         $(window).scroll(function() {
@@ -167,7 +180,7 @@ EOD;
                         <i class="fa fa-align-justify float-md-left"></i>
                         <span>Lọc Sản Phẩm</span>
                     </div>
-                    <div></div>
+                    <div>   <input type="text" id="search1" class="form-control"  placeholder="Tiềm Kiếm" ></div>
                     <div class="box-muc">
                         <p data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample" id="muc11">
                             Loại sản phẩm
@@ -313,6 +326,7 @@ EOD;
                 </div>
             </div>
             
+          
             <div class="col-md-9 col-sm-12 col-xs-12">
                 <div class="wrapper">
                     <div class="links">
@@ -438,7 +452,7 @@ EOD;
                                                                 <p class=" text-center justify-content-center">{$row['MoTa']}</p>
                                                             </div>
                                                             <div style="margin-bottom: 10px;text-align: center; ">
-                                                                <h5>{$row['TenSanPham']}</h5>
+                                                                <h5 class="name">{$row['TenSanPham']}</h5>
                                                                 <p class=" text-center">{$gia}đ</p>
                                                             </div>
                                                         </div>
