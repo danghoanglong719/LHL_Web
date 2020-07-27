@@ -452,7 +452,7 @@ EOD;
                                                                 <p class=" text-center justify-content-center">{$row['MoTa']}</p>
                                                             </div>
                                                             <div style="margin-bottom: 10px;text-align: center; ">
-                                                                <h5 class="name"{$row['TenSanPham']}</h5>
+                                                                <h5 class="name">{$row['TenSanPham']}</h5>
                                                                 <p class=" text-center">{$gia}đ</p>
                                                             </div>
                                                         </div>
