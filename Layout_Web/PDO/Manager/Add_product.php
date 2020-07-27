@@ -38,8 +38,8 @@
     {
          if($_FILES['Hinh']['error'] == 0)
         {
-            $MaSP = $_POST['MaSP'];
-            $MaLoai = $_POST['ID'];
+    
+            $MaLoai =  $_SESSION['MaL'];
             $TenSanPham = $_POST['TenSP'];
             $GiaBan = $_POST['GiaBan'];
             $MauSac = $_POST['Color'];
@@ -48,7 +48,7 @@
                if(move_uploaded_file($_FILES['Hinh']["tmp_name"], "../../img/".$_FILES['Hinh']["name"]))
             {
 
-                $sql = "INSERT INTO `sanpham`(`MaSP` ,`MaLoai`, `TenSanPham`, `GiaBan`, `MauSac`, `VatLieu`, `MoTa`, `Hinh`) VALUES ('$MaSP','$MaLoai', '$TenSanPham', '$GiaBan',' $MauSac','$VatLieu', ' $MoTa' ,'{$_FILES['Hinh']["name"]}' )";
+                $sql = "INSERT INTO `sanpham`(`MaSP` ,`MaLoai`, `TenSanPham`, `GiaBan`, `MauSac`, `VatLieu`, `MoTa`, `Hinh`) VALUES (NULL,'$MaLoai', '$TenSanPham', '$GiaBan',' $MauSac','$VatLieu', ' $MoTa' ,'{$_FILES['Hinh']["name"]}' )";
                 $result = DataProvider::ExecuteQuery($sql);
                 if($result==true)
                 {
@@ -72,16 +72,17 @@
                 <div class="col-md-4 col-sm-3 col-xs-12"></div>
                 <div class="col-md-4 col-sm-6 col-xs-12 border border-success rounded" style="padding:20px">
                     <form class="form-container " id="formLogin" method="POST" enctype="multipart/form-data">
-                        <h2 align="center">Thêm Sản Phẩm</h2>
+                        <h2 style="text-align:center">Thêm Sản Phẩm</h2>
                         <div class="form-group">
                             <div class="form-inline">
                                 <label for="optMaLoai" class="col-sm-4">Mã Loại</label>
                                 <select id="optMaLoai" class="form-control col-sm-8">
                                     <?php
                                         include_once("../DataProvider.php");
-                                        $sql = "SELECT MaLoai, TenLoai FROM loaisp";
+                                        $sql = "SELECT * FROM loaisp";
                                         $query = DataProvider::ExecuteQuery($sql);
                                         while ($row = $query -> fetch()){
+                                            $_SESSION['MaL'] = $row['MaLoai'];
                                             echo "<option value={$row['MaLoai']}> {$row['TenLoai']} </option>";
                                         }
                                     ?>  
