@@ -39,7 +39,7 @@
                         <div class="form-group">
                             <div class="form-inline">
                                 <label for="ipFirstname" class="col-sm-4">Họ Tên</label>
-                                <input type="text" name="firstname" id="ipFirstname" class="form-control col-sm-8" placeholder="Họ">
+                                <input type="text" name="firstname" id="ipFirstname" class="form-control col-sm-8" placeholder="Họ Tên">
                             </div>
                         </div>
                         <div class="form-group">
@@ -62,8 +62,8 @@
                         </div>
                         <div class="form-group">
                             <div class="form-inline">
-                                <label for="ipSdt" class="col-sm-4">Địa Chỉ</label>
-                                <input type="text" name="address" id="ipSdt" class="form-control col-sm-8" placeholder="Nhập địa chỉ" >
+                                <label for="ipDiaChi" class="col-sm-4">Địa Chỉ</label>
+                                <input type="text" name="address" id="ipDiaChi" class="form-control col-sm-8" placeholder="Nhập địa chỉ" >
                             </div>
                         </div>
                         <div class="form-group">
@@ -74,8 +74,8 @@
                         </div>
                         <div class="form-group">
                             <div class="form-inline">
-                                <label for="ipSdt" class="col-sm-4">Email</label>
-                                <input type="text" name="email" id="ipSdt" class="form-control col-sm-8" placeholder="Nhập email" >
+                                <label for="ipEmail" class="col-sm-4">Email</label>
+                                <input type="text" name="email" id="ipEmail" class="form-control col-sm-8" placeholder="Nhập email" >
                             </div>
                         </div>
                         <div id="myErr"></div>

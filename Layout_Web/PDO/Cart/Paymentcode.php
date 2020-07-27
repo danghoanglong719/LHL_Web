@@ -11,6 +11,7 @@ try{
     $dbh->beginTransaction();
     
     if(isset($_POST['payment']) && isset($_SESSION['dangnhap'])){
+        if(isset($_POST['name']) && isset($_POST['telephone']) && isset($_POST['tinh']) && isset($_POST['quan']) && isset($_POST['phuong']) && isset($_POST['diachi']) ){
         $name = $_POST['name'];
         $telephone = $_POST['telephone'];
         $tinh = $_POST['tinh'];
@@ -31,7 +32,9 @@ try{
             $dbh->query($sqlCTHD);
         }
         $dbh->commit();
-	    unset($_SESSION['Cart']);
+        unset($_SESSION['Cart']);
+        }
+        header("location: ../home.php");
     }
 }catch(Exception $ex){
 	$dbh->rollBack();

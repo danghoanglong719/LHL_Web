@@ -16,13 +16,13 @@
                 while( $row = $result->fetch()){
                     if($username == $row['TenDN'] && $password == $row['MatKhau']){ 
                         $_SESSION['dangnhap'] = $row['HoTen'];
+                        $_SESSION['makh'] = $row['MaKH'];
+                            $_SESSION['sdt'] = $row['DienThoai'];
+                            $_SESSION['diachi'] = $row['DiaChi'];
                         if(isset($_SESSION['dangnhap']) && isset($_SESSION['Cart'])) {
                             header("location:./Cart/Giohang.php");
                         }
                         else{
-                            $_SESSION['makh'] = $row['MaKH'];
-                            $_SESSION['sdt'] = $row['DienThoai'];
-                            $_SESSION['diachi'] = $row['DiaChi'];
                             header("location:home.php");
                         }
                     }

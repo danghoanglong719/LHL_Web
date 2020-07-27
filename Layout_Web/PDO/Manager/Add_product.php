@@ -36,10 +36,9 @@
     //var_dump($_GET['edit']);exit;
     if(isset($_POST['create']) )
     {
-         if($_FILES['Hinh']['error'] == 0)
+        if($_FILES['Hinh']['error'] == 0)
         {
-            $MaSP = $_POST['MaSP'];
-            $MaLoai = $_POST['ID'];
+            $MaLoai = $_POST['MaLoai'];
             $TenSanPham = $_POST['TenSP'];
             $GiaBan = $_POST['GiaBan'];
             $MauSac = $_POST['Color'];
@@ -48,7 +47,7 @@
                if(move_uploaded_file($_FILES['Hinh']["tmp_name"], "../../img/".$_FILES['Hinh']["name"]))
             {
 
-                $sql = "INSERT INTO `sanpham`(`MaSP` ,`MaLoai`, `TenSanPham`, `GiaBan`, `MauSac`, `VatLieu`, `MoTa`, `Hinh`) VALUES ('$MaSP','$MaLoai', '$TenSanPham', '$GiaBan',' $MauSac','$VatLieu', ' $MoTa' ,'{$_FILES['Hinh']["name"]}' )";
+                $sql = "INSERT INTO `sanpham`(`MaLoai`, `TenSanPham`, `GiaBan`, `MauSac`, `VatLieu`, `MoTa`, `Hinh`) VALUES ('$MaLoai', '$TenSanPham', '$GiaBan',' $MauSac','$VatLieu', ' $MoTa' ,'{$_FILES['Hinh']["name"]}' )";
                 $result = DataProvider::ExecuteQuery($sql);
                 if($result==true)
                 {
@@ -76,13 +75,13 @@
                         <div class="form-group">
                             <div class="form-inline">
                                 <label for="optMaLoai" class="col-sm-4">Mã Loại</label>
-                                <select id="optMaLoai" class="form-control col-sm-8">
+                                <select id="optMaLoai" name="MaLoai" class="form-control col-sm-8">
                                     <?php
                                         include_once("../DataProvider.php");
                                         $sql = "SELECT MaLoai, TenLoai FROM loaisp";
                                         $query = DataProvider::ExecuteQuery($sql);
                                         while ($row = $query -> fetch()){
-                                            echo "<option value={$row['MaLoai']}> {$row['TenLoai']} </option>";
+                                            echo "<option value={$row['MaLoai']} name='ID'> {$row['TenLoai']} </option>";
                                         }
                                     ?>  
                                 </select>

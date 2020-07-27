@@ -130,12 +130,13 @@
 				tinh:{required:true,},
 				quan:{required:true,},
 				phuong:{required:true,},
-				diachi:{require:true}
+				diachi:{required:true}
 			},
 			messages:{
 				name:{required:"Vui lòng nhập Họ tên",},
 				telephone:{	required:"Vui lòng nhập Số điện thoại",
-							digits:"Vui lòng nhập số điện thoại hợp lệ"},
+							digits:"Vui lòng nhập số điện thoại hợp lệ",
+							rangelength:"Vui lòng nhập số điện thoại hợp lệ"},
 				tinh:{required:"Vui lòng nhập Tỉnh",},
 				quan:{required:"Vui lòng nhập Quận",},
 				phuong:{required:"Vui lòng nhập Phường",},
@@ -145,6 +146,7 @@
 	})
 </script>
 <script>
+/*
 	$(document).ready(function() {
 		$(".create-update").click(function(){
 			Swal.fire({
@@ -156,6 +158,7 @@
 			})
 		});
 	});
+	*/
 </script>
 <!--#endregion Script-->
 </html>

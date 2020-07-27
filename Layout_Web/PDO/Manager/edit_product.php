@@ -36,7 +36,7 @@
     //var_dump($_GET['edit']);exit;
     if(isset($_GET['edit']) && isset($_POST['editproduct']))
     {   
-        $MaLoai = $_POST['ID'];
+        $MaLoai = $_POST['MaLoai'];
         $TenSanPham = $_POST['TenSP'];
         $GiaBan = $_POST['GiaBan'];
         $MauSac = $_POST['MauSac'];
@@ -45,7 +45,7 @@
         $TrangThai = $_POST['Status'];
         $Hinh = $_POST['Hinh'];
         $id= $_GET['edit'];
-        $sql = "UPDATE `sanpham` SET `MaLoai`='$MaLoai',`TenSanPham`='$TenSanPham',`GiaBan`='$GiaBan',`MauSac`='$MauSac',`VatLieu`='$VatLieu',`MoTa`='$MoTa',`Hinh`='$Hinh' where  MaSP='$id' and MaLoai ='$MaLoai' ";
+        $sql = "UPDATE `sanpham` SET `MaLoai`='$MaLoai',`TenSanPham`='$TenSanPham',`GiaBan`='$GiaBan',`MauSac`='$MauSac',`VatLieu`='$VatLieu',`MoTa`='$MoTa',`Hinh`='$Hinh',`Status`='$TrangThai' where  MaSP='$id' ";
         $result = DataProvider::ExecuteQuery($sql);
      
         if($result==true)
@@ -82,7 +82,7 @@
                 <div class="form-group">
                     <div class="form-inline">
                         <label for="ipMaLoai" class="col-sm-4">Mã loại</label>
-                        <input type="text" name="ID"  class="form-control col-sm-8"value="<?php echo $mloai;?>"  >
+                        <input type="text" name="MaLoai"  class="form-control col-sm-8"value="<?php echo $mloai;?>"  >
                     </div>
                 </div>
                 <div class="form-group">

@@ -60,7 +60,7 @@
                         <h2>Đăng ký Admin</h2>
                         <div class="form-group">
                             <div class="form-inline">
-                                <label for="ipFirstname" class="col-sm-4">HọTên</label>
+                                <label for="ipFirstname" class="col-sm-4">Họ Tên</label>
                                 <input type="text" name="firstname" id="ipFirstname" class="form-control col-sm-8" placeholder="Họ">
                             </div>
                         </div>
