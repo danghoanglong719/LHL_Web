@@ -168,12 +168,8 @@ EOD;
             <div class="col-8" id="centercot">
                 <table class="table table-hover">
                     <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Họ tên</th>
-                        <th scope="col">Tài khoản</th>
-                        <th scope="col">Địa chỉ</th>
-                        <th scope="col">SĐT</th>
-                        <th scope="col">Email</th>
+                        <th scope="col">Mã Loại</th>
+                        <th scope="col">Tên Loại</th>
                         <th scope="col" colspan="2">Thao tác</th>
                     </tr>
                     <?php
@@ -186,21 +182,17 @@ EOD;
 							$trang = 1;
 						}
 						$from = ($trang - 1) * $sosp1trang;
-                        $sql = "SELECT * FROM khachhang LIMIT $from,$sosp1trang";
+                        $sql = "SELECT * FROM loaisp LIMIT $from,$sosp1trang";
                         $result = DataProvider::ExecuteQuery($sql);
                         while($row = $result->fetch())
                         {              
                     ?>
                     <tr>
-                        <td><?= $row['MaKH'] ?></td>
-                        <td><?= $row['HoTen'] ?></td>
-                        <td><?= $row['TenDN'] ?></td>
-                        <td><?= $row['DiaChi'] ?></td>
-                        <td><?= "0".$row['DienThoai'] ?></td>
-                        <td><?= $row['Email'] ?></td>
+                        <td><?= $row['MaLoai'] ?></td>
+                        <td><?= $row['TenLoai'] ?></td>
                         
-                        <td><a href="QuanLyAccount.php?delete=<?= $row['MaKH'] ?> "onclick="return confirm('Bạn Có Chắc Muốn Xóa');" >Xóa</a></td>
-                        <td><a href="edit_user.php?edit=<?= $row['MaKH'] ?> " >Sửa</a></td>
+                        <td><a href="QuanLyLoaiSP.php?delete=<?= $row['MaLoai'] ?> "onclick="return confirm('Bạn Có Chắc Muốn Xóa');" >Xóa</a></td>
+                        <td><a href="edit_category.php?edit=<?= $row['MaLoai'] ?> " >Sửa</a></td>
 
                     </tr>
                 
@@ -223,7 +215,7 @@ EOD;
         <div class="row pt-4" style="text-align:center;">
             <div class="col-md-12" id="phantrang">
                 <?php
-                    include_once("PTQLAccount.php");
+                    include_once("PTQLLoai.php");
                 ?>
             </div>
         </div>
@@ -262,14 +254,14 @@ EOD;
     include_once("../DataProvider.php");
     if(isset($_GET['delete']))
     {
-        $user_id = $_GET['delete'];
+        $maloai = $_GET['delete'];
         
-        $sql = "DELETE FROM `khachhang` WHERE  `MaKH` = '$user_id'";
+        $sql = "DELETE FROM `loaisp` WHERE  `MaLoai` = '$maloai'";
         $result = DataProvider::ExecuteQuery($sql);
         if($result==true)
         {
 
-                header("location:QuanLyAccount.php");
+                header("location:QuanLyLoaiSP.php");
         }
         else{
             echo "";

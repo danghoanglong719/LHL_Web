@@ -160,6 +160,7 @@ EOD;
                     <?php
                         if(isset($_SESSION['QTV'])){
                             echo '<a class="list-group-item list-group-item-action" href="Manager.php">Sản Phẩm</a>';
+                            echo '<a class="list-group-item list-group-item-action" href="QuanLyLoaiSP.php">Loại Sản Phẩm</a>';
                         }
                     ?>
                     <?php
@@ -180,12 +181,20 @@ EOD;
             <div class="col-md-2 col-sm-3 col-xs-12" id="rightcot">
                 <table class="table table-hover">
                     <tr><td scope="col" ><a href="Add_product.php"> <input type="button" class="btn btn-success btn-block"  value="Thêm Sản phẩm"></a></td></tr>
+                    <tr><td scope="col" ><a href="Add_category.php"> <input type="button" class="btn btn-success btn-block"  value="Thêm Loại"></a></td></tr>
                     <?php
                         if($_SESSION['QTV'] == 'Admin_1'){
                             echo '<tr><td scope="col" ><a href="../dangkyAdmin.php"> <input type="button" class="btn btn-success btn-block"  value="Thêm Admin"></a></td></tr>';
                         }
                     ?>
                 </table>
+            </div>
+        </div>
+        <div class="row pt-4" style="text-align:center;">
+            <div class="col-md-12" id="phantrang">
+                <?php
+                    include_once("PTManager.php");
+                ?>
             </div>
         </div>
     </div>
@@ -216,6 +225,7 @@ EOD;
         }
     });
 </script>
+
 <!---->
 </body>
 

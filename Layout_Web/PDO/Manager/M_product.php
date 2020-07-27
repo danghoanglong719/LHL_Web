@@ -14,8 +14,16 @@
 				                <th scope="col" colspan="2">Thao tác</th> 
 				            </tr>
 				    <?php
-				        include_once("../DataProvider.php");
-				        $sql = "SELECT * FROM sanpham";
+						include_once("../DataProvider.php");
+						$sosp1trang = 10;
+						if(isset($_GET['page'])){
+							$trang = $_GET['page'];
+							settype($trang, "int");
+						}else{
+							$trang = 1;
+						}
+						$from = ($trang - 1) * $sosp1trang;
+						$sql = "SELECT * FROM sanpham LIMIT $from, $sosp1trang";
 				         $result = DataProvider::ExecuteQuery($sql);
 				            while($row = $result->fetch())
 				                 {
@@ -53,20 +61,20 @@
 
 
     include_once("../DataProvider.php");
-     if(isset($_GET['id']))
-     {
-                $product_id = $_GET['id'];
-               
-                $sql = "DELETE FROM `sanpham` WHERE  `MaSP` = '$product_id'";
-                $result = DataProvider::ExecuteQuery($sql);
-                if($result==true)
-                {
-                    header("location:Manager.php");
-                }
-                else{
-                    echo "that bai";
-                }
-     }
+	if(isset($_GET['id']))
+	{
+		$product_id = $_GET['id'];
+		
+		$sql = "DELETE FROM `sanpham` WHERE  `MaSP` = '$product_id'";
+		$result = DataProvider::ExecuteQuery($sql);
+		if($result==true)
+		{
+			header("location:Manager.php");
+		}
+		else{
+			echo "that bai";
+		}
+	}
                 
 
 ?>

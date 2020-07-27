@@ -152,6 +152,7 @@ EOD;
                     <?php
                         if(isset($_SESSION['QTV'])){
                             echo '<a class="list-group-item list-group-item-action" href="Manager.php">Sản Phẩm</a>';
+                            echo '<a class="list-group-item list-group-item-action" href="QuanLyLoaiSP.php">Loại Sản Phẩm</a>';
                         }
                     ?>
                     <?php
@@ -179,18 +180,18 @@ EOD;
                     </tr>
                     <?php
                         include_once("../DataProvider.php");
-                        $sql = "SELECT * FROM `admin`";
+                        $sosp1trang = 10;
+						if(isset($_GET['page'])){
+							$trang = $_GET['page'];
+							settype($trang, "int");
+						}else{
+							$trang = 1;
+						}
+						$from = ($trang - 1) * $sosp1trang;
+                        $sql = "SELECT * FROM `admin` LIMIT $from,$sosp1trang";
                         $result = DataProvider::ExecuteQuery($sql);
                         while($row = $result->fetch())
-                        {
-                        $_SESSION['MaKH'] =$row['id_admin'];
-                        $_SESSION['HoTen'] =$row['HoTenAdmin'];
-                        $_SESSION['TenDN'] =$row['TaiKhoan'];
-                        $_SESSION['DiaChi'] =$row['DiaChi'];
-                        $_SESSION['DienThoai'] =$row['DienThoai'] ;
-                        $_SESSION['Email'] =$row['Email'];     
-                        $_SESSION['status'] =$row['Status'];  
-                        $_SESSION['pass'] =$row['MatKhau'];               
+                        {             
                     ?>
                     <tr>
                         <td><?= $row['id_admin'] ?></td>
@@ -215,12 +216,20 @@ EOD;
             <div class="col-md-2 col-sm-3 col-xs-12" id="rightcot">
                 <table class="table table-hover">
                     <tr><td scope="col" ><a href="Add_product.php"> <input type="button" class="btn btn-success btn-block"  value="Thêm Sản phẩm"></a></td></tr>
+                    <tr><td scope="col" ><a href="Add_category.php"> <input type="button" class="btn btn-success btn-block"  value="Thêm Loại"></a></td></tr>
                     <?php
                         if($_SESSION['QTV'] == 'Admin_1'){
                             echo '<tr><td scope="col" ><a href="../dangkyAdmin.php"> <input type="button" class="btn btn-success btn-block"  value="Thêm Admin"></a></td></tr>';
                         }
                     ?>
                 </table>
+            </div>
+        </div>
+        <div class="row pt-4" style="text-align:center;">
+            <div class="col-md-12" id="phantrang">
+                <?php
+                    include_once("PTQLAdmin.php");
+                ?>
             </div>
         </div>
     </div>
