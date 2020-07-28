@@ -5,99 +5,88 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
+ <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Đăng nhập</title>
+<link rel="stylesheet" type="text/css" href="../css/SignUp.css">
   <link rel="stylesheet" type="text/css" href="../bootstrap-4.4.1-dist/css/bootstrap.css">
-<style>
-body {font-family: Arial, Helvetica, sans-serif;}
-form {border: 3px solid #f1f1f1;}
-
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
-
-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-}
-
-button:hover {
-  opacity: 0.8;
-}
-
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
-}
-
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
-}
-
-img.avatar {
-  width: 40%;
-  border-radius: 50%;
-}
-
-.container {
-  padding: 16px;
-}
-
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-     display: block;
-     float: none;
+  <style type="text/css">    
+    label.error {   color:red;}
+    input.error {   color:red;}
+    #formdangnhap{
+    border: 1px solid white;
+    padding:40px 40px;
+    border-radius: 10px;
+    margin-top: 12vh;
+    -webkit-box-shadow: 0px 0px 15px 15px rgba(0,0,0,0.74);
+    -moz-box-shadow: 0px 0px 15px 15px rgba(0,0,0,0.74);
+    box-shadow: 0px 0px 15px 15px rgba(0,0,0,0.74);
+    color: #212529;
+    background: rgba(234, 252, 255, 0.815);
   }
-  .cancelbtn {
-     width: 100%;
+  #formdangnhap label:last-child{
+      padding-left: 20px;
   }
-}
-</style>
+  #btndangnhap{
+      margin-top: 10px;
+  }
+  </style>
 </head>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jquery/jquery-3.5.0.min.js"></script>
+<script src="../js/jQueryValidation1.19.1/jquery.validate.js"></script>
 <body>
-
-<h2 align="center">Đăng nhập </h2>
-
-<form method="post">
-  <div class="container-fluid bg"> 
+  <div div class="container-fluid bg"> 
     <div class="row">
       <div class="col-md-4 col-sm-3 col-xs-12"></div>
       <div class="col-md-4 col-sm-6 col-xs-12">
-        <?php
-          include_once("logincode.php");
-        ?>
-        <label for="uname"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="uname" required>
-        <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
-        <label for="psw"><b>User</b></label>
-        <input type="radio"  name="radio"  value="0" required checked>
-        <label for="psw"><b>Admin</b></label>
-        <input type="radio"  name="radio" value="1" required>
-        <button type="submit" name="dangnhap">Login</button>
+        <form class="form-container" id="formdangnhap" method="POST">
+          <h2>Đăng nhập</h2>
+          <?php
+              include_once("logincode.php");
+          ?>
+          <div class="form-group">
+            <div class="form-inline">
+              <label for="uname" class="col-sm-4">Tài khoản</label>
+              <input type="text" name="uname" id="uname" class="form-control col-sm-8" placeholder="Nhập tài khoản">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-inline">
+              <label for="psw" class="col-sm-4">Mật khẩu</label>
+              <input type="password" name="psw" id="psw" class="form-control col-sm-8" placeholder="Nhập mật khẩu">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-inline">
+              <div class="col-sm-4"></div>
+                <label for="user"><b>User</b></label>
+                <input type="radio"  name="radio" id="user" value="0" required checked>
+                <label for="admin" class ="ml-3"><b>Admin</b></label>
+                <input type="radio"  name="radio" id="admin" value="1" required>
+            </div>
+          </div>
+          <div id="myErr"></div>
+          <button type="submit" class="btn btn-success btn-block" id="btndangnhap"  name="dangnhap">Đăng nhập</button>
+          
+        </form>
       </div>
-      <div class="col-md-4 col-sm-3 col-xs-12"></div>
-    </div>  
+    </div>
   </div>
-</form>
-
-
 </body>
+<script>
+    $(document).ready(function(){
+        $('#formdangnhap').validate({
+            rules: {
+              uname:{required:true},
+              psw:{required:true},
+            },
+            messages:{
+              uname:{required:"Vui lòng nhập tài khoản",},
+              psw:{required:"Vui lòng nhập mật khẩu",},
+            },
+        });
+    })
+</script>
 </html>

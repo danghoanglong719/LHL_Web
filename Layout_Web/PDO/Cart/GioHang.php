@@ -103,7 +103,7 @@ include_once("MyCart.php");
                                     </div>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="../Manager/Manager.php"><span></span>Quản Lý</a>
-                                    <a class="dropdown-item" href=""><span></span>Đổi mật khẩu</a>
+                                    <a class="dropdown-item" href="../DoiMatKhau.php"><span></span>Đổi mật khẩu</a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="../logoutcode.php"><span></span>Đăng xuất</a>
 EOD;
@@ -117,7 +117,7 @@ EOD;
                                     </div>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href=""><span></span>Thông tin</a>
-                                    <a class="dropdown-item" href=""><span></span>Đổi mật khẩu</a>
+                                    <a class="dropdown-item" href="../DoiMatKhau.php"><span></span>Đổi mật khẩu</a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="../logoutcode.php"><span></span>Đăng xuất</a>
 EOD;

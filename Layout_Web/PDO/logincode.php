@@ -7,7 +7,7 @@
         $password = $_POST['psw'];
         if(empty($username) || empty($password))
         {
-            echo '<p>Xin Nhập Đầy Đủ</P>';
+            echo "<p style='color:red'>*Vui lòng nhập đầy đủ thông tin</P>";
         }
         else {
             if($radioval == "0"){
@@ -17,8 +17,8 @@
                     if($username == $row['TenDN'] && $password == $row['MatKhau']){ 
                         $_SESSION['dangnhap'] = $row['HoTen'];
                         $_SESSION['makh'] = $row['MaKH'];
-                            $_SESSION['sdt'] = $row['DienThoai'];
-                            $_SESSION['diachi'] = $row['DiaChi'];
+                        $_SESSION['sdt'] = $row['DienThoai'];
+                        $_SESSION['diachi'] = $row['DiaChi'];
                         if(isset($_SESSION['dangnhap']) && isset($_SESSION['Cart'])) {
                             header("location:./Cart/Giohang.php");
                         }
