@@ -153,6 +153,7 @@ EOD;
                         if(isset($_SESSION['QTV'])){
                             echo '<a class="list-group-item list-group-item-action" href="Manager.php">Sản Phẩm</a>';
                             echo '<a class="list-group-item list-group-item-action" href="QuanLyLoaiSP.php">Loại Sản Phẩm</a>';
+                            echo '<a class="list-group-item list-group-item-action" href="QuanLyHoaDon.php">Hóa Đơn</a>';
                         }
                     ?>
                     <?php

@@ -169,13 +169,12 @@ EOD;
             <div class="col-8" id="centercot">
                 <table class="table table-hover">
                     <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Họ tên</th>
-                        <th scope="col">Tài khoản</th>
-                        <th scope="col">Địa chỉ</th>
-                        <th scope="col">SĐT</th>
-                        <th scope="col">Email</th>
-                        <th scope="col" colspan="2">Thao tác</th>
+                        <th scope="col">Mã hóa đơn</th>
+                        <th scope="col">Ngày đặt</th>
+                        <th scope="col">Nơi giao</th>
+                        <th scope="col">Mã khách hàng</th>
+                        <th scope="col">Tình trạng</th>
+                        <th scope="col">Thao tác</th>
                     </tr>
                     <?php
                         include_once("../DataProvider.php");
@@ -187,22 +186,18 @@ EOD;
 							$trang = 1;
 						}
 						$from = ($trang - 1) * $sosp1trang;
-                        $sql = "SELECT * FROM khachhang LIMIT $from,$sosp1trang";
+                        $sql = "SELECT * FROM hoadon ORDER BY MaHD DESC LIMIT $from,$sosp1trang";
                         $result = DataProvider::ExecuteQuery($sql);
                         while($row = $result->fetch())
                         {              
                     ?>
                     <tr>
+                        <td><?= $row['MaHD'] ?></td>
+                        <td><?= $row['NgayDat'] ?></td>
+                        <td><?= $row['NoiGiao'] ?></td>
                         <td><?= $row['MaKH'] ?></td>
-                        <td><?= $row['HoTen'] ?></td>
-                        <td><?= $row['TenDN'] ?></td>
-                        <td><?= $row['DiaChi'] ?></td>
-                        <td><?= "0".$row['DienThoai'] ?></td>
-                        <td><?= $row['Email'] ?></td>
-                        
-                        <td><a href="QuanLyAccount.php?delete=<?= $row['MaKH'] ?> "onclick="return confirm('Bạn Có Chắc Muốn Xóa');" >Xóa</a></td>
-                        <td><a href="edit_user.php?edit=<?= $row['MaKH'] ?> " >Sửa</a></td>
-
+                        <td><?= $row['TinhTrang'] ?></td>
+                        <td><a href="cthoadon.php?id=<?= $row['MaHD'] ?> " >Chi tiết</a></td>
                     </tr>
                 
                     <?php }?>
@@ -224,7 +219,7 @@ EOD;
         <div class="row pt-4" style="text-align:center;">
             <div class="col-md-12" id="phantrang">
                 <?php
-                    include_once("PTQLAccount.php");
+                    include_once("PTQLHoaDon.php");
                 ?>
             </div>
         </div>
@@ -257,28 +252,6 @@ EOD;
     });
 </script>
 <!---->
-    <?php
-
-
-    include_once("../DataProvider.php");
-    if(isset($_GET['delete']))
-    {
-        $user_id = $_GET['delete'];
-        
-        $sql = "DELETE FROM `khachhang` WHERE  `MaKH` = '$user_id'";
-        $result = DataProvider::ExecuteQuery($sql);
-        if($result==true)
-        {
-
-                header("location:QuanLyAccount.php");
-        }
-        else{
-            echo "";
-        }
-    }
-                
-
-?>
 
 </body>
 
