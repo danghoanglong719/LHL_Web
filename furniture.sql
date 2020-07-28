@@ -2,10 +2,10 @@
 -- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th7 28, 2020 lúc 04:01 AM
--- Phiên bản máy phục vụ: 10.4.11-MariaDB
--- Phiên bản PHP: 7.4.4
+-- Host: 127.0.0.1
+-- Generation Time: Jul 28, 2020 at 05:09 PM
+-- Server version: 10.4.13-MariaDB
+-- PHP Version: 7.4.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `furniture`
+-- Database: `furniture`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `admin`
+-- Table structure for table `admin`
 --
 
 CREATE TABLE `admin` (
@@ -40,7 +40,7 @@ CREATE TABLE `admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `admin`
+-- Dumping data for table `admin`
 --
 
 INSERT INTO `admin` (`id_admin`, `HoTenAdmin`, `TaiKhoan`, `MatKhau`, `DiaChi`, `DienThoai`, `Email`, `Level`, `Status`) VALUES
@@ -50,7 +50,7 @@ INSERT INTO `admin` (`id_admin`, `HoTenAdmin`, `TaiKhoan`, `MatKhau`, `DiaChi`, 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `chitiethd`
+-- Table structure for table `chitiethd`
 --
 
 CREATE TABLE `chitiethd` (
@@ -61,27 +61,22 @@ CREATE TABLE `chitiethd` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `chitiethd`
+-- Dumping data for table `chitiethd`
 --
 
 INSERT INTO `chitiethd` (`SoDH`, `MaSP`, `MaHD`, `SoLuong`) VALUES
-(2, 3, 1, 2),
-(3, 5, 5, 1),
-(5, 7, 8, 1),
-(6, 7, 9, 1),
-(7, 9, 9, 1),
-(10, 3, 12, 1),
-(11, 7, 12, 1),
-(24, 7, 20, 1),
-(25, 3, 20, 1),
-(26, 8, 20, 1),
-(27, 9, 20, 1),
-(28, 7, 22, 1);
+(53, 28, 28, 1),
+(54, 34, 28, 1),
+(55, 37, 28, 1),
+(56, 39, 28, 1),
+(63, 31, 32, 1),
+(64, 36, 32, 1),
+(65, 36, 33, 1);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `hoadon`
+-- Table structure for table `hoadon`
 --
 
 CREATE TABLE `hoadon` (
@@ -89,26 +84,25 @@ CREATE TABLE `hoadon` (
   `NgayDat` datetime NOT NULL,
   `NoiGiao` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `MaKH` int(11) NOT NULL,
-  `TinhTrang` enum('Mới đặt','Đã thanh toán','Đã giao hàng','Hủy đơn hàng') COLLATE utf8_unicode_ci NOT NULL
+  `TinhTrang` enum('Mới đặt','Đã thanh toán','Đã giao hàng','Hủy đơn hàng') COLLATE utf8_unicode_ci NOT NULL,
+  `HoTenhd` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `Emailhd` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `DienThoaihd` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `hoadon`
+-- Dumping data for table `hoadon`
 --
 
-INSERT INTO `hoadon` (`MaHD`, `NgayDat`, `NoiGiao`, `MaKH`, `TinhTrang`) VALUES
-(1, '2020-07-24 17:49:38', ', , , ', 12, 'Mới đặt'),
-(5, '2020-07-24 17:55:43', '123123, ádasd, qưeqwe, ấ', 12, 'Mới đặt'),
-(8, '2020-07-24 20:05:07', ', , , ', 12, 'Mới đặt'),
-(9, '2020-07-24 20:31:01', ', , , ', 12, 'Mới đặt'),
-(12, '2020-07-25 13:10:01', ', , , ', 12, 'Mới đặt'),
-(20, '2020-07-27 16:00:47', '123123, 123123, 1123, ád', 12, 'Mới đặt'),
-(22, '2020-07-27 16:02:23', ', , , ', 12, 'Mới đặt');
+INSERT INTO `hoadon` (`MaHD`, `NgayDat`, `NoiGiao`, `MaKH`, `TinhTrang`, `HoTenhd`, `Emailhd`, `DienThoaihd`) VALUES
+(28, '2020-07-28 19:13:48', '783 ADV, P2, Q5, TP HCM', 12, 'Mới đặt', 'Loc Tran', NULL, 382944169),
+(32, '2020-07-28 21:18:14', '783 CMT8, 54, 2323, 144', 12, 'Mới đặt', 'Loc Tran', NULL, 382944169),
+(33, '2020-07-28 21:28:47', '783 CMT8, 6, 5, 2', 12, 'Mới đặt', 'Loc Tran', NULL, 382944169);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `khachhang`
+-- Table structure for table `khachhang`
 --
 
 CREATE TABLE `khachhang` (
@@ -122,7 +116,7 @@ CREATE TABLE `khachhang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `khachhang`
+-- Dumping data for table `khachhang`
 --
 
 INSERT INTO `khachhang` (`MaKH`, `TenDN`, `MatKhau`, `HoTen`, `DiaChi`, `DienThoai`, `Email`) VALUES
@@ -138,7 +132,7 @@ INSERT INTO `khachhang` (`MaKH`, `TenDN`, `MatKhau`, `HoTen`, `DiaChi`, `DienTho
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `loaisp`
+-- Table structure for table `loaisp`
 --
 
 CREATE TABLE `loaisp` (
@@ -147,7 +141,7 @@ CREATE TABLE `loaisp` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `loaisp`
+-- Dumping data for table `loaisp`
 --
 
 INSERT INTO `loaisp` (`MaLoai`, `TenLoai`) VALUES
@@ -159,7 +153,7 @@ INSERT INTO `loaisp` (`MaLoai`, `TenLoai`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `sanpham`
+-- Table structure for table `sanpham`
 --
 
 CREATE TABLE `sanpham` (
@@ -175,7 +169,7 @@ CREATE TABLE `sanpham` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `sanpham`
+-- Dumping data for table `sanpham`
 --
 
 INSERT INTO `sanpham` (`MaSP`, `MaLoai`, `TenSanPham`, `GiaBan`, `MauSac`, `VatLieu`, `MoTa`, `Hinh`, `Status`) VALUES
@@ -214,7 +208,7 @@ INSERT INTO `sanpham` (`MaSP`, `MaLoai`, `TenSanPham`, `GiaBan`, `MauSac`, `VatL
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `xemganday`
+-- Table structure for table `xemganday`
 --
 
 CREATE TABLE `xemganday` (
@@ -224,17 +218,17 @@ CREATE TABLE `xemganday` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Chỉ mục cho các bảng đã đổ
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `admin`
+-- Indexes for table `admin`
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`id_admin`);
 
 --
--- Chỉ mục cho bảng `chitiethd`
+-- Indexes for table `chitiethd`
 --
 ALTER TABLE `chitiethd`
   ADD PRIMARY KEY (`SoDH`),
@@ -242,103 +236,103 @@ ALTER TABLE `chitiethd`
   ADD KEY `fk_chitiethd_masp` (`MaSP`) USING BTREE;
 
 --
--- Chỉ mục cho bảng `hoadon`
+-- Indexes for table `hoadon`
 --
 ALTER TABLE `hoadon`
   ADD PRIMARY KEY (`MaHD`),
   ADD KEY `fk_hoadon_makh` (`MaKH`) USING BTREE;
 
 --
--- Chỉ mục cho bảng `khachhang`
+-- Indexes for table `khachhang`
 --
 ALTER TABLE `khachhang`
   ADD PRIMARY KEY (`MaKH`);
 
 --
--- Chỉ mục cho bảng `loaisp`
+-- Indexes for table `loaisp`
 --
 ALTER TABLE `loaisp`
   ADD PRIMARY KEY (`MaLoai`);
 
 --
--- Chỉ mục cho bảng `sanpham`
+-- Indexes for table `sanpham`
 --
 ALTER TABLE `sanpham`
   ADD PRIMARY KEY (`MaSP`) USING BTREE,
   ADD KEY `fk_sp_loaisp` (`MaLoai`) USING BTREE;
 
 --
--- Chỉ mục cho bảng `xemganday`
+-- Indexes for table `xemganday`
 --
 ALTER TABLE `xemganday`
   ADD KEY `fk_xgd_masp` (`MaSP`) USING BTREE,
   ADD KEY `fk_xgd_makh` (`MaKH`) USING BTREE;
 
 --
--- AUTO_INCREMENT cho các bảng đã đổ
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT cho bảng `admin`
+-- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
   MODIFY `id_admin` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT cho bảng `chitiethd`
+-- AUTO_INCREMENT for table `chitiethd`
 --
 ALTER TABLE `chitiethd`
-  MODIFY `SoDH` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `SoDH` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
 
 --
--- AUTO_INCREMENT cho bảng `hoadon`
+-- AUTO_INCREMENT for table `hoadon`
 --
 ALTER TABLE `hoadon`
-  MODIFY `MaHD` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `MaHD` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
--- AUTO_INCREMENT cho bảng `khachhang`
+-- AUTO_INCREMENT for table `khachhang`
 --
 ALTER TABLE `khachhang`
   MODIFY `MaKH` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- AUTO_INCREMENT cho bảng `loaisp`
+-- AUTO_INCREMENT for table `loaisp`
 --
 ALTER TABLE `loaisp`
   MODIFY `MaLoai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
--- AUTO_INCREMENT cho bảng `sanpham`
+-- AUTO_INCREMENT for table `sanpham`
 --
 ALTER TABLE `sanpham`
   MODIFY `MaSP` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
--- Các ràng buộc cho các bảng đã đổ
+-- Constraints for dumped tables
 --
 
 --
--- Các ràng buộc cho bảng `chitiethd`
+-- Constraints for table `chitiethd`
 --
 ALTER TABLE `chitiethd`
   ADD CONSTRAINT `fk_chitiethd_hoadon` FOREIGN KEY (`MaHD`) REFERENCES `hoadon` (`MaHD`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_chitiethd_masp` FOREIGN KEY (`MaSP`) REFERENCES `sanpham` (`MaSP`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `hoadon`
+-- Constraints for table `hoadon`
 --
 ALTER TABLE `hoadon`
   ADD CONSTRAINT `fk_hoadon_makh` FOREIGN KEY (`MaKH`) REFERENCES `khachhang` (`MaKH`) ON DELETE NO ACTION ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `sanpham`
+-- Constraints for table `sanpham`
 --
 ALTER TABLE `sanpham`
   ADD CONSTRAINT `fk_sp_loaisp` FOREIGN KEY (`MaLoai`) REFERENCES `loaisp` (`MaLoai`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `xemganday`
+-- Constraints for table `xemganday`
 --
 ALTER TABLE `xemganday`
   ADD CONSTRAINT `fk_xgd_makh` FOREIGN KEY (`MaKH`) REFERENCES `khachhang` (`MaKH`) ON DELETE CASCADE ON UPDATE CASCADE,
