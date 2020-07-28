@@ -262,9 +262,9 @@ EOD;
     }
 ?>
 
-    <div class="contain-preview">
+   <div class="container mt-5">
          <h3>Xem Gần Đây</h3>
-         <ul>
+        <div style="display: flex;">
             <?php if (isset($_SESSION['xemganday']) ) {
                 $danhsach_xem = $_SESSION['xemganday'];
                 $i = 0;
@@ -275,11 +275,22 @@ EOD;
                     $result = DataProvider::ExecuteQuery($sql);
                     $row = $result->fetch();
             ?>
-                    <li><a href="chitiet.php?id=<?php echo $row['MaSP']?>"><?php echo $row ['TenSanPham'] ?></a></li>
+                    <a href="chitiet.php?id=<?=$row['MaSP']?>" style="margin: 5px 30px">
+                        <div class="card" style="width: 10rem; padding: 0;">
+                            <div class="card-body" align="center" style="padding: 5px">
+                              <img src="../img/<?=$row['Hinh']?>" class="" height="50%" width="70%" alt="...">
+
+                                <h5 class="card-title"><?=$row['TenSanPham']?></h5>
+                                <p class="card-text"><?=number_format($row['GiaBan'])?>đ.</p>          
+                              </div>
+                            </div>
+                  </a>
+                   
+
                     <?php }
             }?>
-        </ul>
-
+    
+        </div>
     </div>
     <!---->
     <div class="mt-5 " style="background-color:rgb(24, 6, 6); border: none;padding: 10px;box-shadow: 5px 10px 8px 10px #888888; ">
