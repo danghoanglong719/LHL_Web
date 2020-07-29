@@ -39,17 +39,16 @@
             $diachi = $_POST['address'];
             $sdt   = $_POST['sdt'];
             $email  = $_POST['email'];
-            $Level  = $_POST['Level'];
+            $Level  = $_POST['level'];
             $status  = $_POST['status'];
-            echo $firstname;
             $sql = "INSERT INTO `admin` (`HoTenAdmin`, `TaiKhoan`, `MatKhau`,`DiaChi`, `DienThoai`, `Email`,`Level`,`Status`)VALUES ('$firstname' , '$username' ,' $password' , '$diachi' ,'$sdt' , '$email','$Level','$status' )";
-            echo $sql;
             $result = DataProvider::ExecuteQuery($sql);
 
             if($password == $Repass)
             {
                 header("location:Manager/QuanLyAdmin.php");
             }
+            
         }
     ?>
         <div class="container-fluid bg"> 
