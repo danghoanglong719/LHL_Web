@@ -31,24 +31,6 @@
     include_once("../Cart/MyCart.php")
 ?>
 <body>
-<script>
-        function Notification()
-        {
-            return confirm('Bạn Có Chắc Muốn Thay Đổi');
-        }
-
-</script>
-<script>
-$(document).ready(function() {
-
-var $search = $("#search1").on('input', function() {
-    var matcher = new RegExp($(this).val(), 'i');
-                 $('.box').show().not(function() {
-                return matcher.test($(this).find('.name,.name0').text())
-    }).hide();
-})
-})</script>
-
     <!--modal-search-->
     <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="z-index: 123313123;">
         <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -64,7 +46,7 @@ var $search = $("#search1").on('input', function() {
     <!--#region Thanh công cụ-->
     <div class="container-fluid menu pl-0 pr-0">
         <nav class="navbar navbar-expand-md  navbar11">
-            <a class="navbar-brand " href="../home.php"><img src="../../img/LogoLHL.png" width="40px"></a>
+            <a class="navbar-brand " href="Home.html"><img src="../../img/LogoLHL.png" width="40px"></a>
             <button class="navbar-toggler btn-secondary" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                 <i class="fa fa-bars" aria-hidden="true"></i>
             </button>
@@ -72,7 +54,7 @@ var $search = $("#search1").on('input', function() {
                 <div class=" " style="margin:0px auto;">
                     <ul class="navbar-nav ">
                         <li class="nav-item">
-                            <a class="nav-link ml-2" href="../home.php">Trang Chủ <span></span></a>
+                            <a class="nav-link ml-2" href="../Home.php">Trang Chủ <span></span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link ml-2" href="#"> <span></span>Liên Hệ</a>
@@ -155,10 +137,10 @@ EOD;
         </nav>
     </div>
 
-<div class="">
-    <div class=""><img src="https://demo.goodlayers.com/inteco/wp-content/uploads/2018/09/shutterstock_543421996.jpg" alt="" class=" img-fluid-1"></div>
-</div>
-    
+ <div class="">
+        <div class=""><img src="https://demo.goodlayers.com/inteco/wp-content/uploads/2018/09/shutterstock_543421996.jpg" alt="" class=" img-fluid-1"></div>
+    </div>
+
 <div id="txtFist">
     <h1>Quản lý trang web</h1>
     <div class="container-fluid " id="managerpro">
@@ -182,33 +164,62 @@ EOD;
                     ?>
                 </div>
             </div>
+
             <!--cột giữa-->
             <div class="col-8" id="centercot">
-                <?php
-                    include_once("M_product.php");
-                ?>
-            </div>		
+                <table class="table table-hover">
+                    <tr>
+                        <th scope="col">Mã hóa đơn</th>
+                        <th scope="col">Ngày đặt</th>
+                        <th scope="col">Nơi giao</th>
+                        <th scope="col">Mã khách hàng</th>
+                        <th scope="col">Tình trạng</th>
+                        <th scope="col">Thao tác</th>
+                    </tr>
+                    <?php
+                        include_once("../DataProvider.php");
+                        $sosp1trang = 10;
+						if(isset($_GET['page'])){
+							$trang = $_GET['page'];
+							settype($trang, "int");
+						}else{
+							$trang = 1;
+						}
+						$from = ($trang - 1) * $sosp1trang;
+                        $sql = "SELECT * FROM hoadon ORDER BY MaHD DESC LIMIT $from,$sosp1trang";
+                        $result = DataProvider::ExecuteQuery($sql);
+                        while($row = $result->fetch())
+                        {              
+                    ?>
+                    <tr>
+                        <td><?= $row['MaHD'] ?></td>
+                        <td><?= $row['NgayDat'] ?></td>
+                        <td><?= $row['NoiGiao'] ?></td>
+                        <td><?= $row['MaKH'] ?></td>
+                        <td><?= $row['TinhTrang'] ?></td>
+                        <td><a href="cthoadon.php?id=<?= $row['MaHD'] ?> " >Chi tiết</a></td>
+                    </tr>
+                
+                    <?php }?>
+                </table>
+            </div>
             <!--cột phải-->
             <div class="col-md-2 col-sm-3 col-xs-12" id="rightcot">
                 <table class="table table-hover">
                     <tr><td scope="col" ><a href="Add_product.php"> <input type="button" class="btn btn-success btn-block"  value="Thêm Sản phẩm"></a></td></tr>
                     <tr><td scope="col" ><a href="Add_category.php"> <input type="button" class="btn btn-success btn-block"  value="Thêm Loại"></a></td></tr>
-                   
-                   
                     <?php
                         if($_SESSION['QTV'] == 'Admin_1'){
                             echo '<tr><td scope="col" ><a href="../dangkyAdmin.php"> <input type="button" class="btn btn-success btn-block"  value="Thêm Admin"></a></td></tr>';
                         }
                     ?>
-                     <tr><td scope="col" >  <div>   <input type="text" id="search1" class="form-control"  placeholder="search:MaLoai or TenSP" ></div></td></tr>
-                     
                 </table>
             </div>
         </div>
         <div class="row pt-4" style="text-align:center;">
             <div class="col-md-12" id="phantrang">
                 <?php
-                    include_once("PTManager.php");
+                    include_once("PTQLHoaDon.php");
                 ?>
             </div>
         </div>
@@ -240,8 +251,8 @@ EOD;
         }
     });
 </script>
-
 <!---->
+
 </body>
 
 </html>

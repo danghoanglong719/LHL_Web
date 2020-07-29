@@ -146,7 +146,6 @@
 	})
 </script>
 <script>
-/*
 	$(document).ready(function() {
 		$(".create-update").click(function(){
 			Swal.fire({
@@ -158,7 +157,6 @@
 			})
 		});
 	});
-	*/
 </script>
 <!--#endregion Script-->
 </html>

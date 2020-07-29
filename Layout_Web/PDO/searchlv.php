@@ -1,5 +1,5 @@
 <?php
-	include_once("DataProvider.php");
+    include_once("DataProvider.php");
     if(isset($_GET['search'])){
         $chuoi = $_GET['search'];
         $sql = "SELECT * FROM `sanpham` WHERE `TenSanPham` LIKE '%{$chuoi}%' GROUP BY MaSP";

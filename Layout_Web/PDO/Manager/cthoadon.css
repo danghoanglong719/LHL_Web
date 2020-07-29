@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+header {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px;
+    position: relative;
+    z-index: 1;
+    padding: 25px 0px 15px;
+    background: rgb(255, 255, 255);
+}
+header .header-container {
+    display: flex;
+    width: 1170px;
+    
+}
+.plr {
+    width: 1270px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+header .logo {
+    display: flex;
+}
+header .logo .text{
+    color: rgb(51, 51, 51);
+    font-size: 25px;
+    text-transform: capitalize;
+    font-weight: 400;
+    margin: 3px 0px 12px;
+    line-height: 50px;
+    border-left: 1px solid #333;
+    margin-left: 30px;
+    padding-left: 30px;
+}
+
+.main {
+    width: 1270px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.bill-details{
+    display: flex;
+    flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 80px;
+    border-bottom: 1px solid rgb(221, 221, 221);
+}
+.bill-inner {
+    width: 950px;
+}
+.bill-details-title {
+    color: rgb(51, 51, 51);
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin: 0px 0px 12px;
+}
+
+.bill-details-inner {
+    background:rgba(243, 243, 243, 0.486);
+    margin: 0px;
+    border-radius: 4px;
+}
+.bill-details__details {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.bill-details__detail {
+    padding: 20px;
+}
+.bill-details__inner {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.bill-details-inner table {
+    border-radius: 5px;
+}
+.bill-details-inner table th{
+    background-color: rgb(221, 221, 221);
+}
+.bill-details-inner table td{
+    text-align: right;
+    line-height: 30px;
+    padding-right: 10px;
+}
+.bill-details-inner table tr:nth-child(even){
+    background-color: rgba(255, 255, 255, 0.644);
+}
+
+.bill-total-prices {
+    width: calc(100% - 965px);
+    margin-top: 45px;
+}
+.bill-total-prices__inner {
+    position: sticky;
+    top: 75px;
+}
+.prices {
+    background: rgba(243, 243, 243, 0.486);
+    border-radius: 4px;
+}
+.prices__total {
+    display: flex;
+    flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding: 17px 20px;
+    margin: 0px;
+}
+.prices__text {
+    font-weight: 300;
+    color: rgb(51, 51, 51);
+    display: inline-block;
+}
+.prices__value--final {
+    color: rgb(255, 66, 78);
+    font-size: 22px;
+    font-weight: 400;
+    text-align: right;
+}
+.info{
+    margin-top: 20px;
+}
+.info .info-mua,.info-dat{
+    display: inline-block;
+    width: 630px;
+}
+.info table{
+    padding-left: 10px;
+    padding-right: 10%;
+    background-color: rgba(243, 243, 243, 0.486);
+    border-radius: 5px;
+}
+.info table {
+    border:1px solid rgb(221, 221, 221);
+}
