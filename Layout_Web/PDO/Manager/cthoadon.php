@@ -54,7 +54,7 @@
         <div class="bill-inner">
             <h2 class="bill-details-title">Thông tin hóa đơn</h2>
             <div class="bill-details-inner">
-                <table width="950px" class="">
+                <table width="950px" class="" >
                     <tr>
                         <th width="100px">STT</th>
                         <th width="100px">Mã SP</th>
@@ -77,13 +77,13 @@
                     $tongtien = number_format($tcong);
                     $final += $tcong;
                     $chuoi=<<<EOD
-                        <tr>
-                            <td> $stt </td>
-                            <td> $maSP</td>
-                            <td> $tensp</td>
-                            <td> $gban</td>
-                            <td> $sluong</td>
-                            <td> $tongtien </td>
+                        <tr >
+                            <td style="text-align:center;"> $stt </td>
+                            <td style="text-align:center;"> $maSP</td>
+                            <td style="text-align:center;"> $tensp</td>
+                            <td style="text-align:center;"> $gban</td>
+                            <td style="text-align:center;"> $sluong</td>
+                            <td style="text-align:center;"> $tongtien </td>
                         </tr>
 EOD;
     echo $chuoi;
