@@ -4,7 +4,7 @@
     {
         $radioval = $_POST['radio'];
         $username = $_POST['uname'];
-        $password = $_POST['psw'];
+        $password = md5($_POST['psw']);
         if(empty($username) || empty($password))
         {
             echo "<p style='color:red'>*Vui lòng nhập đầy đủ thông tin</P>";
