@@ -41,8 +41,11 @@
             $diachi = $_POST['address'];
             $sdt   = $_POST['sdt'];
             $email  = $_POST['email'];
-            $Status  = $_POST['Status'];
-            $sql = "UPDATE `admin` SET `TaiKhoan` = '$username', `MatKhau` = '$password', `HoTenAdmin` = '$firstname', `DiaChi` = '$diachi', `DienThoai` = '$sdt', `Email` = '$email' , `Status` ='$Block ' WHERE `id_admin` = $id";
+            $Status  = $_POST['status'];
+            $Level = $_POST['level'];
+            $sql = "UPDATE `admin` SET `TaiKhoan` = '$username', `MatKhau` = '$password', `HoTenAdmin` = '$firstname', `DiaChi` = '$diachi', `DienThoai` = '$sdt', `Email` = '$email' , `Status` ='$Status' ,`Level` = '$Level' WHERE `admin`.`id_admin` = $id";
+           echo $sql;
+           echo "<br>".$Status;
             $result = DataProvider::ExecuteQuery($sql);
             if($result==true)
             {
@@ -51,14 +54,8 @@
          }
                 else {
                   echo "that bai";
-                
-
-
-          }
-
+         }
         }
-
-
     ?>
 <?php
     //placeholder
