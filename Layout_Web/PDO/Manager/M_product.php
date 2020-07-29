@@ -1,6 +1,6 @@
 <!--cột giữa-->
-
-				         <table class="table table-hover">
+<!---->
+					         <table class="table table-hover">
 				             <tr >
 				                <th scope="col">Mã SP</th>
 				                <th scope="col">Mã Loại</th>
