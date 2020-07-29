@@ -204,7 +204,7 @@ EOD;
                         <td><?= $row['Level'] ?></td>
                         <td><?= $row['Status'] ?></td>
                     
-                    <td><a href="QuanLyAdmin.php?id=<?= $row['id_admin'] ?> "onclick="return confirm('Bạn Có Chắc Muốn Xóa');" >Xóa</a></td>
+                    <td><a href="delete.php?id=<?= $row['id_admin'] ?> "onclick="return confirm('Bạn Có Chắc Muốn Xóa');" >Xóa</a></td>
                     <td><a href="editAdmin.php?editAdmin=<?= $row['id_admin'] ?> " >Sửa</a></td>
 
                     </tr>
@@ -262,24 +262,6 @@ EOD;
     });
 </script>
 <!---->
-                            
-<?php
-    include_once("../DataProvider.php");
-    if(isset($_GET['id']))
-    {
-        $user_id = $_GET['id'];
-        
-        $sql = "DELETE FROM `admin` WHERE  `id_admin` = '$user_id'";
-        $result = DataProvider::ExecuteQuery($sql);
-        if($result==true)
-        {
-                echo "thanhcong";
-        }
-        else{
-            echo "that bai";
-        }
-    }
-?>
 
 </body>
 
