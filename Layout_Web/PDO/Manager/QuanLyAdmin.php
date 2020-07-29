@@ -198,9 +198,9 @@ EOD;
                         <td><?= $row['id_admin'] ?></td>
                         <td><?= $row['HoTenAdmin'] ?></td>
                         <td><?= $row['TaiKhoan'] ?></td>
-                        <td><?= $row['DiaChi'] ?></td>
+                        <td style="word-break: break-all;"><?= $row['DiaChi'] ?></td>
                         <td><?= "0".$row['DienThoai'] ?></td>
-                        <td><?= $row['Email'] ?></td>
+                        <td style="word-break: break-all;"><?= $row['Email'] ?></td>
                         <td><?= $row['Level'] ?></td>
                         <td><?= $row['Status'] ?></td>
                     
