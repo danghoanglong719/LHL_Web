@@ -1,10 +1,10 @@
 <!--cột giữa-->
-				    
+
 				         <table class="table table-hover">
-				             <tr>
+				             <tr >
 				                <th scope="col">Mã SP</th>
 				                <th scope="col">Mã Loại</th>
-				                <th scope="col">Tên SP</th>
+				                <th scope="col" >Tên SP</th>
 				                <th scope="col">Giá</th>
 				                <th scope="col">Màu Sắc</th>
 				                <th scope="col">Vật liệu</th>
@@ -38,19 +38,18 @@
 				                    $_SESSION['Hinh'] =$row['Hinh'] ;
 				              
 				     ?>
-				        <tr>
-				            <td><?= $row['MaSP'] ?></td>
-				            <td><?= $row['MaLoai'] ?></td>
-				            <td><?= $row['TenSanPham'] ?></td>
+				        <tr class="box">
+				            <td ><?= $row['MaSP'] ?></td>
+				            <td class="name0"><?= $row['MaLoai'] ?></td>
+				            <td class="name"><?= $row['TenSanPham'] ?></td>
 				            <td><?= $row['GiaBan'] ?></td>
 				            <td><?= $row['MauSac'] ?></td>
 				            <td><?= $row['VatLieu'] ?></td>
 							<td><?= $row['MoTa'] ?></td>
 							<td><?= $row['Status'] ?></td>
 				            <td> <img src="../../img/<?= $row['Hinh'] ?> "style="width:80px; height=80px" /></td>
-				           <td><a href="Manager.php?id=<?= $row['MaSP'] ?> "onclick="Notification()" >Xóa</a></td>
+				           <td><a href="delete.php?id=<?= $row['MaSP'] ?> "onclick="return confirm('Bạn có chắc muốn xóa');" >Xóa</a></td>
 				           <td><a href="edit_product.php?edit=<?= $row['MaSP'] ?> " >Sửa</a></td>
-
 				        </tr>
 				        
 				    <?php }?>
@@ -60,21 +59,7 @@
         <?php
 
 
-    include_once("../DataProvider.php");
-	if(isset($_GET['id']))
-	{
-		$product_id = $_GET['id'];
-		
-		$sql = "DELETE FROM `sanpham` WHERE  `MaSP` = '$product_id'";
-		$result = DataProvider::ExecuteQuery($sql);
-		if($result==true)
-		{
-			header("location:Manager.php");
-		}
-		else{
-			echo "that bai";
-		}
-	}
+   
                 
 
 ?>

@@ -277,7 +277,7 @@ EOD;
             ?>
                     <a href="chitiet.php?id=<?=$row['MaSP']?>" style="margin: 5px 30px">
                         <div class="card" style="width: 10rem; padding: 0;">
-                            <div class="card-body" align="center" style="padding: 5px">
+                            <div class="card-body"  style="padding: 5px;text-align:center;">
                               <img src="../img/<?=$row['Hinh']?>" class="" height="50%" width="70%" alt="...">
 
                                 <h5 class="card-title"><?=$row['TenSanPham']?></h5>

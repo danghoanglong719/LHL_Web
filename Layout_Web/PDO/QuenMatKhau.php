@@ -44,51 +44,41 @@ session_start();
         <form class="form-container" id="formdangnhap" method="POST">
           <h2>Đăng nhập</h2>
           <?php
-              include_once("logincode.php");
+           
           ?>
+        
           <div class="form-group">
             <div class="form-inline">
-              <label for="uname" class="col-sm-4">Tài khoản</label>
-              <input type="text" name="uname" id="uname" class="form-control col-sm-8" placeholder="Nhập tài khoản">
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="form-inline">
-              <label for="psw" class="col-sm-4">Mật khẩu</label>
-              <input type="password" name="psw" id="psw" class="form-control col-sm-8" placeholder="Nhập mật khẩu">
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="form-inline">
-              <div class="col-sm-4"></div>
-                <label for="user"><b>User</b></label>
-                <input type="radio"  name="radio" id="user" value="0" required checked>
-                <label for="admin" class ="ml-3"><b>Admin</b></label>
-                <input type="radio"  name="radio" id="admin" value="1" required>
+              <label for="psw" class="col-sm-4">Email</label>
+              <input type="password" name="email" id="psw" class="form-control col-sm-8" placeholder="Nhập Email đã đăng ký ">
             </div>
           </div>
           <div id="myErr"></div>
-          <button type="submit" class="btn btn-success btn-block" id="btndangnhap"  name="dangnhap">Đăng nhập</button>
-          <br>
-            <a href="QuenMatKhau.php">Quên Mật Khẩu</a>
-          
+          <button type="submit" class="btn btn-success btn-block" id="btnQuenmk"  name="dangnhap">Gửi về</button>
+  
         </form>
       </div>
     </div>
   </div>
+
+  <?php
+        /*if(isset($_POST['btnQuenmk']))
+        {
+        $email = $_POST['email'];
+            $sql = "SELECT * FROM khachhang  where `Email` = '$email' limit 1";
+            $result = DataProvider::ExecuteQuery($sql);
+            //$row = $result->fetch();
+                if($result == true){
+                    $token = rand(100,999);
+
+                }
+        
+
+            
+        }*/
+   
+      
+  ?>
 </body>
-<script>
-    $(document).ready(function(){
-        $('#formdangnhap').validate({
-            rules: {
-              uname:{required:true},
-              psw:{required:true},
-            },
-            messages:{
-              uname:{required:"Vui lòng nhập tài khoản",},
-              psw:{required:"Vui lòng nhập mật khẩu",},
-            },
-        });
-    })
-</script>
+
 </html>

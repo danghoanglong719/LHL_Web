@@ -38,6 +38,16 @@
         }
 
 </script>
+<script>
+$(document).ready(function() {
+
+var $search = $("#search1").on('input', function() {
+    var matcher = new RegExp($(this).val(), 'i');
+                 $('.box').show().not(function() {
+                return matcher.test($(this).find('.name,.name0').text())
+    }).hide();
+})
+})</script>
 
     <!--modal-search-->
     <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="z-index: 123313123;">
@@ -182,11 +192,15 @@ EOD;
                 <table class="table table-hover">
                     <tr><td scope="col" ><a href="Add_product.php"> <input type="button" class="btn btn-success btn-block"  value="Thêm Sản phẩm"></a></td></tr>
                     <tr><td scope="col" ><a href="Add_category.php"> <input type="button" class="btn btn-success btn-block"  value="Thêm Loại"></a></td></tr>
+                   
+                   
                     <?php
                         if($_SESSION['QTV'] == 'Admin_1'){
                             echo '<tr><td scope="col" ><a href="../dangkyAdmin.php"> <input type="button" class="btn btn-success btn-block"  value="Thêm Admin"></a></td></tr>';
                         }
                     ?>
+                     <tr><td scope="col" >  <div>   <input type="text" id="search1" class="form-control"  placeholder="search:MaLoai or TenSP" ></div></td></tr>
+                     
                 </table>
             </div>
         </div>
