@@ -403,3 +403,6 @@ a.pt_a:hover:not(.active){
     background-color: rgba(243, 243, 243, 0.486);
     cursor: pointer;
 }
+.box-muc .box-item label{
+    font-size: 16px;
+}

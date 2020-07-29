@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="Payment.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-	<style type="text/css">    
+	<style type="text/css">
 		label.error {   color:red;}
 		input.error {   color:red;}
 		textarea.error {color:red;}
@@ -146,6 +146,7 @@
 	})
 </script>
 <script>
+	/*
 	$(document).ready(function() {
 		$(".create-update").click(function(){
 			Swal.fire({
@@ -157,6 +158,7 @@
 			})
 		});
 	});
+	*/
 </script>
 <!--#endregion Script-->
 </html>

@@ -1,4 +1,4 @@
-<?php 
+<?php
     session_start();
 ?>
 <!DOCTYPE html>
@@ -81,12 +81,12 @@ include_once("./Cart/MyCart.php");
                         <li class="nav-item cart">
                             <a class="nav-link ml-2" href="Cart/GioHang.php"><span></span>
                                 <img src="../img/icon/cart-78-32.png" width="25px"><div class="bh-nb"><div class="nb-pds">
-                                    <?php 
+                                    <?php
                                         $sum = json_decode(Cart::Display());
                                         echo $sum->Count;
                                     ?></div></div>
                             </a>
-                        </li>    
+                        </li>
                         <li class="nav-item ">
                             <a class="nav-link ml-2" href="" data-toggle="modal" data-target=".bd-example-modal-lg"><span></span>
                                 <img src="../img/icon/search-3-48.png" width="25px"/>
@@ -97,11 +97,11 @@ include_once("./Cart/MyCart.php");
                                 <img src="../img/icon/user-32.png" width="25px">
                             </a>
                             <div class="dropdown-menu ">
-                                <?php 
+                                <?php
                                 if(isset($_SESSION['dangnhap']) && isset($_SESSION['QTV'])){
                                     $dangnhap = $_SESSION['dangnhap'];
                                     $login = <<< EOD
-                                    <div style="color:#fff; text-align:center;">Xin chào 
+                                    <div style="color:#fff; text-align:center;">Xin chào
                                         <div style="text-decoration:underline; display:inline;">$dangnhap</div>
                                     </div>
                                     <div class="dropdown-divider"></div>
@@ -115,7 +115,7 @@ EOD;
                                 else if(isset($_SESSION['dangnhap'])){
                                     $dangnhap = $_SESSION['dangnhap'];
                                     $login = <<< EOD
-                                    <div style="color:#fff; text-align:center;">Xin chào 
+                                    <div style="color:#fff; text-align:center;">Xin chào
                                         <div style="text-decoration:underline; display:inline;">$dangnhap</div>
                                     </div>
                                     <div class="dropdown-divider"></div>
@@ -147,7 +147,7 @@ EOD;
 
 
 
-    
+
 <script>$(document).ready(function() {
 
 var $search = $("#search1").on('input', function() {
@@ -180,7 +180,7 @@ var $search = $("#search1").on('input', function() {
                         <i class="fa fa-align-justify float-md-left"></i>
                         <span>Lọc Sản Phẩm</span>
                     </div>
-                    <div>   <input type="text" id="search1" class="form-control"  placeholder="Tiềm Kiếm" ></div>
+                    <div>   <input type="text" id="search1" class="form-control"  placeholder="Tìm kiếm" ></div>
                     <div class="box-muc">
                         <p data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample" id="muc11">
                             Loại sản phẩm
@@ -208,7 +208,7 @@ var $search = $("#search1").on('input', function() {
                                                 </input>
                                             </label>
                                         </div>
-                                        
+
 EOD;
     echo $chuoi;
 }
@@ -325,8 +325,8 @@ EOD;
                     </div>
                 </div>
             </div>
-            
-          
+
+
             <div class="col-md-9 col-sm-12 col-xs-12">
                 <div class="wrapper">
                     <div class="links">
@@ -335,7 +335,7 @@ EOD;
                             <li class="li-grid " data-view="grid-view"> <i class=" fas fa-th-large"> Grid View</i> </li>
                         </ul>
                     </div>
-                    
+
                     <div class="view-main">
                         <div class="view-wrap list-view" style=" display:block;">
                             <div class="row" id="parent-lv">
@@ -419,7 +419,7 @@ EOD;
                                         $trang = 1;
                                     }
                                     $from = ($trang - 1) * $sosp1trang;
-    
+
                                     if(isset($_GET['id']) && $_GET['id'] != "0" ){
                                         $qrloai = "MaLoai = {$_GET['id']}";
                                     }
@@ -432,7 +432,7 @@ EOD;
                                     else {
                                         $qrgia = "1 = 1";
                                     }
-                                    
+
                                     $sqlSanPham = "SELECT MaSP, MaLoai, TenSanPham, GiaBan, MoTa, Hinh FROM sanpham WHERE {$qrloai} AND {$qrgia} LIMIT $from, $sosp1trang";
                                     $dsSanPham = DataProvider::ExecuteQuery($sqlSanPham);
                                     while($row = $dsSanPham->fetch())
@@ -519,7 +519,7 @@ EOD;
                             $count = $rows->fetchAll(PDO::FETCH_ASSOC);
                             $tongsosp = count($count);
                             $sotrang = ceil($tongsosp / $sosp1trang);
-                            
+
                             for($i=1; $i<=$sotrang; $i++){
                                 echo "<a class='pt_a' href='products.php?id=$product_id&page=$i' value='$i'> $i </a>";
                             }
@@ -589,7 +589,7 @@ EOD;
             $('.tittle').click(function() {
                 $('.box-muc').toggle(1000);
             });
-            
+
         });
 
     </script>
@@ -661,7 +661,7 @@ EOD;
         //Xuly ListView
         $.ajax({
             url: "XLLaySPlv.php",
-            data: { 
+            data: {
                 trang_ht: trang,
                 ma_loai_sp: maloai,
                 gia_sp: gia
@@ -674,13 +674,13 @@ EOD;
 						url: "./Cart/XLGioHang.php",
 						data: {
 							"ma_sp": $(this).data("masp"),
-                            "so_luong": 1, 
+                            "so_luong": 1,
 							"hanh_dong": "them"
 						},
 						dataType: "json",
 						success: function(data){
 							$(".nb-pds").html(data.Count);
-                            
+
 						}
                     });
                     Swal.fire({
@@ -710,7 +710,7 @@ EOD;
 						url: "./Cart/XLGioHang.php",
 						data: {
 							"ma_sp": $(this).data("masp"),
-                            "so_luong": 1, 
+                            "so_luong": 1,
 							"hanh_dong": "them"
 						},
 						dataType: "json",

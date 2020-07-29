@@ -40,14 +40,14 @@
 </script>
 <script>
 $(document).ready(function() {
-
 var $search = $("#search1").on('input', function() {
     var matcher = new RegExp($(this).val(), 'i');
                  $('.box').show().not(function() {
                 return matcher.test($(this).find('.name,.name0').text())
     }).hide();
+  });
 })
-})</script>
+</script>
 
     <!--modal-search-->
     <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="z-index: 123313123;">
@@ -94,13 +94,13 @@ var $search = $("#search1").on('input', function() {
                         <li class="nav-item cart">
                             <a class="nav-link ml-2" href="../Cart/GioHang.php"><span></span>
                                 <img src="../../img/icon/cart-78-32.png" width="25px"><div class="bh-nb"><div class="nb-pds">
-                                <?php 
+                                <?php
                                     $sum = json_decode(Cart::Display());
-                                    echo $sum->Count; 
+                                    echo $sum->Count;
                                 ?></div></div>
                             </a>
                         </li>
-                      
+
                         <li class="nav-item ">
                             <a class="nav-link ml-2" href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><span></span>
                                 <img src="../../img/icon/search-3-48.png" width="25px"/>
@@ -111,11 +111,11 @@ var $search = $("#search1").on('input', function() {
                                 <img src="../../img/icon/user-32.png" width="25px">
                             </a>
                             <div class="dropdown-menu ">
-                            <?php 
+                            <?php
                                 if(isset($_SESSION['dangnhap']) && isset($_SESSION['QTV'])){
                                     $dangnhap = $_SESSION['dangnhap'];
                                     $login = <<< EOD
-                                    <div style="color:#fff; text-align:center;">Xin chào 
+                                    <div style="color:#fff; text-align:center;">Xin chào
                                         <div style="text-decoration:underline; display:inline;">$dangnhap</div>
                                     </div>
                                     <div class="dropdown-divider"></div>
@@ -129,7 +129,7 @@ EOD;
                                 else if(isset($_SESSION['dangnhap'])){
                                     $dangnhap = $_SESSION['dangnhap'];
                                     $login = <<< EOD
-                                    <div style="color:#fff; text-align:center;">Xin chào 
+                                    <div style="color:#fff; text-align:center;">Xin chào
                                         <div style="text-decoration:underline; display:inline;">$dangnhap</div>
                                     </div>
                                     <div class="dropdown-divider"></div>
@@ -158,7 +158,7 @@ EOD;
 <div class="">
     <div class=""><img src="https://demo.goodlayers.com/inteco/wp-content/uploads/2018/09/shutterstock_543421996.jpg" alt="" class=" img-fluid-1"></div>
 </div>
-    
+
 <div id="txtFist">
     <h1>Quản lý trang web</h1>
     <div class="container-fluid " id="managerpro">
@@ -187,21 +187,21 @@ EOD;
                 <?php
                     include_once("M_product.php");
                 ?>
-            </div>		
+            </div>
             <!--cột phải-->
             <div class="col-md-2 col-sm-3 col-xs-12" id="rightcot">
                 <table class="table table-hover">
                     <tr><td scope="col" ><a href="Add_product.php"> <input type="button" class="btn btn-success btn-block"  value="Thêm Sản phẩm"></a></td></tr>
                     <tr><td scope="col" ><a href="Add_category.php"> <input type="button" class="btn btn-success btn-block"  value="Thêm Loại"></a></td></tr>
-                   
-                   
+
+
                     <?php
                         if($_SESSION['QTV'] == 'Admin_1'){
                             echo '<tr><td scope="col" ><a href="../dangkyAdmin.php"> <input type="button" class="btn btn-success btn-block"  value="Thêm Admin"></a></td></tr>';
                         }
                     ?>
-                     <tr><td scope="col" >  <div>   <input type="text" id="search1" class="form-control"  placeholder="search:MaLoai or TenSP" ></div></td></tr>
-                     
+                     <tr><td scope="col" >  <div class="mb-1"> Search</div><div>  <input type="text" id="search1" class="form-control"  placeholder="Mã Loại or Tên SP" ></div></td></tr>
+
                 </table>
             </div>
         </div>

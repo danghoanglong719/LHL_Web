@@ -13,7 +13,7 @@ header {
 header .header-container {
     display: flex;
     width: 1170px;
-    
+
 }
 .plr {
     width: 1270px;
@@ -107,6 +107,7 @@ header .logo .text{
 }
 .prices {
     background: rgba(243, 243, 243, 0.486);
+    border: 1px solid rgb(221, 221, 221);
     border-radius: 4px;
 }
 .prices__total {
