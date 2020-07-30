@@ -37,7 +37,7 @@
             $id  = $_GET['editAdmin'];
             $firstname = $_POST['firstname'];
             $username = $_POST['user'];
-            $password = $_POST['pass'];
+            $password = md5($_POST['pass']);
             $diachi = $_POST['address'];
             $sdt   = $_POST['sdt'];
             $email  = $_POST['email'];

@@ -46,9 +46,9 @@
             include_once("DataProvider.php");
             if(isset($_POST['doimatkhau']))
             {
-                $oldpassword = $_POST['oldpsw'];
-                $newpassword = $_POST['newpsw'];
-                $renewpassword = $_POST['renewpsw'];
+                $oldpassword = md5($_POST['oldpsw']);
+                $newpassword = md5($_POST['newpsw']);
+                $renewpassword = md5($_POST['renewpsw']);
                 $makh = $_SESSION['makh'];
                 if(empty($oldpassword) || empty($newpassword) || empty($renewpassword))
                 {

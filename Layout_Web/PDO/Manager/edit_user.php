@@ -35,8 +35,8 @@
             $id  = $_GET['edit'];
             $firstname = $_POST['firstname'];
             $username = $_POST['user'];
-            $password = $_POST['pass'];
-            $Repass   = $_POST['repass'];
+            $password = md5($_POST['pass']);
+            $Repass   = md5($_POST['repass']);
             $diachi = $_POST['address'];
             $sdt   = $_POST['sdt'];
             $email  = $_POST['email'];
