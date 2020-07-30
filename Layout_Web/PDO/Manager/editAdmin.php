@@ -10,7 +10,7 @@
         $firstname = $_POST['firstname'];
         $username = $_POST['user'];
         $password = md5($_POST['pass']);
-        $diachi = md5($_POST['address']);
+        $diachi = $_POST['address'];
         $sdt   = $_POST['sdt'];
         $email  = $_POST['email'];
         $Status  = $_POST['status'];
