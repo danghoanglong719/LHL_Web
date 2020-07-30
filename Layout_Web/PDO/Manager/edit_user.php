@@ -1,3 +1,31 @@
+<?php
+    session_start();
+    if(!isset($_SESSION['QTV'])){
+        header('location:../home.php');
+    }
+    include_once("../DataProvider.php");
+
+
+    if(isset($_POST['EditUser']))
+    {
+        $id  = $_GET['edit'];
+        $firstname = $_POST['firstname'];
+        $username = $_POST['user'];
+        $password = md5($_POST['pass']);
+        $Repass   = md5($_POST['repass']);
+        $diachi = $_POST['address'];
+        $sdt   = $_POST['sdt'];
+        $email  = $_POST['email'];
+
+        if($password == $Repass)
+        {
+            $sql = "UPDATE `khachhang` SET `TenDN` = '$username', `MatKhau` = '$password', `HoTen` = '$firstname', `DiaChi` = '$diachi', `DienThoai` = '$sdt', `Email` = '$email' WHERE `khachhang`.`MaKH` = '$id'";
+            $result = DataProvider::ExecuteQuery($sql);
+
+            header("location:QuanLyAccount.php");
+        }
+    }
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,7 +38,7 @@
         <link rel="stylesheet" href="../../OwlCarousel2-2.3.4/src/js/owl.carousel.js">
         <link rel="stylesheet" href="../../OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
         <link rel="stylesheet" href="../../OwlCarousel2-2.3.4/dist/assets/owl.theme.green.min.css">
-        <style type="text/css">    
+        <style type="text/css">
             label.error {   color:red;}
             input.error {   color:red;}
         </style>
@@ -25,37 +53,7 @@
     <script src="../../js/jQueryValidation1.19.1/jquery.validate.js"></script>
 
     <body>
-<?php
-        session_start();
-        include_once("../DataProvider.php");
 
-     
-        if(isset($_POST['EditUser']))
-        {
-            $id  = $_GET['edit'];
-            $firstname = $_POST['firstname'];
-            $username = $_POST['user'];
-            $password = $_POST['pass'];
-            $Repass   = $_POST['repass'];
-            $diachi = $_POST['address'];
-            $sdt   = $_POST['sdt'];
-            $email  = $_POST['email'];
-            $sql = "UPDATE `khachhang` SET `TenDN` = '$username', `MatKhau` = '$password', `HoTen` = '$firstname', `DiaChi` = '$diachi', `DienThoai` = '$sdt', `Email` = '$email' WHERE `khachhang`.`MaKH` = $id";
-
-
-            if($password == $Repass)
-            {
-                
-                $result = DataProvider::ExecuteQuery($sql);
-
-                header("location:QuanLyAccount.php");
-            }
-           
-
-        }
-
-
-    ?>
 <?php
     //placeholder
     $sqlEdit = "SELECT * FROM khachhang WHERE MaKH = {$_GET['edit']}";
@@ -68,10 +66,10 @@
     $dthoai = $row['DienThoai'];
     $phremail = $row['Email'];
 ?>
-        <div class="container-fluid "> 
+        <div class="container-fluid ">
             <div class="row">
-                <div class="col-md-4 col-sm-3 col-xs-12"></div>
-                <div class="col-md-4 col-sm-6 col-xs-12 border border-success rounded" >
+                <div class="col-md-4 col-sm-3 col-xs-12 mt-4"></div>
+                <div class="col-md-4 col-sm-6 col-xs-12 border border-success rounded mt-4" >
                     <form class="form-container mt-3 mb-3" id="formLogin" method="POST">
                         <h2>Sửa thông tin User</h2>
                         <div class="form-group">
@@ -89,13 +87,13 @@
                         <div class="form-group">
                             <div class="form-inline">
                                 <label for="ipPass" class="col-sm-4">Mật khẩu</label>
-                                <input type="password" name="pass" id="ipPass" class="form-control col-sm-8" placeholder="Nhập mật khẩu">
+                                <input type="password" name="pass" id="ipPass" class="form-control col-sm-8" placeholder="Nhập mật khẩu" value="<?php echo $mkhau;?>">
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="form-inline">
                                 <label for="ipRePass" class="col-sm-4">Nhập lại</label>
-                                <input type="password" name="repass" id="ipRePass" class="form-control col-sm-8" placeholder="Nhập lại mật khẩu">
+                                <input type="password" name="repass" id="ipRePass" class="form-control col-sm-8" placeholder="Nhập lại mật khẩu" value="<?php echo $mkhau;?>">
                             </div>
                         </div>
                         <div class="form-group">
@@ -118,13 +116,13 @@
                         </div>
                         <div id="myErr"></div>
                         <button type="submit" class="btn btn-success btn-block" id="btnSignUp" value="SignUp" name="EditUser">Sửa</button>
-                        
+
                     </form>
                 </div>
             </div>
         </div>
         <!--#endregion SignUp-->
-        
+
     </body>
     <!--#region Script-->
     <script>
@@ -159,5 +157,5 @@
         })
     </script>
     <!--#endregion Script-->
-   
+
 </html>

@@ -1,18 +1,21 @@
 <?php
     session_start();
+    if(!isset($_SESSION['QTV'])){
+        header('location:../home.php');
+    }
     include_once("../DataProvider.php");
     //var_dump($_GET['edit']);exit;
     if(isset($_GET['id']))
-    {   
+    {
         $id= $_GET['id'];
-        
-        $sql = 
+
+        $sql =
         "SELECT hoadon.MaHD, NgayDat, NoiGiao, TinhTrang,HoTenhd, Emailhd, DienThoaihd,
             SoDH, chitiethd.MaSP, SoLuong,
             hoadon.MaKH, HoTen, DiaChi, Email ,DienThoai,
-            chitiethd.MaSP, MaLoai, TenSanPham, GiaBan, MauSac, VatLieu, MoTa, Status 
-        FROM hoadon, chitiethd, khachhang, sanpham 
-        WHERE hoadon.MaHD= $id AND hoadon.MaHD = chitiethd.MaHD AND khachhang.MaKH = hoadon.MaKH 
+            chitiethd.MaSP, MaLoai, TenSanPham, GiaBan, MauSac, VatLieu, MoTa, Status
+        FROM hoadon, chitiethd, khachhang, sanpham
+        WHERE hoadon.MaHD= $id AND hoadon.MaHD = chitiethd.MaHD AND khachhang.MaKH = hoadon.MaKH
             AND chitiethd.MaSP = sanpham.MaSP ";
         $result = DataProvider::ExecuteQuery($sql);
         $row = $result->fetch();
@@ -66,7 +69,7 @@
                     <?php
                     $stt=1;
                     $final=0;
-                    
+
                     $result = DataProvider::ExecuteQuery($sql);
                     while($row = $result->fetch()){
                     $maSP=$row['MaSP'];
@@ -119,7 +122,7 @@ EOD;
                 <td >
                     <?php echo $emailMua; ?>
                 </td>
-            </tr>       
+            </tr>
             <tr height="30px" >
                 <td >Điện thoại: </td>
                 <td >
@@ -148,7 +151,7 @@ EOD;
                 <td >
                     <?php echo $emailDat; ?>
                 </td>
-            </tr>       
+            </tr>
             <tr height="30px" >
                 <td >Điện thoại: </td>
                 <td >
@@ -165,176 +168,4 @@ EOD;
     </div>
 </div>
 </body>
-<!--
-<table width="1270px" >
-    <tr>
-        <td width="250px" ><b style="color:blue;font-size:20px" >Sản phẩm được đặt hàng </b><br><br> </td>   
-        <td width="740px" align="right" >
-        </td>       
-    </tr>
-    <tr>
-        <td align="left" colspan="2" >
-            <table width="880px" >
-                <tr>
-                    <td width="100px">STT</td>
-                    <td width="100px">Mã SP</td>
-                    <td width="300px">Tên sản phẩm</td>
-                    <td width="180px">Giá bán</td>
-                    <td width="100px">Số lượng</td>
-                    <td width="200px">Tổng cộng</td>
-                </tr>
-                <?php
-                $stt=1;
-                $final=0;
-                
-                $result = DataProvider::ExecuteQuery($sql);
-                while($row = $result->fetch()){
-                $maSP=$row['MaSP'];
-                $tensp=$row['TenSanPham'];
-                $gban=$row['GiaBan'];
-                $sluong=$row['SoLuong'];
-                $tcong = $gban * $sluong;
-                $tongtien = number_format($tcong);
-                $final += $tcong;
-                $chuoi=<<<EOD
-                    <tr>
-                        <td> $stt </td>
-                        <td> $maSP</td>
-                        <td> $tensp</td>
-                        <td> $gban</td>
-                        <td> $sluong</td>
-                        <td> $tongtien </td>
-                    </tr>
-EOD;
-    echo $chuoi;
-    $stt++;
-                };
-                ?>
-                <tr>
-                    <td colspan="5">
-                        <br><br>
-                        Tổng tiền của đơn hàng là :
-                        <?php
-                            $finaltotal=number_format($final);
-                            echo "<b>".$finaltotal."</b>";
-                        ?>
-                        <br><br>
-                    </td>
-                </tr>
-            </table>
-        </td>       
-    </tr>
-
-</table>
-<br><br>
-<table width="990px" >
-    <tr>
-        <td width="250px" ><b style="color:blue;font-size:20px" >Thông tin người mua</b><br><br> </td>
-        <td width="740px" align="right" >
-            &nbsp;
-        </td>
-    </tr>
-    <tr height="30px" >
-        <td >Tên người mua: </td>
-        <td >
-            <?php echo $htenMua; ?>
-        </td>
-    </tr>
-    <tr height="30px" >
-        <td >Email: </td>
-        <td >
-            <?php echo $emailMua; ?>
-        </td>
-    </tr>       
-    <tr height="30px" >
-        <td >Điện thoại: </td>
-        <td >
-            <?php echo $dthoaiMua; ?>
-        </td>
-    </tr>
-    <tr height="30px" >
-        <td valign="top" >Địa chỉ : </td>
-        <td >
-            <?php echo $dchiMua; ?>
-        </td>
-    </tr>
-</table>
-<table width="990px" >
-    <tr>
-        <td width="250px" ><b style="color:blue;font-size:20px" >Thông tin tài khoản đặt hàng</b><br><br> </td>
-        <td width="740px" align="right" >
-            &nbsp;
-        </td>
-    </tr>
-    <tr height="30px" >
-        <td >Tên người đặt: </td>
-        <td >
-            <?php echo $htenDat; ?>
-        </td>
-    </tr>
-    <tr height="30px" >
-        <td >Email: </td>
-        <td >
-            <?php echo $emailDat; ?>
-        </td>
-    </tr>       
-    <tr height="30px" >
-        <td >Điện thoại: </td>
-        <td >
-            <?php echo $dthoaiDat; ?>
-        </td>
-    </tr>
-    <tr height="30px" >
-        <td valign="top" >Địa chỉ : </td>
-        <td >
-            <?php echo $dchiDat; ?>
-        </td>
-    </tr>
-</table>
-<div class="main">
-    <div class="bill-details">
-        <div class="bill-inner">
-            <h2 class="bill-details-title">Thông tin hóa đơn</h2>
-            <div class="bill-details-inner">
-            <table width="880px" >
-                <tr>
-                    <td width="100px">STT</td>
-                    <td width="100px">Mã SP</td>
-                    <td width="300px">Tên sản phẩm</td>
-                    <td width="180px">Giá bán</td>
-                    <td width="100px">Số lượng</td>
-                    <td width="200px">Tổng cộng</td>
-                </tr>
-                <?php
-                $stt=1;
-                $final=0;
-                
-                $result = DataProvider::ExecuteQuery($sql);
-                while($row = $result->fetch()){
-                $maSP=$row['MaSP'];
-                $tensp=$row['TenSanPham'];
-                $gban=$row['GiaBan'];
-                $sluong=$row['SoLuong'];
-                $tcong = $gban * $sluong;
-                $tongtien = number_format($tcong);
-                $final += $tcong;
-                $chuoi=<<<EOD
-                    <tr>
-                        <td> $stt </td>
-                        <td> $maSP</td>
-                        <td> $tensp</td>
-                        <td> $gban</td>
-                        <td> $sluong</td>
-                        <td> $tongtien </td>
-                    </tr>
-EOD;
-    echo $chuoi;
-    $stt++;
-                };
-                ?>
-            </div>
-        </div>
-
-    </div>
-</div>
-            -->
+</html>

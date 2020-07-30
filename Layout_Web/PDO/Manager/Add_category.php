@@ -1,5 +1,21 @@
 <?php
  session_start();
+ if(!isset($_SESSION['QTV'])){
+    header('location:../home.php');
+}
+?>
+<?php
+    include_once("../DataProvider.php");
+    if(isset($_POST['addcategory']) )
+    {
+        $TenLoai = $_POST['TenLoai'];
+        $sql = "INSERT INTO `loaisp`(`TenLoai`) VALUES ('$TenLoai')";
+        $result = DataProvider::ExecuteQuery($sql);
+        if($result==true)
+        {
+            header("location:QuanLyLoaiSP.php");
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,36 +45,11 @@
 
 
 <body>
-        
-
-<?php
-    include_once("../DataProvider.php");
-    //var_dump($_GET['edit']);exit;
-    if(isset($_POST['addcategory']) )
-    {
-        $TenLoai = $_POST['TenLoai'];
-            $sql = "INSERT INTO `loaisp`(`TenLoai`) VALUES ('$TenLoai')";
-            $result = DataProvider::ExecuteQuery($sql);
-            if($result==true)
-            {
-                    echo "thanh cong";
-                    header("location:QuanLyLoaiSP.php");
-            }
-                else {
-                    echo "that bai";
-                
-            }
-
-        }
-
-?>
-
-
-<div class="container-fluid bg"> 
+<div class="container-fluid bg">
             <div class="row">
-                <div class="col-md-4 col-sm-3 col-xs-12"></div>
-                <div class="col-md-4 col-sm-6 col-xs-12 border border-success rounded" style="padding:20px">
-                    <form class="form-container " id="formAddCatagory" method="POST" enctype="multipart/form-data">
+                <div class="col-md-4 col-sm-3 col-xs-12 mt-4"></div>
+                <div class="col-md-4 col-sm-6 col-xs-12 border border-success rounded mt-4" style="padding:20px">
+                    <form class="form-container mt-1" id="formAddCatagory" method="POST" enctype="multipart/form-data">
                         <h2 style="text-align:center">Thêm Loại</h2>
                         <div class="form-group">
                             <div class="form-inline">
@@ -68,10 +59,10 @@
                         </div>
                         <div id="myErr"></div>
                         <button type="submit" class="btn btn-success btn-block" id="btnAddCatagory" value="AddCategory" name="addcategory" onclick="return confirm('Bạn Có Chắc Muốn Thêm');">Đồng Ý</button>
-                        
+
                     </form>
                 </div>
-                <div class="col-md-4 col-sm-3 col-xs-12"></div>
+                <div class="col-md-4 col-sm-3 col-xs-12 mt-4"></div>
             </div>
         </div>
     </body>

@@ -1,5 +1,32 @@
 <?php
  session_start();
+ if(!isset($_SESSION['QTV'])){
+    header('location:../home.php');
+}
+?>
+<?php
+    include_once("../DataProvider.php");
+    //var_dump($_GET['edit']);exit;
+    if(isset($_GET['edit']) && isset($_POST['editproduct']))
+    {
+        $MaLoai = $_POST['MaLoai'];
+        $TenSanPham = $_POST['TenSP'];
+        $GiaBan = $_POST['GiaBan'];
+        $MauSac = $_POST['MauSac'];
+        $VatLieu = $_POST['VatLieu'];
+        $MoTa = $_POST['MoTa'];
+        $TrangThai = $_POST['Status'];
+        $Hinh = $_POST['Hinh'];
+        $id= $_GET['edit'];
+        $sql = "UPDATE `sanpham` SET `MaLoai`='$MaLoai',`TenSanPham`='$TenSanPham',`GiaBan`='$GiaBan',`MauSac`='$MauSac',`VatLieu`='$VatLieu',`MoTa`='$MoTa',`Hinh`='$Hinh',`Status`='$TrangThai' where  MaSP='$id' ";
+        $result = DataProvider::ExecuteQuery($sql);
+
+        if($result==true)
+        {
+            header("location:Manager.php");
+        }
+    }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +42,7 @@
     <link rel="stylesheet" href="../OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="../OwlCarousel2-2.3.4/dist/assets/owl.theme.green.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <style type="text/css">    
+    <style type="text/css">
         label.error {   color:red;}
         input.error {   color:red;}
     </style>
@@ -32,34 +59,6 @@
 
 <body>
 <?php
-    include_once("../DataProvider.php");
-    //var_dump($_GET['edit']);exit;
-    if(isset($_GET['edit']) && isset($_POST['editproduct']))
-    {   
-        $MaLoai = $_POST['MaLoai'];
-        $TenSanPham = $_POST['TenSP'];
-        $GiaBan = $_POST['GiaBan'];
-        $MauSac = $_POST['MauSac'];
-        $VatLieu = $_POST['VatLieu'];
-        $MoTa = $_POST['MoTa'];
-        $TrangThai = $_POST['Status'];
-        $Hinh = $_POST['Hinh'];
-        $id= $_GET['edit'];
-        $sql = "UPDATE `sanpham` SET `MaLoai`='$MaLoai',`TenSanPham`='$TenSanPham',`GiaBan`='$GiaBan',`MauSac`='$MauSac',`VatLieu`='$VatLieu',`MoTa`='$MoTa',`Hinh`='$Hinh',`Status`='$TrangThai' where  MaSP='$id' ";
-        $result = DataProvider::ExecuteQuery($sql);
-     
-        if($result==true)
-        {
-            echo"thanhcong";
-            header("location:Manager.php");
-        }
-        else{
-            echo"thatbai";
-        }
-    }
-
-?>
-<?php
     //placeholder
     $sqlEdit = "SELECT * FROM sanpham WHERE MaSP = {$_GET['edit']}";
     $SpEdit = DataProvider::ExecuteQuery($sqlEdit);
@@ -73,11 +72,11 @@
     $tthai = $row['Status'];
     $img = $row['Hinh'];
 ?>
-<div class="container-fluid bg"> 
+<div class="container-fluid bg">
     <div class="row">
-        <div class="col-md-4 col-sm-3 col-xs-12"></div>
-        <div class="col-md-4 col-sm-6 col-xs-12 border border-success rounded">
-            <form class="form-container mt-3 mb-3" id="formEditProduct" method="POST" >
+        <div class="col-md-4 col-sm-3 col-xs-12 mt-4"></div>
+        <div class="col-md-4 col-sm-6 col-xs-12 border border-success rounded mt-4">
+            <form class="form-container mt-2 mb-3" id="formEditProduct" method="POST" >
                 <h3>Thay đổi thông tin sản phẩm</h3>
                 <div class="form-group">
                     <div class="form-inline">
@@ -125,7 +124,7 @@
                     <div class="form-inline">
                         <label for="ipHinh" class="col-sm-4">Hình</label>
                         <input type="file" name="Hinh"  class="form-control col-sm-8"  value="<?php echo $img ;?>">
-        
+
                     </div>
                 </div>
                 <div id="myErr"></div>

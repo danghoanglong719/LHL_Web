@@ -77,13 +77,13 @@ include_once("MyCart.php");
                         <li class="nav-item cart">
                             <a class="nav-link ml-2" href="GioHang.php"><span></span>
                                 <img src="../../img/icon/cart-78-32.png" width="25px"><div class="bh-nb"><div class="nb-pds">
-                                    <?php 
+                                    <?php
                                         $sum = json_decode(Cart::Display());
-                                        echo $sum->Count; 
+                                        echo $sum->Count;
                                     ?></div></div>
                             </a>
                         </li>
-                      
+
                         <li class="nav-item ">
                             <a class="nav-link ml-2" href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><span></span>
                                 <img src="../../img/icon/search-3-48.png" width="25px"/>
@@ -94,11 +94,11 @@ include_once("MyCart.php");
                                 <img src="../../img/icon/user-32.png" width="25px">
                             </a>
                             <div class="dropdown-menu ">
-                            <?php 
+                            <?php
                                 if(isset($_SESSION['dangnhap']) && isset($_SESSION['QTV'])){
                                     $dangnhap = $_SESSION['dangnhap'];
                                     $login = <<< EOD
-                                    <div style="color:#fff; text-align:center;">Xin chào 
+                                    <div style="color:#fff; text-align:center;">Xin chào
                                         <div style="text-decoration:underline; display:inline;">$dangnhap</div>
                                     </div>
                                     <div class="dropdown-divider"></div>
@@ -112,7 +112,7 @@ EOD;
                                 else if(isset($_SESSION['dangnhap'])){
                                     $dangnhap = $_SESSION['dangnhap'];
                                     $login = <<< EOD
-                                    <div style="color:#fff; text-align:center;">Xin chào 
+                                    <div style="color:#fff; text-align:center;">Xin chào
                                         <div style="text-decoration:underline; display:inline;">$dangnhap</div>
                                     </div>
                                     <div class="dropdown-divider"></div>
@@ -184,13 +184,13 @@ EOD;
             echo '    <div class="prices__total">';
             echo '      <span class="prices__text">Thành tiền</span>';
             echo '      <span class="prices__value--final">';
-                            $totalfinal = json_decode(Cart::Display()); 
+                            $totalfinal = json_decode(Cart::Display());
                             echo number_format($totalfinal->TongTien);
                             echo'đ';
             echo '      </span>';
             echo '    </div>';
             echo '  </div>';
-            
+
                 if(isset($_SESSION["dangnhap"]) && $totalfinal->TongTien > 0){
                     echo "<a href='Payment.php' class='cart__submit'>Tiến hành đặt hàng</a>";
                 }
@@ -210,7 +210,7 @@ EOD;
     <div class="mt-5 " style="background-color:rgb(24, 6, 6); border: none;padding: 10px;box-shadow: 5px 10px 8px 10px #888888; ">
         <div style="font-size: 20px; margin-left: 10px;">
             <a href="# " style=" border-radius:100%;border: 1px solid black;padding: 5px 10px;color: white;"><i class="fab fa-twitter "></i></a>
-            <a href="# " style=" border-radius:100%;border: 1px solid black;padding: 5px 10px;color: white;"><i class=" fab fa-youtube "></i></a>
+            <a href="https://www.youtube.com/watch?v=e4-R36cdql8" target="_blank" style=" border-radius:100%;border: 1px solid black;padding: 5px 10px;color: white; "><i class=" fab fa-youtube "></i></a>
             <a href="# " style=" border-radius:100%;border: 1px solid black;padding: 5px 10px;color: white; "><i class="fab fa-facebook-f "></i></a>
             <a href="# " style=" border-radius:100%;border: 1px solid black;padding: 5px 10px; color: white;"><i class=" fab fa-instagram "></i></a>
         </div>
@@ -247,7 +247,7 @@ EOD;
                 url: "XLGioHang.php",
                 data: {
                     "ma_sp": $(this).data("masp"),
-                    "so_luong": 1, 
+                    "so_luong": 1,
                     "hanh_dong": "them"
                 },
                 dataType: "json",

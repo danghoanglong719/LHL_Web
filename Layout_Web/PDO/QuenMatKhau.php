@@ -7,10 +7,10 @@ session_start();
 <head>
  <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Đăng nhập</title>
+<title>Quên mật khẩu</title>
 <link rel="stylesheet" type="text/css" href="../css/SignUp.css">
   <link rel="stylesheet" type="text/css" href="../bootstrap-4.4.1-dist/css/bootstrap.css">
-  <style type="text/css">    
+  <style type="text/css">
     label.error {   color:red;}
     input.error {   color:red;}
     #formdangnhap{
@@ -37,16 +37,16 @@ session_start();
 <script type="text/javascript" src="../js/jquery/jquery-3.5.0.min.js"></script>
 <script src="../js/jQueryValidation1.19.1/jquery.validate.js"></script>
 <body>
-  <div div class="container-fluid bg"> 
+  <div div class="container-fluid bg">
     <div class="row">
       <div class="col-md-4 col-sm-3 col-xs-12"></div>
       <div class="col-md-4 col-sm-6 col-xs-12">
         <form class="form-container" id="formdangnhap" method="POST">
-          <h2>Đăng nhập</h2>
+          <h2>Quên mật khẩu</h2>
           <?php
-           
+
           ?>
-        
+
           <div class="form-group">
             <div class="form-inline">
               <label for="psw" class="col-sm-4">Email</label>
@@ -55,7 +55,7 @@ session_start();
           </div>
           <div id="myErr"></div>
           <button type="submit" class="btn btn-success btn-block" id="btnQuenmk"  name="dangnhap">Gửi về</button>
-  
+
         </form>
       </div>
     </div>
@@ -72,12 +72,12 @@ session_start();
                     $token = rand(100,999);
 
                 }
-        
 
-            
+
+
         }*/
-   
-      
+
+
   ?>
 </body>
 

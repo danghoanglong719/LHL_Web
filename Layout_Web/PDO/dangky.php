@@ -1,3 +1,6 @@
+<?php
+    include_once("dangkycode.php");
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,7 +13,7 @@
         <link rel="stylesheet" href="../OwlCarousel2-2.3.4/src/js/owl.carousel.js">
         <link rel="stylesheet" href="../OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
         <link rel="stylesheet" href="../OwlCarousel2-2.3.4/dist/assets/owl.theme.green.min.css">
-        <style type="text/css">    
+        <style type="text/css">
             label.error {   color:red;}
             input.error {   color:red;}
         </style>
@@ -23,18 +26,24 @@
     <script type="text/javascript" src="../js/jquery/jquery-3.5.0.min.js"></script>
     <script src="../OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
     <script src="../js/jQueryValidation1.19.1/jquery.validate.js"></script>
-    
+
 
 
     <body>
-        <div class="container-fluid bg"> 
+        <div class="container-fluid bg">
             <div class="row">
                 <div class="col-md-4 col-sm-3 col-xs-12"></div>
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <form class="form-container" id="formLogin" method="POST">
                         <h2>Đăng ký</h2>
                         <?php
-                            include_once("dangkycode.php");
+                            include_once("DataProvider.php");
+                            if(isset($_POST['dangky']))
+                            {
+                                if($flag == true){
+                                    echo "<p style='color:red'>*Username đã được sử dụng</p>";
+                                }
+                            }
                         ?>
                         <div class="form-group">
                             <div class="form-inline">
@@ -80,13 +89,13 @@
                         </div>
                         <div id="myErr"></div>
                         <button type="submit" class="btn btn-success btn-block" id="btnSignUp" value="SignUp" name="dangky">Đăng ký</button>
-                        
+
                     </form>
                 </div>
             </div>
         </div>
         <!--#endregion SignUp-->
-        
+
     </body>
     <!--#region Script-->
     <script>
@@ -121,5 +130,5 @@
         })
     </script>
     <!--#endregion Script-->
-   
+
 </html>

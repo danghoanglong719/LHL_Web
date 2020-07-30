@@ -1,3 +1,39 @@
+<?php
+    session_start();
+    include_once("DataProvider.php");
+    if(isset($_POST['dangkyAdmin']))
+    {
+        $firstname = $_POST['firstname'];
+        $username = $_POST['user'];
+        $password = md5($_POST['pass']);
+        $Repass   = md5($_POST['repass']);
+        $diachi = $_POST['address'];
+        $sdt   = $_POST['sdt'];
+        $email  = $_POST['email'];
+        $Level  = $_POST['level'];
+        $status  = $_POST['status'];
+        $flag = false; // Username đã được sử dụng
+
+        $sqlCheck = "SELECT TaiKhoan FROM `admin`";
+        $dsCheck = DataProvider::ExecuteQuery($sqlCheck);
+        while($row = $dsCheck->fetch())
+        {
+            if($username == $row['TaiKhoan']){
+                $flag = true;
+                break;
+            }
+        }
+        if($flag == false){
+            $sql = "INSERT INTO `admin` (`HoTenAdmin`, `TaiKhoan`, `MatKhau`, `DiaChi`, `DienThoai`, `Email`,`Level`,`Status`)VALUES ('$firstname' , '$username' ,'$password' , '$diachi' ,'$sdt' , '$email','$Level','$status' )";
+            $result = DataProvider::ExecuteQuery($sql);
+
+            if($password == $Repass)
+            {
+                header("location:Manager/QuanLyAdmin.php");
+            }
+        }
+    }
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,7 +46,7 @@
         <link rel="stylesheet" href="../OwlCarousel2-2.3.4/src/js/owl.carousel.js">
         <link rel="stylesheet" href="../OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
         <link rel="stylesheet" href="../OwlCarousel2-2.3.4/dist/assets/owl.theme.green.min.css">
-        <style type="text/css">    
+        <style type="text/css">
             label.error {   color:red;}
             input.error {   color:red;}
         </style>
@@ -23,40 +59,25 @@
     <script type="text/javascript" src="../js/jquery/jquery-3.5.0.min.js"></script>
     <script src="../OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
     <script src="../js/jQueryValidation1.19.1/jquery.validate.js"></script>
-    
+
 
 
     <body>
-    <?php
-        session_start();
-        include_once("DataProvider.php");
-        if(isset($_POST['dangkyAdmin']))
-        {
-            $firstname = $_POST['firstname'];
-            $username = $_POST['user'];
-            $password = md5($_POST['pass']);
-            $Repass   = md5($_POST['repass']);
-            $diachi = $_POST['address'];
-            $sdt   = $_POST['sdt'];
-            $email  = $_POST['email'];
-            $Level  = $_POST['level'];
-            $status  = $_POST['status'];
-            $sql = "INSERT INTO `admin` (`HoTenAdmin`, `TaiKhoan`, `MatKhau`,`DiaChi`, `DienThoai`, `Email`,`Level`,`Status`)VALUES ('$firstname' , '$username' ,' $password' , '$diachi' ,'$sdt' , '$email','$Level','$status' )";
-            $result = DataProvider::ExecuteQuery($sql);
 
-            if($password == $Repass)
-            {
-                header("location:Manager/QuanLyAdmin.php");
-            }
-            
-        }
-    ?>
-        <div class="container-fluid bg"> 
+        <div class="container-fluid bg">
             <div class="row">
-                <div class="col-md-4 col-sm-3 col-xs-12"></div>
-                <div class="col-md-4 col-sm-6 col-xs-12 border border-success rounded">
+                <div class="col-md-4 col-sm-3 col-xs-12 mt-4"></div>
+                <div class="col-md-4 col-sm-6 col-xs-12 border border-success rounded mt-4">
                     <form class="form-container mt-3 mb-3" id="formSignUpAdmin" method="POST">
                         <h2>Đăng ký Admin</h2>
+                        <?php
+                            if(isset($_POST['dangkyAdmin']))
+                            {
+                                if($flag == true){
+                                    echo "<p style='color:red'>*Username đã được sử dụng</p>";
+                                }
+                            }
+                        ?>
                         <div class="form-group">
                             <div class="form-inline">
                                 <label for="ipFirstname" class="col-sm-4">Họ Tên</label>
@@ -119,13 +140,13 @@
                         </div>
                         <div id="myErr"></div>
                         <button type="submit" class="btn btn-success btn-status" id="btnSignUpAdmin" value="SignUpAdmin" name="dangkyAdmin">Tạo tài khoản</button>
-                        
+
                     </form>
                 </div>
             </div>
         </div>
         <!--#endregion SignUp-->
-        
+
     </body>
     <!--#region Script-->
     <script>
@@ -160,5 +181,5 @@
         })
     </script>
     <!--#endregion Script-->
-   
+
 </html>

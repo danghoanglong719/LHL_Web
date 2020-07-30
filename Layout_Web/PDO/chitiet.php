@@ -1,4 +1,4 @@
-<?php 
+<?php
     session_start();
 ?>
 <!DOCTYPE html>
@@ -80,12 +80,12 @@ include_once("./Cart/MyCart.php");
                         <li class="nav-item cart">
                             <a class="nav-link ml-2" href="Cart/GioHang.php"><span></span>
                                 <img src="../img/icon/cart-78-32.png" width="25px"><div class="bh-nb"><div class="nb-pds">
-                                    <?php 
+                                    <?php
                                         $sum = json_decode(Cart::Display());
                                         echo $sum->Count;
                                     ?></div></div>
                             </a>
-                        </li>    
+                        </li>
                         <li class="nav-item ">
                             <a class="nav-link ml-2" href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><span></span>
                                 <img src="../img/icon/search-3-48.png" width="25px"/>
@@ -96,11 +96,11 @@ include_once("./Cart/MyCart.php");
                                 <img src="../img/icon/user-32.png" width="25px">
                             </a>
                             <div class="dropdown-menu ">
-                            <?php 
+                            <?php
                                 if(isset($_SESSION['dangnhap']) && isset($_SESSION['QTV'])){
                                     $dangnhap = $_SESSION['dangnhap'];
                                     $login = <<< EOD
-                                    <div style="color:#fff; text-align:center;">Xin chào 
+                                    <div style="color:#fff; text-align:center;">Xin chào
                                         <div style="text-decoration:underline; display:inline;">$dangnhap</div>
                                     </div>
                                     <div class="dropdown-divider"></div>
@@ -114,7 +114,7 @@ EOD;
                                 else if(isset($_SESSION['dangnhap'])){
                                     $dangnhap = $_SESSION['dangnhap'];
                                     $login = <<< EOD
-                                    <div style="color:#fff; text-align:center;">Xin chào 
+                                    <div style="color:#fff; text-align:center;">Xin chào
                                         <div style="text-decoration:underline; display:inline;">$dangnhap</div>
                                     </div>
                                     <div class="dropdown-divider"></div>
@@ -158,8 +158,8 @@ EOD;
     </script>
     <!---->
 
-            
-            
+
+
 
     <div class="container-fluid ">
         <div class="row">
@@ -169,10 +169,10 @@ EOD;
                     include_once("DataProvider.php");
                     if(isset($_GET['id']))
                         $id= $_GET['id'];
-                    
+
                     $sql = "SELECT * FROM sanpham where `MaSP` = '{$id}'" ;
                     $result = DataProvider::ExecuteQuery($sql);
-                    
+
                     while($row = $result->fetch())
                     {
                     ?>
@@ -187,7 +187,7 @@ EOD;
                         </div>
                     </div>
                     <div class="row mt-5 bottom">
-                        <table class="table">                       
+                        <table class="table">
                           <tbody>
                               <th scope="row">Giá</th>
                               <td><?= number_format($row['GiaBan']) ?> đ</td>
@@ -220,7 +220,7 @@ EOD;
             <div class="col-lg-4 col-md-5 mt-3 products-desc border">
                 <h3 class="products-desc-text"> Mô tả </h3>
                 <p><?= $row['MoTa'] ?></p>
-            </div>          
+            </div>
         <?php }?>
         </div>
     </div>
@@ -234,12 +234,12 @@ EOD;
                     $id= $_GET['id'];
                     $sql = "SELECT * FROM sanpham where `Hinh` = '$id'" ;
                     $result = DataProvider::ExecuteQuery($sql);
-                    
+
                     while($row = $result->fetch())
                     {
                     ?>
                         <?= $row['MoTa'] ?>
-                <?php }?>  
+                <?php }?>
                 </div>
                     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
 
@@ -258,7 +258,7 @@ EOD;
         array_unshift($_SESSION['xemganday'], $id);
     } else {
         echo "";
-      
+
     }
 ?>
 
@@ -281,22 +281,22 @@ EOD;
                               <img src="../img/<?=$row['Hinh']?>" class="" height="50%" width="70%" alt="...">
 
                                 <h5 class="card-title"><?=$row['TenSanPham']?></h5>
-                                <p class="card-text"><?=number_format($row['GiaBan'])?>đ.</p>          
+                                <p class="card-text"><?=number_format($row['GiaBan'])?>đ.</p>
                               </div>
                             </div>
                   </a>
-                   
+
 
                     <?php }
             }?>
-    
+
         </div>
     </div>
     <!---->
     <div class="mt-5 " style="background-color:rgb(24, 6, 6); border: none;padding: 10px;box-shadow: 5px 10px 8px 10px #888888; ">
         <div style="font-size: 20px; margin-left: 10px;">
             <a href="# " style=" border-radius:100%;border: 1px solid black;padding: 5px 10px;color: white;"><i class="fab fa-twitter "></i></a>
-            <a href="# " style=" border-radius:100%;border: 1px solid black;padding: 5px 10px;color: white;"><i class=" fab fa-youtube "></i></a>
+            <a href="https://www.youtube.com/watch?v=e4-R36cdql8" target="_blank" style=" border-radius:100%;border: 1px solid black;padding: 5px 10px;color: white; "><i class=" fab fa-youtube "></i></a>
             <a href="# " style=" border-radius:100%;border: 1px solid black;padding: 5px 10px;color: white; "><i class="fab fa-facebook-f "></i></a>
             <a href="# " style=" border-radius:100%;border: 1px solid black;padding: 5px 10px; color: white;"><i class=" fab fa-instagram "></i></a>
         </div>

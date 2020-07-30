@@ -1,5 +1,33 @@
 <?php
- session_start();
+    session_start();
+    if(!isset($_SESSION['QTV'])){
+        header('location:../home.php');
+    }
+?>
+<?php
+    include_once("../DataProvider.php");
+    //var_dump($_GET['edit']);exit;
+    if(isset($_POST['create']) )
+    {
+        if($_FILES['Hinh']['error'] == 0)
+        {
+            $MaLoai = $_POST['MaLoai'];
+            $TenSanPham = $_POST['TenSP'];
+            $GiaBan = $_POST['GiaBan'];
+            $MauSac = $_POST['Color'];
+            $VatLieu = $_POST['VatLieu'];
+            $MoTa = $_POST['MoTa'];
+               if(move_uploaded_file($_FILES['Hinh']["tmp_name"], "../../img/".$_FILES['Hinh']["name"]))
+            {
+                $sql = "INSERT INTO `sanpham`(`MaLoai`, `TenSanPham`, `GiaBan`, `MauSac`, `VatLieu`, `MoTa`, `Hinh`) VALUES ('$MaLoai', '$TenSanPham', '$GiaBan',' $MauSac','$VatLieu', ' $MoTa' ,'{$_FILES['Hinh']["name"]}' )";
+                $result = DataProvider::ExecuteQuery($sql);
+                if($result==true)
+                {
+                    header("location:Manager.php");
+                }
+            }
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,7 +57,7 @@
 
 
 <body>
-        
+
 
 <?php
     include_once("../DataProvider.php");
@@ -56,7 +84,7 @@
                 }
                     else {
                       echo "that bai";
-                    
+
                 }
 
             }
@@ -66,11 +94,11 @@
 ?>
 
 
-<div class="container-fluid bg"> 
+<div class="container-fluid bg">
             <div class="row">
-                <div class="col-md-4 col-sm-3 col-xs-12"></div>
-                <div class="col-md-4 col-sm-6 col-xs-12 border border-success rounded" style="padding:20px">
-                    <form class="form-container " id="formLogin" method="POST" enctype="multipart/form-data">
+                <div class="col-md-4 col-sm-3 col-xs-12 mt-4"></div>
+                <div class="col-md-4 col-sm-6 col-xs-12 border border-success rounded mt-4" style="padding:20px">
+                    <form class="form-container mt-2" id="formLogin" method="POST" enctype="multipart/form-data">
                         <h2 style="text-align:center">Thêm Sản Phẩm</h2>
                         <div class="form-group">
                             <div class="form-inline">
@@ -83,7 +111,7 @@
                                         while ($row = $query -> fetch()){
                                             echo "<option value={$row['MaLoai']}> {$row['TenLoai']} </option>";
                                         }
-                                    ?>  
+                                    ?>
                                 </select>
                             </div>
                         </div>
@@ -131,10 +159,10 @@
                         </div>
                         <div id="myErr"></div>
                         <button type="submit" class="btn btn-success btn-block" id="btnSignUp" value="SignUp" name="create" onclick="return confirm('Bạn Có Chắc Muốn Thêm');">Đồng Ý</button>
-                        
+
                     </form>
                 </div>
-                <div class="col-md-4 col-sm-3 col-xs-12"></div>
+                <div class="col-md-4 col-sm-3 col-xs-12 mt-4"></div>
             </div>
         </div>
     </body>

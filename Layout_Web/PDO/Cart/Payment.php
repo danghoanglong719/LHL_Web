@@ -1,6 +1,9 @@
 <?php
     session_start();
 ?>
+<?php
+	include_once('Paymentcode.php')
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,9 +29,7 @@
 <script src="../../js/jQueryValidation1.19.1/jquery.validate.js"></script>
 
 <body>
-	<?php
-		include_once('Paymentcode.php')
-	?>
+
 	<header>
 		<div class="header-container plr">
 			<div class="logo">

@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+include_once('logincode.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -10,7 +10,7 @@ session_start();
 <title>Đăng nhập</title>
 <link rel="stylesheet" type="text/css" href="../css/SignUp.css">
   <link rel="stylesheet" type="text/css" href="../bootstrap-4.4.1-dist/css/bootstrap.css">
-  <style type="text/css">    
+  <style type="text/css">
     label.error {   color:red;}
     input.error {   color:red;}
     #formdangnhap{
@@ -37,15 +37,26 @@ session_start();
 <script type="text/javascript" src="../js/jquery/jquery-3.5.0.min.js"></script>
 <script src="../js/jQueryValidation1.19.1/jquery.validate.js"></script>
 <body>
-  <div div class="container-fluid bg"> 
+  <div div class="container-fluid bg">
     <div class="row">
       <div class="col-md-4 col-sm-3 col-xs-12"></div>
       <div class="col-md-4 col-sm-6 col-xs-12">
         <form class="form-container" id="formdangnhap" method="POST">
           <h2>Đăng nhập</h2>
           <?php
-              include_once("logincode.php");
-          ?>
+            include_once("DataProvider.php");
+            if(isset($_POST['dangnhap']))
+            {
+                if(empty($username) || empty($password))
+                {
+                    echo "<p style='color:red'>*Vui lòng nhập đầy đủ thông tin</P>";
+                }
+                else {
+                    if($flag == false)
+                    echo "<p style='color:red'>*Thông tin đăng nhập không đúng</P>";
+                }
+            }
+        ?>
           <div class="form-group">
             <div class="form-inline">
               <label for="uname" class="col-sm-4">Tài khoản</label>
@@ -71,7 +82,7 @@ session_start();
           <button type="submit" class="btn btn-success btn-block" id="btndangnhap"  name="dangnhap">Đăng nhập</button>
           <br>
             <a href="QuenMatKhau.php">Quên Mật Khẩu</a>
-          
+
         </form>
       </div>
     </div>

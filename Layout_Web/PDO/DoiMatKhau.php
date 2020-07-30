@@ -1,15 +1,55 @@
 <?php
-    session_start();
+  session_start();
+  include_once("DataProvider.php");
+  if(isset($_POST['doimatkhau']))
+  {
+      $oldpassword = md5($_POST['oldpsw']);
+      $newpassword = md5($_POST['newpsw']);
+      $renewpassword = md5($_POST['renewpsw']);
+      $makh = $_SESSION['makh'];
+      if(empty($oldpassword) || empty($newpassword) || empty($renewpassword))
+      {
+
+      }
+
+      else {
+          if(isset($_SESSION['QTV'])){
+              $sqlCheck = "SELECT MatKhau FROM admin where  id_admin ='$makh'";
+              $dsCheck = DataProvider::ExecuteQuery($sqlCheck);
+              $row = $dsCheck->fetch();
+              if($oldpassword == $row['MatKhau']){
+                  if($newpassword == $renewpassword){
+                      $sqlUpdate = "UPDATE `admin` SET `MatKhau`='$newpassword' where  id_admin ='$makh'";
+                      $dsUpdate = DataProvider::ExecuteQuery($sqlUpdate);
+                      header("location:home.php");
+                  }
+              }
+          }
+          else{
+              $sqlCheck = "SELECT MatKhau FROM khachhang where  MaKH ='$makh'";
+              $dsCheck = DataProvider::ExecuteQuery($sqlCheck);
+              $row = $dsCheck->fetch();
+              if($oldpassword == $row['MatKhau']){
+
+                  if($newpassword == $renewpassword){
+                  $sqlUpdate = "UPDATE `khachhang` SET `MatKhau`='$newpassword' where  MaKH ='$makh'";
+                  $dsUpdate = DataProvider::ExecuteQuery($sqlUpdate);
+                  header("location:home.php");
+                  }
+              }
+          }
+      }
+  }
 ?>
 <!DOCTYPE html>
 <html>
 <head>
  <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Đăng nhập</title>
+<title>Đổi mật khẩu</title>
 <link rel="stylesheet" type="text/css" href="../css/SignUp.css">
   <link rel="stylesheet" type="text/css" href="../bootstrap-4.4.1-dist/css/bootstrap.css">
-  <style type="text/css">    
+  <style type="text/css">
     label.error {   color:red;}
     input.error {   color:red;}
     #formdoimk{
@@ -36,25 +76,21 @@
 <script type="text/javascript" src="../js/jquery/jquery-3.5.0.min.js"></script>
 <script src="../js/jQueryValidation1.19.1/jquery.validate.js"></script>
 <body>
-  <div div class="container-fluid bg"> 
+  <div div class="container-fluid bg">
     <div class="row">
       <div class="col-md-4 col-sm-3 col-xs-12"></div>
       <div class="col-md-4 col-sm-6 col-xs-12">
         <form class="form-container" id="formdoimk" method="POST">
           <h2>Đổi mật khẩu</h2>
-          <?php   
+          <?php
             include_once("DataProvider.php");
             if(isset($_POST['doimatkhau']))
             {
-                $oldpassword = $_POST['oldpsw'];
-                $newpassword = $_POST['newpsw'];
-                $renewpassword = $_POST['renewpsw'];
-                $makh = $_SESSION['makh'];
                 if(empty($oldpassword) || empty($newpassword) || empty($renewpassword))
                 {
                     echo "<p style='color:red'>*Vui lòng nhập đầy đủ</P>";
                 }
-                
+
                 else {
                     if(isset($_SESSION['QTV'])){
                         $sqlCheck = "SELECT MatKhau FROM admin where  id_admin ='$makh'";
@@ -62,9 +98,6 @@
                         $row = $dsCheck->fetch();
                         if($oldpassword == $row['MatKhau']){
                             if($newpassword == $renewpassword){
-                                $sqlUpdate = "UPDATE `admin` SET `MatKhau`='$newpassword' where  id_admin ='$makh'";
-                                $dsUpdate = DataProvider::ExecuteQuery($sqlUpdate);
-                                header("location:home.php");
                             }
                             else{
                                 echo "<p style='color:red'>*Nhập lại không đúng</P>";
@@ -79,18 +112,16 @@
                         $dsCheck = DataProvider::ExecuteQuery($sqlCheck);
                         $row = $dsCheck->fetch();
                         if($oldpassword == $row['MatKhau']){
+
                             if($newpassword == $renewpassword){
-                            $sqlUpdate = "UPDATE `khachhang` SET `MatKhau`='$newpassword' where  MaKH ='$makh'";
-                            $dsUpdate = DataProvider::ExecuteQuery($sqlUpdate);
-                            header("location:home.php");
+                            }
+                            else{
+                                echo "<p style='color:red'>*Nhập lại không đúng</P>";
+                            }
                         }
                         else{
-                            echo "<p style='color:red'>*Nhập lại không đúng</P>";
+                            echo "<p style='color:red'>*Sai mật khẩu cũ</P>";
                         }
-                    }
-                    else{
-                        echo "<p style='color:red'>*Sai mật khẩu cũ</P>";
-                    }
                     }
                 }
             }
@@ -115,7 +146,7 @@
           </div>
           <div id="myErr"></div>
           <button type="submit" class="btn btn-success btn-block" id="btndoimk"  name="doimatkhau">Đổi mật khẩu</button>
-          
+
         </form>
       </div>
     </div>

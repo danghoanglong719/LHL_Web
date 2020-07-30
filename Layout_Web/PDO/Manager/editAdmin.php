@@ -1,3 +1,29 @@
+<?php
+    session_start();
+    if(!isset($_SESSION['QTV'])){
+        header('location:../home.php');
+    }
+    include_once("../DataProvider.php");
+    if(isset($_POST['EditAdmin']))
+    {
+        $id  = $_GET['editAdmin'];
+        $firstname = $_POST['firstname'];
+        $username = $_POST['user'];
+        $password = md5($_POST['pass']);
+        $diachi = md5($_POST['address']);
+        $sdt   = $_POST['sdt'];
+        $email  = $_POST['email'];
+        $Status  = $_POST['status'];
+        $Level = $_POST['level'];
+        $sql = "UPDATE `admin` SET `TaiKhoan` = '$username', `MatKhau` = '$password', `HoTenAdmin` = '$firstname', `DiaChi` = '$diachi', `DienThoai` = '$sdt', `Email` = '$email' , `Status` ='$Status' ,`Level` = '$Level' WHERE `admin`.`id_admin` = $id";
+
+        $result = DataProvider::ExecuteQuery($sql);
+        if($result==true)
+        {
+            header("location:QuanLyAdmin.php");
+        }
+    }
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,7 +38,7 @@
         <link rel="stylesheet" href="../../OwlCarousel2-2.3.4/src/js/owl.carousel.js">
         <link rel="stylesheet" href="../../OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
         <link rel="stylesheet" href="../../OwlCarousel2-2.3.4/dist/assets/owl.theme.green.min.css">
-        <style type="text/css">    
+        <style type="text/css">
             label.error {   color:red;}
             input.error {   color:red;}
         </style>
@@ -27,36 +53,7 @@
     <script src="../../js/jQueryValidation1.19.1/jquery.validate.js"></script>
 
     <body>
-<?php
-        session_start();
-        include_once("../DataProvider.php");
 
-     
-        if(isset($_POST['EditAdmin']))
-        {
-            $id  = $_GET['editAdmin'];
-            $firstname = $_POST['firstname'];
-            $username = $_POST['user'];
-            $password = $_POST['pass'];
-            $diachi = $_POST['address'];
-            $sdt   = $_POST['sdt'];
-            $email  = $_POST['email'];
-            $Status  = $_POST['status'];
-            $Level = $_POST['level'];
-            $sql = "UPDATE `admin` SET `TaiKhoan` = '$username', `MatKhau` = '$password', `HoTenAdmin` = '$firstname', `DiaChi` = '$diachi', `DienThoai` = '$sdt', `Email` = '$email' , `Status` ='$Status' ,`Level` = '$Level' WHERE `admin`.`id_admin` = $id";
-           echo $sql;
-           echo "<br>".$Status;
-            $result = DataProvider::ExecuteQuery($sql);
-            if($result==true)
-            {
-             echo "thanh cong";
-             header("location:QuanLyAdmin.php");
-         }
-                else {
-                  echo "that bai";
-         }
-        }
-    ?>
 <?php
     //placeholder
     $sqlEdit = "SELECT * FROM `admin` WHERE id_admin = {$_GET['editAdmin']}";
@@ -71,10 +68,10 @@
     $level = $row['Level'];
     $status = $row['Status'];
 ?>
-       <div class="container-fluid bg"> 
+       <div class="container-fluid bg">
             <div class="row">
-                <div class="col-md-4 col-sm-3 col-xs-12"></div>
-                <div class="col-md-4 col-sm-6 col-xs-12 border border-success rounded">
+                <div class="col-md-4 col-sm-3 col-xs-12 mt-4"></div>
+                <div class="col-md-4 col-sm-6 col-xs-12 border border-success rounded mt-4">
                     <form class="form-container mt-2 mb-3" id="formLogin" method="POST">
                         <h2>Sửa thông tin Admin</h2>
                         <div class="form-group">
@@ -95,7 +92,7 @@
                                 <input type="password" name="pass" id="ipPass" class="form-control col-sm-8" value="<?php echo  $mkhau; ?>">
                             </div>
                         </div>
-     
+
                         <div class="form-group">
                             <div class="form-inline">
                                 <label for="ipDiaChi" class="col-sm-4">Địa Chỉ</label>
@@ -132,16 +129,16 @@
                                 <label for="Block">Block</label>
                             </div>
                         </div>
-                        
+
                         <div id="myErr"></div>
                         <button type="submit" class="btn btn-success btn-block" id="btnEditAdmin" value="EditAdmin" name="EditAdmin">Sửa</button>
-                        
+
                     </form>
                 </div>
             </div>
         </div>
         <!--#endregion SignUp-->
-        
+
     </body>
     <!--#region Script-->
     <script>
@@ -183,5 +180,5 @@
     </script>
 
     <!--#endregion Script-->
-   
+
 </html>

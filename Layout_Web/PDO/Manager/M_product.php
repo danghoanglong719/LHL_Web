@@ -11,7 +11,7 @@
 								<th scope="col">Mô tả</th>
 								<th scope="col">Trạng thái</th>
 				                <th scope="col">Hình</th>
-				                <th scope="col" colspan="2">Thao tác</th> 
+				                <th scope="col" colspan="2">Thao tác</th>
 				            </tr>
 				    <?php
 						include_once("../DataProvider.php");
@@ -36,7 +36,7 @@
 									$_SESSION['MoTa'] =$row['MoTa'] ;
 									$_SESSION['Status'] =$row['Status'] ;
 				                    $_SESSION['Hinh'] =$row['Hinh'] ;
-				              
+
 				     ?>
 				        <tr class="box">
 				            <td ><?= $row['MaSP'] ?></td>
@@ -48,18 +48,18 @@
 							<td><?= $row['MoTa'] ?></td>
 							<td><?= $row['Status'] ?></td>
 				            <td> <img src="../../img/<?= $row['Hinh'] ?> "style="width:80px; height=80px" /></td>
-				           <td><a href="delete.php?id=<?= $row['MaSP'] ?> "onclick="return confirm('Bạn có chắc muốn xóa');" >Xóa</a></td>
+				           <td><a href="delete.php?idsp=<?= $row['MaSP'] ?> "onclick="return confirm('Bạn có chắc muốn xóa');" >Xóa</a></td>
 				           <td><a href="edit_product.php?edit=<?= $row['MaSP'] ?> " >Sửa</a></td>
 				        </tr>
-				        
+
 				    <?php }?>
 				   		</table>
 
-     
+
         <?php
 
 
-   
-                
+
+
 
 ?>
